@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>ViOLa UI Prototype</title>
+	<script src="lib/three.js"></script>
+	<script src="build/main.js"></script>
+	<script src="lib/controls.js"></script>
+	<link rel="stylesheet" href="main.css" />
+</head>
+<body>
+  <canvas id="myCanvas"> </canvas>
+  <script>
+    var c = document.getElementById('myCanvas');
+	var s = null;
+
+	window.onresize = function() {
+		c.width = window.innerWidth;
+		c.height = window.innerHeight;
+		if(s) s.resize();
+	};
+
+	window.onresize();
+
+	document.storehouse = s = new Storehouse({
+		maxItems: 4,
+		items: [
+  			[6,3,1,4],
+  			[2,5,7,8],
+  			[]
+  		],
+  		canvas: c
+  	});
+
+    function retrieveItems() {
+    	s.promiseTo()
+		  .relocate(1,2)
+		  .relocate(1,2)
+		  .relocate(1,2)
+		  .relocate(0,2)
+		  .unload(0)
+		  .unload(1)
+		  .unload(0)
+		  .unload(2)
+		  .unload(2)
+		  .unload(0)
+		  .unload(2)
+		  .unload(2);
+
+	}
+	setTimeout(retrieveItems, 2000);
+  </script>
+</body>
+</html>

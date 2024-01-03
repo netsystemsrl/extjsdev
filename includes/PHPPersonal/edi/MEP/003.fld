@@ -1,0 +1,14 @@
+NomeField		,Len,Align	,Requested	,CodeValue,SampleValue
+ANNOMESE		,08	,L		,Y		 	,'T'	,Fisso
+TIPOREC			,03	,L		,Y			,001	,START CYCLE EVENT
+PROGR			,03	,L		,Y			,001	,
+QTY				,03	,L		,Y			,001	,
+REP				,03	,L		,Y			,001	,
+LENGTH			,03	,L		,Y			,001	,
+SIDE	 		,03	,L		,Y			,001	,
+SIDEFIRST 		,03	,L		,Y			,001	,
+CLIENT			,03	,L		,Y			,001	,
+SCHEDULE		,03	,L		,Y			,001	,
+DIAMETER		,03	,L		,Y			,001	,
+DOCNUM			,03	,L		,Y			,001	,
+ENERGY			,03	,L		,Y			,001	,

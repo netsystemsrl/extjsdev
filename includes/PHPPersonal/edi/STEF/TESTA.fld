@@ -1,0 +1,92 @@
+NomeField		,Len,Align	,Requested	,CodeValue,SampleValue
+TIPOREC			,01	,L		,Y		 	,'T'	,Fisso
+DDTNUM			,16	,L		,Y			,		,Numero DDT Stampato
+DDTDATA			,08	,L		,Y			,   	,Formato AAAAMMGG
+DDTPARTENZA		,08	,L		,N			,   	,Formato AAAAMMGG; Specificare
+ORDNUM			,16	,L		,N			,   	,Numero d’ordine
+MITCOD			,16	,L		,N			,   	,Codice del MITTENTE
+MITRAG			,36	,L		,Y			,   	,Ragione sociale 
+MITIND			,36	,L		,Y			,   	,Indirizzo
+MITLOC			,36	,L		,Y			,   	,Località
+MITCAP			,9	,L		,Y			,   	,CAP
+MITPRO			,2	,L		,Y			,   	,Provincia
+MITNAZ			,2	,L		,Y			,   	,Nazione
+CARCOD			,16	,L		,N			,   	,Codice del CARICO
+CARRAG			,36	,L		,N			,   	,Ragione sociale 
+CARIND			,36	,L		,N			,   	,Indirizzo
+CARLOC			,36	,L		,N			,   	,Località
+CARCAP			,9	,L		,N			,   	,CAP
+CARPRO			,2	,L		,N			,   	,Provincia
+CARNAZ			,2	,L		,N			,   	,Nazione
+DESCOD			,16	,L		,N			,   	,Codice del DESTINO
+DESRAG			,36	,L		,Y			,   	,Ragione sociale 
+DESIND			,36	,L		,Y			,   	,Indirizzo
+DESLOC			,36	,L		,Y			,   	,Località
+DESCAP			,9	,L		,Y			,   	,CAP
+DESPRO			,2	,L		,Y			,   	,Provincia
+DESNAZ			,2	,L		,Y			,   	,Nazione
+SCACOD			,16	,L		,N			,   	,Codice del SCARICO
+SCARAG			,36	,L		,N			,   	,Ragione sociale 
+SCAIND			,36	,L		,N			,   	,Indirizzo
+SCALOC			,36	,L		,N			,   	,Località
+SCACAP			,9	,L		,N			,   	,CAP
+SCAPRO			,2	,L		,N			,   	,Provincia
+SCANAZ			,2	,L		,N			,   	,Nazione
+COLLINUM		,6	,R		,Y			,   	,Numero colli
+PESO			,6	,R		,Y			,   	,Peso
+PEZZINUM		,6	,L		,N			,   	,Numero pezzi articoli contenuti nei colli
+PAL				,6	,L		,N			,   	,Numero PAL BANCALI PEDANE
+DOGQTA			,6	,L		,N			,   	,Indica QTA differente rispetto	
+DOGUM			,3	,L		,N			,   	,Indica UM differente rispetto	
+CONTRASEGNOVAL	,10	,L		,N			,   	,contrassegno VALORE 2 DEC
+CONTRASEGNOMON	,3	,L		,N			,   	,contrassegno Valuta
+CONTRASEGNORIM	,2	,L		,N			,   	,contrassegno rimborso
+CONSEGNADATA	,8	,L		,Y			,   	,TASSATIVA Data consegna richiesta
+CONSEGNAORA		,4	,L		,Y			,   	,TASSATIVA Ora consegna richiesta
+NOTE			,128,L		,N			,   	,Se sui segnacolli viene stampato un numero
+GIRO			,5,L		,N			,   	,filiale STEF che farà la consegna
+TEMPERATURA		,2,L		,Y			,   	,SU=Surgelato FR=fresco NR=non refrigerato
+TARIFFARIO		,4,L		,N			,   	,FR=Spedizioni normali RMFR=Resi a seguito di giacenza RPFR=Resi RLFR=Riconsegna a seguito di giacenza INFR=Altre tariffe LDFR=Altre tariffe
+NATURA			,4	,L		,N			,=   	,=Non specificato OP=Operazioni promozionali OF=Uova di cioccolato
+PORTO 			,2	,L		,Y			,   	,PP=Porto franco PD=Porto assegnato
+DAVENTILARE		,1	,L		,N			,   	,Y=massivo da ventilare
+RITIRO			,1	,L		,N			,   	,N=non effettuare il ritiro
+DEPOSITO		,1	,L		,N			,   	,N=La merce verrà ritirata presso filiale di arrivo
+ANNUNCIO		,1	,L		,N			,   	,Y=Annuncio, N=Posizione reale
+ANNUNCIOKEY		,17	,L		,N			,   	,codice utilizzato per legare la previsione di spedizione con la spedizione definitiva
+POSIZIONE		,12	,L		,N			,   	,RISERVATO
+UNITASPED		,4	,L		,N			,   	,Indica il numero di unità indivisibili della spedizione.
+REMETTANT		,16	,L		,N			,   	,ndirizzamento delle comunicazioni di anomalie
+ORIGINEPOS		,12	,L		,N			,   	,in caso di spedizione di chiusura giacenza
+ALTQTA			,4	,L		,N			,   	,Indica QTA alternative rispetto	
+ALTUM			,4	,L		,N			,   	,Indica UM alternative rispetto	
+STEFESTERNO		,16	,L		,N			,   	,RISERVATO
+STEFFILIALE		,3	,L		,N			,   	,RISERVATO
+MERCEVOLUME		,6	,L		,N			,   	,M3
+TRASPORTOVOLUME	,6	,L		,N			,   	,M3
+MERCENETTO		,6	,L		,N			,   	,KG
+MERCELORDO		,6	,L		,N			,   	,KG
+TRASPORTOLORDO	,6	,L		,N			,   	,M3
+FATRAG			,36	,L		,N			,   	,Ragione sociale FATTURAZIONE
+FATIND			,36	,L		,N			,   	,indirizzo 
+FATLOC			,36	,L		,N			,   	,Località
+FATCAP			,9	,L		,N			,   	,CAP
+FATPRO			,2	,L		,N			,   	,Provincia
+FATNAZ			,2	,L		,N			,   	,Nazione
+FATPIVA			,20	,L		,N			,   	,PIVA
+FATCOD			,15	,L		,N			,   	,Codice
+ORDDATA			,8	,L		,N			,   	,Ordine Data
+ORDNUMD			,35	,L		,N			,   	,Ordine Numero destinatario
+ORDDATAD		,8	,L		,N			,   	,Ordine Data destinatario
+CAUSALE			,35	,L		,N			,   	,Descrizione della causale di trasporto da stampare sul DDT
+ASPETTO			,35	,L		,N			,   	,Descrizione della causale di trasporto da stampare sul DDT
+VETRAG			,36	,L		,N			,   	,Ragione sociale VETTORE
+VETIND			,36	,L		,N			,   	,indirizzo 
+VETLOC			,36	,L		,N			,   	,Località
+VETCAP			,9	,L		,N			,   	,CAP
+VETPRO			,2	,L		,N			,   	,Provincia
+VETNAZ			,2	,L		,N			,   	,Nazione
+RIGHENUM		,4	,L		,N			,   	,Numero righe
+SSCCNUM			,4	,L		,N			,   	,Numero SSCC
+EMAIL			,254,L		,N			,   	,EMAIL destinatario
+TEL				,20,L		,N			,   	,TEL destinatario

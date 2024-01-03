@@ -1,0 +1,15 @@
+NomeField		,Len,Align	,Requested	,CodeValue	,SampleValue
+TIPOREC			,02	,L		,Y		 	,'01'		,MP Testata
+TERZISTA		,13	,L		,Y			,			,0000000001234 TERZISTA
+ORDANNO			,04 ,L		,Y			,			,2020
+ORDNUM			,13 ,L		,Y			,			,0000000056402
+FORNCODICE		,13 ,L 		,Y  		,  			,0000000001234
+DOCTIPO			,03 ,L  	,Y  		,			,DDT FAT CMR
+DOCNUM			,13 ,L  	,Y  		,			,2020-02-02
+DOCDATA			,10 ,L  	,Y  		,			,2020-02-02
+DOCCONSDATA		,10 ,L  	,Y  		,			,2020-02-02
+DOCCONSORA		,08 ,L  	,Y  		,			,18.35.17
+ORDANNO			,04 ,L		,Y			,			,2020
+ORDNUM			,35 ,L  	,Y  		,			,0000000001234
+SENDDATA		,10 ,L  	,Y  		,			,2020-02-02
+SENDTIME		,08 ,L  	,Y  		,			,18.35.17

@@ -1,0 +1,68 @@
+
+// Classic theme uses a different "more" icon on the left
+@if $include-rtl {
+    .#{$prefix}rtl.#{$prefix}toolbar-more-icon {
+        background-image: theme-background-image('toolbar/more-left') !important;
+    }
+}
+
+@mixin _codaxy-toolbar-ui (
+    $ui: null,
+    $ui-inner-border-width: null,
+    $ui-inner-border-color: null,
+    $ui-text-color: null,
+    $ui-header-padding: null,
+    $ui-footer-padding: null,
+    $ui-footer-background-color: null,
+    $ui-border-color: null,
+    $ui-background-color: null,
+    $ui-toolbar-docked-border-color-rotation: false
+) {
+    .#{$prefix}toolbar-#{$ui} {
+        @if $ui-inner-border-width != null and $ui-inner-border-color != null {
+        @include inner-border($width: $ui-inner-border-width, $color: $ui-inner-border-color);
+        }
+        @if $ui-header-padding != null { padding: $ui-header-padding } 
+        
+        .#{$prefix}toolbar-text {
+            @if $ui-text-color != null { color: $ui-text-color }
+        }
+        @if $ui-background-color != null { background-color: $ui-background-color }
+    }
+
+    @if ($ui-toolbar-docked-border-color-rotation == true and $ui-border-color != null)  {
+      .#{$prefix}toolbar-#{$ui}-docked-top {
+          border-color: list-rect($ui-border-color, top)
+                        list-rect($ui-border-color, right)
+                        list-rect($ui-border-color, bottom)
+                        list-rect($ui-border-color, left);
+      }
+      .#{$prefix}toolbar-#{$ui}-docked-left {
+          border-color: list-rect($ui-border-color, right)
+                        list-rect($ui-border-color, bottom)
+                        list-rect($ui-border-color, left )
+                        list-rect($ui-border-color, top);
+      }
+      .#{$prefix}toolbar-#{$ui}-docked-bottom {
+          border-color: list-rect($ui-border-color, bottom)
+                        list-rect($ui-border-color, left)
+                        list-rect($ui-border-color, top)
+                        list-rect($ui-border-color, right);
+      }
+      .#{$prefix}toolbar-#{$ui}-docked-right {
+          border-color: list-rect($ui-border-color, left)
+                        list-rect($ui-border-color, top)
+                        list-rect($ui-border-color, right)
+                        list-rect($ui-border-color, bottom);
+      }
+    }
+}
+
+@include _codaxy-toolbar-ui (
+    $ui: default,
+    $ui-inner-border-width: $toolbar-inner-border-width,
+    $ui-inner-border-color: $toolbar-inner-border-color,
+    $ui-text-color: $toolbar-header-text-color,
+    $ui-header-padding: $toolbar-padding
+);
+

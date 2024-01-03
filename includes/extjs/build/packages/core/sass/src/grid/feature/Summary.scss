@@ -1,0 +1,11 @@
+
+
+.#{$prefix}grid-row-summary {
+    .#{$prefix}grid-cell,
+    .#{$prefix}grid-rowwrap,
+    .#{$prefix}grid-cell-rowbody {
+        @if $grid-row-summary-font-weight != null { font-weight: $grid-row-summary-font-weight }      
+        @if $grid-row-summary-border-top-color != null { border-top-color: $grid-row-summary-border-top-color }
+    }
+}
+

@@ -1,0 +1,23 @@
+/*GENERAL*/
+.alert-inline {
+  display: inline-flex;
+}
+
+input:required ~ label:after{
+	content:" *";
+	font-weight:bold;
+	color:red;
+}
+
+/*CATALOG*/
+.catalogsidebar .categories,
+.catalogsidebar .brads {max-height: 250px;}
+
+.item-spedizione.active {
+	background: lightslategray;
+    color: white;
+}
+
+.card-product-grid .fix-height {
+	overflow: auto;
+}

@@ -1,0 +1,14 @@
+﻿
+@function blur($l: 0, $s: 0, $h: 0, $a: null, $c: null) {
+
+    $blured-color: nth($base-blur, 1);
+    $alpha:  nth($base-blur, 2);
+
+    @if type-of($c) == color { $blured-color: $c }
+    @if type-of($a) == number { $alpha: $alpha + $a }
+
+    @return rgba(adjust-color($blured-color, $lightness: 0% + $l, $saturation: 0% + $s, $hue: 0% + $h), $alpha);
+
+}
+
+

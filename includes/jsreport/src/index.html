@@ -1,0 +1,17 @@
+<DOCTYPE html>
+<html>
+<script src="canny.js"></script>
+<body>
+<img id="cosmetics" src="cosmetics-fullsize-orig.jpeg"/>
+<canvas />
+</body>
+<script type="text/javascript">
+imgToCanvas('cosmetics');
+const imgToCanvas = (imgId) => {
+  const img = document.getElementById('cosmetics');
+  const canvas = document.querySelector("canvas");
+  const ctx = canvas.getContext("2d");
+  ctx.drawImage(img, 0, 0);
+}
+</script>
+</html>

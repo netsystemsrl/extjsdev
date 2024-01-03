@@ -1,0 +1,4 @@
+﻿
+.#{$prefix}grid-group-hd-collapsed .#{$prefix}grid-group-hd {
+    @if $grid-group-hd-collapsed-border-width != null { border-width: $grid-group-hd-collapsed-border-width }
+}

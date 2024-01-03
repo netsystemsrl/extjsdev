@@ -1,0 +1,115 @@
+
+.#{$prefix}accordion-hd-sibling-expanded {
+    @if $panel-header-inner-border-color != null {
+        @include single-box-shadow($panel-header-inner-border-color, 0, 1px, 0, 0, true);
+  }
+}
+
+@if $panel-borders-overrides {
+  .#{$prefix}panel-body-default.#{$prefix}accordion-layout-ct {
+    border-width: 0 0 1px 0;
+  }
+}
+
+
+
+@mixin _codaxy-accordion-ui (
+      $ui,
+      $ui-header-color: null,
+      $ui-header-color-over: null,
+      $ui-header-background-color: null,
+      $ui-header-background-color-over: null,
+      $ui-header-border-color: null,
+      $ui-header-font-size: null,
+      $ui-header-line-height: null,
+      $ui-body-border-color: null,
+      $ui-body-background-color: null,
+      $ui-inner-border-width: null,
+      $ui-inner-border-color: null,
+      $ui-tool-image-background-color-over: null,
+      $ui-tool-image-background-color: null,
+      $ui-tool-background-image: null,
+      $ui-accordion-header-tool-size: null
+) {
+
+    .#{$prefix}panel-header-#{$ui}.#{$prefix}accordion-hd .#{$prefix}panel-header-title {
+        @if $ui-header-color != null {color: $ui-header-color;}
+        @if $ui-header-font-size != null { font-size: $ui-header-font-size }
+        @if $ui-header-line-height != null { line-height: $ui-header-line-height }
+    }
+
+    .#{$prefix}panel-header-#{$ui}.#{$prefix}accordion-hd {
+        @if $ui-header-background-color != null { background: $ui-header-background-color }
+        @if $ui-header-border-color != null { border-color: $ui-header-border-color }
+        @if $ui-inner-border-width != null and $ui-inner-border-color != null {
+            @include inner-border($width: $ui-inner-border-width, $color: $ui-inner-border-color);
+        }
+
+    .#{$prefix}tool-img {
+        @if $ui-tool-background-image != null { background-image: theme-background-image($ui-tool-background-image) }
+        @if $ui-tool-image-background-color != null { background-color: $ui-tool-image-background-color }
+        &:hover {
+            @if $ui-tool-image-background-color-over != null { background-color: $ui-tool-image-background-color-over }
+        }
+    }  
+
+    /** OK-315 TODO
+     * check this feature in flatmate
+     */
+
+    //&:hover {
+    //    .#{$prefix}tool-img {
+    //        @if $ui-tool-image-background-color-over != null { background-color: $ui-tool-image-background-color-over }
+    //    }
+    //}   
+}
+
+    .#{$prefix}panel-body-#{$ui}.#{$prefix}accordion-body  {
+        @if $ui-body-border-color != null { border-color: $ui-body-border-color }
+    }
+
+    @if $ui-header-background-color-over != null {
+        .#{$prefix}panel-header-#{$ui}.#{$prefix}accordion-hd-over {
+            background-color: $ui-header-background-color-over;
+        }
+    }
+
+    @if $ui != null {
+
+        .#{$prefix}accordion-hd-sibling-expanded {
+            @if $ui-header-border-color != null { border-top-color: bottom($ui-header-border-color) }
+        }
+
+        .#{$prefix}accordion-hd-last-collapsed {
+            @if $ui-header-background-color != null { border-bottom-color: $ui-header-background-color }
+        }
+    }
+
+    // OK-315 override for theme neutral
+    // find a better solution TODO
+    .#{$prefix}accordion-hd {
+        .#{$prefix}tool-over {
+            .#{$prefix}tool-expand-bottom, 
+            .#{$prefix}tool-expand-top {
+                background-position: (-$accordion-header-tool-size) ($accordion-header-tool-size * -16);
+            }
+
+            .#{$prefix}tool-collapse-top,
+            .#{$prefix}tool-collapse-bottom {
+                background-position: (-$accordion-header-tool-size) -17 * ($accordion-header-tool-size);
+            }
+        }
+    }
+}
+
+@if $include-ext-layout-container-accordion {
+    @include _codaxy-accordion-ui (
+        $ui: default,
+        $ui-inner-border-width: $accordion-header-inner-border-width,
+        $ui-inner-border-color: $accordion-header-inner-border-color,
+        $ui-tool-image-background-color-over: $accordion-tool-image-background-color-over,
+        $ui-header-font-size: $accordion-header-font-size,
+        $ui-header-line-height: $accordion-header-line-height
+    );
+}
+

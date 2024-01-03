@@ -1,0 +1,50 @@
+﻿
+/** 
+ * CODAXY
+ * $html-editor-color
+ * @var {string}
+ * defines default text color in html editor
+*/
+$html-editor-color: dynamic(black);
+
+/** 
+ * CODAXY
+ * $html-editor-btn-background-image
+ * @var {string}
+ * defines html editor toolbar button images sprite- different background image used with different theme sizes (used with theme-scale-switch function)
+*/
+$html-editor-btn-background-image: dynamic(null);
+
+/** 
+ * CODAXY
+ * $html-editor-toolbar-padding
+ * @var {list}
+ * defines html editor toolbar padding
+*/
+$html-editor-toolbar-padding: dynamic(null);
+
+/** 
+ * CODAXY
+ * $html-editor-toolbar-border-width
+ * @var {list}
+ * defines html editor toolbar border width
+*/
+$html-editor-toolbar-border-width: dynamic(null);
+
+$html-editor-input-border-width: dynamic(null);
+
+/** 
+ * CODAXY
+ * $html-editor-input-background-color
+ * @var {list}
+ * defines html editor input background color
+*/
+$html-editor-input-background-color: dynamic(null);
+
+/** 
+ * CODAXY
+ * $html-editor-input-padding
+ * @var {list}
+ * defines html editor input padding
+*/
+$html-editor-input-padding: dynamic(null);

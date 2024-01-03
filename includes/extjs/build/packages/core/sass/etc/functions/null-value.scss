@@ -1,0 +1,9 @@
+﻿
+@function null-value ($a, $b) {
+    @if $a == null {
+        @return $b;
+    } 
+    @else {
+        @return $a;
+    }
+}

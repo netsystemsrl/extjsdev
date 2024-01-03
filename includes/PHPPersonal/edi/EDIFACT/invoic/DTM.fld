@@ -1,0 +1,9 @@
+NomeField		,Len,Align	,Requested	,CodeValue										,SampleValue
+TIPOREC			,99	,		,Y		 	,DTM											,DTM     DATA
+FILLER			,99	,		,Y		 	,+												,FILLER
+TIPOLOGIA		,99	,		,Y			,137											,137		=	Document/message date/time
+FILLER			,99	,		,Y		 	,:												,FILLER
+DATA			,99	,		,Y			,   											,20181024
+FILLER			,99	,		,Y		 	,:												,FILLER
+TIPODATAC		,99	,		,N			,102											,102		=	CCYYMMDD
+END				,99	,		,Y		 	,'												,END

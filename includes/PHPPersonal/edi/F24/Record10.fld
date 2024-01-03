@@ -1,0 +1,14 @@
+NomeField			,Len,Align	,Requested	,CodeValue,SampleValue
+FILLER         		,01,L0		,N		 	, 		,FILLER
+TIPOREC				,02,L0		,N			,10		,TIPOREC
+DelegaProg			,07,R0		,Y		 	,		,ProgressivoDelega
+CodiceFiscale       ,16,L		,Y		 	,		,CodiceFiscale
+RagioneSocCognome   ,20,L		,Y		 	,		,CognomeRagioneSociale
+RagioneSocNome      ,20,L		,Y		 	,		,NomeRagioneSociale
+Sesso               ,01,L		,Y		 	,		,Sesso
+ComuneNascita       ,25,L		,Y		 	,		,ComuneNascita
+ProvinciaNascita    ,02,L		,Y		 	,		,ProvinciaNascita
+DataNascita         ,08,yyyyMMdd,Y		 	,		,DataNascita
+ProtocolloDelega    ,07,R0		,Y		 	,		,ProtocolloDelega
+FILLER          	,07,L		,N		 	,		,FILLER
+

@@ -1,0 +1,1147 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class ModbusMaster</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class ModbusMaster</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ModbusMaster</p>
+<p class="description"><p>This class deals with the MODBUS master</p><p>Implemented MODBUS master functions: <ul><li>FC  1: read coils</li><li>FC  2: read input discretes</li><li>FC  3: read multiple registers</li><li>FC  4: read multiple input registers</li><li>FC  5: write single coil</li><li>FC  6: write single register</li><li>FC 15: write multiple coils</li><li>FC 16: write multiple registers</li><li>FC 23: read write registers</li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Jan Krakora</li>
+				<li><span class="field">copyright:</span> Copyright (c) 2004, 2013 Jan Krakora</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_Phpmodbus---ModbusMaster.php.html">/Phpmodbus/ModbusMaster.php</a> (line <span class="field">42</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../Phpmodbus/ModbusMasterTcp.html">ModbusMasterTcp</a></td>
+					<td>
+											ModbusMasterTcp
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../Phpmodbus/ModbusMasterUdp.html">ModbusMasterUdp</a></td>
+					<td>
+											ModbusMasterUdp
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$client" title="details" class="var-name">$client</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$client_port" title="details" class="var-name">$client_port</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$endianness" title="details" class="var-name">$endianness</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$host" title="details" class="var-name">$host</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$port" title="details" class="var-name">$port</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$socket_protocol" title="details" class="var-name">$socket_protocol</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$status" title="details" class="var-name">$status</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$timeout_sec" title="details" class="var-name">$timeout_sec</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																				
+												<div class="method-definition">
+											<span class="method-result">ModbusMaster</span>
+										<a href="#ModbusMaster" title="details" class="method-name">ModbusMaster</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$host</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$protocol</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">type</span>
+										<a href="#fc1" title="details" class="method-name">fc1</a>
+											(<span class="var-type">type</span>&nbsp;<span class="var-name">$unitId</span>, <span class="var-type">type</span>&nbsp;<span class="var-name">$reference</span>, <span class="var-type">type</span>&nbsp;<span class="var-name">$quantity</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">type</span>
+										<a href="#fc2" title="details" class="method-name">fc2</a>
+											(<span class="var-type">type</span>&nbsp;<span class="var-name">$unitId</span>, <span class="var-type">type</span>&nbsp;<span class="var-name">$reference</span>, <span class="var-type">type</span>&nbsp;<span class="var-name">$quantity</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">false|Array</span>
+										<a href="#fc3" title="details" class="method-name">fc3</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$unitId</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$reference</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$quantity</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">false|Array</span>
+										<a href="#fc4" title="details" class="method-name">fc4</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$unitId</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$reference</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$quantity</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#fc5" title="details" class="method-name">fc5</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$unitId</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$reference</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$dataTypes</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#fc6" title="details" class="method-name">fc6</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$unitId</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$reference</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$dataTypes</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#fc15" title="details" class="method-name">fc15</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$unitId</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$reference</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#fc16" title="details" class="method-name">fc16</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$unitId</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$reference</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$dataTypes</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">false|Array</span>
+										<a href="#fc23" title="details" class="method-name">fc23</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$unitId</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$referenceRead</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$quantity</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$referenceWrite</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$dataTypes</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#readCoils" title="details" class="method-name">readCoils</a>
+											(<span class="var-type">type</span>&nbsp;<span class="var-name">$unitId</span>, <span class="var-type">type</span>&nbsp;<span class="var-name">$reference</span>, <span class="var-type">type</span>&nbsp;<span class="var-name">$quantity</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#readInputDiscretes" title="details" class="method-name">readInputDiscretes</a>
+											(<span class="var-type">type</span>&nbsp;<span class="var-name">$unitId</span>, <span class="var-type">type</span>&nbsp;<span class="var-name">$reference</span>, <span class="var-type">type</span>&nbsp;<span class="var-name">$quantity</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">false|Array</span>
+										<a href="#readMultipleInputRegisters" title="details" class="method-name">readMultipleInputRegisters</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$unitId</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$reference</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$quantity</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">false|Array</span>
+										<a href="#readMultipleRegisters" title="details" class="method-name">readMultipleRegisters</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$unitId</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$reference</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$quantity</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">false|Array</span>
+										<a href="#readWriteRegisters" title="details" class="method-name">readWriteRegisters</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$unitId</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$referenceRead</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$quantity</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$referenceWrite</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$dataTypes</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">type</span>
+										<a href="#writeMultipleCoils" title="details" class="method-name">writeMultipleCoils</a>
+											(<span class="var-type">type</span>&nbsp;<span class="var-name">$unitId</span>, <span class="var-type">type</span>&nbsp;<span class="var-name">$reference</span>, <span class="var-type">type</span>&nbsp;<span class="var-name">$data</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#writeMultipleRegister" title="details" class="method-name">writeMultipleRegister</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$unitId</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$reference</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$dataTypes</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#writeSingleCoil" title="details" class="method-name">writeSingleCoil</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$unitId</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$reference</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">bool</span>
+										<a href="#writeSingleRegister" title="details" class="method-name">writeSingleRegister</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$unitId</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$reference</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$dataTypes</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#__toString" title="details" class="method-name">__toString</a>
+										()
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$client" id="$client"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$client</span>
+			 = <span class="var-default"> &quot;&quot;</span>			(line <span class="line-number">46</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$client_port" id="$client_port"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$client_port</span>
+			 = <span class="var-default"> &quot;502&quot;</span>			(line <span class="line-number">47</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$endianness" id="$endianness"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$endianness</span>
+			 = <span class="var-default"> 0</span>			(line <span class="line-number">50</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$host" id="$host"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$host</span>
+			 = <span class="var-default"> &quot;192.168.1.1&quot;</span>			(line <span class="line-number">44</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$port" id="$port"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$port</span>
+			 = <span class="var-default"> &quot;502&quot;</span>			(line <span class="line-number">45</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$socket_protocol" id="$socket_protocol"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$socket_protocol</span>
+			 = <span class="var-default"> &quot;UDP&quot;</span>			(line <span class="line-number">51</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$status" id="$status"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$status</span>
+						(line <span class="line-number">48</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$timeout_sec" id="$timeout_sec"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$timeout_sec</span>
+			 = <span class="var-default"> 5</span>			(line <span class="line-number">49</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="methodModbusMaster" id="ModbusMaster"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor ModbusMaster</span> (line <span class="line-number">61</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ModbusMaster</p>
+<p class="description"><p>This is the constructor that defines <a href="../Phpmodbus/ModbusMaster.html#var$host">$host</a> IP address of the object.</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">ModbusMaster</span>
+		<span class="method-name">
+			ModbusMaster
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$host</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$protocol</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$host</span><span class="var-description">: An IP address of a Modbus TCP device. E.g. &quot;192.168.1.1&quot;</span>			</li>
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$protocol</span><span class="var-description">: Socket protocol (TCP, UDP)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfc1" id="fc1"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">fc1</span> (line <span class="line-number">255</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">fc1</p>
+<p class="description"><p>Alias to <a href="../Phpmodbus/ModbusMaster.html#methodreadCoils">readCoils</a> method</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">type</span>
+		<span class="method-name">
+			fc1
+		</span>
+					(<span class="var-type">type</span>&nbsp;<span class="var-name">$unitId</span>, <span class="var-type">type</span>&nbsp;<span class="var-name">$reference</span>, <span class="var-type">type</span>&nbsp;<span class="var-name">$quantity</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">type</span>
+				<span class="var-name">$unitId</span>			</li>
+					<li>
+				<span class="var-type">type</span>
+				<span class="var-name">$reference</span>			</li>
+					<li>
+				<span class="var-type">type</span>
+				<span class="var-name">$quantity</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfc2" id="fc2"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">fc2</span> (line <span class="line-number">370</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">fc2</p>
+<p class="description"><p>Alias to <a href="../Phpmodbus/ModbusMaster.html#methodreadInputDiscretes">readInputDiscretes</a> method</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">type</span>
+		<span class="method-name">
+			fc2
+		</span>
+					(<span class="var-type">type</span>&nbsp;<span class="var-name">$unitId</span>, <span class="var-type">type</span>&nbsp;<span class="var-name">$reference</span>, <span class="var-type">type</span>&nbsp;<span class="var-name">$quantity</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">type</span>
+				<span class="var-name">$unitId</span>			</li>
+					<li>
+				<span class="var-type">type</span>
+				<span class="var-name">$reference</span>			</li>
+					<li>
+				<span class="var-type">type</span>
+				<span class="var-name">$quantity</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfc3" id="fc3"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">fc3</span> (line <span class="line-number">463</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">fc3</p>
+<p class="description"><p>Alias to <a href="../Phpmodbus/ModbusMaster.html#methodreadMultipleRegisters">readMultipleRegisters</a> method.</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">false|Array</span>
+		<span class="method-name">
+			fc3
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$unitId</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$reference</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$quantity</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$unitId</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$reference</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$quantity</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfc4" id="fc4"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">fc4</span> (line <span class="line-number">562</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">fc4</p>
+<p class="description"><p>Alias to <a href="../Phpmodbus/ModbusMaster.html#methodreadMultipleInputRegisters">readMultipleInputRegisters</a> method.</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">false|Array</span>
+		<span class="method-name">
+			fc4
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$unitId</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$reference</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$quantity</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$unitId</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$reference</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$quantity</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfc5" id="fc5"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">fc5</span> (line <span class="line-number">661</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">fc5</p>
+<p class="description"><p>Alias to <a href="../Phpmodbus/ModbusMaster.html#methodwriteSingleCoil">writeSingleCoil</a> method</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			fc5
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$unitId</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$reference</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$dataTypes</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$unitId</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$reference</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$dataTypes</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfc6" id="fc6"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">fc6</span> (line <span class="line-number">764</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">fc6</p>
+<p class="description"><p>Alias to <a href="../Phpmodbus/ModbusMaster.html#methodwriteSingleRegister">writeSingleRegister</a> method</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			fc6
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$unitId</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$reference</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$dataTypes</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$unitId</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$reference</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$dataTypes</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfc15" id="fc15"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">fc15</span> (line <span class="line-number">861</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">fc15</p>
+<p class="description"><p>Alias to <a href="../Phpmodbus/ModbusMaster.html#methodwriteMultipleCoils">writeMultipleCoils</a> method</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			fc15
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$unitId</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$reference</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$unitId</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$reference</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfc16" id="fc16"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">fc16</span> (line <span class="line-number">982</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">fc16</p>
+<p class="description"><p>Alias to <a href="../Phpmodbus/ModbusMaster.html#methodwriteMultipleRegister">writeMultipleRegister</a> method</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			fc16
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$unitId</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$reference</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$dataTypes</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$unitId</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$reference</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$dataTypes</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfc23" id="fc23"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">fc23</span> (line <span class="line-number">1103</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">fc23</p>
+<p class="description"><p>Alias to <a href="../Phpmodbus/ModbusMaster.html#methodreadWriteRegisters">readWriteRegisters</a> method.</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">false|Array</span>
+		<span class="method-name">
+			fc23
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$unitId</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$referenceRead</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$quantity</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$referenceWrite</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$dataTypes</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$unitId</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$referenceRead</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$quantity</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$referenceWrite</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$dataTypes</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodreadCoils" id="readCoils"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">readCoils</span> (line <span class="line-number">225</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">readCoils</p>
+<p class="description"><p>Modbus function FC 1(0x01) - Read Coils</p><p>Reads $quantity of Coils (boolean) from reference  $reference of a memory of a Modbus device given by  $unitId.</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			readCoils
+		</span>
+					(<span class="var-type">type</span>&nbsp;<span class="var-name">$unitId</span>, <span class="var-type">type</span>&nbsp;<span class="var-name">$reference</span>, <span class="var-type">type</span>&nbsp;<span class="var-name">$quantity</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">type</span>
+				<span class="var-name">$unitId</span>			</li>
+					<li>
+				<span class="var-type">type</span>
+				<span class="var-name">$reference</span>			</li>
+					<li>
+				<span class="var-type">type</span>
+				<span class="var-name">$quantity</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodreadInputDiscretes" id="readInputDiscretes"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">readInputDiscretes</span> (line <span class="line-number">340</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">readInputDiscretes</p>
+<p class="description"><p>Modbus function FC 2(0x02) - Read Input Discretes</p><p>Reads $quantity of Inputs (boolean) from reference  $reference of a memory of a Modbus device given by  $unitId.</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			readInputDiscretes
+		</span>
+					(<span class="var-type">type</span>&nbsp;<span class="var-name">$unitId</span>, <span class="var-type">type</span>&nbsp;<span class="var-name">$reference</span>, <span class="var-type">type</span>&nbsp;<span class="var-name">$quantity</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">type</span>
+				<span class="var-name">$unitId</span>			</li>
+					<li>
+				<span class="var-type">type</span>
+				<span class="var-name">$reference</span>			</li>
+					<li>
+				<span class="var-type">type</span>
+				<span class="var-name">$quantity</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodreadMultipleInputRegisters" id="readMultipleInputRegisters"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">readMultipleInputRegisters</span> (line <span class="line-number">532</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">readMultipleInputRegisters</p>
+<p class="description"><p>Modbus function FC 4(0x04) - Read Multiple Input Registers.</p><p>This function reads $quantity of Words (2 bytes) from reference  $referenceRead of a memory of a Modbus device given by  $unitId.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Success flag or array of received data.</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">false|Array</span>
+		<span class="method-name">
+			readMultipleInputRegisters
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$unitId</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$reference</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$quantity</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$unitId</span><span class="var-description">: usually ID of Modbus device</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$reference</span><span class="var-description">: Reference in the device memory to read data.</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$quantity</span><span class="var-description">: Amounth of the data to be read from device.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodreadMultipleRegisters" id="readMultipleRegisters"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">readMultipleRegisters</span> (line <span class="line-number">433</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">readMultipleRegisters</p>
+<p class="description"><p>Modbus function FC 3(0x03) - Read Multiple Registers.</p><p>This function reads $quantity of Words (2 bytes) from reference  $referenceRead of a memory of a Modbus device given by  $unitId.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Success flag or array of received data.</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">false|Array</span>
+		<span class="method-name">
+			readMultipleRegisters
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$unitId</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$reference</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$quantity</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$unitId</span><span class="var-description">: usually ID of Modbus device</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$reference</span><span class="var-description">: Reference in the device memory to read data (e.g. in device WAGO 750-841, memory MW0 starts at address 12288).</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$quantity</span><span class="var-description">: Amounth of the data to be read from device.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodreadWriteRegisters" id="readWriteRegisters"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">readWriteRegisters</span> (line <span class="line-number">1070</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">readWriteRegisters</p>
+<p class="description"><p>Modbus function FC23(0x17) - Read Write Registers.</p><p>This function writes $data array at reference $referenceWrite  position of memory of a Modbus device given by $unitId. Simultanously,  it returns $quantity of Words (2 bytes) from reference $referenceRead.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Success flag or array of data.</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">false|Array</span>
+		<span class="method-name">
+			readWriteRegisters
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$unitId</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$referenceRead</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$quantity</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$referenceWrite</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$dataTypes</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$unitId</span><span class="var-description">: usually ID of Modbus device</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$referenceRead</span><span class="var-description">: Reference in the device memory to read data (e.g. in device WAGO 750-841, memory MW0 starts at address 12288).</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$quantity</span><span class="var-description">: Amounth of the data to be read from device.</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$referenceWrite</span><span class="var-description">: Reference in the device memory to write data.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span><span class="var-description">: Array of values to be written.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$dataTypes</span><span class="var-description">: Array of types of values to be written. The array should consists of string &quot;INT&quot;, &quot;DINT&quot; and &quot;REAL&quot;.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodwriteMultipleCoils" id="writeMultipleCoils"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">writeMultipleCoils</span> (line <span class="line-number">832</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">writeMultipleCoils</p>
+<p class="description"><p>Modbus function FC15(0x0F) - Write Multiple Coils</p><p>This function writes $data array at $reference position of  memory of a Modbus device given by $unitId.</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">type</span>
+		<span class="method-name">
+			writeMultipleCoils
+		</span>
+					(<span class="var-type">type</span>&nbsp;<span class="var-name">$unitId</span>, <span class="var-type">type</span>&nbsp;<span class="var-name">$reference</span>, <span class="var-type">type</span>&nbsp;<span class="var-name">$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">type</span>
+				<span class="var-name">$unitId</span>			</li>
+					<li>
+				<span class="var-type">type</span>
+				<span class="var-name">$reference</span>			</li>
+					<li>
+				<span class="var-type">type</span>
+				<span class="var-name">$data</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodwriteMultipleRegister" id="writeMultipleRegister"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">writeMultipleRegister</span> (line <span class="line-number">951</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">writeMultipleRegister</p>
+<p class="description"><p>Modbus function FC16(0x10) - Write Multiple Register.</p><p>This function writes $data array at $reference position of  memory of a Modbus device given by $unitId.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Success flag</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			writeMultipleRegister
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$unitId</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$reference</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$dataTypes</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$unitId</span><span class="var-description">: usually ID of Modbus device</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$reference</span><span class="var-description">: Reference in the device memory (e.g. in device WAGO 750-841, memory MW0 starts at address 12288)</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span><span class="var-description">: Array of values to be written.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$dataTypes</span><span class="var-description">: Array of types of values to be written. The array should consists of string &quot;INT&quot;, &quot;DINT&quot; and &quot;REAL&quot;.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodwriteSingleCoil" id="writeSingleCoil"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">writeSingleCoil</span> (line <span class="line-number">630</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">writeSingleCoil</p>
+<p class="description"><p>Modbus function FC5(0x05) - Write Single Register.</p><p>This function writes $data single coil at $reference position of  memory of a Modbus device given by $unitId.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Success flag</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			writeSingleCoil
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$unitId</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$reference</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$unitId</span><span class="var-description">: usually ID of Modbus device</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$reference</span><span class="var-description">: Reference in the device memory (e.g. in device WAGO 750-841, memory MW0 starts at address 12288)</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span><span class="var-description">: value to be written (TRUE|FALSE).</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodwriteSingleRegister" id="writeSingleRegister"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">writeSingleRegister</span> (line <span class="line-number">733</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">writeSingleRegister</p>
+<p class="description"><p>Modbus function FC6(0x06) - Write Single Register.</p><p>This function writes $data single word value at $reference position of  memory of a Modbus device given by $unitId.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Success flag</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			writeSingleRegister
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$unitId</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$reference</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$dataTypes</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$unitId</span><span class="var-description">: usually ID of Modbus device</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$reference</span><span class="var-description">: Reference in the device memory (e.g. in device WAGO 750-841, memory MW0 starts at address 12288)</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span><span class="var-description">: Array of values to be written.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$dataTypes</span><span class="var-description">: Array of types of values to be written. The array should consists of string &quot;INT&quot;, &quot;DINT&quot; and &quot;REAL&quot;.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__toString" id="__toString"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">__toString</span> (line <span class="line-number">71</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">__toString</p>
+<p class="description"><p>Magic method</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__toString
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 09 Jul 2013 23:46:23 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

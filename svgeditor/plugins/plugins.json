@@ -1,0 +1,32 @@
+{
+  "id": "RIKIUYTREDF001",
+  "type": "object-plugins",
+  "version": "1.0.0",
+  "category": "architect-interiors",
+  "title": "dimensions",
+  "description": "These group of plugins are integrated in janvas",
+  "detailsUrl": "https://www.janvas.com",
+  "windowTemplate":"TOOLS-WINDOW",
+  "windowMinWidth": "102",
+  "windowMaxWidth": "102",
+  "items": [
+    {
+      "objectId":"linear-dimension",
+      "url": "plugins/objects/LinearDimension2D_object.js",
+      "toolName":"drawLinearDimension_tool",
+      "toolIconUrl":"resources/icons/janvas-app-icons.svg#linearDimension_icon"
+    },
+    {
+      "objectId":"angular-dimension",
+      "url": "plugins/objects/AngularDimension2D_object.js",
+      "toolName":"drawAngularDimension_tool",
+      "toolIconUrl":"resources/icons/janvas-app-icons.svg#angularDimension_icon"
+    },
+    {
+      "objectId":"radial-dimension",
+      "url": "plugins/objects/RadialDimension2D_object.js",
+      "toolName":"drawRadialDimension_tool",
+      "toolIconUrl":"resources/icons/janvas-app-icons.svg#radiusDimension_icon"
+    }
+  ]
+}

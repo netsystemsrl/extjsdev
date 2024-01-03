@@ -1,0 +1,370 @@
+
+@mixin _codaxy-table-ui (
+    $ui: null,
+
+    $ui-row-cell-color: null,
+    $ui-row-cell-background-color: null,
+    $ui-row-cell-border-style: null,
+    $ui-row-cell-border-color: null,
+    $ui-row-cell-border-width: null,
+    $ui-row-cell-first-border-style: null,
+    $ui-row-cell-first-border-color: null,
+    $ui-row-cell-first-border-width: null,
+
+    $ui-row-cell-over-color: null,
+    $ui-row-cell-over-background-color: null,
+    $ui-row-cell-over-border-style: null,
+    $ui-row-cell-over-border-color: null,
+    $ui-row-cell-first-over-border-color: null,
+
+    $ui-row-cell-selected-color: null,
+    $ui-row-cell-selected-border-color: null,
+    $ui-row-cell-selected-border-style: null,
+    $ui-row-cell-selected-background-color: null,
+    $ui-row-cell-first-selected-border-color: null,
+    $ui-grid-col-lines-cell-border-color: null,
+    $ui-grid-col-lines-cell-border-color-selected: null,
+
+    $ui-row-cell-focus-color: null,
+    $ui-row-cell-focus-border-width: null,
+    $ui-row-cell-focus-border-color: null,
+    $ui-row-cell-focus-border-style: null,
+    $ui-row-cell-focus-background-color: null,
+    $ui-focus-indicator-over-cell: false,
+
+    $ui-tree-row-cell-color-selected: null,
+    $ui-tree-row-cell-color-focus: null,  
+
+    $ui-tree-row-cell-background-color-selected: null,
+    $ui-tree-row-cell-background-color-focus: null,
+  
+    $ui-row-cell-selected-over-background-color: null,
+    $ui-row-cell-focus-over-background-color: null,
+    $ui-row-cell-focus-over-border-color: null,
+    $ui-row-cell-first-padding: null,
+
+    $ui-grid-row-numberer-cell-background-color: null,
+    $ui-grid-row-numberer-cell-selected-background-color: null
+) {
+
+    @mixin _codaxy-table-ui--focused () {
+
+        .#{$prefix}grid-item-focused {
+            @if not is-null($ui-row-cell-focus-color)             { color: $ui-row-cell-focus-color important(not is-null($ui))}
+            @if not is-null($ui-row-cell-focus-background-color)  { background-color: $ui-row-cell-focus-background-color important(not is-null($ui))}
+            &:hover {
+                @if $ui-row-cell-focus-over-background-color != null { background-color: $ui-row-cell-focus-over-background-color }
+            }
+            .#{$prefix}grid-cell-inner:before {
+                @if not is-null($ui-row-cell-focus-border-width) { border-width: $ui-row-cell-focus-border-width }
+                @if not is-null($ui-row-cell-focus-border-color) { border-color: $ui-row-cell-focus-border-color important(not is-null($ui))}
+                @if not is-null($ui-row-cell-focus-border-style) { border-style: $ui-row-cell-focus-border-style }
+            } 
+        }
+
+        .#{$prefix}grid-cell-treecolumn.#{$prefix}grid-item-focused {
+            @if not is-null($ui-tree-row-cell-color-focus) { color: $ui-tree-row-cell-color-focus important(not is-null($ui)); }
+            @if not is-null($ui-tree-row-cell-background-color-focus) { background-color: $ui-tree-row-cell-background-color-focus important(not is-null($ui)); }
+        }
+
+        /* M-131
+         * Focus indicator same size as grid cell
+         * Adding negative margin to grid-cell-inner to be same size as cell
+         */
+        @if ($ui-focus-indicator-over-cell == true) {
+            .#{$prefix}grid-item-focused {
+                overflow: visible;
+                .#{$prefix}grid-cell-inner {
+                    margin: -1px 0 -1px -1px;
+                    padding: #{list-rect($grid-cell-inner-padding, top) + 1px}
+                             list-rect($grid-cell-inner-padding, right)
+                             #{list-rect($grid-cell-inner-padding, bottom) + 1px}
+                             #{list-rect($grid-cell-inner-padding, left) + 1px};
+                }
+                .#{$prefix}grid-cell-inner-treecolumn {
+                    margin: -1px;
+                    padding: #{list-rect($tree-cell-inner-padding, top) + 1px}
+                             #{list-rect($tree-cell-inner-padding, right) + 1px}
+                             #{list-rect($tree-cell-inner-padding, bottom) + 1px}
+                             #{list-rect($tree-cell-inner-padding, left) + 1px};
+                }
+            }
+            .x-grid-with-col-lines .#{$prefix}grid-item-focused {
+                .#{$prefix}grid-cell-inner {
+                    margin-right: -1px;
+                    padding-right: list-rect($grid-cell-inner-padding, right) + 1px;
+                }
+            }
+            table.x-grid-item:first-child tr:first-child .#{$prefix}grid-item-focused {
+                .#{$prefix}grid-cell-inner {
+                    margin-top: 0;
+                    padding-top: nth($grid-cell-inner-padding, 1);
+                }
+            }
+
+            /** OK-315
+             ** GRID PLUGINS
+             ** correcting grid special cell behaviour on focus- work in progress
+             **/
+            .#{$prefix}grid-item-focused {
+                .#{$prefix}grid-cell-inner {
+                    &.#{$prefix}grid-cell-inner-row-numberer {
+                        padding-right: right($grid-cell-inner-padding);
+                    }
+                    &.#{$prefix}grid-cell-inner-row-expander {
+                        &:before {
+                            border: none;
+                        }
+                    }
+                    &.#{$prefix}grid-cell-inner-checkcolumn {
+                        padding: $grid-checkcolumn-cell-padding;
+                    }
+                    &.#{$prefix}grid-cell-inner-action-col {
+                        padding: $grid-actioncolumn-cell-padding;
+                        margin: 0;
+                    }
+                }
+            }
+            .#{$prefix}grid-cell-row-checker.#{$prefix}grid-item-focused {
+                .#{$prefix}grid-cell-inner {
+                    padding: $grid-checker-cell-padding;
+                    margin: 0;
+                    &:before {
+                        border: none;
+                    }
+                }
+            }
+            table.x-grid-item:first-child tr:first-child .#{$prefix}grid-cell-row-checker.#{$prefix}grid-item-focused {
+                .#{$prefix}grid-cell-inner {
+                    padding: $grid-checker-cell-padding;
+                }
+            }
+        }
+
+    }
+
+
+    @mixin _codaxy-table-ui--background () {
+
+        .#{$prefix}grid-item {
+            @if not is-null($ui-row-cell-background-color) {
+                background-color: $ui-row-cell-background-color important(not is-null($ui));
+            }
+        }
+        .#{$prefix}grid-item-over {
+            @if not is-null($ui-row-cell-over-background-color) {
+                background-color: $ui-row-cell-over-background-color important(not is-null($ui));
+            }
+        }
+        .#{$prefix}grid-item-selected {
+            @if not is-null($ui-row-cell-selected-background-color) {
+                background-color: $ui-row-cell-selected-background-color important(not is-null($ui));
+            }
+            .#{$prefix}grid-cell-inner-row-numberer {
+                @if $ui-grid-row-numberer-cell-selected-background-color != null {
+                    background-color: $ui-grid-row-numberer-cell-selected-background-color;
+                }
+            }
+
+            .#{$prefix}grid-cell-treecolumn {
+                @if not is-null($ui-tree-row-cell-background-color-selected) { 
+                    background-color: $ui-tree-row-cell-background-color-selected;
+                }    
+            }
+        }
+        .#{$prefix}grid-cell-inner-row-numberer {
+            @if $ui-grid-row-numberer-cell-background-color != null {
+                background-color: $ui-grid-row-numberer-cell-background-color;
+            }
+        }
+    }
+
+
+    /* O-315
+     * added _codaxy-table-ui--text-color so grid text color can be adjusted 
+     */
+    @mixin _codaxy-table-ui--text-color () {
+
+        .#{$prefix}grid-item {
+            @if not is-null($ui-row-cell-color) {
+                color: $ui-row-cell-color important(not is-null($ui));
+            }
+        }
+        .#{$prefix}grid-item-over {
+            @if not is-null($ui-row-cell-over-color) {
+                color: $ui-row-cell-over-color important(not is-null($ui));
+            }
+        }
+        .#{$prefix}grid-item-selected {
+            @if not is-null($ui-row-cell-selected-color) {
+                color: $ui-row-cell-selected-color important(not is-null($ui));
+            }       
+            .#{$prefix}grid-cell-treecolumn {
+                @if not is-null($ui-tree-row-cell-color-selected) { 
+                    color: $ui-tree-row-cell-color-selected important(not is-null($ui)); } 
+            }   
+        }
+
+    }
+
+
+    @mixin _codaxy-table-ui--border () {
+
+        .#{$prefix}grid-item.#{$prefix}grid-item {
+            @if not is-null($ui-row-cell-border-style) {
+                border-style: $ui-row-cell-border-style important(not is-null($ui));
+            }
+            @if not is-null($ui-row-cell-border-color) {
+                border-color: $ui-row-cell-border-color important(not is-null($ui));
+            }
+            @if not is-null($ui-row-cell-border-width) {
+                border-width: $ui-row-cell-border-width important(not is-null($ui));
+            }
+
+            .#{$prefix}grid-cell-first {
+                @if not is-null($ui-row-cell-first-border-style) {
+                    border-style: $ui-row-cell-first-border-style;
+                }
+                @if not is-null($ui-row-cell-first-border-color) {
+                    border-color: $ui-row-cell-first-border-color;
+                }
+                @if not is-null($ui-row-cell-first-border-width) {
+                    border-width: $ui-row-cell-first-border-width;
+                }
+                @if $ui-row-cell-first-padding != null { 
+                    padding-left: $ui-row-cell-first-padding;
+                } 
+            }
+        }
+
+        .#{$prefix}grid-item.#{$prefix}grid-item-over {
+            @if not is-null($ui-row-cell-over-border-style) {
+                border-style: $ui-row-cell-over-border-style important(not is-null($ui));
+            }
+            @if not is-null($ui-row-cell-over-border-color) {
+                border-color: $ui-row-cell-over-border-color important(not is-null($ui));
+            }
+
+            .#{$prefix}grid-cell-first {
+                @if not is-null($ui-row-cell-first-over-border-color) {
+                    border-color: $ui-row-cell-first-over-border-color;
+                }
+            }
+        }
+
+        .#{$prefix}grid-item-over + .#{$prefix}grid-item {
+            @if not is-null($ui-row-cell-over-border-style){
+                border-top-style: $ui-row-cell-over-border-style important(not is-null($ui));
+            }
+            @if not is-null($ui-row-cell-over-border-color) {
+                border-top-color: $ui-row-cell-over-border-color important(not is-null($ui));
+            }
+        }
+
+        .#{$prefix}grid-item.#{$prefix}grid-item-selected {
+            @if not is-null($ui-row-cell-selected-border-style) {
+                border-style: $ui-row-cell-selected-border-style important(not is-null($ui));
+            }
+            @if not is-null($ui-row-cell-selected-border-color) {
+                border-color: $ui-row-cell-selected-border-color important(not is-null($ui));
+            }
+
+            .#{$prefix}grid-cell-first {
+                @if not is-null($ui-row-cell-first-selected-border-color) {
+                    border-color: $ui-row-cell-first-selected-border-color;
+                }
+            }
+        }
+
+        .#{$prefix}grid-item-selected + .#{$prefix}grid-item {
+            @if not is-null($ui-row-cell-selected-border-style) {
+                border-top-style: $ui-row-cell-selected-border-style important(not is-null($ui));
+            }
+            @if not is-null($ui-row-cell-selected-border-color) {
+                border-top-color: $ui-row-cell-selected-border-color important(not is-null($ui));
+            }
+        }
+
+    }
+
+
+    /* O-315
+     * added _codaxy-table-ui--col-border so the grid col line border color can be adjusted separately
+     */
+    @mixin _codaxy-table-ui--col-border () {
+        .#{$prefix}grid-item .#{$prefix}grid-cell { 
+            @if $ui-grid-col-lines-cell-border-color != null {  border-color: $ui-grid-col-lines-cell-border-color important(not is-null($ui)) }
+        }
+        .#{$prefix}grid-item-selected .#{$prefix}grid-cell {
+            @if $ui-grid-col-lines-cell-border-color-selected != null { border-color: $ui-grid-col-lines-cell-border-color-selected important(not is-null($ui)) }
+        }
+
+    }
+
+
+    @if not is-null($ui) {
+        .#{$prefix}panel-body-#{$ui} > .#{$prefix}grid-view,
+        .#{$prefix}panel-body-#{$ui} > .#{$prefix}tree-view {
+            @include _codaxy-table-ui--background;
+            @include _codaxy-table-ui--focused;
+            @include _codaxy-table-ui--text-color;
+            &.#{$prefix}grid-with-row-lines {
+                @include _codaxy-table-ui--border;
+            }
+            &.#{$prefix}grid-with-col-lines {
+                @include _codaxy-table-ui--col-border; 
+            }
+        }
+    } @else {
+        @include _codaxy-table-ui--background;
+        @include _codaxy-table-ui--focused;
+        @include _codaxy-table-ui--text-color;
+        .#{$prefix}grid-with-row-lines {
+            @include _codaxy-table-ui--border;
+        }
+        .#{$prefix}grid-with-col-lines {
+            @include _codaxy-table-ui--col-border; 
+        }
+     }
+
+  }
+
+
+//override for focused cell border in default grid;
+@include _codaxy-table-ui (
+    $ui-row-cell-focus-border-width: $grid-row-cell-focus-border-width,
+    $ui-row-cell-focus-border-color: $grid-row-cell-focus-border-color,
+    $ui-row-cell-focus-border-style: $grid-row-cell-focus-border-style,
+    
+    $ui-focus-indicator-over-cell: $focus-indicator-over-cell,
+    $ui-grid-col-lines-cell-border-color-selected: $grid-col-lines-cell-border-color-selected,
+    
+    $ui-grid-row-numberer-cell-background-color: $grid-row-numberer-cell-background-color,
+    $ui-grid-row-numberer-cell-selected-background-color: $grid-row-numberer-cell-selected-background-color
+);
+
+
+
+/*
+ * OK-315 (aligning grid text when image is inside grid)
+ */
+
+.#{$prefix}grid-td {
+    vertical-align: middle;
+}
+
+/*
+ * O-315 horizontal scroll issue
+ */
+.#{$prefix}box-target {
+    .#{$prefix}grid-inner-locked .#{$prefix}grid-view {
+        width: initial !important;
+        width: auto !important;
+    }
+    .#{$prefix}grid-view {
+        width: inherit !important;
+    }
+
+}
+
+

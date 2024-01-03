@@ -1,0 +1,62 @@
+.blinker { animation-name: blinker; animation-iteration-count: infinite; animation-timing-function: cubic-bezier(1,0,0,1); animation-duration: 1s; stroke-width: 3px!important;; vector-effect: non-scaling-stroke; }
+@keyframes blinker { from { opacity: 1.0; } to { opacity: 0.0; } }
+
+
+#INTERACTION { position:absolute; top:0px; left:0px;  bottom:0; right:0px; pointer-events: none;}
+#INTERACTION #ORIGIN_XY {display:inline; pointer-events:none;}
+#INTERACTION > #SELECTION_PREVIEWS .interactive-path { fill:none!important; }
+
+#INTERACTION > #BBOX_2D line, #INTERACTION > #PERSPECTIVE_DEFORM_2D line,
+#INTERACTION > #INTERACTION_POINTS line {stroke-width:1; stroke:#3d7cff; /*stroke-dasharray: 2;*/ }
+
+#INTERACTION > #ELEMENT_ORIGIN #translateOriginHandle {display: none;}
+#INTERACTION > #ELEMENT_ORIGIN line.axis-x, #ORIGIN_XY line.axis-x{ stroke:#fb006b;}
+#INTERACTION > #ELEMENT_ORIGIN line.axis-y, #ORIGIN_XY line.axis-y{ stroke:#00bf41;}
+
+
+#INTERACTION > #GRADIENT_2D_INTERACTION line { cursor: cell; pointer-events:all; }
+#INTERACTION > #GRADIENT_2D_INTERACTION .resize { cursor:nwse-resize; fill: #c7c7c7; stroke:white; stroke-width: 3; }
+#INTERACTION > #GRADIENT_2D_INTERACTION .stop-colors > circle { cursor: pointer; pointer-events:all; }
+
+
+#INTERACTION .translate,
+#INTERACTION .resize,
+#INTERACTION .rotate{ fill: rgba(255, 0, 0, 0); stroke-width:0; stroke:none;  pointer-events:all; }
+
+#INTERACTION .translate{ cursor:move; }
+#INTERACTION .resize{ cursor:nesw-resize; }
+#INTERACTION .rotate{ cursor:nesw-resize; }
+
+
+
+
+#INTERACTION .tip-icon{ fill:#3d7cff; stroke:#FFFFFF; display: none; }
+#INTERACTION .rotate:hover + .tip-icon{ display:inline; }
+#INTERACTION .point{ fill:white; stroke:#3d7cff; }
+#INTERACTION .label{ pointer-events:all; cursor:pointer; font-size:10px; }
+#INTERACTION text{ stroke: white;  stroke-width: 4px;  paint-order: stroke;  stroke-linejoin: round; }
+
+#INTERACTION #ROTATE_2D .translate:active,
+#INTERACTION #SCALE_2D .translate:active,
+#INTERACTION #ELEMENT_ORIGIN .translate:active,
+#INTERACTION > #PERSPECTIVE_DEFORM_2D .resize:active { pointer-events:none; }
+
+#INTERACTION .interaction-point.selected .point{ fill: #0073fb; stroke:#FFFFFF; }
+#INTERACTION .interaction-point.selected.focused .point{ fill: #33de05; stroke:#FFFFFF; }
+
+.point-list>g:not(.selected):first-child>.point{ stroke-width:3;}
+/*.point-list>g:last-child>.point{  stroke:red!important; stroke-width:3;}*/
+
+
+#INTERACTION #SELECTION_PREVIEWS *{ pointer-events: none!important; fill:none!important; stroke:#0052FF;  stroke-dasharray:0!important; filter:none!important; opacity: 1!important; stroke-width:2!important; vector-effect: non-scaling-stroke!important; }
+
+.point-selection-by-rect-area #INTERACTION * { pointer-events:none!important; }
+.point-selection-by-rect-area #INTERACTION #INTERACTION_POINTS .interaction-point .point{ pointer-events:all!important; }
+
+
+.space-key  #INTERACTION{ display: none;}
+
+.shift-key  #BBOX_2D .translate{cursor:url(../cursors/rotate_cur.png) 16 16, default!important;}
+/*#DOCUMENTS_CONTAINER.element-selection-by-rect-area:active {cursor:url(../images/cursors/arrowBlack_cur.png), default!important;}*/
+
+

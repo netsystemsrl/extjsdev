@@ -1,0 +1,17 @@
+NomeField		,Len,Align	,Requested	,CodeValue										,SampleValue
+TIPOREC			,99	,		,Y		 	,TAX											,TAX
+FILLER			,99	,		,Y		 	,+												,FILLER
+TIPO			,99	,		,Y		 	,7												,5		=	Customs duty;7		=	Tax
+FILLER			,99	,		,Y		 	,+												,FILLER
+TAXNAME			,15	,		,Y			,VAT											,GST		=	Goods and services tax ;VAT		=	Value added tax
+FILLER			,99	,		,Y		 	,+												,FILLER
+FILLER			,99	,		,Y		 	,+												,FILLER
+IMPONIBILE		,99	,		,Y			,G												,IMPONIBILE
+FILLER			,99	,		,Y		 	,+												,FILLER
+FILLER			,99	,		,Y		 	,:												,FILLER
+FILLER			,99	,		,Y		 	,:												,FILLER
+FILLER			,99	,		,Y		 	,:												,FILLER
+PERCENTUALE		,15	,		,Y			,0												,PERCENTUALE
+FILLER			,99	,		,Y		 	,+												,FILLER
+TIPOLOGIA		,15	,		,Y			,G												,TIPOLOGIA
+END				,99	,		,Y		 	,'												,END 

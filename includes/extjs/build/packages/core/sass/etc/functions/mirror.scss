@@ -1,0 +1,85 @@
+﻿
+
+@function list-sum ($list, $value) {
+
+    $result : ();
+
+    @each $i in $list {
+        $result : append($result,#{$i + $value})
+    }
+
+    @return $result;
+}
+
+@function list-rect ($list, $direction) {
+
+    $top:null;
+    $right:null;
+    $bottom: null;
+    $left: null;
+
+    @if length($list) == 1 {
+        $top: nth($list, 1);
+        $right: nth($list, 1);
+        $bottom: nth($list, 1);
+        $left: nth($list, 1);
+    }
+    @elseif length($list) == 2 {
+        $top: nth($list, 1);
+        $right: nth($list, 2);
+        $bottom: nth($list, 1);
+        $left: nth($list, 2);
+    }
+    @elseif length($list) == 3 {
+        $top: nth($list, 1);
+        $right: nth($list, 2);
+        $bottom: nth($list, 3);
+        $left: nth($list, 2);
+    }
+    @elseif length($list) == 4 {
+        $top: nth($list, 1);
+        $right: nth($list, 2);
+        $bottom: nth($list, 3);
+        $left: nth($list, 4);
+
+    } @else if(length($list) > 4) {
+        @warn "list-rect function supports only lists with 4 or less items.";
+    }
+
+    @if $direction == "top" {
+        @return $top;
+    }
+    @else if $direction == "right" {
+        @return $right;
+    }
+    @else if $direction == "bottom" {
+        @return $bottom;
+    }
+    @else if $direction == "left" {
+        @return $left;
+    }
+    @else {
+        @warn "Please define correct direction (top, right, bottom, left)!";
+    }
+
+}
+
+
+@function mirror ($direction, $list) {
+
+    $top: list-rect($list, top);
+    $right: list-rect($list, right);
+    $bottom: list-rect($list, bottom);
+    $left: list-rect($list, left);
+
+    @if $direction == v {
+        @return $bottom $right $top $left;
+    }
+    @else if $direction == h {
+        @return $top $left $bottom $right;
+    }
+    @else {
+        @warn "Please define correct direction (v or h)";
+    }
+
+}

@@ -1,0 +1,10 @@
+NomeField		,Len,Align	,Requested	,CodeValue										,SampleValue
+TIPOREC			,99	,		,Y		 	,MOA											,MOA
+FILLER			,99	,		,Y		 	,+												,FILLER
+TIPOLOGIA		,99	,		,Y		 	,66												,124		=	Tax amount;125		=	Taxable amount	=	Despatch quantity;21		=	Ordered quantity;46		=	Delivered quantity;47		=	Invoiced quantity;59		=	Number of consumer units in the traded unit;61		=	Return quantity;192		=	Free goods quantity
+FILLER			,99	,		,Y		 	,:												,FILLER
+VALORE			,15	,		,Y			,												,VALORE
+FILLER			,99	,		,Y		 	,:												,FILLER
+FILLER			,99	,		,Y		 	,:												,FILLER
+CURTYPE			,15	,		,Y			,												,VALORE
+END				,99	,		,Y		 	,'												,END

@@ -1,0 +1,12 @@
+NomeField		,Len,Align	,Requested	,CodeValue										,SampleValue
+TIPOREC			,99	,		,Y		 	,PRI											,PRI
+FILLER			,99	,		,Y		 	,+												,FILLER
+TIPOVALORE		,99	,		,Y		 	,AAA											,AAA		=	Calculation net;AAB		=	Calculation gross;AAE		=	Information price, excluding allowances or charges, including taxes;AAF		=	Information price, excluding allowances or charges and taxes
+FILLER			,99	,		,Y		 	,:												,FILLER
+VALORE			,99	,		,Y			,												,VALORE
+FILLER			,99	,		,Y		 	,:												,FILLER
+FILLER			,99	,		,Y		 	,:												,FILLER
+FILLER			,99	,		,Y		 	,:												,FILLER
+FILLER			,99	,		,Y		 	,:												,FILLER
+UM				,99	,		,Y			,PCE  											,PCE = PIECES  ;KGM		=	kilogram ;LTR		=	litre
+END				,99	,		,Y		 	,'												,END 

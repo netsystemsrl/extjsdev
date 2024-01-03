@@ -1,0 +1,42 @@
+﻿
+$accordion-header-background-color: dynamic($base-color);
+
+/** 
+ * CODAXY
+ * $accordion-header-font-size
+ * @var {string}
+ * defines font size of accordion header text
+*/ 
+$accordion-header-font-size: dynamic(null);
+
+/** 
+ * CODAXY
+ * $accordion-header-line-height
+ * @var {string}
+ * defines line height in accordion header
+*/ 
+$accordion-header-line-height: dynamic(null);
+
+/** 
+ * CODAXY
+ * $accordion-tool-image-background-color-over
+ * @var {string}
+ * defines accordion header tool background color on hover
+*/ 
+$accordion-tool-image-background-color-over: dynamic(null);
+
+/** 
+ * CODAXY
+ * $accordion-header-inner-border-width
+ * @var {list}
+ * defines accordion header inner border width
+*/ 
+$accordion-header-inner-border-width: dynamic(null);
+
+/** 
+ * CODAXY
+ * $accordion-header-inner-border-color
+ * @var {list}
+ * defines accordion header inner border color
+*/ 
+$accordion-header-inner-border-color: dynamic(null);

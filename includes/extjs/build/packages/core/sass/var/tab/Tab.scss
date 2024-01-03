@@ -1,0 +1,122 @@
+﻿
+$tab-border-width: dynamic(null);
+$tab-border-color: dynamic(null);
+
+/**
+ * CODAXY 
+ * $tab-text-shadow-color
+ * @var {list}
+ * adds shadow to text in tabs
+ */
+$tab-text-shadow: dynamic(null);
+
+/**
+ * CODAXY 
+ * $tab-text-shadow-color-active
+ * @var {list}
+ * defines shadow of text in active tab
+ */
+$tab-text-shadow-active: dynamic(null);
+
+/**
+ * CODAXY 
+ * $tab-inner-border-width
+ * @var {list}
+ * sets inner border width to tabs
+ */
+$tab-inner-border-width: dynamic(null);
+
+/**
+ * CODAXY 
+ * $tab-inner-border-color
+ * @var {list}
+ * defines tab inner border color
+ */
+$tab-inner-border-color: dynamic(null);
+
+/**
+ * CODAXY 
+ * $tab-inner-border-width-active
+ * @var {list}
+ * defines active tab inner border width
+ */
+$tab-inner-border-width-active: dynamic(null);
+
+/**
+ * CODAXY 
+ * $tab-inner-border-color-active
+ * @var {list}
+ * defines active tab inner border color
+ */
+$tab-inner-border-color-active: dynamic(null);
+
+/**
+ * CODAXY 
+ * $tab-inner-border-width-over
+ * @var {list}
+ * defines tab inner border width on hover
+ */
+$tab-inner-border-width-over: dynamic(null);
+
+/**
+ * CODAXY 
+ * $tab-inner-border-color-over
+ * @var {list}
+ * defines tab inner border color on hover
+ */
+$tab-inner-border-color-over: dynamic(null); 
+
+
+$tab-closable-icon-height: dynamic(null);
+
+/**
+ * CODAXY 
+ * $tab-closable-icon-background-image-active
+ * @var {string}
+ * changes closable icon when tab is active and default closable icon is not appropriate
+ */
+$tab-closable-icon-background-image-active: dynamic(null);
+
+$tab-plain-border-width: dynamic(null);
+
+/**
+ * CODAXY 
+ * $tab-first-child-border-width
+ * @var {list}
+ * sets tab first child border width (helps with tab rotation to put border on proper side of tab first child)
+ */
+$tab-first-child-border-width: dynamic(null);
+
+/**
+ * CODAXY 
+ * $tab-first-child-border-radius
+ * @var {list}
+ * sets tab first child border radius
+ */
+$tab-first-child-border-radius: dynamic(null);
+
+/*
+ * CODAXY 
+ * $tab-last-child-border-right-width
+ * @var {string}
+ * defines the tab last child right border width 
+*/
+$tab-last-child-border-width: dynamic(null);
+
+/**
+ * CODAXY 
+ * $tab-hidden-icon
+ * @var {boolean}
+ * 'hides' tab closable icon when tab is not hovered over or active
+*/
+$tab-hidden-icon: dynamic(false);
+
+/**
+ * CODAXY 
+ * $tab-active-border-color-inheritance
+ * @var {boolean}
+ * border-left-color of the tab coming after the active tab inherits value of $tab-border-color-active 
+ * used when there is no margin between tabs and tab border-right-width is set to 0, while tab border-left-width has value bigger than 0
+*/
+$tab-active-border-color-inheritance: dynamic(false);
+

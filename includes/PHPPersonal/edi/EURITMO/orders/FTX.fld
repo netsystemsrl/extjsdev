@@ -1,0 +1,4 @@
+NomeField		,Len,Align	,Requested	,CodeValue,SampleValue
+TIPOREC			,03	,L		,Y		 	,'FTX'	,FTX   NOTE TESTA
+DIVISA			,03	,L		,Y			,		,EUR
+NOTE			,35	,L		,Y			,   	,0000193

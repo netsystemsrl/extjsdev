@@ -1,0 +1,18 @@
+$operator-width: dynamic(16px);
+$operator-glyph-color: dynamic($neutral-dark-color);
+$operator-glyph-font-size: dynamic(12px);
+$operator-like-icon-glyph: dynamic($font-Flaticon-is-similar-to-symbol $operator-glyph-font-size $flaticon-font-family);
+$operator-nlike-icon-glyph: dynamic($font-Flaticon-not-similar-mathematical-symbol $operator-glyph-font-size $flaticon-font-family);
+$operator-eq-icon-glyph: dynamic($font-Flaticon-equal-mathematical-sign $operator-glyph-font-size $flaticon-font-family);
+$operator-neq-icon-glyph: dynamic($font-Flaticon-is-not-equal-to-mathematical-symbol $operator-glyph-font-size $flaticon-font-family);
+$operator-gt-icon-glyph: dynamic($font-Flaticon-is-greater-than-mathematical-sign $operator-glyph-font-size $flaticon-font-family);
+$operator-gte-icon-glyph: dynamic($font-Flaticon-is-greater-than-or-equal-to-mathematical-symbol $operator-glyph-font-size $flaticon-font-family);
+$operator-lt-icon-glyph: dynamic($font-Flaticon-is-less-than-mathematical-sign $operator-glyph-font-size $flaticon-font-family);
+$operator-lte-icon-glyph: dynamic($font-Flaticon-is-less-than-or-equal-to-mathematical-symbol $operator-glyph-font-size $flaticon-font-family);
+$operator-in-icon-glyph: dynamic($font-Flaticon-is-a-subset-of-mathematical-sign $operator-glyph-font-size $flaticon-font-family);
+$operator-nin-icon-glyph: dynamic($font-Flaticon-is-not-a-subset-mathematical-sign $operator-glyph-font-size $flaticon-font-family);
+$operator-identical-icon-glyph: dynamic($font-Flaticon-identical-to-mathematical-symbol $operator-glyph-font-size $flaticon-font-family);
+$operator-nidentical-icon-glyph: dynamic($font-Flaticon-is-not-identical-with-mathematical-sign $operator-glyph-font-size $flaticon-font-family);
+$operator-empty-icon-glyph: dynamic($font-Flaticon-empty-set-mathematical-symbol $operator-glyph-font-size $flaticon-font-family);
+$operator-exists-icon-glyph: dynamic($font-Flaticon-there-exists-mathematical-symbol $operator-glyph-font-size $flaticon-font-family);
+$operator-fn-icon-glyph: dynamic($font-Flaticon-function-mathematical-symbol $operator-glyph-font-size $flaticon-font-family);

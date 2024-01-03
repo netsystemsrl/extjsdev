@@ -1,0 +1,137 @@
+[
+    {
+        "Id"          : 1000,
+        "StartDate"   : "2019-08-16",
+        "EndDate"     : "2019-09-13",
+        "Name"        : "Project A",
+        "PercentDone" : 43,
+        "expanded"    : true,
+        "children"    : [
+            {
+                "Id"          : 1,
+                "Name"        : "Planning",
+                "PercentDone" : 60,
+                "StartDate"   : "2019-08-21 11:50:00",
+                "Duration"    : 10,
+                "expanded"    : true,
+                "Rollup"      : true,
+                "children"    : [
+                    {
+                        "Id"          : 11,
+                        "leaf"        : true,
+                        "Name"        : "Investigate",
+                        "PercentDone" : 70,
+                        "StartDate"   : "2019-08-21 08:30:00",
+						"EndDate"	  :"2019-08-21 11:50:00"
+                        "Duration"    : 10
+                    },
+                    {
+                        "Id"          : 12,
+                        "leaf"        : true,
+                        "Name"        : "Assign resources",
+                        "PercentDone" : 60,
+                        "StartDate"   : "2019-08-16",
+                        "Duration"    : 8
+                    },
+                    {
+                        "Id"          : 13,
+                        "leaf"        : true,
+                        "Name"        : "Gather documents",
+                        "PercentDone" : 50,
+                        "StartDate"   : "2019-08-16",
+                        "Duration"    : 8
+                    },
+                    {
+                        "Id"          : 17,
+                        "leaf"        : true,
+                        "Name"        : "Report to management",
+                        "PercentDone" : 0,
+                        "StartDate"   : "2019-08-28",
+                        "Duration"    : 0
+                    }
+                ]
+            },
+            {
+                "Id"          : 4,
+                "Name"        : "Implementation Phase",
+                "PercentDone" : 20,
+                "StartDate"   : "2019-08-30",
+                "Duration"    : 10,
+                "expanded"    : true,
+                "Rollup"      : true,
+                "children"    : [
+                    {
+                        "Id"          : 34,
+                        "leaf"        : true,
+                        "Name"        : "Preparation work",
+                        "PercentDone" : 40,
+                        "StartDate"   : "2019-08-30",
+                        "Duration"    : 5
+                    },
+                    {
+                        "Id"          : 16,
+                        "leaf"        : true,
+                        "Name"        : "Choose technology suite",
+                        "PercentDone" : 30,
+                        "StartDate"   : "2019-08-30",
+                        "Duration"    : 4,
+                        "Rollup"      : true
+                    },
+                    {
+                        "Id"          : 15,
+                        "Name"        : "Build prototype",
+                        "PercentDone" : 9,
+                        "StartDate"   : "2019-09-06",
+                        "Duration"    : 5,
+                        "expanded"    : true,
+                        "children"    : [
+                            {
+                                "Id"          : 20,
+                                "leaf"        : true,
+                                "Name"        : "Step 1",
+                                "PercentDone" : 20,
+                                "StartDate"   : "2019-09-06",
+                                "Duration"    : 4
+                            },
+                            {
+                                "Id"          : 19,
+                                "leaf"        : true,
+                                "Name"        : "Step 2",
+                                "PercentDone" : 10,
+                                "StartDate"   : "2019-09-06",
+                                "Duration"    : 4
+                            },
+                            {
+                                "Id"          : 18,
+                                "leaf"        : true,
+                                "Name"        : "Step 3",
+                                "PercentDone" : 0,
+                                "StartDate"   : "2019-09-06",
+                                "Duration"    : 4
+                            },
+                            {
+                                "Id"          : 21,
+                                "leaf"        : true,
+                                "Name"        : "Follow up with customer",
+                                "PercentDone" : 0,
+                                "StartDate"   : "2019-09-10",
+                                "Duration"    : 1,
+                                "Rollup"      : true
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "Id"          : 5,
+                "leaf"        : true,
+                "Name"        : "Customer approval",
+                "PercentDone" : 0,
+                "StartDate"   : "2019-09-13",
+                "Duration"    : 0,
+                "Rollup"      : true
+            }
+        ]
+    }
+]
+

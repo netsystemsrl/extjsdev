@@ -1,0 +1,12 @@
+NomeField		,Len,Align	,Requested	,CodeValue	,SampleValue
+DATAINV			,10	,L		,Y		 	,'01'		,2020-02-02
+TERZISTACOD		,13	,L		,Y			,			,0000000001234 TERZISTA
+TERZISTADESC	,30	,L		,Y			,			,CORTEPARMA TERZISTA
+ARTCODICE		,13 ,L		,Y			,			,0000000056402
+ARTDESC			,50 ,L 		,Y  		,  			,0000000001234
+LOTTO			,20 ,L  	,Y  		,			,DDT FAT CMR
+SCADENZA		,10 ,L  	,Y  		,			,2020-02-02
+PEZZI			,15 ,L  	,Y  		,			,0000000001234
+COLLI			,15 ,L  	,Y  		,			,0000000001234
+KG				,15 ,L  	,Y  		,			,0000000001234
+IF				,1  ,L  	,Y  		,			,I INIZIO F FINE

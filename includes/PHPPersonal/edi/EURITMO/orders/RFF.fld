@@ -1,0 +1,6 @@
+NomeField		,Len,Align	,Requested	,CodeValue											,SampleValue
+TIPOREC			,03	,L		,Y		 	,'RFF'												,RFF
+TPRIF			,03	,L		,Y			,													,AAS
+NUMRIF			,35	,L		,Y			,   												,0000193
+DATRIF			,08	,L		,Y			,													,20181024	
+ORARIF			,04	,L		,N			,													,102

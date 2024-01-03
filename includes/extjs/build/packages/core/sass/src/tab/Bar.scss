@@ -1,0 +1,55 @@
+
+@if $header-tabbar-strip {
+	
+	.cx-header-tabbar{
+		> .#{$prefix}panel-header-docked-top {
+			border-bottom-color:$tabbar-strip-border-color;
+			
+			&:before {
+				content: ' ';
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				border-width: 1px;
+				border-style: solid;
+				border-color: $tabbar-strip-border-color;
+				height: $tabbar-strip-height - 2px;
+				background-color: $tabbar-strip-background-color;
+				z-index: 3;
+			}
+		}
+		
+		> .#{$prefix}panel-header {
+			.#{$prefix}tab-bar {
+				border-width: 0;
+				background-color: transparent;
+			}
+		}
+		
+	}
+}
+
+
+// OK-315
+// rtl
+@if $include-rtl {
+    .#{$prefix}tab-bar-right > .#{$prefix}tab-bar-strip {
+        &.#{$prefix}rtl {
+            left: 0;
+            right: auto;
+            width: $tabbar-strip-height + 1px;
+        }
+    }
+
+
+    .#{$prefix}tab-bar-left > .#{$prefix}tab-bar-strip {
+        &.#{$prefix}rtl {
+            left: auto;
+            right: 0;
+            width: $tabbar-strip-height + 1px;
+        }
+    }
+} 
+
+

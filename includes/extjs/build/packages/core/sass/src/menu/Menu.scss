@@ -1,0 +1,64 @@
+﻿@mixin _codaxy-menu-ui (
+$ui,
+$ui-item-icon-horizontal-spacing: $menu-item-icon-horizontal-spacing,
+$ui-item-icon-size: $menu-item-icon-size,
+$ui-separator-border-color: $menu-separator-border-color,
+$ui-separator-size: $menu-separator-size,
+$ui-inner-border-width: null,
+$ui-inner-border-color: null,
+$ui-text-padding: null,
+$ui-border-radius: null,
+$ui-shadow: null
+) {
+
+    $ui-icon-separator-indent: before($ui-item-icon-horizontal-spacing) + $ui-item-icon-size + after($ui-item-icon-horizontal-spacing);
+    .#{$prefix}menu-item-icon-#{$ui} {
+        @if $include-rtl {
+            &.#{$prefix}rtl {
+                .#{$prefix}menu-item-active & {
+                    right: before($ui-item-icon-horizontal-spacing);
+                }
+            }
+        }
+    }
+
+    .#{$prefix}menu-icon-separator-#{$ui} {
+        @if $include-rtl {
+            .#{$prefix}menu-body.#{$prefix}rtl & {
+                left: auto;
+                right: $ui-icon-separator-indent;
+            }
+        }
+    }
+
+    .#{$prefix}menu {
+         @if $ui-shadow != null {
+            @include box-shadow($ui-shadow);
+        }
+         @if $ui-border-radius != null {
+            @include border-radius($ui-border-radius);
+        }
+    }
+
+    .#{$prefix}menu-body-#{$ui} {
+        @if $ui-inner-border-width != null and $ui-inner-border-color != null {
+            @include inner-border($width: $ui-inner-border-width, $color: $ui-inner-border-color);
+        }
+    }
+
+    .#{$prefix}menu-item-text.#{$prefix}menu-item-indent {
+        @if $ui-text-padding != null {
+            padding: $ui-text-padding;
+        }
+    }
+
+}
+
+@include _codaxy-menu-ui (
+    $ui: default,
+    $ui-inner-border-width: $menu-inner-border-width,
+    $ui-inner-border-color: $menu-inner-border-color,
+    $ui-text-padding: $menu-item-text-padding,
+    $ui-border-radius: $menu-border-radius,
+    $ui-shadow: $menu-shadow
+);

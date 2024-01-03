@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="45"
+   height="10"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="slider-v-bg.svg"
+   inkscape:export-filename="E:\SVN\extjs5-themes\packages\codaxy-theme-azzurra\resources\images\slider\slider-v-bg.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="10.626489"
+     inkscape:cx="8.8783064"
+     inkscape:cy="2.4249174"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1453"
+     inkscape:window-height="884"
+     inkscape:window-x="163"
+     inkscape:window-y="472"
+     inkscape:window-maximized="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2985"
+       empspacing="2"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-1042.3622)">
+    <image
+       y="0"
+       x="-1052.3622"
+       id="image2995"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAtCAYAAACXm/ozAAAABHNCSVQICAgIfAhkiAAAAWRJREFU
+OI21lLFqwzAURa/sF3CIiEMdQyid0gzdAh36H/mbQudC/qOfkL/oULDI0CEZsmVojIUj4kF96tJu
+dqRCItCkg3Tfu3pXOOcQsqIg6j8gKaW2IaCoqipIJPV6vaCnL1/MFdrDzGHgbrcLAoVzrgwC67q+
+/NNB4BX6CABKqXsArwAeAcRtoCiK4lYIUWRZNh4MBt03xnG8TNN0PBqNvBoXw+HQqzFiZklEfpCI
+YK31g1JKE2JjlOf5SmuNqqpgrQUzt27hnLtrmqbY7/c3p9MJXf/zz+sHAEsATwCSTlAp5dVISikI
+IZBlGXzOIE1ThDiDUGcQ4gw557abzabt7BvAB4CX2Wy2PZtmxhgcDocv59xcGGPODk1ZltBav3lH
+4bfQhRckIjCz9ILWWhCRfwrruoaU0nSmGTPjeDxCa43pdLoS6/W6teooitDv9zGZTMokSebn0qwB
+8A7gGcDn5bPnB6IgsdKSfSwRAAAAAElFTkSuQmCC
+"
+       height="45"
+       width="10"
+       transform="matrix(0,-1,1,0,0,0)" />
+    <path
+       style="fill:none;stroke:#b6bcc4;stroke-width:1px;stroke-linecap:square;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 2.500017,1042.8622 0,9"
+       id="path2998"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="E:\SVN\extjs5-themes\packages\codaxy-theme-azzurra\resources\images\slider\slider-bg.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#b6bcc4;stroke-width:1px;stroke-linecap:square;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 12.500017,1042.8622 0,9"
+       id="path3000"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="E:\SVN\extjs5-themes\packages\codaxy-theme-azzurra\resources\images\slider\slider-bg.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#b6bcc4;stroke-width:1px;stroke-linecap:square;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 17.500017,1042.8622 0,9 10,0 0,-9"
+       id="path3002"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="E:\SVN\extjs5-themes\packages\codaxy-theme-azzurra\resources\images\slider\slider-bg.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:none;stroke:#b6bcc4;stroke-width:1px;stroke-linecap:square;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 32.500017,1051.8622 0,-9 10,0 0,9"
+       id="path3004"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="E:\SVN\extjs5-themes\packages\codaxy-theme-azzurra\resources\images\slider\slider-bg.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:#ebebec;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       d="m 3.000017,1052.3622 0,-10 9,0 0,10 z"
+       id="rect3777"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="fill:#ebebec;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       d="m 18.000017,1051.3622 0,-9 9,0 0,9 z"
+       id="rect3779"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="fill:#ebebec;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       d="m 33.000017,1052.3622 0,-9 9,0 0,9 z"
+       id="rect3781"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
+  </g>
+</svg>

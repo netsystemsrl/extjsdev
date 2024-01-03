@@ -1,0 +1,169 @@
+
+@if $include-tab-ui and $include-ext-tab-tab {
+  //default style for panel
+  @include extjs-panel-ui(
+    $ui:'#{$ui-label}-tab',
+    $ui-body-background-color: $ui-panel-body-background-color,
+    $ui-body-border-color: $ui-panel-body-border-color
+  );
+
+
+  @include extjs-tab-panel-ui(
+    $ui: '#{$ui-label}-tab',
+    $ui-tab-background-color: $ui-tab-background-color,
+    $ui-tab-background-color-active: $ui-tab-background-color-active,
+    $ui-tab-background-color-over: $ui-tab-background-color-over,
+    $ui-tab-background-gradient: $ui-tab-background-gradient,
+    $ui-tab-background-gradient-over: $ui-tab-background-gradient-over,
+    $ui-tab-background-gradient-active: $ui-tab-background-gradient-active,
+    $ui-tab-color: $ui-tab-color,
+    $ui-tab-color-active: $ui-tab-color-active,
+    $ui-tab-color-over: $ui-tab-color-over,
+    $ui-tab-glyph-color-over: $ui-tab-glyph-color-over,
+    $ui-tab-border-width: null-value($ui-tab-border-width, $tab-border-width),
+    $ui-tab-border-color: $ui-tab-border-color,
+    $ui-tab-border-color-active: $ui-tab-border-color-active,
+    $ui-tab-border-color-over: $ui-tab-border-color-over,
+    $ui-tab-padding: null-value($ui-tab-padding, $tab-padding),
+
+    $ui-bar-background-color: $ui-bar-background-color,
+    $ui-bar-background-gradient: $ui-bar-background-gradient,
+    $ui-bar-border-color: $ui-bar-border-color,
+    $ui-bar-padding: null-value($ui-bar-padding, $tabbar-padding),
+
+    $ui-strip-border-color: $ui-strip-border-color,
+    $ui-strip-background-color: $ui-strip-background-color,
+    $ui-strip-height: null-value($ui-strip-height, $tabbar-strip-height)
+  );
+
+
+  @if $include-grid-ui and $include-grid-inheritance and $include-ext-grid-panel and $include-ext-view-table {
+    .#{$prefix}panel-body-#{$ui-label}-tab,
+    .cx-ui-defined .#{$prefix}panel-body-#{$ui-label}-tab,
+    .cx-ui-defined .cx-ui-defined .#{$prefix}panel-body-#{$ui-label}-tab,
+    .cx-ui-defined .cx-ui-defined .cx-ui-defined .#{$prefix}panel-body-#{$ui-label}-tab {
+      @include _codaxy-table-ui (
+        $ui-row-cell-selected-color: $ui-grid-row-cell-selected-color,
+        $ui-row-cell-selected-border-color: $ui-grid-row-cell-selected-border-color,
+        $ui-row-cell-selected-background-color: $ui-grid-row-cell-selected-background-color,
+        $ui-row-cell-over-background-color: $ui-grid-row-cell-over-background-color,
+        $ui-row-cell-focus-color: $ui-grid-row-cell-focus-color,
+        $ui-row-cell-focus-background-color: $ui-grid-row-cell-focus-background-color,
+        $ui-row-cell-focus-border-color: $ui-grid-row-cell-focus-border-color,
+        $ui-grid-col-lines-cell-border-color-selected: $ui-grid-row-cell-selected-border-color,
+        $ui-row-cell-color: $ui-grid-row-cell-color
+      );
+    }
+  }
+
+
+
+  @include _codaxy-tab-ui (
+      $ui: '#{$ui-label}-tab',
+      $ui-color: $ui-tab-color,
+      $ui-color-over: $ui-tab-color-over,
+      $ui-color-active: $ui-tab-color-active,
+      $ui-border-color: $ui-tab-border-color,
+      $ui-border-color-over: $ui-tab-border-color-over,
+      $ui-background-color: $ui-tab-background-color,
+      $ui-background-color-over: $ui-tab-background-color-over,
+      $ui-background-color-active: $ui-tab-background-color-active,
+      $ui-background-gradient: $ui-tab-background-gradient,
+      $ui-background-gradient-over: $ui-tab-background-gradient-over,
+      $ui-background-gradient-active: $ui-tab-background-gradient-active,  
+      $ui-border-color-active: $ui-tab-border-color-active,
+      $ui-bar-background-color: $ui-bar-background-color,
+      $ui-bar-background-gradient: $ui-bar-background-gradient,
+      $ui-bar-border-color: $ui-bar-border-color,
+      $ui-bar-inner-border-width: $tabbar-inner-border-width,
+      $ui-bar-inner-border-color: $ui-bar-inner-border-color,
+      $ui-first-child-border-color-active: $ui-tab-first-child-border-color-active,
+      $ui-first-child-border-width: $ui-tab-first-child-border-width,
+      $ui-strip-border-color: $ui-strip-border-color,
+      $ui-strip-background-color: $ui-strip-background-color,
+      $ui-strip-plain-border-color: $ui-strip-plain-border-color,
+      $ui-strip-plain-border-width: $tabbar-strip-plain-border-width,
+      $ui-text-shadow: $ui-tab-text-shadow,
+      $ui-text-shadow-active: $ui-tab-text-shadow-active,
+      $ui-inner-border-width: $tab-inner-border-width,
+      $ui-inner-border-color: $tab-inner-border-color,
+      $ui-inner-border-width-active: $tab-inner-border-width-active,
+      $ui-inner-border-color-active: $tab-inner-border-color-active,
+      $ui-hidden-icon: true, 
+      $ui-closable-background-image-active: $ui-tab-closable-background-image-active,
+      $ui-first-child-border-radius: null-value($ui-tab-first-child-border-radius, $tab-first-child-border-radius),
+      $ui-tab-active-border-color-inheritance: $tab-active-border-color-inheritance,
+      $ui-last-child-border-width: $ui-tab-last-child-border-width
+  );
+   @include _codaxy-tab-ui (
+      $ui: '#{$ui-label}-tab-active',
+      $ui-first-child-border-width: $tab-first-child-border-width,
+      $ui-first-child-border-color-active: $tab-border-color,
+      $ui-bar-inner-border-width: $tabbar-inner-border-width,
+      $ui-bar-inner-border-color: $tabbar-border-color
+   );
+
+}
+
+
+
+@if $include-tab-active-ui and $include-ext-tab-tab {
+
+  @include extjs-panel-ui($ui:'#{$ui-label}-tab-active');
+  @include extjs-tab-panel-ui($ui: '#{$ui-label}-tab-active');
+
+  .#{$prefix}window-active {
+    @include _codaxy-tab-ui (
+      $ui:'#{$ui-label}-tab-active',
+      $ui-color: $ui-tab-color,
+      $ui-color-over: $ui-tab-color-over,
+      $ui-color-active: $ui-tab-color-active,
+      $ui-border-color: $ui-tab-border-color,
+      $ui-border-color-over: $ui-tab-border-color-over,
+      $ui-background-color: $ui-tab-background-color,
+      $ui-background-color-over: $ui-tab-background-color-over,
+      $ui-background-color-active: $ui-tab-background-color-active,
+      $ui-background-gradient: $ui-tab-background-gradient,
+      $ui-background-gradient-over: $ui-tab-background-gradient-over,
+      $ui-background-gradient-active: $ui-tab-background-gradient-active,  
+      $ui-border-color-active: $ui-tab-border-color-active,
+      $ui-bar-background-color: $ui-bar-background-color,
+      $ui-bar-background-gradient: $ui-bar-background-gradient,
+      $ui-bar-border-color: $ui-bar-border-color,
+      $ui-bar-inner-border-width: $tabbar-inner-border-width,
+      $ui-bar-inner-border-color: $ui-bar-inner-border-color,
+      $ui-first-child-border-color-active: $ui-tab-first-child-border-color-active,
+      $ui-first-child-border-width: $ui-tab-first-child-border-width,
+      $ui-strip-border-color: $ui-strip-border-color,
+      $ui-strip-background-color: $ui-strip-background-color,
+      $ui-strip-plain-border-width: $tabbar-strip-plain-border-width,
+      $ui-strip-plain-border-color: $ui-strip-plain-border-color,
+      $ui-text-shadow: $ui-tab-text-shadow,
+      $ui-text-shadow-active: $ui-tab-text-shadow-active,
+      $ui-inner-border-width: $tab-inner-border-width,
+      $ui-inner-border-color: $tab-inner-border-color,
+      $ui-inner-border-width-active: $tab-inner-border-width-active,
+      $ui-inner-border-color-active: $tab-inner-border-color-active,
+      $ui-hidden-icon: true
+    );
+
+    @if $include-grid-ui and $include-grid-inheritance and $include-ext-grid-panel and $include-ext-view-table {
+      .#{$prefix}panel-body-#{$ui-label}-tab-active,
+      .cx-ui-defined .#{$prefix}panel-body-#{$ui-label}-tab-active,
+      .cx-ui-defined .cx-ui-defined .#{$prefix}panel-body-#{$ui-label}-tab-active,
+      .cx-ui-defined .cx-ui-defined .cx-ui-defined .#{$prefix}panel-body-#{$ui-label}-tab-active {
+        @include _codaxy-table-ui (
+        $ui-row-cell-selected-border-color: $ui-grid-row-cell-selected-border-color,
+        $ui-row-cell-selected-background-color: $ui-grid-row-cell-selected-background-color,
+        $ui-row-cell-over-background-color: $ui-grid-row-cell-over-background-color,
+        $ui-row-cell-focus-background-color: $ui-grid-row-cell-focus-background-color,
+        $ui-row-cell-focus-border-color: $ui-grid-row-cell-focus-border-color,
+        $ui-grid-col-lines-cell-border-color-selected: $ui-grid-row-cell-selected-border-color,
+        $ui-row-cell-color: $ui-grid-row-cell-color
+        );
+      }
+    }
+
+  }
+}
+

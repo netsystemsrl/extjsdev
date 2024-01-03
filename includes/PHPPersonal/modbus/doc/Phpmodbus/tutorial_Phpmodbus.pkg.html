@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Phpmodbus user's guide</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+
+<div><a name=""></a><div class="ref-title-box"><h1 class="ref-title">Phpmodbus user's guide</h1>
+  <h2 class="ref-purpose">Phpmodbus How-to</h2></div>
+ <div class="ref-synopsis"><span class="author">Jan Krakora
+   <div class="author-blurb"><a href="mailto:krakora.jan@googlemail.com">email</a></div></span></div>
+ <h1 class="title">Table of Contents</h1>
+<ul class="toc">
+	
+			
+					<li><a href="../Phpmodbus/tutorial_Phpmodbus.pkg.html#intro">Introduction</a></li>
+					
+					<li><a href="../Phpmodbus/tutorial_Phpmodbus.pkg.html#install">Install</a></li>
+					
+					<li><a href="../Phpmodbus/tutorial_Phpmodbus.pkg.html#examples">Examples</a></li>
+					
+				  				<ul class="toc">
+					<li><a href="../Phpmodbus/tutorial_Phpmodbus.pkg.html#examples.example_fc1">FC1 - read mutliple coils</a></li>
+						
+					
+					<li><a href="../Phpmodbus/tutorial_Phpmodbus.pkg.html#examples.example_fc2">FC2 - read input discretes</a></li>
+					
+					<li><a href="../Phpmodbus/tutorial_Phpmodbus.pkg.html#examples.example_fc3">FC3 - read mutliple registers</a></li>
+					
+					<li><a href="../Phpmodbus/tutorial_Phpmodbus.pkg.html#examples.example_fc4">FC4 - read multiple input registers</a></li>
+					
+					<li><a href="../Phpmodbus/tutorial_Phpmodbus.pkg.html#examples.example_fc5">FC5 - write single coil</a></li>
+					
+					<li><a href="../Phpmodbus/tutorial_Phpmodbus.pkg.html#examples.example_fc6">FC6 - write single register</a></li>
+					
+					<li><a href="../Phpmodbus/tutorial_Phpmodbus.pkg.html#examples.example_fc15">FC15 - write mutliple coils</a></li>
+					
+					<li><a href="../Phpmodbus/tutorial_Phpmodbus.pkg.html#examples.example_fc16">FC16 - write mutliple registers</a></li>
+					
+					<li><a href="../Phpmodbus/tutorial_Phpmodbus.pkg.html#examples.example_fc23">FC23 - read write registers</a></li>
+					
+					<li><a href="../Phpmodbus/tutorial_Phpmodbus.pkg.html#examples.wago_example">Dump of M-memory from WAGO 750-84x series coupler.</a></li>
+					
+					<li><a href="../Phpmodbus/tutorial_Phpmodbus.pkg.html#examples.datatype">Data conversion to PHP types.</a></li>
+					
+				  															</ul>
+						<li><a href="../Phpmodbus/tutorial_Phpmodbus.pkg.html#back_comp">Back compatibility</a></li>
+																				
+					</ul>
+
+ <span><a name="intro"></a><h2 class="title">Introduction</h2><p>Phpmodbus is a PHP library for the Modbus protocol. The library implements
+   Modbus TCP/UDP master class with subset of the most used Modbus commands.</p>
+  <p>The library implements:
+   <ul><li><p>FC  1: read multiple coils</p></li>
+     <li><p>FC  2: read input discretes</p></li>
+     <li><p>FC  3: read multiple registers</p></li>
+     <li><p>FC  4: read multiple input registers</p></li>
+     <li><p>FC  5: write single coil</p></li>
+     <li><p>FC  6: write single register</p></li>
+     <li><p>FC 15: write multiple coils</p></li>
+     <li><p>FC 16: write multiple registers</p></li>
+     <li><p>FC 23: read write registers</p></li></ul></p>
+  <p>For more about Modbus protocol see [<a href="http://www.modbus.org">http://www.modbus.org</a>] or
+   [<a href="http://en.wikipedia.org/wiki/Modbus">Wiki</a>]</p></span>
+ <span><a name="install"></a><h2 class="title">Install</h2><p>At the first, it is supposed an PHP solution has been already installed on
+   your server (LAMP, WAMP, MSS+CGI etc.).</p>
+  <p>Copy the Phpmodbus library to your PHP project folder.</p>
+  <p>Create a PHP script and assign the library using require_once() command
+     <div class="src-code"><pre>require_once dirname(__FILE__) . '/Phpmodbus/ModbusMaster.php'; </pre></div></p>
+  <p>To create UDP Modbus master object communicating to an modbus slave 
+    e.g. at IP address 192.168.1.1 write
+    <div class="src-code"><pre> $modbus = new ModbusMaster(&quot;192.168.1.1&quot;, &quot;UDP&quot;); </pre></div></p>
+  <p>To create TCP Modbus master use
+    <div class="src-code"><pre> $modbus = new ModbusMaster(&quot;192.168.1.1&quot;, &quot;TCP&quot;); </pre></div></p>
+  <p>To read 5 words (10 bytes) from the device ID=0 and its memory address 12288
+    use try-catch method call
+    <div class="src-code"><pre>try {
+    // Function processing
+    $recData = $modbus-&gt;readMultipleRegisters(0, 12288, 5); 
+}
+catch (Exception $e) {
+    // Exception processing, e.g. print error information
+    echo $modbus;
+    echo $e;
+    exit; 
+}</pre></div></p>
+  <p>To process the function byte stream, use conversion to PHP types in</p>
+  <div class="src-code"><pre>echo PhpType::bytes2string($recData); </pre></div>
+  <p>For other examples see sections bellow.</p></span>  
+ <span><a name="examples"></a><h2 class="title">Examples</h2><p>This section presents library features and examples</p>
+    <span><a name="examples.example_fc1"></a><h3 class="title">FC1 - read mutliple coils</h3><p>FC1 functionality example</p>
+    <p><div class="src-code"><ol><li><div class="src-line"><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-inc">require_once&nbsp;</span><span class="src-id">dirname</span><span class="src-sym">(</span>__FILE__<span class="src-sym">)&nbsp;</span>.&nbsp;<span class="src-str">'/../Phpmodbus/ModbusMaster.php'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Create&nbsp;Modbus&nbsp;object</span></div></li>
+<li><div class="src-line"><span class="src-var">$modbus&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="../Phpmodbus/ModbusMaster.html">ModbusMaster</a></span><span class="src-sym">(</span><span class="src-str">&quot;192.192.15.51&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-str">&quot;UDP&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">try&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;FC&nbsp;1</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$recData&nbsp;</span>=&nbsp;<span class="src-var">$modbus</span><span class="src-sym">-&gt;</span><span class="src-id">readCoils</span><span class="src-sym">(</span><span class="src-num">0</span><span class="src-sym">,&nbsp;</span><span class="src-num">12288</span><span class="src-sym">,&nbsp;</span><span class="src-num">12</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-sym">}</span></div></li>
+<li><div class="src-line">catch&nbsp;<span class="src-sym">(</span><span class="src-id">Exception&nbsp;</span><span class="src-var">$e</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;Print&nbsp;error&nbsp;information&nbsp;if&nbsp;any</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-var">$modbus</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-var">$e</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">exit</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-sym">}</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Print&nbsp;status&nbsp;information</span></div></li>
+<li><div class="src-line">echo&nbsp;<span class="src-str">&quot;&lt;/br&gt;Status:&lt;/br&gt;&quot;&nbsp;</span>.&nbsp;<span class="src-var">$modbus</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Print&nbsp;read&nbsp;data</span></div></li>
+<li><div class="src-line">echo&nbsp;<span class="src-str">&quot;&lt;/br&gt;Data:&lt;/br&gt;&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a href="http://www.php.net/var_dump">var_dump</a><span class="src-sym">(</span><span class="src-var">$recData</span><span class="src-sym">)</span><span class="src-sym">;&nbsp;</span></div></li>
+<li><div class="src-line">echo&nbsp;<span class="src-str">&quot;&lt;/br&gt;&quot;</span><span class="src-sym">;</span></div></li>
+</ol></div></p></span>
+  <span><a name="examples.example_fc2"></a><h3 class="title">FC2 - read input discretes</h3><p>FC2 functionality example</p>
+    <p><div class="src-code"><ol><li><div class="src-line"><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-inc">require_once&nbsp;</span><span class="src-id">dirname</span><span class="src-sym">(</span>__FILE__<span class="src-sym">)&nbsp;</span>.&nbsp;<span class="src-str">'/../Phpmodbus/ModbusMaster.php'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Create&nbsp;Modbus&nbsp;object</span></div></li>
+<li><div class="src-line"><span class="src-var">$modbus&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="../Phpmodbus/ModbusMaster.html">ModbusMaster</a></span><span class="src-sym">(</span><span class="src-str">&quot;192.192.15.51&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-str">&quot;UDP&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">try&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;FC&nbsp;2</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;read&nbsp;2&nbsp;input&nbsp;bits&nbsp;from&nbsp;address&nbsp;0x0&nbsp;(Wago&nbsp;input&nbsp;image)</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$recData&nbsp;</span>=&nbsp;<span class="src-var">$modbus</span><span class="src-sym">-&gt;</span><span class="src-id">readInputDiscretes</span><span class="src-sym">(</span><span class="src-num">0</span><span class="src-sym">,&nbsp;</span><span class="src-num">0</span><span class="src-sym">,&nbsp;</span><span class="src-num">2</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-sym">}</span></div></li>
+<li><div class="src-line">catch&nbsp;<span class="src-sym">(</span><span class="src-id">Exception&nbsp;</span><span class="src-var">$e</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;Print&nbsp;error&nbsp;information&nbsp;if&nbsp;any</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-var">$modbus</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-var">$e</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">exit</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-sym">}</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Print&nbsp;status&nbsp;information</span></div></li>
+<li><div class="src-line">echo&nbsp;<span class="src-str">&quot;&lt;/br&gt;Status:&lt;/br&gt;&quot;&nbsp;</span>.&nbsp;<span class="src-var">$modbus</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Print&nbsp;read&nbsp;data</span></div></li>
+<li><div class="src-line">echo&nbsp;<span class="src-str">&quot;&lt;/br&gt;Data:&lt;/br&gt;&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a href="http://www.php.net/var_dump">var_dump</a><span class="src-sym">(</span><span class="src-var">$recData</span><span class="src-sym">)</span><span class="src-sym">;&nbsp;</span></div></li>
+<li><div class="src-line">echo&nbsp;<span class="src-str">&quot;&lt;/br&gt;&quot;</span><span class="src-sym">;</span></div></li>
+</ol></div></p></span>
+  <span><a name="examples.example_fc3"></a><h3 class="title">FC3 - read mutliple registers</h3><p>FC3 functionality example</p>
+    <p><div class="src-code"><ol><li><div class="src-line"><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-inc">require_once&nbsp;</span><span class="src-id">dirname</span><span class="src-sym">(</span>__FILE__<span class="src-sym">)&nbsp;</span>.&nbsp;<span class="src-str">'/../Phpmodbus/ModbusMaster.php'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Create&nbsp;Modbus&nbsp;object</span></div></li>
+<li><div class="src-line"><span class="src-var">$modbus&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="../Phpmodbus/ModbusMaster.html">ModbusMaster</a></span><span class="src-sym">(</span><span class="src-str">&quot;192.192.15.51&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-str">&quot;UDP&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">try&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;FC&nbsp;3</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$recData&nbsp;</span>=&nbsp;<span class="src-var">$modbus</span><span class="src-sym">-&gt;</span><span class="src-id">readMultipleRegisters</span><span class="src-sym">(</span><span class="src-num">0</span><span class="src-sym">,&nbsp;</span><span class="src-num">12288</span><span class="src-sym">,&nbsp;</span><span class="src-num">6</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-sym">}</span></div></li>
+<li><div class="src-line">catch&nbsp;<span class="src-sym">(</span><span class="src-id">Exception&nbsp;</span><span class="src-var">$e</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;Print&nbsp;error&nbsp;information&nbsp;if&nbsp;any</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-var">$modbus</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-var">$e</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">exit</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-sym">}</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Print&nbsp;status&nbsp;information</span></div></li>
+<li><div class="src-line">echo&nbsp;<span class="src-str">&quot;&lt;/br&gt;Status:&lt;/br&gt;&quot;&nbsp;</span>.&nbsp;<span class="src-var">$modbus</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Print&nbsp;read&nbsp;data</span></div></li>
+<li><div class="src-line">echo&nbsp;<span class="src-str">&quot;&lt;/br&gt;Data:&lt;/br&gt;&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a href="http://www.php.net/print_r">print_r</a><span class="src-sym">(</span><span class="src-var">$recData</span><span class="src-sym">)</span><span class="src-sym">;&nbsp;</span></div></li>
+<li><div class="src-line">echo&nbsp;<span class="src-str">&quot;&lt;/br&gt;&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-php">?&gt;</span></div></li>
+</ol></div></p></span>
+  <span><a name="examples.example_fc4"></a><h3 class="title">FC4 - read multiple input registers</h3><p>FC4 functionality example</p>
+    <p><div class="src-code"><ol><li><div class="src-line"><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-inc">require_once&nbsp;</span><span class="src-id">dirname</span><span class="src-sym">(</span>__FILE__<span class="src-sym">)&nbsp;</span>.&nbsp;<span class="src-str">'/../../Phpmodbus/ModbusMasterUdp.php'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Create&nbsp;Modbus&nbsp;object</span></div></li>
+<li><div class="src-line"><span class="src-var">$modbus&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="../Phpmodbus/ModbusMasterUdp.html">ModbusMasterUdp</a></span><span class="src-sym">(</span><span class="src-str">&quot;192.192.15.51&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">try&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;Read&nbsp;input&nbsp;discretes&nbsp;-&nbsp;FC&nbsp;4</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$recData&nbsp;</span>=&nbsp;<span class="src-var">$modbus</span><span class="src-sym">-&gt;</span><span class="src-id">readMultipleInputRegisters</span><span class="src-sym">(</span><span class="src-num">0</span><span class="src-sym">,&nbsp;</span><span class="src-num">0</span><span class="src-sym">,&nbsp;</span><span class="src-num">2</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-sym">}</span></div></li>
+<li><div class="src-line">catch&nbsp;<span class="src-sym">(</span><span class="src-id">Exception&nbsp;</span><span class="src-var">$e</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;Print&nbsp;error&nbsp;information&nbsp;if&nbsp;any</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-var">$modbus</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-var">$e</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">exit</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-sym">}</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><a href="http://www.php.net/var_dump">var_dump</a><span class="src-sym">(</span><span class="src-var">$recData</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+</ol></div></p></span>
+  <span><a name="examples.example_fc5"></a><h3 class="title">FC5 - write single coil</h3><p>FC5 functionality example</p>
+    <p><div class="src-code"><ol><li><div class="src-line"><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-inc">require_once&nbsp;</span><span class="src-id">dirname</span><span class="src-sym">(</span>__FILE__<span class="src-sym">)&nbsp;</span>.&nbsp;<span class="src-str">'/../../Phpmodbus/ModbusMasterUdp.php'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Create&nbsp;Modbus&nbsp;object</span></div></li>
+<li><div class="src-line"><span class="src-var">$modbus&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="../Phpmodbus/ModbusMasterUdp.html">ModbusMasterUdp</a></span><span class="src-sym">(</span><span class="src-str">&quot;192.192.15.51&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Data&nbsp;to&nbsp;be&nbsp;writen&nbsp;-&nbsp;TRUE,&nbsp;FALSE</span></div></li>
+<li><div class="src-line"><span class="src-var">$data_true&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-id">TRUE</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$data_false&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-id">FALSE</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">try&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;Write&nbsp;single&nbsp;coil&nbsp;-&nbsp;FC5</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$modbus</span><span class="src-sym">-&gt;</span><span class="src-id">writeSingleCoil</span><span class="src-sym">(</span><span class="src-num">0</span><span class="src-sym">,&nbsp;</span><span class="src-num">12288</span><span class="src-sym">,&nbsp;</span><span class="src-var">$data_true</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$modbus</span><span class="src-sym">-&gt;</span><span class="src-id">writeSingleCoil</span><span class="src-sym">(</span><span class="src-num">0</span><span class="src-sym">,&nbsp;</span><span class="src-num">12289</span><span class="src-sym">,&nbsp;</span><span class="src-var">$data_false</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$modbus</span><span class="src-sym">-&gt;</span><span class="src-id">writeSingleCoil</span><span class="src-sym">(</span><span class="src-num">0</span><span class="src-sym">,&nbsp;</span><span class="src-num">12290</span><span class="src-sym">,&nbsp;</span><span class="src-var">$data_true</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$modbus</span><span class="src-sym">-&gt;</span><span class="src-id">writeSingleCoil</span><span class="src-sym">(</span><span class="src-num">0</span><span class="src-sym">,&nbsp;</span><span class="src-num">12291</span><span class="src-sym">,&nbsp;</span><span class="src-var">$data_false</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-sym">}</span></div></li>
+<li><div class="src-line">catch&nbsp;<span class="src-sym">(</span><span class="src-id">Exception&nbsp;</span><span class="src-var">$e</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;Print&nbsp;error&nbsp;information&nbsp;if&nbsp;any</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-var">$modbus</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-var">$e</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">exit</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-sym">}</span></div></li>
+</ol></div></p></span>
+  <span><a name="examples.example_fc6"></a><h3 class="title">FC6 - write single register</h3><p>FC6 functionality example</p>
+    <p><div class="src-code"><ol><li><div class="src-line"><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-inc">require_once&nbsp;</span><span class="src-id">dirname</span><span class="src-sym">(</span>__FILE__<span class="src-sym">)&nbsp;</span>.&nbsp;<span class="src-str">'/../Phpmodbus/ModbusMaster.php'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Create&nbsp;Modbus&nbsp;object</span></div></li>
+<li><div class="src-line"><span class="src-var">$modbus&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="../Phpmodbus/ModbusMaster.html">ModbusMaster</a></span><span class="src-sym">(</span><span class="src-str">&quot;192.192.15.51&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-str">&quot;UDP&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Data&nbsp;to&nbsp;be&nbsp;writen</span></div></li>
+<li><div class="src-line"><span class="src-var">$data&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span>-<span class="src-num">1000</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$dataTypes&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">&quot;INT&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">try&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;FC6</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$modbus</span><span class="src-sym">-&gt;</span><span class="src-id">writeSingleRegister</span><span class="src-sym">(</span><span class="src-num">0</span><span class="src-sym">,&nbsp;</span><span class="src-num">12288</span><span class="src-sym">,&nbsp;</span><span class="src-var">$data</span><span class="src-sym">,&nbsp;</span><span class="src-var">$dataTypes</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-sym">}</span></div></li>
+<li><div class="src-line">catch&nbsp;<span class="src-sym">(</span><span class="src-id">Exception&nbsp;</span><span class="src-var">$e</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;Print&nbsp;error&nbsp;information&nbsp;if&nbsp;any</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-var">$modbus</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-var">$e</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">exit</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-sym">}</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Print&nbsp;status&nbsp;information</span></div></li>
+<li><div class="src-line">echo&nbsp;<span class="src-var">$modbus</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-php">?&gt;</span></div></li>
+</ol></div></p></span>
+  <span><a name="examples.example_fc15"></a><h3 class="title">FC15 - write mutliple coils</h3><p>FC15 functionality example</p>
+    <p><div class="src-code"><ol><li><div class="src-line"><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-inc">require_once&nbsp;</span><span class="src-id">dirname</span><span class="src-sym">(</span>__FILE__<span class="src-sym">)&nbsp;</span>.&nbsp;<span class="src-str">'/../Phpmodbus/ModbusMaster.php'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Create&nbsp;Modbus&nbsp;object</span></div></li>
+<li><div class="src-line"><span class="src-var">$modbus&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="../Phpmodbus/ModbusMaster.html">ModbusMaster</a></span><span class="src-sym">(</span><span class="src-str">&quot;192.192.15.51&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-str">&quot;UDP&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Data&nbsp;to&nbsp;be&nbsp;writen</span></div></li>
+<li><div class="src-line"><span class="src-var">$data&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-id">TRUE</span><span class="src-sym">,&nbsp;</span><span class="src-id">FALSE</span><span class="src-sym">,&nbsp;</span><span class="src-id">TRUE</span><span class="src-sym">,&nbsp;</span><span class="src-id">TRUE</span><span class="src-sym">,&nbsp;</span><span class="src-id">FALSE</span><span class="src-sym">,&nbsp;</span><span class="src-id">TRUE</span><span class="src-sym">,&nbsp;</span><span class="src-id">TRUE</span><span class="src-sym">,&nbsp;</span><span class="src-id">TRUE</span><span class="src-sym">,&nbsp;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-id">TRUE</span><span class="src-sym">,&nbsp;</span><span class="src-id">TRUE</span><span class="src-sym">,&nbsp;</span><span class="src-id">TRUE</span><span class="src-sym">,&nbsp;</span><span class="src-id">TRUE</span><span class="src-sym">,&nbsp;</span><span class="src-id">FALSE</span><span class="src-sym">,&nbsp;</span><span class="src-id">FALSE</span><span class="src-sym">,&nbsp;</span><span class="src-id">FALSE</span><span class="src-sym">,&nbsp;</span><span class="src-id">FALSE</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-id">FALSE</span><span class="src-sym">,&nbsp;</span><span class="src-id">FALSE</span><span class="src-sym">,&nbsp;</span><span class="src-id">FALSE</span><span class="src-sym">,&nbsp;</span><span class="src-id">FALSE</span><span class="src-sym">,&nbsp;</span><span class="src-id">TRUE</span><span class="src-sym">,&nbsp;</span><span class="src-id">TRUE</span><span class="src-sym">,&nbsp;</span><span class="src-id">TRUE</span><span class="src-sym">,&nbsp;</span><span class="src-id">TRUE</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-id">TRUE</span><span class="src-sym">,&nbsp;</span><span class="src-id">TRUE</span><span class="src-sym">,&nbsp;</span><span class="src-id">TRUE</span><span class="src-sym">,&nbsp;</span><span class="src-id">TRUE</span><span class="src-sym">,&nbsp;</span><span class="src-id">TRUE</span><span class="src-sym">,&nbsp;</span><span class="src-id">TRUE</span><span class="src-sym">,&nbsp;</span><span class="src-id">TRUE</span><span class="src-sym">,&nbsp;</span><span class="src-id">TRUE</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">try&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;FC15</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$modbus</span><span class="src-sym">-&gt;</span><span class="src-id">writeMultipleCoils</span><span class="src-sym">(</span><span class="src-num">0</span><span class="src-sym">,&nbsp;</span><span class="src-num">12288</span><span class="src-sym">,&nbsp;</span><span class="src-var">$data</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-sym">}</span></div></li>
+<li><div class="src-line">catch&nbsp;<span class="src-sym">(</span><span class="src-id">Exception&nbsp;</span><span class="src-var">$e</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;Print&nbsp;error&nbsp;information&nbsp;if&nbsp;any</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-var">$modbus</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-var">$e</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">exit</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-sym">}</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Print&nbsp;status&nbsp;information</span></div></li>
+<li><div class="src-line">echo&nbsp;<span class="src-var">$modbus</span><span class="src-sym">;</span></div></li>
+</ol></div></p></span>
+  <span><a name="examples.example_fc16"></a><h3 class="title">FC16 - write mutliple registers</h3><p>FC16 functionality example</p>
+    <p><div class="src-code"><ol><li><div class="src-line"><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-inc">require_once&nbsp;</span><span class="src-id">dirname</span><span class="src-sym">(</span>__FILE__<span class="src-sym">)&nbsp;</span>.&nbsp;<span class="src-str">'/../Phpmodbus/ModbusMaster.php'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Create&nbsp;Modbus&nbsp;object</span></div></li>
+<li><div class="src-line"><span class="src-var">$modbus&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="../Phpmodbus/ModbusMaster.html">ModbusMaster</a></span><span class="src-sym">(</span><span class="src-str">&quot;192.192.15.51&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-str">&quot;UDP&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Data&nbsp;to&nbsp;be&nbsp;writen</span></div></li>
+<li><div class="src-line"><span class="src-var">$data&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-num">10</span><span class="src-sym">,&nbsp;</span>-<span class="src-num">1000</span><span class="src-sym">,&nbsp;</span><span class="src-num">2000</span><span class="src-sym">,&nbsp;</span><span class="src-num">3.0</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$dataTypes&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">&quot;WORD&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-str">&quot;INT&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-str">&quot;DINT&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-str">&quot;REAL&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">try&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;FC16</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$modbus</span><span class="src-sym">-&gt;</span><span class="src-id">writeMultipleRegister</span><span class="src-sym">(</span><span class="src-num">0</span><span class="src-sym">,&nbsp;</span><span class="src-num">12288</span><span class="src-sym">,&nbsp;</span><span class="src-var">$data</span><span class="src-sym">,&nbsp;</span><span class="src-var">$dataTypes</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-sym">}</span></div></li>
+<li><div class="src-line">catch&nbsp;<span class="src-sym">(</span><span class="src-id">Exception&nbsp;</span><span class="src-var">$e</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;Print&nbsp;error&nbsp;information&nbsp;if&nbsp;any</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-var">$modbus</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-var">$e</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">exit</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-sym">}</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Print&nbsp;status&nbsp;information</span></div></li>
+<li><div class="src-line">echo&nbsp;<span class="src-var">$modbus</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-php">?&gt;</span></div></li>
+</ol></div></p></span>
+  <span><a name="examples.example_fc23"></a><h3 class="title">FC23 - read write registers</h3><p>FC23 functionality example</p>
+    <p><div class="src-code"><ol><li><div class="src-line"><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-inc">require_once&nbsp;</span><span class="src-id">dirname</span><span class="src-sym">(</span>__FILE__<span class="src-sym">)&nbsp;</span>.&nbsp;<span class="src-str">'/../Phpmodbus/ModbusMaster.php'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Create&nbsp;Modbus&nbsp;object</span></div></li>
+<li><div class="src-line"><span class="src-var">$modbus&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="../Phpmodbus/ModbusMaster.html">ModbusMaster</a></span><span class="src-sym">(</span><span class="src-str">&quot;192.192.15.51&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-str">&quot;UDP&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Data&nbsp;to&nbsp;be&nbsp;writen</span></div></li>
+<li><div class="src-line"><span class="src-var">$data&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-num">10</span><span class="src-sym">,&nbsp;</span>-<span class="src-num">1000</span><span class="src-sym">,&nbsp;</span><span class="src-num">2000</span><span class="src-sym">,&nbsp;</span><span class="src-num">3.0</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$dataTypes&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">&quot;WORD&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-str">&quot;INT&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-str">&quot;DINT&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-str">&quot;REAL&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">try&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;FC23</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$recData&nbsp;</span>=&nbsp;<span class="src-var">$modbus</span><span class="src-sym">-&gt;</span><span class="src-id">readWriteRegisters</span><span class="src-sym">(</span><span class="src-num">0</span><span class="src-sym">,&nbsp;</span><span class="src-num">12288</span><span class="src-sym">,&nbsp;</span><span class="src-num">6</span><span class="src-sym">,&nbsp;</span><span class="src-num">12288</span><span class="src-sym">,&nbsp;</span><span class="src-var">$data</span><span class="src-sym">,&nbsp;</span><span class="src-var">$dataTypes</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-sym">}</span></div></li>
+<li><div class="src-line">catch&nbsp;<span class="src-sym">(</span><span class="src-id">Exception&nbsp;</span><span class="src-var">$e</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;Print&nbsp;error&nbsp;information&nbsp;if&nbsp;any</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-var">$modbus</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-var">$e</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">exit</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-sym">}</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Print&nbsp;status&nbsp;information</span></div></li>
+<li><div class="src-line">echo&nbsp;<span class="src-str">&quot;&lt;/br&gt;Status:&lt;/br&gt;&quot;&nbsp;</span>.&nbsp;<span class="src-var">$modbus</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Print&nbsp;read&nbsp;data</span></div></li>
+<li><div class="src-line">echo&nbsp;<span class="src-str">&quot;&lt;/br&gt;Data:&lt;/br&gt;&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a href="http://www.php.net/print_r">print_r</a><span class="src-sym">(</span><span class="src-var">$recData</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">echo&nbsp;<span class="src-str">&quot;&lt;/br&gt;&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-php">?&gt;</span></div></li>
+</ol></div></p></span>
+  <span><a name="examples.wago_example"></a><h3 class="title">Dump of M-memory from WAGO 750-84x series coupler.</h3><p>Dump of M-memory from WAGO 750-84x series coupler.</p>
+    <p><div class="src-code"><ol><li><div class="src-line"><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-inc">require_once&nbsp;</span><span class="src-id">dirname</span><span class="src-sym">(</span>__FILE__<span class="src-sym">)&nbsp;</span>.&nbsp;<span class="src-str">'/../Phpmodbus/ModbusMaster.php'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Create&nbsp;Modbus&nbsp;object</span></div></li>
+<li><div class="src-line"><span class="src-var">$ip&nbsp;</span>=&nbsp;<span class="src-str">&quot;192.192.15.51&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-var">$modbus&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="../Phpmodbus/ModbusMaster.html">ModbusMaster</a></span><span class="src-sym">(</span><span class="src-var">$ip</span><span class="src-sym">,&nbsp;</span><span class="src-str">&quot;UDP&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">try&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;FC&nbsp;3</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$moduleId&nbsp;</span>=&nbsp;<span class="src-num">0</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$reference&nbsp;</span>=&nbsp;<span class="src-num">12288</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$mw0address&nbsp;</span>=&nbsp;<span class="src-num">12288</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$quantity&nbsp;</span>=&nbsp;<span class="src-num">6</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$recData&nbsp;</span>=&nbsp;<span class="src-var">$modbus</span><span class="src-sym">-&gt;</span><span class="src-id">readMultipleRegisters</span><span class="src-sym">(</span><span class="src-var">$moduleId</span><span class="src-sym">,&nbsp;</span><span class="src-var">$reference</span><span class="src-sym">,&nbsp;</span><span class="src-var">$quantity</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-sym">}</span></div></li>
+<li><div class="src-line">catch&nbsp;<span class="src-sym">(</span><span class="src-id">Exception&nbsp;</span><span class="src-var">$e</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-var">$modbus</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-var">$e</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">exit</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-sym">}</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-php">?&gt;</span></div></li>
+<li><div class="src-line">&lt;html&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta&nbsp;http-equiv=&quot;content-type&quot;&nbsp;content=&quot;text/html;&nbsp;charset=windows-1250&quot;&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta&nbsp;name=&quot;generator&quot;&nbsp;content=&quot;PSPad&nbsp;editor,&nbsp;www.pspad.com&quot;&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;WAGO&nbsp;750-841&nbsp;M-memory&nbsp;dump&lt;/title&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Dump&nbsp;of&nbsp;M-memory&nbsp;from&nbsp;WAGO&nbsp;750-84x&nbsp;series&nbsp;coupler.&lt;/h1&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;PLC:&nbsp;750-84x&nbsp;series&lt;/li&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;IP:&nbsp;<span class="src-php">&lt;?php&nbsp;</span>echo&nbsp;<span class="src-var">$ip</span><span class="src-php">?&gt;</span>&lt;/li&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Modbus&nbsp;module&nbsp;ID:&nbsp;<span class="src-php">&lt;?php&nbsp;</span>echo&nbsp;<span class="src-var">$moduleId</span><span class="src-php">?&gt;</span>&lt;/li&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Modbus&nbsp;memory&nbsp;reference:&nbsp;<span class="src-php">&lt;?php&nbsp;</span>echo&nbsp;<span class="src-var">$reference</span><span class="src-php">?&gt;</span>&lt;/li&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Modbus&nbsp;memory&nbsp;quantity:&nbsp;<span class="src-php">&lt;?php&nbsp;</span>echo&nbsp;<span class="src-var">$quantity</span><span class="src-php">?&gt;</span>&lt;/li&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;</div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;M-memory&nbsp;dump&lt;/h2&gt;</div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;table&nbsp;border=&quot;1px&quot;&nbsp;width=&quot;400px&quot;&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Modbus&nbsp;address&lt;/td&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;MWx&lt;/td&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;value&lt;/td&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">for</span><span class="src-sym">(</span><span class="src-var">$i</span>=<span class="src-num">0</span><span class="src-sym">;</span><span class="src-var">$i</span>&lt;<a href="http://www.php.net/count">count</a><span class="src-sym">(</span><span class="src-var">$recData</span><span class="src-sym">)</span><span class="src-sym">;</span><span class="src-var">$i</span>+=<span class="src-num">2</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-php">?&gt;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;<span class="src-php">&lt;?php&nbsp;</span>echo&nbsp;<span class="src-var">$i</span>+<span class="src-var">$reference</span><span class="src-php">?&gt;</span>&lt;/td&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;MW<span class="src-php">&lt;?php&nbsp;</span>echo&nbsp;<span class="src-sym">(</span><span class="src-var">$i&nbsp;</span>+&nbsp;<span class="src-var">$reference&nbsp;</span>-&nbsp;<span class="src-var">$mw0address</span><span class="src-sym">)</span>/<span class="src-num">2</span><span class="src-php">?&gt;</span>&lt;/td&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;<span class="src-php">&lt;?php&nbsp;</span>echo&nbsp;<span class="src-sym">(</span><span class="src-var">$recData</span><span class="src-sym">[</span><span class="src-var">$i</span><span class="src-sym">]&nbsp;</span>&lt;&lt;&nbsp;<span class="src-num">8</span><span class="src-sym">)</span>+&nbsp;<span class="src-var">$recData</span><span class="src-sym">[</span><span class="src-var">$i</span>+<span class="src-num">1</span><span class="src-sym">]</span><span class="src-php">?&gt;</span>&lt;/td&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-php">?&gt;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/table&gt;</div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Modbus&nbsp;class&nbsp;status&lt;/h2&gt;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-var">$modbus</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-php">?&gt;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;</div></li>
+<li><div class="src-line">&lt;/html&gt;</div></li>
+</ol></div></p></span>
+  <span><a name="examples.datatype"></a><h3 class="title">Data conversion to PHP types.</h3><p>Conversion of the data bytes, received from Modbus, to a PHP type.</p>
+    <p><div class="src-code"><ol><li><div class="src-line"><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-inc">require_once&nbsp;</span><span class="src-id">dirname</span><span class="src-sym">(</span>__FILE__<span class="src-sym">)&nbsp;</span>.&nbsp;<span class="src-str">'/../Phpmodbus/ModbusMaster.php'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Create&nbsp;Modbus&nbsp;object</span></div></li>
+<li><div class="src-line"><span class="src-var">$modbus&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="../Phpmodbus/ModbusMaster.html">ModbusMaster</a></span><span class="src-sym">(</span><span class="src-str">&quot;192.192.15.51&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-str">&quot;UDP&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">try&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;FC&nbsp;3</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;read&nbsp;10&nbsp;words&nbsp;(20&nbsp;bytes)&nbsp;from&nbsp;device&nbsp;ID=0,&nbsp;address=12288</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$recData&nbsp;</span>=&nbsp;<span class="src-var">$modbus</span><span class="src-sym">-&gt;</span><span class="src-id">readMultipleRegisters</span><span class="src-sym">(</span><span class="src-num">0</span><span class="src-sym">,&nbsp;</span><span class="src-num">12288</span><span class="src-sym">,&nbsp;</span><span class="src-num">10</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-sym">}</span></div></li>
+<li><div class="src-line">catch&nbsp;<span class="src-sym">(</span><span class="src-id">Exception&nbsp;</span><span class="src-var">$e</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;Print&nbsp;error&nbsp;information&nbsp;if&nbsp;any</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-var">$modbus</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-var">$e</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">exit</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-sym">}</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Received&nbsp;data</span></div></li>
+<li><div class="src-line">echo&nbsp;<span class="src-str">&quot;&lt;h1&gt;Received&nbsp;Data&lt;/h1&gt;\n&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a href="http://www.php.net/print_r">print_r</a><span class="src-sym">(</span><span class="src-var">$recData</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Conversion</span></div></li>
+<li><div class="src-line">echo&nbsp;<span class="src-str">&quot;&lt;h2&gt;32&nbsp;bits&nbsp;types&lt;/h2&gt;\n&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Chunk&nbsp;the&nbsp;data&nbsp;array&nbsp;to&nbsp;set&nbsp;of&nbsp;4&nbsp;bytes</span></div></li>
+<li><div class="src-line"><span class="src-var">$values&nbsp;</span>=&nbsp;<a href="http://www.php.net/array_chunk">array_chunk</a><span class="src-sym">(</span><span class="src-var">$recData</span><span class="src-sym">,&nbsp;</span><span class="src-num">4</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Get&nbsp;float&nbsp;from&nbsp;REAL&nbsp;interpretation</span></div></li>
+<li><div class="src-line">echo&nbsp;<span class="src-str">&quot;&lt;h3&gt;REAL&nbsp;to&nbsp;Float&lt;/h3&gt;\n&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-key">foreach</span><span class="src-sym">(</span><span class="src-var">$values&nbsp;</span><span class="src-key">as&nbsp;</span><span class="src-var">$bytes</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-id"><a href="../Phpmodbus/PhpType.html">PhpType</a></span><span class="src-sym">::</span><a href="../Phpmodbus/PhpType.html#methodbytes2float">bytes2float</a><span class="src-sym">(</span><span class="src-var">$bytes</span><span class="src-sym">)&nbsp;</span>.&nbsp;<span class="src-str">&quot;&lt;/br&gt;&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Get&nbsp;integer&nbsp;from&nbsp;DINT&nbsp;interpretation</span></div></li>
+<li><div class="src-line">echo&nbsp;<span class="src-str">&quot;&lt;h3&gt;DINT&nbsp;to&nbsp;integer&nbsp;&lt;/h3&gt;\n&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-key">foreach</span><span class="src-sym">(</span><span class="src-var">$values&nbsp;</span><span class="src-key">as&nbsp;</span><span class="src-var">$bytes</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-id"><a href="../Phpmodbus/PhpType.html">PhpType</a></span><span class="src-sym">::</span><a href="../Phpmodbus/PhpType.html#methodbytes2signedInt">bytes2signedInt</a><span class="src-sym">(</span><span class="src-var">$bytes</span><span class="src-sym">)&nbsp;</span>.&nbsp;<span class="src-str">&quot;&lt;/br&gt;&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Get&nbsp;integer&nbsp;of&nbsp;float&nbsp;from&nbsp;DINT&nbsp;interpretation</span></div></li>
+<li><div class="src-line">echo&nbsp;<span class="src-str">&quot;&lt;h3&gt;DWORD&nbsp;to&nbsp;integer&nbsp;(or&nbsp;float)&nbsp;&lt;/h3&gt;\n&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-key">foreach</span><span class="src-sym">(</span><span class="src-var">$values&nbsp;</span><span class="src-key">as&nbsp;</span><span class="src-var">$bytes</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-id"><a href="../Phpmodbus/PhpType.html">PhpType</a></span><span class="src-sym">::</span><a href="../Phpmodbus/PhpType.html#methodbytes2unsignedInt">bytes2unsignedInt</a><span class="src-sym">(</span><span class="src-var">$bytes</span><span class="src-sym">)&nbsp;</span>.&nbsp;<span class="src-str">&quot;&lt;/br&gt;&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">echo&nbsp;<span class="src-str">&quot;&lt;h2&gt;16&nbsp;bit&nbsp;types&lt;/h2&gt;\n&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Chunk&nbsp;the&nbsp;data&nbsp;array&nbsp;to&nbsp;set&nbsp;of&nbsp;4&nbsp;bytes</span></div></li>
+<li><div class="src-line"><span class="src-var">$values&nbsp;</span>=&nbsp;<a href="http://www.php.net/array_chunk">array_chunk</a><span class="src-sym">(</span><span class="src-var">$recData</span><span class="src-sym">,&nbsp;</span><span class="src-num">2</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Get&nbsp;signed&nbsp;integer&nbsp;from&nbsp;INT&nbsp;interpretation</span></div></li>
+<li><div class="src-line">echo&nbsp;<span class="src-str">&quot;&lt;h3&gt;INT&nbsp;to&nbsp;integer&nbsp;&lt;/h3&gt;\n&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-key">foreach</span><span class="src-sym">(</span><span class="src-var">$values&nbsp;</span><span class="src-key">as&nbsp;</span><span class="src-var">$bytes</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-id"><a href="../Phpmodbus/PhpType.html">PhpType</a></span><span class="src-sym">::</span><a href="../Phpmodbus/PhpType.html#methodbytes2signedInt">bytes2signedInt</a><span class="src-sym">(</span><span class="src-var">$bytes</span><span class="src-sym">)&nbsp;</span>.&nbsp;<span class="src-str">&quot;&lt;/br&gt;&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Get&nbsp;unsigned&nbsp;integer&nbsp;from&nbsp;WORD&nbsp;interpretation</span></div></li>
+<li><div class="src-line">echo&nbsp;<span class="src-str">&quot;&lt;h3&gt;WORD&nbsp;to&nbsp;integer&nbsp;&lt;/h3&gt;\n&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-key">foreach</span><span class="src-sym">(</span><span class="src-var">$values&nbsp;</span><span class="src-key">as&nbsp;</span><span class="src-var">$bytes</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-id"><a href="../Phpmodbus/PhpType.html">PhpType</a></span><span class="src-sym">::</span><a href="../Phpmodbus/PhpType.html#methodbytes2unsignedInt">bytes2unsignedInt</a><span class="src-sym">(</span><span class="src-var">$bytes</span><span class="src-sym">)&nbsp;</span>.&nbsp;<span class="src-str">&quot;&lt;/br&gt;&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line"><span class="src-comm">//&nbsp;Get&nbsp;string&nbsp;from&nbsp;STRING&nbsp;interpretation</span></div></li>
+<li><div class="src-line">echo&nbsp;<span class="src-str">&quot;&lt;h3&gt;STRING&nbsp;to&nbsp;string&nbsp;&lt;/h3&gt;\n&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">echo&nbsp;<span class="src-id"><a href="../Phpmodbus/PhpType.html">PhpType</a></span><span class="src-sym">::</span><a href="../Phpmodbus/PhpType.html#methodbytes2string">bytes2string</a><span class="src-sym">(</span><span class="src-var">$recData</span><span class="src-sym">)&nbsp;</span>.&nbsp;<span class="src-str">&quot;&lt;/br&gt;&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-php">?&gt;</span></div></li>
+</ol></div></p></span></span> 
+ <span><a name="back_comp"></a><h2 class="title">Back compatibility</h2><p>This version is back compatible to the last versions. Just use  
+   <div class="src-code"><pre>require_once dirname(__FILE__) . '/Phpmodbus/ModbusMasterUdp.php';
+$modbus = new ModbusMasterUdp(&quot;192.168.1.1&quot;); 
+// ... </pre></div></p></span></div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 09 Jul 2013 23:46:22 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.1</a>
+	</p>
+	</div></body>
+</html>

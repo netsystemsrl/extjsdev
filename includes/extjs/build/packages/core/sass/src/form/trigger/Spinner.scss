@@ -1,0 +1,42 @@
+﻿
+@mixin _codaxy-trigger-spinner-ui (
+    $ui: default,
+    $ui-spinner-background-color: null,
+    $ui-spinner-background-color-over: null,
+    $ui-spinner-background-color-pressed: null,
+    $ui-spinner-inner-border-width: null,
+    $ui-spinner-inner-border-color: null,
+    $ui-spinner-inner-border-color-pressed: null,
+    $ui-spinner-background-image: null
+) {
+
+    .#{$prefix}form-spinner-#{$ui} {
+            @if $ui-spinner-background-color != null { background-color: $ui-spinner-background-color }
+        &.#{$prefix}form-spinner-over {
+            @if $ui-spinner-background-color-over != null { background-color: $ui-spinner-background-color-over }
+        }
+        &.#{$prefix}form-spinner-click {
+            @if $ui-spinner-background-color-pressed != null { background-color: $ui-spinner-background-color-pressed }
+            @if $ui-spinner-inner-border-width != null and $ui-spinner-inner-border-color-pressed != null {
+                @include inner-border($width: $ui-spinner-inner-border-width, $color: $ui-spinner-inner-border-color-pressed);
+            }
+        }
+            @if $ui-spinner-background-image != null {  background-image: theme-background-image($ui-spinner-background-image) }       
+    }
+
+    .#{$prefix}form-spinner {
+        @if $ui-spinner-inner-border-width != null and $ui-spinner-inner-border-color != null {
+            @include inner-border($width: $ui-spinner-inner-border-width, $color: $ui-spinner-inner-border-color);   
+        }    
+    }
+
+}
+
+@include _codaxy-trigger-spinner-ui (
+    $ui-spinner-background-color: $spinner-background-color,
+    $ui-spinner-background-color-over: $spinner-background-color-over,
+    $ui-spinner-background-color-pressed: $spinner-background-color-pressed,
+    $ui-spinner-inner-border-width: $spinner-inner-border-width,
+    $ui-spinner-inner-border-color: $spinner-inner-border-color,
+    $ui-spinner-inner-border-color-pressed: $spinner-inner-border-color-pressed
+);

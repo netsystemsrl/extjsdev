@@ -1,0 +1,7 @@
+NomeField		,Len,Align	,Requested	,CodeValue										,SampleValue
+TIPOREC			,99	,		,Y		 	,UNZ											,UNZ
+FILLER			,99	,		,Y		 	,+												,FILLER
+IDMSG			,99	,		,Y			,1												,IDENTIFICATORE
+FILLER			,99	,		,Y		 	,+												,FILLER
+UNIQUEREF		,99	,		,Y			,123456									   		,DOCID
+END				,99	,		,Y		 	,'												,END

@@ -1,0 +1,14 @@
+NomeField			,Len,Align	,Requested	,CodeValue,SampleValue
+FILLER         		,01,L0		,N		 	, 		,FILLER
+TIPOREC				,02,L0		,N			,40		,TIPOREC
+DelegaProg			,07,R0		,Y		 	,		,ProgressivoDelega
+SUBTIPOREC			,02,L0		,N			,11		,Fisso
+ProgressivoTributo  ,02,R0		,Y		 	,		,ProgressivoTributo
+CodiceEnte          ,04,L		,Y		 	,		,CodiceEnte
+CodiceSede          ,05,L		,Y		 	,		,CodiceSede
+Causale             ,04,L		,Y		 	,		,Causale
+CodicePosizione     ,09,R0		,Y		 	,		,CodicePosizione
+PeriodoRifInizio    ,06,R0		,Y		 	,		,PeriodoRiferimentoInizio
+PeriodoRifFine      ,06,R0		,Y		 	,		,PeriodoRiferimentoFine
+ImpADebitoVersato   ,15,D2		,Y		 	,		,ImportoADebitoVersato
+FILLER          	,42,L		,N		 	,		,FILLER

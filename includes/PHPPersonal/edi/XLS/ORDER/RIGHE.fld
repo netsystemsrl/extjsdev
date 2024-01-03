@@ -1,0 +1,5 @@
+NomeField		,Len,Align	,Requested	,CodeValue,SampleValue
+ARTCOD			,16	,L		,Y			,B8		,Numero DDT Stampato
+EAN				,16	,L		,Y		 	,C8		,Fisso
+ARTDESC			,255,L		,Y		 	,D8		,Fisso
+QTA				,08	,L		,Y			,E8   	,Formato AAAAMMGG

@@ -1,0 +1,45 @@
+[{
+		"Id" : 1,
+		"Name" : "Mats",
+		"Bg": "#01BAEF",
+		"TextColor": "#fff",
+		"Icon": "fire"
+	}, {
+		"Id" : 2,
+		"Name" : "Nickolay",
+		"Bg": "#01BAEF",
+		"TextColor": "#fff",
+		"Icon": "paint-brush"
+	}, {
+		"Id" : 3,
+		"Name" : "Goran",
+		"CalendarId" : "Customized",
+		"Bg": "#01BAEF",
+		"TextColor": "#fff",
+		"Icon": "scissors"
+	}, {
+		"Id" : 4,
+		"Name" : "Dan",
+		"Bg": "#01BAEF",
+		"TextColor": "#fff",
+		"Icon": "scissors"
+	}, {
+		"Id" : 5,
+		"Name" : "Jake",
+		"Bg": "#01BAEF",
+		"TextColor": "#fff",
+		"Icon": "scissors"
+	}, {
+		"Id" : 6,
+		"Name" : "Kim",
+		"Bg": "#58c0c7",
+		"TextColor": "#fff",
+		"Icon": "gear"
+	}, {
+		"Id" : 7,
+		"Name" : "Bart",
+		"Bg": "#58c0c7",
+		"TextColor": "#fff",
+		"Icon": "gear"
+	}
+]

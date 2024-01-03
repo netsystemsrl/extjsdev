@@ -1,0 +1,31 @@
+.jsr-report, 
+.jsr-report div, .jsr-report span, 
+.jsr-report a, 
+.jsr-report img, 
+.jsr-report table, .jsr-report th, .jsr-report td,
+.jsr-report canvas, 
+.jsr-report footer, .jsr-report header {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+.jsr-report {
+    font-family: Roboto, Helvetica, sans-serif;
+}
+.jsr-report {
+    line-height: normal;
+}
+/* HTML5 display-role reset for older browsers */
+.jsr-report footer, .jsr-report header {
+    display: block;
+}
+.jsr-report table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.jsr-report th, .jsr-report td {
+    font-size: inherit;
+}

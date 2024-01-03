@@ -1,0 +1,6 @@
+
+.#{$prefix}css-shadow {
+  @include box-shadow(rgba(black, 0.08) 0 0 0 1px !important);
+  @include border-radius(0);
+}
+

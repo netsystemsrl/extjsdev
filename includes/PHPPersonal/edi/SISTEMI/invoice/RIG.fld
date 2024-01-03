@@ -1,0 +1,29 @@
+NomeField		,Len,Align	,Requested	,CodeValue	,SampleValue
+TIPOREC			,03	,		,Y		 	,RIG		,RIG - RIGA
+TIPODOCV		,03	,		,Y		 	,702		,???			
+TIPODOC			,11	,		,Y		 	,0			,0STD|10UE|20-SMarino|30-Vat|40-Rev|50-AutoFt17|55-AutoFt17.2c|60-Art6.5|61-SplitPay|70-XCassa|71-XCassa
+REGDATA			,20	,		,Y		 	,30062021	,30062021
+REGNUM			,30	,		,N			,100  		,
+APPENDICE		,35	,		,Y		 	,			,FILLER
+NUMEROIVA		,40	,		,N			,1  		,Code list identific
+REGISTROIVA		,45	,		,Y		 	,3			,FILLER
+DOCDATA			,50	,		,N			,1  		,9=GS1
+DOCNUM			,60	,		,Y		 	,30062021	,FILLER
+CONTO			,73	,		,Y			,100			,VA	 SOCIO UNICO
+CLIFORCONTO		,80	,		,Y		 	,110301			,END
+CLIFORCF		,81	,		,Y		 	,			,END
+CLIFORPIVA		,82	,		,Y		 	,80010170357			,END
+CAUSALE			,350,		,Y		 	,			,END
+COMPETENZAIVA	,82	,		,Y		 	,Fattura Cliente			,END
+PAGAMENTO		,82	,		,Y		 	,6			,END
+PAGAMENTO		,82	,		,Y		 	,415
+PAGAMENTO		,82	,		,Y		 	,60
+PAGAMENTO		,82	,		,Y		 	,471103
+PAGAMENTO		,82	,		,Y		 	,
+PAGAMENTO		,82	,		,Y		 	,E029
+PAGAMENTO		,82	,		,Y		 	,
+PAGAMENTO		,82	,		,Y		 	,150
+PAGAMENTO		,82	,		,Y		 	,1
+PAGAMENTO		,82	,		,Y		 	,01062021
+PAGAMENTO		,82	,		,Y		 	,30062021
+PAGAMENTO		,82	,		,Y		 	,1009 P

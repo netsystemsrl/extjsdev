@@ -1,0 +1,26 @@
+﻿
+/**
+ * CODAXY
+ * $focus-indicator-over-cell
+ * @var {boolean}
+ * `true` to add negative 1px margin and +1px padding to focused .x-grid-inner-cell.
+ * focus indicator same size as cell
+ */
+$focus-indicator-over-cell: dynamic(false);
+
+/**
+* CODAXY
+* $grid-col-lines-cell-border-color-selected
+* @var {list}
+* gives color to (right) border of grid cell in selected row (when inside grid with column lines)
+*/
+$grid-col-lines-cell-border-color-selected: dynamic(null);
+
+
+// special cells
+$grid-cell-special-background-color: dynamic(null);
+$grid-row-cell-over-background-color: dynamic(adjust-color($neutral-color, $hue: 0deg, $saturation: 0%, $lightness: 0.392%));
+$grid-checker-cell-padding: dynamic(null);
+
+$grid-row-numberer-cell-background-color: dynamic(null);
+$grid-row-numberer-cell-selected-background-color: dynamic(null);

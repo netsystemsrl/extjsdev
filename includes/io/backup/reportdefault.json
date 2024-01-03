@@ -1,0 +1,49 @@
+{
+	"title": "New Report",
+	"version": "1.4.35",
+	"page": {
+		"units": "mm",
+		"paper_size": {
+			"mm": [
+				210,
+				297
+			]
+		},
+		"margins": {
+			"top": 0.5,
+			"left": 0.5,
+			"right": 0.5,
+			"bottom": 0.5
+		}
+	},
+	"filters": [
+	],
+	"inputs": [
+	],
+	"page_header": {
+		"visible": false,
+		"elements": [
+		],
+		"height": 1
+	},
+	"body": {
+		"data_source": "defaultds",
+		"show_detail": true,
+		"elements": [
+		],
+		"sublevels": [
+		],
+		"column_count": 1,
+		"pivot_enabled": false,
+		"pivot_expression": "",
+		"pivot_column_sort_by": "",
+		"pivot_column_bucket_type": "",
+		"pivot_value_aggregate": ""
+	},
+	"page_footer": {
+		"visible": false,
+		"elements": [
+		],
+		"height": 1
+	}
+}

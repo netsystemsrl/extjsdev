@@ -1,0 +1,27 @@
+NomeField	,Len	,Align	,Requested	,CodeValue		,SampleValue
+COMANDO		,1		,L		,Y		 	,'A'			,comando A
+DATAAGG		,6		,L		,Y		 	,				,DataAggiornamento
+CODART		,30		,L		,Y		 	,				,codart 
+BARCODE		,21		,L		,Y		 	,				,BarcodeComp 
+DESCRIZIONE	,40		,L		,Y		 	,				,Descrizione
+VENDITA		,8		,R		,Y		 	,				,Vendita  X100
+ACQUISTO	,8		,R		,Y		 	,				,Acquisto X100
+DISATTIVATO	,1		,L		,Y		 	,				,Disattivo
+REPARTO		,4		,L		,Y		 	,				,REPARTO
+DESREPARTO	,40		,L		,Y		 	,				,DESREPARTO
+GRUPPO		,3		,L		,Y		 	,'999'			,GRUPPO		Codice gruppo '999' se non presente
+DESGRU		,40		,L		,Y		 	,'Non Gestito'	,DESGRU		Descrizione gruppo 'Non Gestito' se non presente
+FAMIGLIA	,3		,L		,Y		 	,'999'			,FAMIGLIA  	Codice gruppo '999' se non presente
+DESFAM		,40		,L		,Y		 	,'Non Gestito'	,DESFAM 	Descrizione gruppo 'Non Gestito' se non presente
+SFAMIGLIA	,3		,L		,Y		 	,'999'			,SFAMIGLIA  Codice famiglia vuoto se non presente
+SDESFAM		,40		,L		,Y		 	,'Non Gestito'	,SDESFAM	Descrizione famiglia vuoto se non presente
+IVA			,4		,L		,Y		 	,'22'			,Codice aliquota iva	
+IVADESC		,50		,L		,Y		 	,				,Descrizione aliquota iva	
+PERCIVA		,5		,L		,Y		 	,'22'			,Percentuale aliquota iva
+CONFEZIONE	,3		,L		,Y		 	,'1'			,Yumero pezzi per confezione
+SCONTOVEND	,5		,L		,Y		 	,			,Percentuale sconto su prezzo con 2 decimali senza separatore
+PRZLRDPROMO	,8		,R		,Y		 	,			,Prezzo lordo se in promozione con 2 decimali senza separatore
+SCONTOPROMO	,5		,R		,Y		 	,			,Percentuale sconto se in promozione con 2 decimali senza separatore
+DATAIPRO	,8		,R		,Y		 	,				,Data inizio Promozione YYYYMMDD
+DATAFPRO	,8		,R		,Y		 	,				,Data Fine Promozione YYYYMMDD
+CODLISTINO	,5		,L		,Y		 	,			,Codice del listino di origine (se presente)

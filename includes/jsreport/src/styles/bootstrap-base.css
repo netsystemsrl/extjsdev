@@ -1,0 +1,76 @@
+.ditto-designer button,
+.ditto-designer input,
+.ditto-designer select,
+.ditto-designer textarea {
+  margin: 0;
+  font-size: 100%;
+  vertical-align: middle;
+}
+
+.ditto-designer button,
+.ditto-designer input {
+  *overflow: visible;
+  line-height: normal;
+}
+
+.ditto-designer button::-moz-focus-inner,
+.ditto-designer input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+.ditto-designer button,
+.ditto-designer html input[type="button"],
+.ditto-designer input[type="reset"],
+.ditto-designer input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+.ditto-designer label,
+.ditto-designer select,
+.ditto-designer button,
+.ditto-designer input[type="button"],
+.ditto-designer input[type="reset"],
+.ditto-designer input[type="submit"],
+.ditto-designer input[type="radio"],
+.ditto-designer input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.ditto-designer input[type="search"] {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+  -webkit-appearance: textfield;
+}
+
+.ditto-designer input[type="search"]::-webkit-search-decoration,
+.ditto-designer input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+.ditto-designer textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+.ditto-designer {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+  background-color: #ffffff;
+}
+
+.ditto-designer a {
+  color: #0088cc;
+  text-decoration: none;
+}
+
+.ditto-designer a:hover,
+.ditto-designer a:focus {
+  color: #005580;
+  text-decoration: underline;
+}

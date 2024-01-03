@@ -1,0 +1,28 @@
+NomeField		,Len,Align	,Requested	,CodeValue											,SampleValue
+TIPOREC			,99	,		,Y		 	,UNB												,BGM
+FILLER			,99	,		,Y		 	,+												,FILLER
+ID-EDI-MITT-1	,35	,		,Y			,UNOC
+FILLER			,99	,		,Y		 	,:												,FILLER
+FILLER			,99	,		,Y		 	,3												,FILLER
+FILLER			,99	,		,Y		 	,+												,FILLER
+CODICE			,99	,		,Y		 	,9800000653135												,FILLER
+FILLER			,99	,		,Y		 	,:												,FILLER
+FILLER			,99	,		,Y		 	,14												,FILLER
+FILLER			,99	,		,Y		 	,+												,FILLER
+CODICEDEST		,99	,		,Y		 	,5600000000427												,FILLER
+FILLER			,99	,		,Y		 	,:												,FILLER
+FILLER			,99	,		,Y		 	,14												,FILLER
+FILLER			,99	,		,Y		 	,+												,FILLER
+DATAPRE			,99	,		,Y		 	,200428												,FILLER
+FILLER			,99	,		,Y		 	,:												,FILLER
+TIMEPRE			,99	,		,Y		 	,1729												,FILLER
+FILLER			,99	,		,Y		 	,+												,FILLER
+UNIQUEREF		,99	,		,Y		 	,947												,FILLER
+FILLER			,99	,		,Y		 	,+												,FILLER
+FILLER			,99	,		,Y		 	,+												,FILLER
+FILLER			,99	,		,Y		 	,INVOIC												,FILLER
+FILLER			,99	,		,Y		 	,+												,FILLER
+FILLER			,99	,		,Y		 	,+												,FILLER
+FILLER			,99	,		,Y		 	,+												,FILLER
+FILLER			,99	,		,Y		 	,EANCOM												,FILLER
+END				,99	,		,Y		 	,'												,END 

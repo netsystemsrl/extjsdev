@@ -1,0 +1,8 @@
+NomeField		,Len,Align	,Requested	,CodeValue											,SampleValue
+TIPOREC			,03	,L		,Y		 	,'CCI'												,RFF
+NUMRIGA			,06	,R0		,Y			,													,AAS
+RFFAPID			,10	,L		,Y			,   												,0000193
+APIDDAT			,35	,L		,Y			,													,20181024	
+CONIMBCOD		,03	,L		,N			,													,102
+IDETIPIMB		,03	,L		,N			,													,102
+RESPAGIM		,03	,L		,N			,													,102

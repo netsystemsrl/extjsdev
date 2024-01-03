@@ -1,0 +1,8 @@
+NomeField		,Len,Align	,Requested	,CodeValue,SampleValue
+TIPOREC			,03	,L		,Y		 	,'DTM'		,DTM   CONSEGNA
+DATACONS		,08	,L		,Y			,			,2
+ORACONS			,04	,L		,Y			,   		,20181024
+TIPODATAC		,03	,L		,N			,			,102	
+DATACON2		,08	,L		,N			,			,102	
+ORACON2			,04	,L		,N			,			,102	
+TIPODATA2		,03	,L		,N			,			,102	

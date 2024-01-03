@@ -1,0 +1,199 @@
+﻿
+@mixin _codaxy-text-field-ui (
+    $ui: default,
+    $ui-form-field-focus-background-color: null,
+    $ui-form-field-focus-color: null,    
+    $ui-form-field-focus-border-color: null,
+    $ui-form-field-invalid-color: null,
+    $ui-form-field-shadow: null,
+    $ui-form-field-focus-shadow: null,
+    $ui-form-field-invalid-shadow: null,
+    $ui-form-field-padding: null,
+    $ui-form-field-background-color: null,
+    $ui-form-field-border-radius: null,
+    $ui-form-field-border-width: null,
+    $ui-form-field-border-color: null,
+    $ui-form-field-text-field-padding: null,
+    $ui-form-field-font-size: null,
+    $ui-search-trigger-background-image: null,
+    $ui-clear-trigger-background-image: null,
+    $ui-date-trigger-background-image: null,
+    $ui-text-wrap-shadow: null,
+    $ui-text-wrap-focus-shadow: null,
+    $ui-text-wrap-invalid-shadow: null,
+    $ui-trigger-border-width: null,
+    $ui-trigger-width: null,
+    $ui-trigger-inner-border-width: null,
+    $ui-trigger-inner-border-color: null,
+    $ui-trigger-background-color-over: null,
+    $ui-trigger-background-color-pressed: null,
+    $ui-trigger-inner-border-color-pressed: null,
+    $ui-trigger-border-radius: null
+) {
+
+    .#{$prefix}form-text-wrap-#{$ui} {
+        .#{$prefix}field-form-focus {
+            @if $ui-form-field-focus-background-color != null { background-color: $ui-form-field-focus-background-color }
+            @if $ui-form-field-focus-color != null { color: $ui-form-field-focus-color }          
+        }
+    }
+    .#{$prefix}form-trigger-wrap-#{$ui} {
+        @if $ui-form-field-background-color != null { background-color: $ui-form-field-background-color }
+        @if $ui-form-field-shadow != null {
+            @include box-shadow(#{$ui-form-field-shadow});
+            overflow: visible;
+        }
+        @if $ui-form-field-padding != null { padding-right: $ui-form-field-padding } 
+        @if $ui-form-field-border-width != null { border-width: $ui-form-field-border-width }  
+        @if $ui-form-field-border-radius != null {
+            @include border-radius($ui-form-field-border-radius)
+        } 
+        @if $ui-form-field-border-color != null { border-color: $ui-form-field-border-color }
+        &.#{$prefix}form-trigger-wrap-focus {
+            @if $ui-form-field-focus-background-color != null { background-color: $ui-form-field-focus-background-color }
+            @if $ui-form-field-focus-border-color != null { border-color: $ui-form-field-focus-border-color }
+            @if $ui-form-field-focus-shadow != null {
+                @include box-shadow(#{$ui-form-field-focus-shadow});
+                overflow: visible;
+            }
+        }
+        &.#{$prefix}form-trigger-wrap-invalid {
+            @if $ui-form-field-invalid-shadow != null {
+                @include box-shadow(#{$ui-form-field-invalid-shadow});
+                overflow: visible;
+            }
+            .#{$prefix}form-invalid-field,
+            .#{$prefix}field-form-focus {
+                @if $ui-form-field-invalid-color != null { color: $ui-form-field-invalid-color }
+            }
+        }
+        .#{$prefix}form-clear-trigger-#{$ui} {
+            @if $ui-clear-trigger-background-image != null { background-image: theme-background-image($ui-clear-trigger-background-image) }
+        }
+        .#{$prefix}form-search-trigger-#{$ui} {
+            @if $ui-search-trigger-background-image != null {  background-image: theme-background-image($ui-search-trigger-background-image) }
+        }
+        .#{$prefix}form-date-trigger-#{$ui} {
+            @if $ui-date-trigger-background-image != null { background-image: theme-background-image($ui-date-trigger-background-image) }
+        }
+
+        .#{$prefix}form-text-#{$ui} {
+            @if $ui-form-field-font-size != null {
+                font-size: $ui-form-field-font-size;
+            }
+            @if $ui-form-field-border-radius != null {
+                @include border-radius($ui-form-field-border-radius)
+            }
+            @if $ui-form-field-text-field-padding != null { padding: $ui-form-field-text-field-padding } 
+        }
+
+        .#{$prefix}form-trigger.#{$prefix}form-trigger-cmp {
+            text-align: left;
+        }
+    }
+    .#{$prefix}text-wrap-#{$ui} {
+        @if $ui-text-wrap-shadow != null {
+            @include box-shadow($ui-text-wrap-shadow);
+            overflow: visible;
+        }
+ 
+        &.#{$prefix}form-text-wrap-focus {
+            @if $ui-text-wrap-focus-shadow != null {
+                @include box-shadow($ui-text-wrap-focus-shadow);
+                overflow: visible;
+            }
+        } 
+        &.#{$prefix}form-text-wrap-invalid {
+            @if $ui-text-wrap-invalid-shadow != null {
+                @include box-shadow(#{$ui-text-wrap-invalid-shadow});
+                overflow: visible;
+            }
+            .#{$prefix}form-invalid-field,
+            .#{$prefix}field-form-focus {
+                @if $ui-form-field-invalid-color != null { color: $ui-form-field-invalid-color }
+            }
+        }
+    }
+
+    .#{$prefix}form-trigger-#{$ui} {
+                 
+        @if ($include-rtl == 'true') { 
+            @if $ui-trigger-border-width != null {
+                &.#{$prefix}rtl {
+                    border-width: $ui-trigger-border-width;
+                }
+            }
+        }
+
+        @if $ui-trigger-inner-border-width != null and $ui-trigger-inner-border-color != null {
+            @include inner-border($width: $ui-trigger-inner-border-width, $color: $ui-trigger-inner-border-color);
+        }
+
+        &.#{$prefix}form-trigger-over {
+            @if $ui-trigger-background-color-over != null {
+                background-color: $ui-trigger-background-color-over;
+            }
+        }
+        &.#{$prefix}form-trigger-click {
+            @if $ui-trigger-inner-border-width != null and $ui-trigger-inner-border-color-pressed {
+                @include inner-border($width: $ui-trigger-inner-border-width, $color: $ui-trigger-inner-border-color-pressed);
+            } 
+            @if $ui-trigger-background-color-pressed != null {
+                background-color: $ui-trigger-background-color-pressed;
+            }
+        }
+
+        @if $ui-trigger-border-radius != null { @include border-radius($ui-trigger-border-radius) }
+    }
+      
+ }
+
+
+
+
+@if $include-ext-form-field-text {
+
+    @include _codaxy-text-field-ui (
+        $ui-form-field-focus-background-color: $form-field-focus-background-color,
+        $ui-form-field-focus-color: $form-field-focus-color,
+        $ui-form-field-invalid-color: $form-field-invalid-color,
+        $ui-form-field-shadow: $form-field-shadow,
+        $ui-form-field-focus-shadow: $form-field-focus-shadow,
+        $ui-form-field-invalid-shadow: $form-field-invalid-shadow,
+        $ui-form-field-background-color: $form-field-background-color,
+        $ui-trigger-border-width: $form-trigger-border-width-rtl,
+        $ui-trigger-width: $form-trigger-width,
+        $ui-trigger-inner-border-width: $form-trigger-inner-border-width,
+        $ui-trigger-inner-border-color: $form-trigger-inner-border-color,
+        $ui-trigger-inner-border-color-pressed: $form-trigger-inner-border-color-pressed,
+        $ui-trigger-background-color-over: $form-trigger-background-color-over,
+        $ui-trigger-background-color-pressed: $form-trigger-background-color-pressed,
+        $ui-trigger-border-radius: $form-trigger-border-radius,
+        $ui-date-trigger-background-image: $date-trigger-background-image,
+        $ui-clear-trigger-background-image: $clear-trigger-background-image,
+        $ui-search-trigger-background-image: $search-trigger-background-image   
+    );
+
+
+    .#{$prefix}grid-cell-editor, .#{$prefix}grid-row-editor {
+        @include _codaxy-text-field-ui (
+            $ui-form-field-border-radius: $cell-editor-form-field-border-radius,
+            $ui-form-field-border-width: $cell-editor-form-field-border-width,
+            $ui-form-field-border-color: $cell-editor-form-field-border-color,
+            $ui-form-field-focus-border-color: $cell-editor-form-field-focus-border-color,
+            $ui-form-field-text-field-padding: $cell-editor-form-field-text-field-padding,
+            $ui-form-field-font-size: $cell-editor-form-field-font-size
+        ); 
+    }
+    
+}
+
+
+.#{$prefix}form-text {
+    @if $include-webkit {
+        .#{$prefix}webkit & {
+            // they added 3px to 100%, but it creates a bug with file field in Edge; 
+            height: 100%;
+        }
+    }
+}

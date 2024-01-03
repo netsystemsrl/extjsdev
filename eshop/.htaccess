@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /eshop/
+#RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /eshop/index.php [L]
+#RewriteRule ^eshop/? eshop/index.php [L]
+#RewriteRule eshop/index.php [L]
+</IfModule>

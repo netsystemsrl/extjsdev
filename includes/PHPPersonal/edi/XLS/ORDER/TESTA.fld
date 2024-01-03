@@ -1,0 +1,3 @@
+NomeField		,Len,Align	,Requested	,CodeValue,SampleValue
+NUMDOC: 		,08	,L		,Y			,C4   	,Formato 0000193
+DATADOC: 		,08	,L		,Y			,C5   	,Formato AAAAMMGG

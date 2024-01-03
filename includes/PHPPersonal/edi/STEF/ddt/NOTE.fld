@@ -1,0 +1,6 @@
+NomeField		,Len,Align	,Requested	,CodeValue,SampleValue
+TIPOREC			,01	,L		,Y		 	,'R'	,Fisso
+DDTNUM			,16	,L		,Y			,		,Numero DDT Stampato
+DDTRIGANUM		,4,L		,Y			,9999	,9999=Note di piede 0000=Note di testata
+NOTA			,240,L		,Y			,		,NOTA
+

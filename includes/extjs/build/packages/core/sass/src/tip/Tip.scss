@@ -1,0 +1,21 @@
+﻿
+/* OK-315
+ * giving the error tip arrow the same color as $tip-error-border-color
+ */
+.#{$prefix}tip-form-invalid {
+    .#{$prefix}tip-anchor-top {
+        border-bottom-color: $tip-error-border-color;
+    }
+    .#{$prefix}tip-anchor-bottom {
+        border-top-color: $tip-error-border-color;
+    }
+    .#{$prefix}tip-anchor-right {
+        border-left-color: $tip-error-border-color;
+    }
+    .#{$prefix}tip-anchor-left {
+        border-right-color: $tip-error-border-color;
+    }
+    .#{$prefix}tip-body-form-invalid {
+        background-position: $tip-error-background-image-position;
+    }
+}

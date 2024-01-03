@@ -1,0 +1,16 @@
+   
+ @if $fieldset-header-tool-background-color-over != null {
+    .#{$prefix}fieldset-header-tool-default.#{$prefix}tool-over > .x-tool-toggle {
+        background-color: $fieldset-header-tool-background-color-over;
+    }
+ }
+
+ /* OK-315
+    Override for theme neutral hard-coded red outline color. 
+    TODO- make a mixin
+  */
+ .#{$prefix}fieldset-header-tool-default {
+     &.#{$prefix}focus {
+         outline-color: $border-color;
+     }
+ }

@@ -1,0 +1,9 @@
+NomeField		,Len,Align	,Requested	,CodeValue										,SampleValue
+TIPOREC			,99	,		,Y		 	,QTY											,QTY
+FILLER			,99	,		,Y		 	,+												,FILLER
+TIPOLOGIA		,99	,		,Y		 	,47												,1		=	Discrete quantity;12		=	Despatch quantity;21		=	Ordered quantity;46		=	Delivered quantity;47		=	Invoiced quantity;59		=	Number of consumer units in the traded unit;61		=	Return quantity;192		=	Free goods quantity
+FILLER			,99	,		,Y		 	,:												,FILLER
+QTA				,15	,		,Y			,												,AAS
+FILLER			,99	,		,Y		 	,:												,FILLER
+UM				,99	,		,Y			,PCE  											,PCE = PIECES  ;KGM		=	kilogram ;LTR		=	litre
+END				,99	,		,Y		 	,'												,END 

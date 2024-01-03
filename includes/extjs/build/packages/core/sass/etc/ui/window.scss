@@ -1,0 +1,243 @@
+//Window ui
+@if $include-window-ui and $include-ext-window-window {
+  @include extjs-window-ui(
+  $ui: '#{$ui-label}-window',
+  $ui-header-color: $ui-window-header-color,
+  $ui-header-inner-border-color: $ui-window-header-inner-border-color,
+  $ui-border-color: $ui-window-border-color,
+  $ui-background-color: $ui-window-background-color,
+  $ui-header-background-color: null-value($ui-window-header-background-color, rgba(#fff, 0)),
+  $ui-body-border-color: $ui-window-body-border-color,
+  $ui-tool-background-image: null-value($ui-window-tools-background-image, $tool-background-image)
+  );
+
+
+  @include _codaxy-window-ui (
+  $ui: '#{$ui-label}-window',
+  $ui-tools-background-color: $ui-window-tools-background-color,
+  $ui-tools-background-color-over: $ui-window-tools-background-color-over,
+  $ui-header-text-shadow: $ui-window-header-text-shadow-active,
+  $ui-shadow: $window-shadow,
+  $ui-window-footer-background-color: $ui-window-toolbar-footer-background-color
+  );
+
+}
+
+//Window active ui
+@if ($include-window-active-ui and $include-ext-window-window) {
+
+  @include extjs-window-ui(
+  $ui: #{$ui-label}-window-active
+  );
+
+  @include _codaxy-window-ui (
+  $ui:'#{$ui-label}-window-active',
+  $ui-tools-background-color-over: $window-tools-background-color-over,
+  $ui-header-text-shadow: $ui-window-header-text-shadow,
+  $ui-inner-border-width: $ui-window-header-inner-border-width,
+  $ui-inner-border-color: $window-header-inner-border-color,
+  $ui-shadow: $ui-window-active-shadow,/*!!! pitaj Marka*/
+  $ui-window-footer-background-color: $ui-window-toolbar-footer-background-color
+  );
+
+  @include _codaxy-window-ui (
+  $ui: '#{$ui-label}-window-active',
+  $class: '.#{$window-active-class}',
+  $ui-border-color: $ui-window-border-color,
+  $ui-background-color: $ui-window-background-color,
+  $ui-tools-background-color: $ui-window-tools-background-color,
+  $ui-tools-background-color-over: $ui-window-tools-background-color-over, 
+  $ui-header-background-color: $ui-window-header-background-color,
+  $ui-header-color: $ui-window-header-color,
+  $ui-header-text-shadow: $ui-window-header-text-shadow-active,
+  $ui-inner-border-width: $ui-window-header-inner-border-width,
+  $ui-inner-border-color: $ui-window-header-inner-border-color,
+  $ui-tool-background-image: $ui-window-tools-background-image,
+ 
+  $ui-body-border-color: $ui-window-body-border-color,
+  $ui-shadow: $ui-window-active-shadow
+  );
+
+
+  .#{$prefix}window-#{$ui-label}-window-active.x-window-active,
+  .#{$prefix}window-#{$ui-label}-window {
+
+    @if $include-ext-toolbar-toolbar {
+
+      > {
+        @include _codaxy-toolbar-ui (
+          $ui: default,
+          $ui-border-color: $ui-window-body-border-color $ui-window-body-border-color $toolbar-border-color,
+          $ui-toolbar-docked-border-color-rotation: $toolbar-docked-border-color-rotation
+        );
+      }
+
+    }
+
+
+    .#{$prefix}window-header-#{$ui-label}-window-active {
+      .#{$prefix}tool-img {
+        background-color: $ui-window-tools-background-color;
+      }
+
+      .#{$prefix}tool-img:hover {
+        background-color: $ui-window-tools-background-color-over;
+      }
+    }
+
+    //tab inheritance
+    @if $include-tab-ui and $include-ext-tab-tab {
+      @include _codaxy-tab-ui (
+      $ui: 'default',
+      $ui-color: $ui-tab-color,
+      $ui-color-over: $ui-tab-color-over,
+      $ui-color-active: $ui-tab-color-active,
+      $ui-border-color: $ui-tab-border-color,
+      $ui-border-color-over: $ui-tab-border-color-over,
+      $ui-background-color: $ui-tab-background-color,
+      $ui-background-color-over: $ui-tab-background-color-over,
+      $ui-background-color-active: $ui-tab-background-color-active,
+      $ui-background-gradient: $ui-tab-background-gradient,
+      $ui-background-gradient-over: $ui-tab-background-gradient-over,
+      $ui-background-gradient-active: $ui-tab-background-gradient-active,  
+      $ui-border-color-active: $ui-tab-border-color-active,
+      $ui-bar-background-color: $ui-bar-background-color,
+      $ui-bar-background-gradient: $ui-bar-background-gradient,
+      $ui-bar-border-color: $ui-bar-border-color,
+      $ui-bar-inner-border-width: $tabbar-inner-border-width,
+      $ui-bar-inner-border-color: $ui-bar-inner-border-color,
+      $ui-first-child-border-color-active: $ui-tab-first-child-border-color-active,
+      $ui-first-child-border-width: $ui-tab-first-child-border-width,
+      $ui-strip-border-color: $ui-strip-border-color,
+      $ui-strip-background-color: $ui-strip-background-color,
+      $ui-strip-plain-border-color: $ui-strip-plain-border-color,
+      $ui-strip-plain-border-width: $tabbar-strip-plain-border-width,
+      $ui-text-shadow: $ui-tab-text-shadow,
+      $ui-text-shadow-active: $ui-tab-text-shadow-active,
+      $ui-inner-border-width: $tab-inner-border-width,
+      $ui-inner-border-color: $tab-inner-border-color,
+      $ui-inner-border-width-active: $tab-inner-border-width-active,
+      $ui-inner-border-color-active: $tab-inner-border-color-active 
+      );
+    }
+
+    //grid inheritance
+    @if $include-grid-ui and $include-ext-grid-panel and $include-ext-view-table and $include-grid-inheritance {
+      @include _codaxy-table-ui (
+      $ui-row-cell-selected-color: $ui-grid-row-cell-selected-color,
+      $ui-row-cell-selected-border-color: $ui-grid-row-cell-selected-border-color,
+      $ui-row-cell-selected-background-color: $ui-grid-row-cell-selected-background-color,
+      $ui-row-cell-over-background-color: $ui-grid-row-cell-over-background-color,
+      $ui-row-cell-focus-color: $ui-grid-row-cell-focus-color,
+      $ui-row-cell-focus-background-color: $ui-grid-row-cell-focus-background-color,
+      $ui-row-cell-focus-border-color: $ui-grid-row-cell-focus-border-color,
+      $ui-tree-row-cell-color-selected:$ui-grid-tree-row-cell-color-selected,
+      $ui-tree-row-cell-color-focus: $ui-grid-tree-row-cell-color-focus,
+      $ui-tree-row-cell-background-color-selected: $ui-grid-tree-row-cell-background-color-selected,
+      $ui-tree-row-cell-background-color-focus: $ui-grid-tree-row-cell-background-color-focus,
+      $ui-grid-col-lines-cell-border-color-selected: $ui-grid-row-cell-selected-border-color
+      );
+
+    }
+
+    @if $include-btn-ui and $include-ext-button-button {
+      @include _codaxy-btn-ui (
+      $ui: 'default-small',
+      
+      $ui-color: $ui-btn-color,
+      
+      $ui-border-color: $ui-btn-border-color,
+      $ui-border-color-over: $ui-btn-border-color-over,
+      $ui-border-color-focus: $ui-btn-border-color-focus,
+      $ui-border-color-pressed: $ui-btn-border-color-pressed,
+      $ui-border-color-focus-over: $ui-btn-border-color-focus-over,
+      $ui-border-color-focus-pressed: $ui-btn-border-color-focus-pressed,
+      $ui-border-color-disabled: $ui-btn-border-color-disabled,
+      
+      $ui-background-color: $ui-btn-background-color,
+      $ui-background-color-over: $ui-btn-background-color-over,
+      $ui-background-color-focus: $ui-btn-background-color-focus,
+      $ui-background-color-pressed: $ui-btn-background-color-pressed,
+      $ui-background-color-focus-over: $ui-btn-background-color-focus-over,
+      $ui-background-color-focus-pressed: $ui-btn-background-color-focus-pressed,
+      $ui-background-color-disabled: $ui-btn-background-color-disabled,
+      
+      $ui-background-gradient: $ui-btn-background-gradient,
+      $ui-background-gradient-over: $ui-btn-background-gradient-over,
+      $ui-background-gradient-pressed: $ui-btn-background-gradient-pressed,
+      $ui-background-gradient-focus: $ui-btn-background-gradient-focus,
+      $ui-background-gradient-focus-over: $ui-btn-background-gradient-focus-over,
+      $ui-background-gradient-focus-pressed: $ui-btn-background-gradient-focus-pressed,
+
+      $ui-inner-border-color: $ui-btn-inner-border-color
+
+      );
+ 
+      @include _codaxy-btn-ui (
+      $ui: 'default-medium',
+      
+      $ui-color: $ui-btn-color,
+     
+      $ui-border-color: $ui-btn-border-color,
+      $ui-border-color-over: $ui-btn-border-color-over,
+      $ui-border-color-focus: $ui-btn-border-color-focus,
+      $ui-border-color-pressed: $ui-btn-border-color-pressed,
+      $ui-border-color-focus-over: $ui-btn-border-color-focus-over,
+      $ui-border-color-focus-pressed: $ui-btn-border-color-focus-pressed,
+      $ui-border-color-disabled: $ui-btn-border-color-disabled,
+      
+      $ui-background-color: $ui-btn-background-color,
+      $ui-background-color-over: $ui-btn-background-color-over,
+      $ui-background-color-focus: $ui-btn-background-color-focus,
+      $ui-background-color-pressed: $ui-btn-background-color-pressed,
+      $ui-background-color-focus-over: $ui-btn-background-color-focus-over,
+      $ui-background-color-focus-pressed: $ui-btn-background-color-focus-pressed,
+      $ui-background-color-disabled: $ui-btn-background-color-disabled,
+
+      $ui-background-gradient: $ui-btn-background-gradient,
+      $ui-background-gradient-over: $ui-btn-background-gradient-over,
+      $ui-background-gradient-pressed: $ui-btn-background-gradient-pressed,
+      $ui-background-gradient-focus: $ui-btn-background-gradient-focus,
+      $ui-background-gradient-focus-over: $ui-btn-background-gradient-focus-over,
+      $ui-background-gradient-focus-pressed: $ui-btn-background-gradient-focus-pressed,
+
+      $ui-inner-border-color: $ui-btn-inner-border-color
+      );
+
+
+      @include _codaxy-btn-ui (
+      $ui: 'default-large',
+      
+      $ui-color: $ui-btn-color,
+      
+      $ui-border-color: $ui-btn-border-color,
+      $ui-border-color-over: $ui-btn-border-color-over,
+      $ui-border-color-focus: $ui-btn-border-color-focus,
+      $ui-border-color-pressed: $ui-btn-border-color-pressed,
+      $ui-border-color-focus-over: $ui-btn-border-color-focus-over,
+      $ui-border-color-focus-pressed: $ui-btn-border-color-focus-pressed,
+      $ui-border-color-disabled: $ui-btn-border-color-disabled,
+      
+      $ui-background-color: $ui-btn-background-color,
+      $ui-background-color-over: $ui-btn-background-color-over,
+      $ui-background-color-focus: $ui-btn-background-color-focus,
+      $ui-background-color-pressed: $ui-btn-background-color-pressed,
+      $ui-background-color-focus-over: $ui-btn-background-color-focus-over,
+      $ui-background-color-focus-pressed: $ui-btn-background-color-focus-pressed,
+      $ui-background-color-disabled: $ui-btn-background-color-disabled,
+
+      $ui-background-gradient: $ui-btn-background-gradient,
+      $ui-background-gradient-over: $ui-btn-background-gradient-over,
+      $ui-background-gradient-pressed: $ui-btn-background-gradient-pressed,
+      $ui-background-gradient-focus: $ui-btn-background-gradient-focus,
+      $ui-background-gradient-focus-over: $ui-btn-background-gradient-focus-over,
+      $ui-background-gradient-focus-pressed: $ui-btn-background-gradient-focus-pressed,
+
+      $ui-inner-border-color: $ui-btn-inner-border-color
+      );
+
+    }
+
+  }
+
+}

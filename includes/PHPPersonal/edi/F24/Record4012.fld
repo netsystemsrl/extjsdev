@@ -1,0 +1,11 @@
+NomeField			,Len,Align	,Requested	,CodeValue,SampleValue
+FILLER         		,01,L0		,N		 	, 		,FILLER
+TIPOREC				,02,L0		,N			,40		,TIPOREC
+DelegaProg			,07,R0		,Y		 	,		,ProgressivoDelega
+SUBTIPOREC			,02,L0		,N			,12		,Fisso
+CodiceEnte          ,04,L		,Y		 	,		,CodiceEnte
+TotADebitoVersato   ,15,D2		,Y		 	,		,TotaleImportoADebitoVersato
+TotACreditoCompensa ,15,D2		,Y		 	,		,TotaleImportoACreditoCompensato
+SegnoSezione        ,01,L		,Y		 	,		,SegnoSezione
+SaldoSezione        ,15,D2		,Y		 	,		,SaldoSezione
+FILLER          	,58,L		,N		 	,		,FILLER

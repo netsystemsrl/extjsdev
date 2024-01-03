@@ -1,0 +1,17 @@
+NomeField		,Len,Align	,Requested	,CodeValue,SampleValue
+ANNO			,2	,L		,Y		 	,'T'	,Fisso
+TIPODOC			,1	,L		,Y			,		,N= Nota credito - P=Fattura proforma -Spazio= Fattura
+DOCNUM			,5	,L		,Y			,   	,NUM
+RIGA			,5	,L		,N			,   	,Riga
+CAUSALERIGA		,2	,L		,Y			,		,Causale riga
+CODICEARTICOLO	,20	,L		,N			,		,Codice Articolo
+NRCOMMESSA		,6	,R		,N			,		,Nr Commessa
+QUANTITA		,10	,R		,N			,		,Quantita
+PREZZONETTO		,19	,R		,N			,		,Prezzo Netto 
+SCONTO1 		,5	,R		,N			,		,Sconto 1
+SCONTO2			,5  ,R		,N			,		,Sconto 2 
+SCONTO3 		,5  ,R		,N			,		,Sconto 3
+PROVVIGIONI		,5  ,R		,N			,		,Provvigioni
+CODIVA			,2  ,L		,N			,		,Cod. Iva
+UNITAMISURA		,2  ,L		,N			,		,Unità di misura
+VUOTO    		,40 ,L		,N			,		,Vuoto

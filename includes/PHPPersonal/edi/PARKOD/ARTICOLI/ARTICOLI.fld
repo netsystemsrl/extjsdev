@@ -1,0 +1,27 @@
+NomeField	,Len	,Align	,Requested	,CodeValue		,SampleValue
+InterCode	,2		,L		,Y		 	,'A'			,comando A
+BrandCode	,3		,L		,Y		 	,				,BrandCode
+FamilyCode	,2		,L		,Y		 	,				,FamilyCode 
+ProductCode	,3		,L		,Y		 	,				,ProductCode 
+LineCode	,2		,L		,Y		 	,				,LineCode
+Libre		,1		,R		,Y		 	,				,Libre
+ProdDesc	,18		,R		,Y		 	,				,ProdDesc
+ColorCapa	,16		,L		,Y		 	,				,Disattivo
+SuppRef1	,11		,L		,Y		 	,				,REPARTO
+SuppRef2	,6		,L		,Y		 	,				,DESREPARTO
+Packaging	,3		,L		,Y		 	,'999'			,GRUPPO		Codice gruppo '999' se non presente
+VATcode		,1		,L		,Y		 	,'Non Gestito'	,DESGRU		Descrizione gruppo 'Non Gestito' se non presente
+Purchase	,7		,L		,Y		 	,'999'			,FAMIGLIA  	Codice gruppo '999' se non presente
+CoefRatio	,4		,L		,Y		 	,'Non Gestito'	,DESFAM 	Descrizione gruppo 'Non Gestito' se non presente
+Capacity	,1		,L		,Y		 	,'999'			,SFAMIGLIA  Codice famiglia vuoto se non presente
+SalePrice	,7		,L		,Y		 	,'Non Gestito'	,SDESFAM	Descrizione famiglia vuoto se non presente
+MinimumOrder,3		,L		,Y		 	,'22'			,Codice aliquota iva	
+Capacityum	,4		,L		,Y		 	,				,Descrizione aliquota iva	
+CapacityCode,1		,L		,Y		 	,'22'			,Percentuale aliquota iva
+UpdateDate	,6		,L		,Y		 	,'1'			,Yumero pezzi per confezione
+UpdateCMP	,1		,L		,Y		 	,				,Percentuale sconto su prezzo con 2 decimali senza separatore
+CreationDate,6		,R		,Y		 	,				,Prezzo lordo se in promozione con 2 decimali senza separatore
+Currency	,3		,R		,Y		 	,				,Percentuale sconto se in promozione con 2 decimali senza separatore
+LibreFree	,2		,R		,Y		 	,				,Data inizio Promozione YYYYMMDD
+CompDesc	,15		,R		,Y		 	,				,Data Fine Promozione YYYYMMDD
+EANCode		,13		,L		,Y		 	,				,Codice del listino di origine (se presente)

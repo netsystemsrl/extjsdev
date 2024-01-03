@@ -1,0 +1,18 @@
+NomeField			,Len,Align	,Requested	,CodeValue,SampleValue
+FILLER         		,01,L0		,N		 	, 		,FILLER
+TIPOREC				,02,L0		,N			,40		,TIPOREC
+DelegaProg			,07,R0		,Y		 	,		,ProgressivoDelega
+SUBTIPOREC			,02,L0		,N			,07		,Fisso   
+CodiceEnte          ,04,L		,Y		 	,		,CodiceEnte
+TributoProgressivo  ,02,R0		,Y		 	,		,ProgressivoTributo
+TributoCodice       ,04,L		,Y		 	,		,CodiceTributo
+TributoRiferimenti  ,08,R0		,Y		 	,		,RiferimentiTributo
+ImpADebitoVersato   ,15,D2		,Y		 	,		,ImportoADebitoVersato
+ImpACreditoCompensa ,15,D2		,Y		 	,		,ImportoACreditoCompensato
+Ravvedimento        ,01,L0		,Y		 	,		,Ravvedimento
+ImmobiliVariati     ,01,L0		,Y		 	,		,ImmobiliVariati
+Acconto             ,01,L0		,Y		 	,		,Acconto
+Saldo               ,01,L0		,Y		 	,		,Saldo
+NumeroFabbricati    ,03,R0		,Y		 	,		,NumeroFabbricati
+DetrazioneIci       ,15,D2		,Y		 	,		,DetrazioneIci
+FILLER          	,38,L		,N		 	,		,FILLER

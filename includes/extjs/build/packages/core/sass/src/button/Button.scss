@@ -1,0 +1,298 @@
+@mixin _codaxy-btn-ui (
+  $ui,
+  $ui-color: null,  
+
+  $ui-margin: null,
+
+  $ui-border-color: null,
+  $ui-border-color-over: null,
+  $ui-border-color-focus: null,
+  $ui-border-color-pressed: null,
+  $ui-border-color-focus-over: null,
+  $ui-border-color-focus-pressed: null,
+  $ui-border-color-disabled: null,
+
+  $ui-background-color: null,
+  $ui-background-color-over: null,
+  $ui-background-color-focus: null,
+  $ui-background-color-pressed: null,
+  $ui-background-color-focus-over: null,
+  $ui-background-color-focus-pressed: null,
+  $ui-background-color-disabled: null,
+
+  $ui-background-gradient: null,
+  $ui-background-gradient-over: null,
+  $ui-background-gradient-pressed: null,
+  $ui-background-gradient-focus: null,
+  $ui-background-gradient-focus-over: null,
+  $ui-background-gradient-focus-pressed: null,
+  $ui-background-gradient-disabled: null,
+
+  $ui-inner-border-color: null,
+  $ui-inner-border-color-disabled: null,
+
+  $shadow: null,
+  $shadow-over: null,
+  $shadow-focus: null,
+  $shadow-focus-pressed: null,
+  $shadow-focus-over: null,
+
+  $ui-box-shadow-transition: null,
+
+  $ui-button-arrow: null,
+  $ui-split-button-arrow: null,
+  $ui-split-button-arrow-b: null,
+  $ui-split-button-arrow-o: null,
+  $ui-split-button-arrow-bo: null,
+
+  $ui-segmented-button-border-width: null,
+  $ui-segmented-button-border-color: null
+
+) {
+
+  .#{$prefix}btn-#{$ui} {
+    @if $ui-box-shadow-transition != null {
+        @include transition(#{$ui-box-shadow-transition})
+    }
+    @if $ui-margin != null { margin: $ui-margin !important }
+    @if $ui-border-color != null { border-color: $ui-border-color }
+    @if $ui-background-color != null { background-color: $ui-background-color }
+    @if $shadow != null {
+      @include box-shadow(#{$shadow});
+      overflow: visible;
+    }
+    @if $ui-background-gradient != null  {
+         @include background-gradient($ui-background-color, $ui-background-gradient, top);
+    }
+    @if $ui-inner-border-color != null {
+        @include inner-border($width: 1px 0 0 0, $color: $ui-inner-border-color);
+    }
+    @if $ui-color != null {color: $ui-color;}
+    
+    &.#{$prefix}btn-disabled {
+        @include box-shadow(none);
+    }
+  }
+
+  .#{$prefix}btn-focus.#{$prefix}btn-#{$ui} {
+      @if $ui-border-color-focus != null { border-color: $ui-border-color-focus }
+      @if $ui-background-color-focus != null { background-color: $ui-background-color-focus }
+      @if $ui-background-gradient-focus != null  {
+        @include background-gradient($ui-background-color-focus, $ui-background-gradient-focus, top);
+      }
+      @if $shadow-focus != null {
+        @include box-shadow(#{$shadow-focus});
+        overflow: visible;
+    }
+  }
+
+  .#{$prefix}btn-over.#{$prefix}btn-#{$ui} {
+    @if $ui-border-color-over != null { border-color: $ui-border-color-over }
+    @if $ui-background-color-over != null { background-color: $ui-background-color-over }
+    @if $ui-background-gradient-over != null {
+        @include background-gradient($ui-background-color-over, $ui-background-gradient-over, top);
+    }
+    @if $shadow-over != null {
+      @include box-shadow(#{$shadow-over});
+      overflow: visible;
+    }
+  }
+
+  .#{$prefix}btn-focus.#{$prefix}btn-over.#{$prefix}btn-#{$ui} {
+    @if $ui-border-color-focus-over != null { border-color: $ui-border-color-focus-over }
+    @if $ui-background-color-focus-over != null { background-color: $ui-background-color-focus-over }
+    @if $ui-background-gradient-focus-over != null  {
+        @include background-gradient($ui-background-color-focus-over, $ui-background-gradient-focus-over, top);
+    }
+    @if $shadow-focus-over != null {
+      @include box-shadow(#{$shadow-focus-over});
+      overflow: visible;
+    }
+  }
+
+  .#{$prefix}btn.#{$prefix}btn-menu-active.#{$prefix}btn-#{$ui},
+  .#{$prefix}btn.#{$prefix}btn-pressed.#{$prefix}btn-#{$ui} {
+    @if $ui-border-color-pressed != null { border-color: $ui-border-color-pressed }
+    @if $ui-background-color-pressed != null { background-color: $ui-background-color-pressed }
+    @if $ui-background-gradient-pressed != null  {
+        @include background-gradient($ui-background-color-pressed, $ui-background-gradient-pressed, top);
+    }
+    @if $ui-inner-border-color != null {
+        @include inner-border($width: 0, $color: $ui-inner-border-color);
+    }
+  }
+
+  .#{$prefix}btn-focus.#{$prefix}btn-menu-active.#{$prefix}btn-#{$ui},
+  .#{$prefix}btn-focus.#{$prefix}btn-pressed.#{$prefix}btn-#{$ui} {
+    @if $ui-border-color-focus-pressed != null { border-color: $ui-border-color-focus-pressed }
+    @if $ui-background-color-focus-pressed != null { background-color: $ui-background-color-focus-pressed }
+    @if $shadow-focus-pressed != null {
+      @include box-shadow(#{$shadow-focus-pressed});
+      overflow: visible;
+    }
+  }
+
+  .#{$prefix}btn.#{$prefix}btn-disabled.#{$prefix}btn-#{$ui} {
+    @if $ui-border-color-disabled != null { border-color: $ui-border-color-disabled; }
+    @if $ui-background-color-disabled != null { background-color: $ui-background-color-disabled; }
+    @if $ui-background-gradient-disabled != null { 
+        @include background-gradient($ui-background-color-disabled, $ui-background-gradient-disabled, top);
+    }
+    @if $ui-inner-border-color-disabled != null {
+        @include inner-border($color: $ui-inner-border-color-disabled);
+    }
+
+  }
+
+  .#{$prefix}btn-inner-#{$ui} {
+      @if $ui-color != null { color: $ui-color }
+  }
+
+  /* O-315
+   * in ext-theme-neutral button-arrow images are used directly, not through variables
+   */
+  .#{$prefix}btn-wrap-#{$ui} {
+        &.#{$prefix}btn-arrow-right:after, &.#{$prefix}btn-arrow-bottom:after {
+            @if $ui-button-arrow != null { background-image: theme-background-image(#{$ui-button-arrow}) }
+        }
+        &.#{$prefix}btn-split-right:after {
+            @if $ui-split-button-arrow != null { background-image: theme-background-image(#{$ui-split-button-arrow}) }
+        }
+        &.#{$prefix}btn-split-bottom:after {
+            @if $ui-split-button-arrow-b != null { background-image: theme-background-image(#{$ui-split-button-arrow-b}) }
+        }
+  }
+
+  .#{$prefix}btn-over {
+      & > .#{$prefix}btn-wrap-#{$ui} {
+          &.#{$prefix}btn-split-right:after {
+              @if $ui-split-button-arrow-o != null { background-image: theme-background-image(#{$ui-split-button-arrow-o}) }
+          }
+          &.#{$prefix}btn-split-bottom:after {
+              @if $ui-split-button-arrow-bo != null { background-image: theme-background-image(#{$ui-split-button-arrow-bo})}
+          }
+      }
+  }
+
+}
+
+  /* O-315
+   * override for default button border color when $button-default-border-color is defined with list
+   */
+  @include _codaxy-btn-ui (
+    $ui: "default-toolbar-small",
+    $ui-margin: $button-margin,
+    $ui-border-color: $button-border-color,
+    $shadow: $button-shadow
+  );
+
+  @include _codaxy-btn-ui (
+    $ui: "default-small",
+    $ui-margin: $button-margin,
+    $ui-border-color: $button-border-color,
+    $shadow: $button-shadow
+  );
+
+  @include _codaxy-btn-ui (
+    $ui: "default-medium",
+    $ui-margin: $button-margin,
+    $ui-border-color: $button-border-color,
+    $shadow: $button-shadow
+  );
+
+  @include _codaxy-btn-ui (
+    $ui: "default-large",
+    $ui-margin: $button-margin,
+    $ui-border-color: $button-border-color,
+    $shadow: $button-shadow
+  );
+
+
+
+
+@mixin _codaxy-segmented-btn-ui (
+    $ui,
+    $ui-segmented-toolbar-button-border-style: null,
+    $ui-segmented-toolbar-button-border-width: null,
+    $ui-segmented-toolbar-button-border-color: null,
+    $ui-segmented-toolbar-button-inner-border-width: null,
+    $ui-segmented-toolbar-button-inner-border-color: null,
+
+    $ui-segmented-toolbar-button-first-border-width: null,
+    $ui-segmented-toolbar-button-first-border-color: null,
+    $ui-segmented-toolbar-button-first-inner-border-width: null,
+    $ui-segmented-toolbar-button-first-inner-border-color: null,
+    $ui-segmented-toolbar-button-middle-border-width: null,
+    $ui-segmented-toolbar-button-middle-border-color: null,
+    $ui-segmented-toolbar-button-last-border-width: null,
+    $ui-segmented-toolbar-button-last-border-color: null,
+
+    $ui-segmented-button-background-color-over: null
+) {
+    .#{$prefix}toolbar-item.#{$prefix}segmented-button-#{$ui} {
+
+        @if $ui-segmented-toolbar-button-border-style != null {
+            border-style: $ui-segmented-toolbar-button-border-style;  
+        }    
+        @if $ui-segmented-toolbar-button-border-width != null {
+            border-width: $ui-segmented-toolbar-button-border-width;  
+        }    
+        @if $ui-segmented-toolbar-button-border-color != null {
+            border-color: $ui-segmented-toolbar-button-border-color;  
+        } 
+
+        @if $ui-segmented-toolbar-button-inner-border-width != null
+        and $ui-segmented-toolbar-button-inner-border-color != null  {
+            @include inner-border($ui-segmented-toolbar-button-inner-border-width, $ui-segmented-toolbar-button-inner-border-color);
+        }
+        
+        .#{$prefix}segmented-button-item-horizontal.#{$prefix}btn {
+            &.#{$prefix}segmented-button-first {    
+                @if $ui-segmented-toolbar-button-first-border-width != null {
+                    border-width: $ui-segmented-toolbar-button-first-border-width !important;
+                }
+                @if $ui-segmented-toolbar-button-first-border-color != null {
+                    border-color: $ui-segmented-toolbar-button-first-border-color !important;
+                }
+            }
+            &.#{$prefix}segmented-button-middle {
+                @if $ui-segmented-toolbar-button-middle-border-width != null {
+                    border-width: $ui-segmented-toolbar-button-middle-border-width !important;
+                }
+                @if $ui-segmented-toolbar-button-middle-border-color != null {
+                    border-color: $ui-segmented-toolbar-button-middle-border-color !important;
+                }
+            } 
+            &.#{$prefix}segmented-button-last {
+                @if $ui-segmented-toolbar-button-last-border-width != null {
+                    border-width: $ui-segmented-toolbar-button-last-border-width !important;
+                }
+                @if $ui-segmented-toolbar-button-last-border-color != null {
+                    border-color: $ui-segmented-toolbar-button-last-border-color !important;
+                }
+            }
+            &.#{$prefix}btn-over {
+                @if $ui-segmented-button-background-color-over {
+                    background-color: $ui-segmented-button-background-color-over;
+                }
+            }
+        }
+    }
+}
+
+@include _codaxy-segmented-btn-ui (
+    $ui: default,
+    $ui-segmented-toolbar-button-border-style: $segmented-toolbar-button-border-style,
+    $ui-segmented-toolbar-button-border-width: $segmented-toolbar-button-border-width,
+    $ui-segmented-toolbar-button-border-color: $segmented-toolbar-button-border-color,
+    $ui-segmented-toolbar-button-inner-border-width: $segmented-toolbar-button-inner-border-width,
+    $ui-segmented-toolbar-button-inner-border-color: $segmented-toolbar-button-inner-border-color,
+    $ui-segmented-toolbar-button-first-border-width: $segmented-toolbar-button-first-border-width, 
+    $ui-segmented-toolbar-button-first-border-color: $segmented-toolbar-button-first-border-color,
+    $ui-segmented-toolbar-button-middle-border-width:$segmented-toolbar-button-middle-border-width,
+    $ui-segmented-toolbar-button-middle-border-color:$segmented-toolbar-button-middle-border-color,
+    $ui-segmented-toolbar-button-last-border-width: $segmented-toolbar-button-last-border-width,
+    $ui-segmented-toolbar-button-last-border-color: $segmented-toolbar-button-last-border-color,
+
+    $ui-segmented-button-background-color-over: $segmented-toolbar-button-background-color-over
+);

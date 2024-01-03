@@ -1,0 +1,537 @@
+[{
+    text:'Date field',
+	cls:'datefield',
+	leaf:true,
+	objxtype: 'datefield',
+	objfieldLabel:'Date field',
+	objdatasourcefield:'datefield1',
+    objname:'datefield1'
+},{
+    text:'Time field',
+	cls:'timefield',
+	leaf:true,
+	objxtype: 'timefield',
+	objfieldLabel:'Time field',
+	objdatasourcefield:'timefield1',
+    objname:'timefield1'
+},{
+    text:'Timer field',
+	cls:'timerfield',
+	leaf:true,
+	objxtype: 'timerfield',
+	objfieldLabel:'Timer field',
+	objdatasourcefield:'timerfield1',
+    objname:'timerfield1'
+},{
+    text:'DateTime field',
+	cls:'datetimefield',
+	leaf:true,
+	objxtype: 'datetimefield',
+	objfieldLabel:'DateTime field',
+	objdatasourcefield:'datetimefield1',
+    objname:'datetimefield1'
+},{
+    text:'Clock field',
+	cls:'dynamicclock',
+	leaf:true,
+	objxtype: 'dynamicclock',
+	objfieldLabel:'Clock field',
+	objdatasourcefield:'dynamicclock1',
+    objname:'dynamicclock1'
+},{
+    text:'Text field', 
+	cls:'textfield',
+	leaf:true,
+	objxtype:'textfield',
+    objfieldLabel:'Text field',
+	objdatasourcefield:'textfield1',
+    objname:'textfield1'
+},{
+    text:'Icon field', 
+	cls:'iconfield',
+	leaf:true,
+	objxtype:'iconfield',
+    objfieldLabel:'Icon field',
+	objdatasourcefield:'iconfield1',
+    objname:'iconfield1'
+},{
+    text:'Number field',
+	cls:'numberfield',
+    leaf:true,
+	objxtype:'numberfield',
+    objfieldLabel:'Number field',
+	objdatasourcefield:'numberfield1',
+    objname:'numberfield1'
+},{
+    text:'Currency field',
+	cls:'currencyfield',
+    leaf:true,
+	objxtype:'currencyfield',
+    objfieldLabel:'Currency field',
+	objdatasourcefield:'currencyfield1',
+    objname:'currencyfield1'
+},
+{
+    text:'Text area',
+	cls:'textarea',
+    leaf:true,
+	objxtype:'textarea',
+    objfieldLabel:'Text area',
+	objdatasourcefield:'textarea1',
+    objname:'textarea1'
+},{
+    text:'Combo box',
+    cls:'combobox',
+	leaf:true,
+	objxtype:'combobox',
+	objfieldLabel:'combobox1',
+	objdatasource:'ESEMPIO',
+	objdatasourcetype:'ESEMPIO',
+	objvalueField:'ID',
+	objdisplayField:'DESCRIZIONE',
+	objdatasourcefield:'combobox1',
+    objname:'combobox1'
+},{
+    text:'List box',
+    cls:'list',
+	leaf:true,
+	objxtype:'list',
+	objfieldLabel:'list',
+	objdatasource:'ESEMPIO',
+	objdatasourcetype:'ESEMPIO',
+	objvalueField:'ID',
+	objdatasourcefield:'list1',
+    objname:'list1'
+},{
+    text:'Multi Select',
+    cls:'multiselect',
+	leaf:true,
+	objxtype:'multiselect',
+	objfieldLabel:'multiselect',
+	objdatasource:'ESEMPIO',
+	objdatasourcetype:'ESEMPIO',
+	objdatasourcefield:'multiselect1',
+    objname:'multiselect1',
+	objvalueField:'ID',
+	objdisplayField:'DESCRIZIONE'
+},{
+    text:'Item Selector',
+    cls:'itemselector',
+	leaf:true,
+	objxtype:'itemselector',
+	objfieldLabel:'itemselector',
+	objdatasource:'ESEMPIO',
+	objdatasourcetype:'ESEMPIO',
+	objdatasourcefield:'itemselector1',
+    objname:'itemselector1',
+	objvalueField:'ID',
+	objdisplayField:'DESCRIZIONE'
+},{
+    text:'Check box',
+	cls:'checkbox',
+    leaf:true,
+	objxtype: 'checkbox',
+	objfieldLabel:'Check box',
+	objdatasourcefield:'checkbox1',
+    objname:'checkbox1'
+},{
+    text:'Radio group',
+	cls:'radio',
+	leaf:true,
+	objxtype:'radio',
+	objfieldLabel:'Radio group',
+	objdatasourcefield:'radio1',
+    objname:'radio1'
+},{
+    text:'Button',
+	cls:'button',
+    leaf:true,
+	objxtype: 'button',
+	objonclick: '1',
+	objprocremoteonclick: '0',
+    objname:'button1'
+},{
+    text:'Label',
+	cls:'label',
+    leaf:true,
+	objxtype: 'label',
+    objname:'label1'
+},{
+    text:'Spacer',
+	cls:'spacer',
+    leaf:true,
+	objxtype: 'spacer',
+    objname:'spacer1'
+},{
+    text:'File field',
+	cls:'filefield',
+    leaf:true,
+	objxtype:'filefield',
+    objfieldLabel:'file field',
+	objdatasourcefield:'FILENAME',
+    objname:'filefield1'
+},		
+{
+    text:'sliderfield',
+	cls:'sliderfield',
+    leaf:true,
+	objxtype: 'sliderfield',
+	objfieldLabel: 'Single Slider',
+    objname: 'sliderfield1'
+},
+{
+    text:'DynamicFrame',
+    cls:'dynamicframe',
+    leaf:true,
+	objxtype: 'dynamicframe',
+	objdatasourcefield:'dynamicframe1',
+	objname: 'dynamicframe1'
+},{
+    text:'HTMLEditor',
+    cls:'htmleditor',
+    leaf:true,
+	objxtype: 'htmleditor',
+	objdatasourcefield:'htmleditor1',
+	objname: 'htmleditor1'
+},{
+    text:'DynamicHTMLBox',
+    cls:'dynamichtmlbox',
+    leaf:true,
+	objxtype: 'dynamichtmlbox',
+	objdatasourcefield:'dynamichtmlbox1',
+	objname: 'dynamichtmlbox1'
+},{
+    text:'Container',
+    cls:'container',
+    leaf:true,
+	objxtype: 'container',
+	objdatasourcefield:'container1',
+	objname: 'container1'
+},{
+    text:'CODEEditor',
+    cls:'codeeditor',
+    leaf:true,
+	objxtype: 'codeeditor',
+	objdatasourcefield:'codeeditor1',
+	objname: 'codeeditor1'
+},{
+    text:'Dynamic3D',
+    cls:'dynamic3d',
+    leaf:true,
+	objxtype: 'dynamic3d',
+	objdatasourcefield:'dynamic3d1',
+	objname: 'dynamic3d1'
+},{
+    text:'DynamicTextField', 
+	cls:'dynamictextfield',
+	leaf:true,
+	objxtype:'dynamictextfield',
+    objfieldLabel:'Text field',
+	objdatasourcefield:'dynamictextfield1',
+    objname:'dynamictextfield1'
+},{
+    text:'DynamicComboButton',
+	cls:'dynamiccombobutton',
+    leaf:true,
+	objxtype: 'dynamiccombobutton',
+	objfieldLabel:'dynamiccombobutton',
+	objdatasource:'ESEMPIO',
+	objdatasourcetype:'ESEMPIO',
+	objvalueField:'ID',
+	objdatasourcefield:'dynamiccombobutton1',
+	objonclick: '1',
+	objprocremoteonclick: '0',
+    objname:'dynamiccombobutton1'
+},{
+    text:'dynamicwmsmap',
+	cls:'dynamicwmsmap',
+    leaf:true,
+	objxtype: 'dynamicwmsmap',
+	objfieldLabel:'dynamicwmsmap',
+	objdatasource:'ESEMPIO',
+	objdatasourcetype:'ESEMPIO',
+	objvalueField:'ID',
+	objdatasourcefield:'dynamicwmsmap1',
+	objonclick: '1',
+	objprocremoteonclick: '0',
+    objname:'dynamicwmsmap1'
+},{
+    text:'dynamicwmseditmap',
+	cls:'dynamicwmseditmap',
+    leaf:true,
+	objxtype: 'dynamicwmseditmap',
+	objfieldLabel:'dynamicwmseditmap',
+	objdatasource:'ESEMPIO',
+	objdatasourcetype:'ESEMPIO',
+	objvalueField:'ID',
+	objdatasourcefield:'dynamicwmseditmap1',
+	objonclick: '1',
+	objprocremoteonclick: '0',
+    objname:'dynamicwmseditmap1'
+},{
+    text:'DynamicImage',
+	cls:'dynamicimage',
+    leaf:true,
+	objxtype:'dynamicimage',
+	objdatasourcefield:'dynamicimage1',
+    objname:'dynamicimage1'
+},{
+    text:'DynamicBarcode',
+	cls:'dynamicbarcode',
+    leaf:true,
+	objxtype:'dynamicbarcode',
+	objdatasourcefield:'dynamicbarcode1',
+    objname:'dynamicbarcode1'
+},{
+    text: 'DynamicTreeGrid',
+    cls:  'dynamictreegrid',
+    leaf: true,
+	objxtype: 'dynamictreegrid',
+	objdatasource:'ESEMPIO',
+	objdatasourcetype:'TREE',
+	objdatasourcefield:'dynamictreegrid1',
+	objname: 'dynamictreegrid1'
+},{
+    text: 'DynamicTreeCombo',
+    cls:  'dynamictreecombo',
+    leaf: true,
+	objxtype: 'dynamictreecombo',
+	objdatasource:'ESEMPIO',
+	objdatasourcetype:'TREE',
+	objdatasourcefield:'dynamictreecombo1',
+	objname: 'dynamictreecombo1',
+	objfieldLabel:'Dynamic Tree Combo'
+},{
+    text:'DynamicGrid',
+    cls:'dynamicgrid',
+	leaf:true,
+	objxtype:'dynamicgrid',
+	objfieldLabel:'dynamicgrid',
+	objdatasource:'ESEMPIO',
+	objdatasourcetype:'ESEMPIO',
+	objvalueField:'ID',
+	objdatasourcefield:'dynamicgrid1',
+    objname:'dynamicgrid1'
+},{
+    text:'DynamicGridForm',
+    cls:'dynamicgridform',
+	leaf:true,
+	items:[],
+	objxtype:'dynamicgridform',
+	objfieldLabel:'dynamicgridform',
+	objdatasource:'ESEMPIO',
+	objdatasourcetype:'ESEMPIO',
+	objvalueField:'ID',
+	objdatasourcefield:'dynamicgridform1',
+    objname:'dynamicgridform1'
+},{
+    text:'DynamicCombo',
+    cls:'dynamiccombo',
+	leaf:true,
+	objxtype:'dynamiccombo',
+	objfieldLabel:'dynamiccombo',
+	objdatasource:'ESEMPIO',
+	objdatasourcetype:'ESEMPIO',
+	objvalueField:'ID',
+	objdisplayField:'DESCRIZIONE',
+	objdatasourcefield:'dynamiccombo1',
+    objname:'dynamiccombo1',
+	objfieldLabel:'Dynamic Combo'
+},{
+    text:'DynamicCalendar',
+    cls:'dynamiccalendar',
+    leaf:true,
+	objxtype: 'dynamiccalendar',
+	objdatasource:'ESEMPIO',
+	objdatasourcetype:'ESEMPIO',
+	objvalueField:'ID',
+	objdisplayField:'DESCRIZIONE',
+	objdatasourcefield:'dynamiccalendar1',
+    objname:'dynamiccalendar1',
+	objfieldLabel:'Dynamic Calendar'
+},{
+    text:'DynamicGantt',
+    cls:'dynamicgantt',
+    leaf:true,
+	objxtype: 'dynamicgantt',
+	objdatasource:'ESEMPIO',
+	objdatasourcetype:'ESEMPIO',
+	objvalueField:'ID',
+	objdisplayField:'DESCRIZIONE',
+	objdatasourcefield:'dynamicgantt1',
+    objname:'dynamicgantt1',
+	objfieldLabel:'Dynamic Gantt'
+},{
+    text:'DynamicScheduler',
+    cls:'dynamicscheduler',
+    leaf:true,
+	objxtype: 'dynamicscheduler',
+	objdatasource:'ESEMPIO',
+	objdatasourcetype:'ESEMPIO',
+	objvalueField:'ID',
+	objdisplayField:'DESCRIZIONE',
+	objdatasourcefield:'dynamicscheduler1',
+    objname:'dynamicscheduler1',
+	objfieldLabel:'Dynamic Scheduler'
+},{
+    text:'DynamicColor',
+    cls:'dynamiccolor',
+    leaf:true,
+	objxtype: 'dynamiccolor',
+	objdatasourcefield:'dynamiccolor1',
+    objname:'dynamiccolor1',
+	objfieldLabel:'Dynamic Color'
+},{
+    text:'DynamicSignature',
+    cls:'dynamicsignature',
+    leaf:true,
+	objxtype: 'dynamicsignature',
+	objdatasourcefield:'dynamicsignature1',
+    objname:'dynamicsignature1',
+	objfieldLabel:'Dynamic Signature'
+},{
+    text:'GMapPanel',
+    cls:'gmappanel',
+	leaf:true,
+	objxtype:'gmappanel',
+	objdatasource:'GMAP',
+	objdatasourcetype:'GMAP',
+	objdatasourcefield:'GMapPanel1',
+    objname:'gmappanel1',
+},{
+    text:'DynamicMeteo',
+    cls:'dynamicmeteo',
+	leaf:true,
+	objxtype:'dynamicmeteo',
+	objdatasource:'GMAP',
+	objdatasourcefield:'DYNAMICMETEO1',
+    objname:'dynamicmeteo1',
+},{
+    text:'TabPanel',
+	cls:'tabpanel',
+    leaf:true,
+	objxtype:'tabpanel',
+    objname:'tabpanel1',
+	activeTab:0,
+	items:[
+		{	xtype:"panel",
+			title:"A",
+			layout:{type: 'absolute'},
+			items:[]
+		},{
+			xtype:"panel",
+			title:"B",
+			layout:{type: 'absolute'},
+			items:[]
+		},{
+			xtype:"panel",
+			title:"C",
+			layout:{type: 'absolute'},
+			items:[]
+		}
+	]
+},{
+    text:'Panel',
+	cls:'panel',
+    leaf:true,
+	objxtype:'panel',
+    objname:'panel1',
+	title:"panel1",
+	layout:{type: 'absolute'},
+	items:[]
+},{
+    text:'GraphicBox',
+	cls:'panel',
+    leaf:true,
+	objxtype:'box',
+    objname:'box1',
+},{
+    text: 'KPI Gauge',
+    cls:  'kpigauge',
+    leaf: true,
+    objxtype: 'kpigauge',
+	objdatasource:'ESEMPIO',
+	objdatasourcetype:'ESEMPIO',
+	objvalueField:'EXPR',
+	objdisplayField:'GROUPDESC',
+	objdatasourcefield:'kpigauge1',	
+	objname: 'kpigauge1'
+},{
+    text: 'KPI Pie',
+    cls:  'kpipie',
+    leaf: true,
+    objxtype: 'kpipie',
+	objdatasource:'ESEMPIO',
+	objdatasourcetype:'ESEMPIO',
+	objvalueField:'EXPR',
+	objdisplayField:'GROUPDESC',
+	objdatasourcefield:'kpipie1',		
+	objname: 'kpipie1'
+},{
+    text: 'KPI Polar',
+    cls:  'kpipolar',
+    leaf: true,
+    objxtype: 'kpipolar',
+	objdatasource:'ESEMPIO',
+	objdatasourcetype:'ESEMPIO',
+	objvalueField:'EXPR',
+	objdisplayField:'GROUPDESC',
+	objdatasourcefield:'kpipolar1',		
+	objname: 'kpipolar1'
+},
+{
+    text: 'KPI Area',
+    cls:  'kpiarea',
+    leaf: true,
+    objxtype: 'kpiarea',
+	objdatasource:'ESEMPIO',
+	objdatasourcetype:'ESEMPIO',
+	objvalueField:'EXPR',
+	objdisplayField:'GROUPDESC',
+	objdatasourcefield:'kpiarea1',		
+	objname: 'kpiarea1'
+},{
+    text: 'KPI Bar',
+    cls:  'kpibar',
+    leaf: true,
+    objxtype: 'kpibar',
+	objdatasource:'ESEMPIO',
+	objdatasourcetype:'ESEMPIO',	
+	objvalueField:'EXPR',
+	objdisplayField:'GROUPDESC',
+	objdatasourcefield:'kpibar1',	
+	objname: 'kpibar1'
+},{
+    text: 'KPI Line',
+    cls:  'kpiline',
+    leaf: true,
+    objxtype: 'kpiline',
+	objdatasource:'ESEMPIO',
+	objdatasourcetype:'ESEMPIO',	
+	objvalueField:'EXPR',
+	objdisplayField:'GROUPDESC',
+	objdatasourcefield:'kpiline1',	
+	objname: 'kpiline1'
+},{
+    text: 'KPI Pivot',
+    cls:  'pivotgrid',
+    leaf: true,
+    objxtype: 'pivotgrid',
+	objdatasource:'ESEMPIO',
+	objdatasourcetype:'ESEMPIO',	
+	objdatasourcefield:'pivotgrid1',	
+	objname: 'pivotgrid1'
+},{
+    text: 'KPI DynamicButton',
+    cls:  'dynamicbutton',
+    leaf: true,
+    objxtype: 'dynamicbutton',
+	objdatasource:'ESEMPIO',
+	objdatasourcetype:'ESEMPIO',	
+	objvalueField:'EXPR',
+	objdisplayField:'GROUPDESC',
+	objdatasourcefield:'dynamicbutton1',	
+	objname: 'dynamicbutton1'
+},
+]
+ 

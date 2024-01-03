@@ -1,0 +1,34 @@
+NomeField		,Len,Align	,Requested	,CodeValue	,SampleValue
+TIPOREC			,02	,L		,Y		 	,'03'		,TRACCIABILITA
+TERZISTA		,13	,L		,Y			,			,0000000001234 TERZISTA
+ORDANNO			,04 ,L		,Y			,			,2020
+ORDNUM			,13 ,L		,Y			,			,0000000056402
+RIGA			,05 ,L 		,Y  		,  			,12345
+LOTTO			,20 ,L  	,Y  		,			,Lotto
+LOTTOINT		,20 ,L  	,Y  		,			,Lotto
+IDCAPO			,20 ,L  	,N  		,			,Id Capo x Carne
+QTALETTO		,15 ,L  	,Y  		,			,NNNNNNNNNN,NNN * 1000
+PESOLETTO		,10 ,L  	,Y  		,			,NNNNNNNNNN,NNN * 1000
+SCADENZA		,10 ,L  	,N  		,			,2020-04-31
+SSCC			,20 ,L  	,N  		,			,(00)NNNNNNNNNN
+RFID			,30 ,L  	,N  		,			,NNNNNNNNNN
+NAZIONE			,03 ,L  	,N  		,			,NNN
+BOLLO			,30 ,L  	,N  		,			,132M
+LAB1NAZIONE		,03 ,L  	,N  		,			,NNN
+LAB1BOLLO		,30 ,L  	,N  		,			,NNNNNNNNNN
+LAB2NAZIONE		,03 ,L  	,N  		,			,NNN
+LAB2BOLLO		,30 ,L  	,N  		,			,NNNNNNNNNN
+RAZZA			,01 ,L  	,N  		,			,1 BOVINI 0 GENERICO
+RAZZACODICE		,03 ,L  	,N  		,			,ABC
+MESI			,03 ,L  	,N  		,			,16
+NAZIONEISO0		,03 ,L  	,N  		,			,250
+NAZIONEISO1		,03 ,L  	,N  		,			,250
+NAZIONEISO2		,03 ,L  	,N  		,			,250
+NAZIONEISO3		,03 ,L  	,N  		,			,250
+NAZIONEISO4		,03 ,L  	,N  		,			,250
+NAZIONEISO5		,03 ,L  	,N  		,			,250
+NAZIONEMACELLO	,03 ,L  	,N  		,			,250
+NAZIONESEZIONE  ,03 ,L  	,N  		,			,250
+NAZIONELAV		,03 ,L  	,N  		,			,250
+SENDDATA		,10 ,L  	,Y  		,			,2020-02-02
+SENDTIME		,08 ,L  	,Y  		,			,18.35.17

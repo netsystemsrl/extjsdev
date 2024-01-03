@@ -1,0 +1,44 @@
+/* including package saki-tree-icon */
+/* including package saki-tree-icon */
+/*global Ext:true */
+/*jslint browser: true, devel:true, sloppy: true, white: true, plusplus: true */
+/*
+ This file is part of Tree Icon Plugin package
+
+ Copyright (c) 2015, Jozef Sakalos, Saki
+
+ Package:  saki-tree-icon
+ Author:   Jozef Sakalos, Saki
+ Contact:  http://extjs.eu/contact
+ Date:     1. February 2015
+
+ Commercial License
+ Developer, or the specified number of developers, may use this file in any number
+ of projects during the license period in accordance with the license purchased.
+
+ Uses other than including the file in the project are prohibited.
+ See http://extjs.eu/licensing for details.
+
+ SCSS for the plugin
+
+ You can separate values below to var/tree/column/Icon.scss for bigger applications
+ that can probably benefit from the separation. The values are define inline here\
+ for simplicity.
+
+ @member Ext.saki.tree.Icon
+ */
+/* line 30, ../../sass/src/tree/Icon.scss */
+.fa-icon {
+  text-align: center;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  margin-right: 3px; }
+
+/* line 37, ../../sass/src/tree/Icon.scss */
+.fa.fa-icon {
+  font-size: 14px; }
+
+/* line 40, ../../sass/src/tree/Icon.scss */
+.x-grid-tree-node-expanded .fa-folder-o:before {
+  content: "\f115"; }

@@ -1,0 +1,21 @@
+NomeField		,Len,Align	,Requested	,CodeValue,SampleValue
+TIPOREC			,1	,L		,Y		 	,'R'	,Fisso
+DDTNUM			,16	,L		,Y			,		,Numero DDT Stampato
+DDTRIGA			,4	,L		,Y			,		,ID RIGA
+ARTCOD			,14	,L		,Y			,		,CODICE ARTICOLO
+ARTDESC			,36	,L		,N			,		,DESCRIZIONE ARTICOLO
+NATURA			,4	,L		,N			,=		,=Non specificato OP=Operazioni promozionali OF=Uova di cioccolato
+QTA				,6	,L		,N			,		,Numero totale di colli relativi all’articolo
+PESO			,8	,L		,N			,		,lordo totale in KG della riga della spedizione
+DOGQTA			,6	,L		,N			,		,QTA differente rispetto al peso
+DOGUM			,3	,L		,N			,		,UM differente rispetto al peso
+LOTTO			,20	,L		,N			,		,LOTTO 
+SCADENZA		,8	,L		,N			,		,SCADENZA 
+NOTE			,240,L		,N			,		,NOTE 
+EANCOLLO		,14 ,L		,N			,		,EAN COLLO
+ARTCODDEST		,15 ,L		,N			,		,ARTCODDEST 
+ARTEAN			,13 ,L		,N			,		,EAN ARTICOLO
+CARTPZ			,4  ,L		,N			,		,numero pezzi per cartone
+DDTRIGANUM		,10 ,L		,N			,		,Determina l’ordine delle righe sul DDT
+PESONETTO		,8  ,L		,N			,		,Peso netto totale in KG della riga bolla
+

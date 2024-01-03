@@ -1,0 +1,16 @@
+NomeField		,Len,Align	,Requested	,CodeValue,SampleValue
+FILLER			,01	,L		,N		 	, 	,Fisso
+TIPOREC			,02	,L		,N		 	,F4	,Fisso
+Mittente		,05	,L		,Y		 	, 	,SIA
+Ricevente		,05	,L		,Y		 	, 	,ABI
+DataCreazione	,06	,L		,Y		 	, 	,DataCreazione
+NomeSupporto	,20	,L		,Y		 	, 	,NomeSupporto
+MittenteRif 	,06	,L	    ,Y		 	, 	,RiferimentiMittente
+FILLER			,59	,L		,N		 	, 	,Fisso
+TIPOflusso		,01	,L		,N		 	,2	,Fisso
+QualifFlusso    ,01 ,L	    ,N		 	,$	,QualificatoreFlusso
+SoggettoVeicol  ,05 ,L	    ,Y		 	,	,SIA o ABI
+FILLER			,02	,L		,N		 	, 	,FILLER
+CodiceDivisa    ,01	,L		,N		 	,E	,Fisso
+FILLER			,01	,L		,N		 	, 	,FILLER   
+NonDisponibile  ,05	,L	    ,N		 	, 	,CampoNonDisponibile

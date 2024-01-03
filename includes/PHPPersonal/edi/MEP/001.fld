@@ -1,0 +1,4 @@
+NomeField		,Len,Align	,Requested	,CodeValue,SampleValue
+ANNOMESE		,08	,L		,Y		 	,'T'	,Fisso
+TIPOREC			,03	,L		,Y			,001	,MACHINE ON EVENT
+FILENAME		,99 ,L		,Y			,		,NOME FILE

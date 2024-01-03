@@ -1,0 +1,15 @@
+NomeField		,Len,Align	,Requested	,CodeValue										,SampleValue
+TIPOREC			,99	,		,Y		 	,IMD											,IMD
+FILLER			,99	,		,Y		 	,+												,FILLER
+NUMRIGA			,99	,		,Y			,F												,A		=		Free-form long description;B		=		Code and text;C		=		Code (from industry code list);E		=		Free-form short description;F		=		Free-form;S		=		Structured (from industry code list)
+FILLER			,99	,		,Y		 	,+												,FILLER
+TIPODESC		,35	,		,Y			,DSC											,CU		=	Consumer unit (GS1 Permanent Code); DU		=	Despatch unit (GS1 Permanent Code);RC		=	Returnable container (GS1 Permanent Code);SER		=	Service (GS1 Permanent Code);TU		=	Traded unit (GS1 Permanent Code);VQ		=	Variable quantity product (GS1 Permanent Code)
+FILLER			,99	,		,Y		 	,+												,FILLER
+IDCODE			,99	,		,Y			,												,A		=		Free-form long description;B		=		Code and text;C		=		Code (from industry code list);E		=		Free-form short description;F		=		Free-form;S		=		Structured (from industry code list)
+FILLER			,99	,		,Y		 	,:												,FILLER
+AGCODE			,99	,		,Y			,												,A		=		Free-form long description;B		=		Code and text;C		=		Code (from industry code list);E		=		Free-form short description;F		=		Free-form;S		=		Structured (from industry code list)
+FILLER			,99	,		,Y		 	,:												,FILLER
+CODART			,99	,		,Y			,												,COD ARTICOLO
+FILLER			,99	,		,Y		 	,:												,FILLER
+DESCART			,35	,		,Y			,												,DESCR ARTICOLO
+END				,99	,		,Y		 	,'												,END 

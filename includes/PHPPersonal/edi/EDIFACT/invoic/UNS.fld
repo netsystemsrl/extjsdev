@@ -1,0 +1,5 @@
+NomeField		,Len,Align	,Requested	,CodeValue										,SampleValue
+TIPOREC			,99	,		,Y		 	,UNT											,UNT
+FILLER			,99	,		,Y		 	,+												,FILLER
+MSGCOUNT		,99	,		,Y			,S												,MSGCOUNT
+END				,99	,		,Y		 	,'												,END

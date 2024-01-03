@@ -1,0 +1,16 @@
+﻿
+@mixin _codaxy-buttongroup-ui (
+    $ui,
+    $ui-header-text-shadow: null
+) {
+    .#{$prefix}btn-group-header {
+        @if $ui-header-text-shadow != null {
+            @include text-shadow($ui-header-text-shadow);
+        }
+    }
+}
+
+@include _codaxy-buttongroup-ui (
+    $ui: default,
+    $ui-header-text-shadow: $btn-group-header-text-shadow
+);

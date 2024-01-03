@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>WMS RADIO GPS</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/iThing.css" type="text/css" />
+    <script src="jquery.js"></script>
+    <script src="jquerycsv.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="lib/jquery.mousewheel.min.js"></script>
+    <script src="jQDateRangeSlider-min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <style>
+		
+		html, body {
+			height:100%;
+		}
+		body {
+			/*overflow:hidden;*/
+		}
+		
+		#site-wrapper {
+			position: relative;
+			overflow: hidden;
+			width: 100%;
+		}
+
+		#site-canvas {
+			width: 100%;
+			height: 100%;
+			position: relative;
+			-webkit-transform: translateX(0);
+			transform: translateX(0);
+			-webkit-transition: .3s ease all;
+			transition: .3s ease all;
+		}
+
+		#site-menu {
+			width: 30em;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: -30em;
+			background: #428bca;
+			padding: 15px;
+		}
+
+		#site-wrapper.show-nav #site-canvas {
+			-webkit-transform: translateX(+30em);
+			transform: translateX(+30em);
+		}
+
+		a.toggle-nav {position: absolute; top:0; left:0; font-size:2em; z-index: 999;}
+
+		/* Better Performing Method */
+		#site-canvas {
+			-webkit-transform: translate3d(0);
+			transform: translate3d(0);
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+		}
+		.show-nav #site-canvas {
+			-webkit-transform: translate3d(30em);  
+			transform: translate3d(30em);  
+		}
+	
+		/*
+        .row {
+		  width: 100%;
+		  display: flex;
+		  flex-direction: row;
+		}
+		*/
+		.block {
+		  width: 100px;
+		}
+		
+		caption { 
+			display: table-caption;
+			text-align: center;
+		}
+		
+		.better-table caption {  caption-side: bottom; } 
+		
+		table,th,td {
+			border: 1px solid black;
+			border-collapse: collapse;
+			padding: 15px;
+			border-spacing: 5px;
+		}
+		
+		table#Mezzi {
+			width: 100%; 
+			background-color: #f1f1c1;
+		}
+		table#Mezzi tr:nth-child(even) {
+			background-color: #eee;
+		}
+		table#Mezzi tr:nth-child(odd) {
+			background-color: #fff;
+		}
+		table#Mezzi th {
+			color: white;
+			background-color: black;
+		}
+		
+		/* GRAFIC LOADER */
+		#loading {
+			display:none;
+		}
+		/* Absolute Center Spinner */
+		.loading {
+		  position: fixed;
+		  z-index: 999;
+		  height: 2em;
+		  width: 2em;
+		  /*overflow: show;*/
+		  margin: auto;
+		  top: 0;
+		  left: 0;
+		  bottom: 0;
+		  right: 0;
+		}
+
+		/* Transparent Overlay */
+		.loading:before {
+		  content: '';
+		  display: block;
+		  position: fixed;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 100%;
+			background: radial-gradient(rgba(20, 20, 20,.8), rgba(0, 0, 0, .8));
+
+		  background: -webkit-radial-gradient(rgba(20, 20, 20,.8), rgba(0, 0, 0,.8));
+		}
+
+		/* :not(:required) hides these rules from IE9 and below */
+		.loading:not(:required) {
+		  /* hide "loading..." text */
+		  font: 0/0 a;
+		  color: transparent;
+		  text-shadow: none;
+		  background-color: transparent;
+		  border: 0;
+		}
+
+		.loading:not(:required):after {
+		  content: '';
+		  display: block;
+		  font-size: 10px;
+		  width: 1em;
+		  height: 1em;
+		  margin-top: -0.5em;
+		  -webkit-animation: spinner 1500ms infinite linear;
+		  -moz-animation: spinner 1500ms infinite linear;
+		  -ms-animation: spinner 1500ms infinite linear;
+		  -o-animation: spinner 1500ms infinite linear;
+		  animation: spinner 1500ms infinite linear;
+		  border-radius: 0.5em;
+		  -webkit-box-shadow: rgba(255,255,255, 0.75) 1.5em 0 0 0, rgba(255,255,255, 0.75) 1.1em 1.1em 0 0, rgba(255,255,255, 0.75) 0 1.5em 0 0, rgba(255,255,255, 0.75) -1.1em 1.1em 0 0, rgba(255,255,255, 0.75) -1.5em 0 0 0, rgba(255,255,255, 0.75) -1.1em -1.1em 0 0, rgba(255,255,255, 0.75) 0 -1.5em 0 0, rgba(255,255,255, 0.75) 1.1em -1.1em 0 0;
+			box-shadow: rgba(255,255,255, 0.75) 1.5em 0 0 0, rgba(255,255,255, 0.75) 1.1em 1.1em 0 0, rgba(255,255,255, 0.75) 0 1.5em 0 0, rgba(255,255,255, 0.75) -1.1em 1.1em 0 0, rgba(255,255,255, 0.75) -1.5em 0 0 0, rgba(255,255,255, 0.75) -1.1em -1.1em 0 0, rgba(255,255,255, 0.75) 0 -1.5em 0 0, rgba(255,255,255, 0.75) 1.1em -1.1em 0 0;
+		}
+
+		/* Animation */
+
+		@-webkit-keyframes spinner {
+		  0% {
+			-webkit-transform: rotate(0deg);
+			-moz-transform: rotate(0deg);
+			-ms-transform: rotate(0deg);
+			-o-transform: rotate(0deg);
+			transform: rotate(0deg);
+		  }
+		  100% {
+			-webkit-transform: rotate(360deg);
+			-moz-transform: rotate(360deg);
+			-ms-transform: rotate(360deg);
+			-o-transform: rotate(360deg);
+			transform: rotate(360deg);
+		  }
+		}
+		@-moz-keyframes spinner {
+		  0% {
+			-webkit-transform: rotate(0deg);
+			-moz-transform: rotate(0deg);
+			-ms-transform: rotate(0deg);
+			-o-transform: rotate(0deg);
+			transform: rotate(0deg);
+		  }
+		  100% {
+			-webkit-transform: rotate(360deg);
+			-moz-transform: rotate(360deg);
+			-ms-transform: rotate(360deg);
+			-o-transform: rotate(360deg);
+			transform: rotate(360deg);
+		  }
+		}
+		@-o-keyframes spinner {
+		  0% {
+			-webkit-transform: rotate(0deg);
+			-moz-transform: rotate(0deg);
+			-ms-transform: rotate(0deg);
+			-o-transform: rotate(0deg);
+			transform: rotate(0deg);
+		  }
+		  100% {
+			-webkit-transform: rotate(360deg);
+			-moz-transform: rotate(360deg);
+			-ms-transform: rotate(360deg);
+			-o-transform: rotate(360deg);
+			transform: rotate(360deg);
+		  }
+		}
+		@keyframes spinner {
+		  0% {
+			-webkit-transform: rotate(0deg);
+			-moz-transform: rotate(0deg);
+			-ms-transform: rotate(0deg);
+			-o-transform: rotate(0deg);
+			transform: rotate(0deg);
+		  }
+		  100% {
+			-webkit-transform: rotate(360deg);
+			-moz-transform: rotate(360deg);
+			-ms-transform: rotate(360deg);
+			-o-transform: rotate(360deg);
+			transform: rotate(360deg);
+		  }
+		}
+		
+		.dotgreen {
+		  height: 25px;
+		  width: 25px;
+		  background-color: green;
+		  border-radius: 50%;
+		  display: inline-block;
+		}
+		.dotblue {
+		  height: 25px;
+		  width: 25px;
+		  background-color: blue;
+		  border-radius: 50%;
+		  display: inline-block;
+		}
+		.dotred {
+		  height: 25px;
+		  width: 25px;
+		  background-color: red;
+		  border-radius: 50%;
+		  display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	<div id="loading" class="loading"></div>
+	
+	<div id="site-wrapper" class="container">
+
+		<div id="site-canvas">
+
+			<a href="#" class="toggle-nav btn btn-lg" id="big-sexy"><i class="fa fa-bars"></i> </a>
+			
+			<div id="site-menu">
+				<div id="actions">
+					<button id="server-input" class="btn btn-default" type="button">Carica dal server</button>
+					<div class="form-group" id="inputs">
+						<label for="exampleInputFile">File input</label>
+						<input type="file" id="files" name="files[]" multiple >
+						<p class="help-block">Seleziona un file posizioni</p>
+					</div>
+				</div>
+				<div id="mezzi_container">
+					<table id="Mezzi" style="width:100%; height:200px;" border>
+						<h1>Business Intelligence</h1>
+						<tr>
+							<td>Carrello 5</td>
+							<td><span class="dotgreen"></td>
+							<td><input type="checkbox" id="chk5" onclick="DrawRoute()" checked></td>
+						</tr>
+						<tr>
+							<td>Carrello 6</td>
+							<td><span class="dotred"></td>
+							<td><input type="checkbox" id="chk6" onclick="DrawRoute()" checked></td>
+						</tr>
+						<tr>
+							<td>Carrello 7</td>
+							<td><span class="dotblue"></td>
+							<td><input type="checkbox" id="chk7" onclick="DrawRoute()" checked></td>
+						</tr>
+						<tr>
+							<td></td>
+						</tr>
+					</table>
+					
+					<table id="totalizzatori" style="width:100%; height:200px;" border>
+						<tr>
+							<td>Missioni</td>
+							<td>1</td>
+						</tr>
+						<tr>
+							<td>TempoCarico</td>
+							<td>1</td>
+						</tr>
+						<tr>
+							<td>TempoScarico</td>
+							<td>1</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			
+			<div class='row'>
+				<div class="col-md-12">
+					<div id="slider-container" class="col-md-10 col-md-offset-1">
+						<div id="slider"></div>
+					</div>
+					
+					<canvas id="myCanvas" width="1200" height="800" style="border:1px solid #d3d3d3;"></canvas>
+					<!--
+					<canvas id="myCanvas" style="position:relative;height:80vh;border:1px solid #d3d3d3;"></canvas>
+					-->
+				</div>
+			</div>
+       </div><!-- #site-canvas -->
+
+    </div><!-- #site-wrapper> -->
+
+</body>
+    <script>
+		/*CANVAS SIDEBAR*/
+		$(function() {
+			$('.toggle-nav').click(function() {
+				// Calling a function in case you want to expand upon this.
+				toggleNav();
+			});
+		});
+
+		function toggleNav() {
+			if ($('#site-wrapper').hasClass('show-nav')) {
+				// Do things on Nav Close
+				$('#site-wrapper').removeClass('show-nav');
+			} else {
+				// Do things on Nav Open
+				$('#site-wrapper').addClass('show-nav');
+			}
+
+			//$('#site-wrapper').toggleClass('show-nav');
+		}
+		$(document).keyup(function(e) {
+			if (e.keyCode == 27) {
+				if ($('#site-wrapper').hasClass('show-nav')) {
+					// Assuming you used the function I made from the demo
+					toggleNav();
+				}
+			} 
+		});
+	
+        /* DRAW POINT MAP*/
+        var canvas = document.getElementById("myCanvas");
+		var canvasWidth, canvasHeight, ctx, canvasData;
+		
+		var data;
+		var maxDateTime;
+		var minDateTime;
+	
+		var MaxMachine = 10;
+		var MachineColorMatrix = {1:getRandomColor(), 2:getRandomColor(), 3:getRandomColor(), 4:"yellow" , 5:"green", 6:"red", 7:"blue", 8:getRandomColor(), 9:getRandomColor(), 10:getRandomColor()};
+		var PositionDB = new Array(MaxMachine);
+		var EventDB = new Array();
+		
+		var dragStart, dragged;
+
+        /* background */
+        var background;
+
+        $(document).ready(function() {
+			docheight = $(document).height();
+			docwidth = $(document).width();
+			
+			$(canvas).css('height',docheight);
+			$(canvas).css('width',docwidth);
+			
+			canvasWidth = canvas.width;
+			canvasHeight = canvas.height;
+			ctx = canvas.getContext("2d");
+			canvasData = ctx.getImageData(0, 0, canvasWidth, canvasHeight);
+				
+			background = new Image();
+			background.src = "mappa.png";
+
+			background.onload = function() {
+				ctx.drawImage(background, 0, 0, background.width, background.height, 0, 0, canvas.width, canvas.height);
+			}
+				
+			trackTransforms(ctx);
+			
+			lastX = canvas.width / 2,
+			lastY = canvas.height / 2;
+			
+			$("#server-input").click(function () {
+				showLoader();
+				//file = new File("data/posizioni.csv");
+				//file = new File([], "data/posizioni.csv");
+				//var file = File.createFromFileName("data/posizioni.csv");
+				$.ajax({
+					type: "GET",
+					url: "data/posizioni.csv",
+					dataType: "text",
+					success: function(data) {processDataFromServer(data);}
+				});
+				return false; //return true;
+			});
+            if (isAPIAvailable()) {
+                $('#files').bind('change', handleFileSelect);
+            }
+        });
+		
+        /* time slider */
+        // http://ghusse.github.io/jQRangeSlider/options.html#rangeOption
+       
+        //$("#slider").dateRangeSlider();
+		function addZero(val) {
+			if (val < 10) {
+				return "0" + val;
+			}
+
+			return val;
+		}
+
+		/* DRAW - COLOR */
+		function getRandomColor() {
+		  var letters = '0123456789ABCDEF';
+		  var color = '#';
+		  for (var i = 0; i < 6; i++) {
+			color += letters[Math.floor(Math.random() * 16)];
+		  }
+		  return color;
+		}
+
+		function DrawRoute(){
+			
+			//test linea
+			//lineDemo(ctx);
+			/*
+			- UNIX time in milliseconds (time since 1970.01.01)
+			- time from previous record in milliseconds
+			- time from running dashboard in milliseconds
+			- address of hedgehog
+			- X coordinate of hedgehog, meters
+			- Y coordinate of hedgehog, meters
+			- Z coordinate of hedgehog, meters
+			- address of stationary beacon
+			- raw distance from hedgehog to stationary beacon, meters
+			*/
+			var lastX = 0;
+			var lastY = 0;
+			var timerstart =0;
+			var timerend =0;
+			var Riga = 0;
+			var lastDirezione =1;
+			var Direzione =1;
+			var TempoScarico =0;
+			var TempoCarico =0;
+			var MissioniScarichi = 0;
+			var MissioniCarichi = 0;
+			var timerlast =0;
+			
+			PositionDB = new Array(MaxMachine);
+			EventDB = new Array();
+			
+			for (var i = 0; i < MaxMachine; ++i) {
+				var Machine = { name:  'name' + i,
+								color: MachineColorMatrix[i],
+								//color: getRandomColor(),
+								type:  'muletto',
+								positioncount: 0,
+								positions: []
+								};
+				PositionDB[i] = Machine;
+			}
+			
+			ctx.drawImage(background, 0, 0, background.width, background.height, 0, 0, canvas.width, canvas.height);
+		
+			for (var row in data) {
+				if ((parseInt(data[row][0]) > minDateTime.getTime()) && (parseInt(data[row][0]) < maxDateTime.getTime())){
+					
+					Riga = Riga +1;
+					
+					if (timerstart == 0) {timerstart = parseInt(data[row][0]);}
+					timerend = parseInt(data[row][0]);
+					
+					var MachineId = data[row][3];
+					
+					xx = data[row][5];
+					yy = data[row][4];
+					
+					xx = parseInt(Number(xx) * 5);
+					yy = parseInt(Number(yy) * 5); //.toFixed;
+					
+					if (MachineId == 5){
+						xx = xx +270;
+						yy = yy +250;
+					}
+					else if (MachineId == 6){
+						xx = xx +50;
+						yy = yy +230;
+					}
+					else if (MachineId == 7){
+						xx = xx + 570;
+						yy = yy + 390;
+					}
+					
+					//SAVE POSITION - CREATE PositionDB
+					var Position = {time:    timerend,
+									machine: MachineId,
+									x:       xx, 
+									y:       yy,
+									pallet:  parseInt(data[row][16]),
+									weight:  parseInt(data[row][2])
+									};
+					PositionDB[MachineId].positions.push(Position);
+					PositionDB[MachineId].positioncount = PositionDB[MachineId].positioncount +1;
+					
+					
+					// DRAW SCREEN
+					var chk = document.getElementById("chk" + MachineId);
+					var MachineColor = MachineColorMatrix[MachineId];
+					if  (chk.checked == true){
+					
+						pointb(Position.x,Position.y, ctx,MachineColor,Position.pallet);
+						
+						
+						if (PositionDB[MachineId].positioncount > 3){
+							var positionPrev = PositionDB[MachineId].positions[PositionDB[MachineId].positioncount-2];								
+							if ((positionPrev.pallet == 0) && (Position.pallet == 1)){
+								//DRAW Image
+								EventDB.push(Position);
+								var image="carrello_elevatore_1.png";
+								pointimma(Position.x,Position.y, ctx, image);
+								
+							}else if ((positionPrev.pallet == 1) && (Position.pallet == 0)){
+								//DRAW Image
+								EventDB.push(Position);
+								var image="carrello_elevatore_0.png";
+								pointimma(Position.x,Position.y, ctx, image);
+								
+							}
+							
+							line(Position.x, Position.y, ctx, MachineColor, positionPrev.x, positionPrev.y);
+						}
+						
+						//EVENT START
+						if (PositionDB[MachineId].positioncount == 2){
+							EventDB.push(Position);
+						}
+					}
+						
+				}
+			}
+			
+			//calcolo tempi 
+			var EventDBLen = EventDB.length;
+			for (i = 1; i < EventDBLen; i++) {
+				if (EventDB[i].pallet == 0) {
+					MissioniScarichi = MissioniScarichi +1;
+					TempoScarico = TempoScarico + EventDB[i].time - EventDB[i-1].time;
+				}else{
+					MissioniCarichi = MissioniCarichi +1;
+					TempoCarico = TempoCarico + EventDB[i].time - EventDB[i-1].time;
+				}
+			}
+				
+			//PUBLICATE TIMING
+			var MissioniHTML = document.getElementById("totalizzatori").rows[0].cells;
+			MissioniHTML[1].innerHTML = 'Car:' + MissioniCarichi + ' Scar:' + MissioniScarichi;
+			
+			var TempoScaricoHTML = document.getElementById("totalizzatori").rows[1].cells;
+			TempoScaricoHTML[1].innerHTML = TempoScarico / 1000;
+			
+			var TempoCaricoHTML = document.getElementById("totalizzatori").rows[2].cells;
+			TempoCaricoHTML[1].innerHTML = TempoCarico / 1000;
+			
+		}
+    
+        function pointb(x, y, Mycanvas, color, fill) {
+            Mycanvas.beginPath();
+            Mycanvas.arc(x, y, 2, 0, 2 * Math.PI, true);
+            Mycanvas.strokeStyle = color;
+			
+			if (fill == '1') {
+				Mycanvas.fill();
+			}
+			Mycanvas.stroke();
+			
+        }
+		
+        function pointimma(x, y, Mycanvas, image) {
+			base_image = new Image();
+			base_image.src = image;	
+			base_image.id = 'image-' + x + '-' + y;
+			ctx.drawImage(base_image, x, y, 25, 15);
+        }
+
+		
+        function line(x, y, Mycanvas, color, xx, yy) {
+           // console.log('xx ' + xx + 'yy ' + yy + 'x ' + xx + 'y ' + yy);
+            Mycanvas.beginPath();
+            Mycanvas.moveTo(xx, yy);
+            //Mycanvas.lineWidth="5";
+            Mycanvas.strokeStyle = color;
+            //Mycanvas.lineTo(x+0.4, y+0.4);
+            Mycanvas.lineTo(x, y);
+            Mycanvas.stroke();
+        }
+
+        function lineDemo(Mycanvas) {
+            ctx.beginPath();
+            ctx.strokeStyle = "purple"; // Purple path
+            ctx.moveTo(50, 0);
+            ctx.lineTo(150, 130);
+            ctx.stroke(); // Draw it
+        }
+
+		function showLoader(){
+			$("#loading").css('display', 'block');
+		}
+		
+		function hideLoader(){
+			$("#loading").css('display', 'none');
+		}
+
+
+        /* CSV */
+
+		function processDataFromServer(allText) {
+			data = $.csv.toArrays(allText);
+			manageData(data);
+		}
+		
+        function isAPIAvailable() {
+            // Check for the various File API support.
+            if (window.File && window.FileReader && window.FileList && window.Blob) {
+                // Great success! All the File APIs are supported.
+                return true;
+            } else {
+                // source: File API availability - http://caniuse.com/#feat=fileapi
+                // source: <output> availability - http://html5doctor.com/the-output-element/
+                document.writeln('The HTML5 APIs used in this form are only available in the following browsers:<br />');
+                // 6.0 File API & 13.0 <output>
+                document.writeln(' - Google Chrome: 13.0 or later<br />');
+                // 3.6 File API & 6.0 <output>
+                document.writeln(' - Mozilla Firefox: 6.0 or later<br />');
+                // 10.0 File API & 10.0 <output>
+                document.writeln(' - Internet Explorer: Not supported (partial support expected in 10.0)<br />');
+                // ? File API & 5.1 <output>
+                document.writeln(' - Safari: Not supported<br />');
+                // ? File API & 9.2 <output>
+                document.writeln(' - Opera: Not supported');
+                return false;
+            }
+        }
+
+        function handleFileSelect(evt) {
+			showLoader();
+            var files = evt.target.files; // FileList object
+            var file = files[0];
+            // read the file metadata
+            var output = ''
+            output += '<span style="font-weight:bold;">' + escape(file.name) + '</span><br />\n';
+            output += ' - FileType: ' + (file.type || 'n/a') + '<br />\n';
+            output += ' - FileSize: ' + file.size + ' bytes<br />\n';
+            output += ' - LastModified: ' + (file.lastModifiedDate ? file.lastModifiedDate.toLocaleDateString() : 'n/a') + '<br />\n';
+            // read the file contents
+            printTable(file);
+            // post the results
+            $('#list').append(output);
+        }
+
+        function printTable(file) {
+            var reader = new FileReader();
+            reader.readAsText(file);
+            reader.onload = function(event) {
+                var csv = event.target.result;
+                data = $.csv.toArrays(csv);				
+				manageData(data);
+            };
+            reader.onerror = function() {
+                alert('Unable to read ' + file.fileName);
+            };
+        }
+		
+		function manageData(data) {
+			var timerstart =0;
+			var timerend =0;
+			// DRAW SLIDER
+			for (var row in data) {
+				if (timerstart == 0) {timerstart = parseInt(data[row][0]);}
+				timerend = parseInt(data[row][0]);
+			}
+			timerstartDate = new Date(timerstart);
+			timerendDate = new Date(timerend);
+			
+			timerstartDate.setHours( timerstartDate.getHours() - 1);
+			timerendDate.setHours( timerendDate.getHours() + 1);
+
+			$("#slider").dateRangeSlider({
+				bounds: {
+					min: timerstartDate,
+					max: timerendDate
+				},
+				range: {
+					min: {
+						minutes: 10
+					}
+				},
+				scales: [{
+					first: function (value) {
+						return value;
+					},
+					end: function (value) {
+						return value;
+					},
+					next: function (value) {
+						var next = new Date(value);
+						return new Date(next.setHours(value.getHours() + 1));
+
+					},
+					label: function (value) {
+						return value.getHours();
+					},
+					format: function (tickContainer, tickStart, tickEnd) {
+						tickContainer.addClass("myCustomClass");
+					}
+				}],
+				formatter: function (val) {
+					var h = val.getHours(),
+						m = val.getMinutes();
+
+					return addZero(h) + ':' + addZero(m);
+				},
+			});
+			$("#slider").bind("valuesChanging", function(e, data){
+				maxDateTime = data.values.max;
+				minDateTime = data.values.min;
+				DrawRoute();
+			});
+			hideLoader();
+		}
+		
+		/* ZOOM */
+		function redraw() {
+
+			// Clear the entire canvas
+			var p1 = ctx.transformedPoint(0, 0);
+			var p2 = ctx.transformedPoint(canvas.width, canvas.height);
+			ctx.clearRect(p1.x, p1.y, p2.x - p1.x, p2.y - p1.y);
+
+			ctx.save();
+			ctx.setTransform(1, 0, 0, 1, 0, 0);
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+			ctx.restore();
+
+			//ctx.drawImage(gkhead, 0, 0);
+
+		}
+		
+		var scaleFactor = 1.1;
+
+		var zoom = function (clicks) {
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+			var pt = ctx.transformedPoint(lastX, lastY);
+			ctx.translate(pt.x, pt.y);
+			var factor = Math.pow(scaleFactor, clicks);
+			ctx.scale(factor, factor);
+			ctx.translate(-pt.x, -pt.y);
+			//redraw();
+			DrawRoute();
+		}
+
+		var handleScroll = function (evt) {
+			var delta = evt.wheelDelta ? evt.wheelDelta / 40 : evt.detail ? -evt.detail : 0;
+			if (delta)
+				zoom(delta);
+			return evt.preventDefault() && false;
+		};
+
+		/* EVENT ZOOM MOUSE CANVAS	
+
+		canvas.addEventListener('mousedown', function (evt) {
+			document.body.style.mozUserSelect = document.body.style.webkitUserSelect = document.body.style.userSelect = 'none';
+			lastX = evt.offsetX || (evt.pageX - canvas.offsetLeft);
+			lastY = evt.offsetY || (evt.pageY - canvas.offsetTop);
+			dragStart = ctx.transformedPoint(lastX, lastY);
+			dragged = false;
+			DrawRoute();
+		}, false);
+
+		canvas.addEventListener('mousemove', function (evt) {
+			lastX = evt.offsetX || (evt.pageX - canvas.offsetLeft);
+			lastY = evt.offsetY || (evt.pageY - canvas.offsetTop);
+			dragged = true;
+			if (dragStart) {
+				ctx.clearRect(0, 0, canvas.width, canvas.height);
+				var pt = ctx.transformedPoint(lastX, lastY);
+				ctx.translate(pt.x - dragStart.x, pt.y - dragStart.y);
+				//redraw();
+				DrawRoute();
+			}
+		}, false);
+
+		canvas.addEventListener('mouseup', function (evt) {
+			dragStart = null;
+			if (!dragged)
+				zoom(evt.shiftKey ? -1 : 1);
+			DrawRoute();
+		}, false);
+	*/
+		canvas.addEventListener('DOMMouseScroll', handleScroll, false);
+		canvas.addEventListener('mousewheel', handleScroll, false);
+		
+		canvas.addEventListener('mousemove', function (evt) {
+			lastX = evt.offsetX || (evt.pageX - canvas.offsetLeft);
+			lastY = evt.offsetY || (evt.pageY - canvas.offsetTop);
+		}, false);
+		
+		//canvas.addEventListener('mouseup', handleClickOnObj, false);
+		canvas.addEventListener('mouseup', function (evt) {
+		//var handleClickOnObj = function (evt) {
+			var yPage = lastY +10 ; // + 248,
+			var xPage = lastX +147; // - 83;
+			
+			var EventDBLen = EventDB.length;
+			for (i = 0; i < EventDBLen; i++) {
+				if ((yPage > EventDB[i].y -40 && 
+					yPage  < EventDB[i].y + 40) 
+					
+				&& (xPage > EventDB[i].x -40 && 
+					xPage < EventDB[i].x + 40)) {
+					//alert('clicked element' + EventDB[i].machine + '-' + EventDB[i].x + '-' + EventDB[i].y );
+					window.open("pallet" + EventDB[i].machine + ".png", "Foto", "width=500, height=450");
+				}
+				//window.open("pallet" + EventDB[i].machine + ".png", "Foto", "width=500, height=450");
+			}
+			//return evt.preventDefault() && false;
+		//};
+		}, false);
+		
+		// Adds ctx.getTransform() - returns an SVGMatrix
+		// Adds ctx.transformedPoint(x,y) - returns an SVGPoint
+		function trackTransforms(ctx) {
+			var svg = document.createElementNS("http://www.w3.org/2000/svg", 'svg');
+			var xform = svg.createSVGMatrix();
+			ctx.getTransform = function () {
+				return xform;
+			};
+
+			var savedTransforms = [];
+			var save = ctx.save;
+			ctx.save = function () {
+				savedTransforms.push(xform.translate(0, 0));
+				return save.call(ctx);
+			};
+
+			var restore = ctx.restore;
+			ctx.restore = function () {
+				xform = savedTransforms.pop();
+				return restore.call(ctx);
+			};
+
+			var scale = ctx.scale;
+			ctx.scale = function (sx, sy) {
+				xform = xform.scaleNonUniform(sx, sy);
+				return scale.call(ctx, sx, sy);
+			};
+
+			var rotate = ctx.rotate;
+			ctx.rotate = function (radians) {
+				xform = xform.rotate(radians * 180 / Math.PI);
+				return rotate.call(ctx, radians);
+			};
+
+			var translate = ctx.translate;
+			ctx.translate = function (dx, dy) {
+				xform = xform.translate(dx, dy);
+				return translate.call(ctx, dx, dy);
+			};
+
+			var transform = ctx.transform;
+			ctx.transform = function (a, b, c, d, e, f) {
+				var m2 = svg.createSVGMatrix();
+				m2.a = a;
+				m2.b = b;
+				m2.c = c;
+				m2.d = d;
+				m2.e = e;
+				m2.f = f;
+				xform = xform.multiply(m2);
+				return transform.call(ctx, a, b, c, d, e, f);
+			};
+
+			var setTransform = ctx.setTransform;
+			ctx.setTransform = function (a, b, c, d, e, f) {
+				xform.a = a;
+				xform.b = b;
+				xform.c = c;
+				xform.d = d;
+				xform.e = e;
+				xform.f = f;
+				return setTransform.call(ctx, a, b, c, d, e, f);
+			};
+
+			var pt = svg.createSVGPoint();
+			ctx.transformedPoint = function (x, y) {
+				pt.x = x;
+				pt.y = y;
+				return pt.matrixTransform(xform.inverse());
+			}
+		}
+
+	</script>
+
+</html>

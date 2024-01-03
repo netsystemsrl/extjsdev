@@ -1,0 +1,364 @@
+###########################################################
+#
+#  Language:		English
+#  Author:		Winston Zhang
+#  Product Name:	A-PDF Scan and Split
+#  Product Version:	1.0.0
+#
+###########################################################
+
+[frmMain]
+ btnNext.Caption				=&Next >
+ btnPiror.Caption				=< &Previous
+ TabSheet1.Caption				=First
+ Labelbatch.Caption				=Batch scan your documents and split them directly into small PDF files automatically.
+ Labelhot.Caption				=Batch split exists PDF documents base on blank page or barcode inside. 
+ Labelfirsttip.Caption				=Please select:  
+ rbScan.Caption				=&Scan and Split
+ rbSplit.Caption				=Split &PDF
+ Labelscanmethod1.Caption				=Batch scan your paper and separate them by inserting blank page as you will, then output split PDF files.
+ Labelscanmethod2.Caption				=Batch scan your paper and separate them by inserting barcode page as you will, Then output split PDF files
+ Labeltipscan.Caption				=Please choose appropriate split method for your needs:
+ rbmethod1.Caption				= Method  &2 (Blank Page as Split Tag)
+ rbmethod2.Caption				= Method &1 (Printed Barcode Page as Split Tag)
+
+Labelstarttip1.Caption				=Click "Start" button to scan and split
+ GroupBoxpb.Caption				=Prepare for Printing Barcode Pages
+ Labelbarcodememo.Caption				=Before scanning your documents, please click the 'Create and print Barcode' button to create and print barcode pages as split tag   
+ Labelbarcodetest.Caption				=To make sure your barcode page can be recognized, please click the 'Make Sure Your Barcode Can be Recognized' button to tune setting.
+ btnMakeBarCode.Caption				=Create and &Print Barcode
+ BtnBarcodeRecognise.Caption				=Make Sure Your Barcode Can be &Recognized
+ GroupBoxSS.Caption				=Source Selecting
+ lbScanner.Caption				=Please Select S&canner:
+ GroupBox1.Caption				=Output Settings
+ LabelSplitedPDFFolder.Caption				=Output PDF &Folder:
+ LabelNameforSplitedPDF.Caption				=&Name for Split PDF:
+ Labelexample.Caption				=Example:
+ ScanExample.Caption				=Scan Example
+ LbScanTips.Caption				=The name pattern must include macro: {barcode} or {part}
+btnbrowsepdffolder.Caption				=&Browse
+ btndefault.Caption				=&Default
+ GroupBoxblank.Caption				=Blank Page Recognizing
+ Labelblanktip.Caption				=Before scanning your documents, please click the 'Recognize Blank Page' button to make sure your scanned blank page can be recognized.
+ btnScanBlankSet.Caption				=&Recognize Blank Page
+Labelscaninpregress.Caption				=Scan and split in progress...
+Labelsplitpdfblank.Caption				=Batch split your PDF documents into small parts. The blank page within PDF will be used as split tag
+ Labelsplitpdfbarcode.Caption				=Batch split your PDF documents into small parts. The barcode page within the PDF will be used as split tag.
+ LabelSplitpdftip.Caption				=Please Select:
+ rbByBlank.Caption				=Split by Blank Page.
+ rbByBarcode.Caption				=Split by Barcode Page.
+Labelnote.Caption				=To make sure the blank or barcode page within your PDF documents can be recognized, we recommend you to set the appropriate parameter. Please click the setting button to do that.
+ btnBlankparam.Caption				=&Setting
+ GroupBoxaddpdf.Caption				="     Add PDF Documents"
+ sbtDelPdf.hint				=Remove selected items from list
+ sbtDelAllPdf.hint				=Clear all items
+ sbtAddDir.hint				=Add all files in a directory to list
+ sbtaddpdf.hint				=Add PDF documents
+ sbtUnlock.hint				=Input password of selected PDF document
+ GroupBoxoutput.Caption				= "     Output Settings"
+ LabelSplitedPDFFolder1.Caption				=Split PDF &Folder:
+ LabelNameforSplitedPDF1.Caption				=&Name for Split PDF:
+ Labelexample1.Caption				=Example:
+ LbSample.Caption				=Sample
+ Labelstarttip.Caption				=Click "Start" button to split
+ LbSplitTip.Caption				=The name pattern must include the macro: {part}
+ chkcreateeachfolder.Caption				=&Create directory for each PDF
+ btnSelectDir.Caption				=B&rowse
+ LabelSplitinginprogress.Caption				=Splitting in progress...
+ lbsuccess.Caption				=The PDF Documents has been split successfully!
+ btnsplitpdf.Caption				=Split &PDF
+ BtnOpenFDir.Caption				=&Browse split folder
+ btnHome.Caption				=&Scan and split another
+ btnbacktohome.Caption				=Bac&k to home
+ Labelhome.Caption				=Home
+ sbtcancel.Caption				=&Quit
+ sbtAbout.Caption				=Abo&ut
+ sbtHelp.Caption				=&Help
+CbScannerSetting.caption			=&Use last scan settings
+BtnScanNext.Caption				=S&can Next
+BtnScanFinish.Caption				=Scan &Finish
+lblbarcodemethod.Caption			=Option for separator page:  
+Labelcmdtip.Caption			        =Using command line to split PDF base on barcode or blank page, for more information, refer to:
+labelcmdlink.Caption			        =Using A-PDF Scan and Split in command line
+
+
+[frmBarCode]
+ lbtxtTitle.Caption				=Note: Alpha-Numeric 0..9 
+ Labeltip.Caption				=In order to better recognize Barcode by Scan and Split, we strongly recommend you print the Barcode use High quality printer.
+ Labelinputcode.Caption				=&Input code here:
+ Labelbarcodepreview.Caption				=Barcode Preview:
+ btnPrint.Caption				=&Print
+btnClose.Caption				=&Close
+ cbShowCode.Caption				=&Show Code
+
+[frmBlankparam]
+ btnOk.Caption				=&Save
+ btnCancel.Caption				=&Cancel
+Labeltip1.Caption				=To make your blank page can be recognized, please follow the instructions below: 
+ Labeltip2.Caption				=Step1: Scan a test document which is blank(we recommend that all scanned images are at least 100 DPI, Color 16 bit or Grayscale 8 bit)
+ Labeltip3.Caption				=Step2: Adjust the parameters for Threshold and black/white until finding out a blank page
+ Labeltip4.Caption				=Step3: Click Save button to save the settings 
+ GroupBoxpreview.Caption				=Preview
+ btnhead.hint				=First page 
+ btnnext.hint				=Next page 
+ btnpre.hint				=Prior
+ btntail.hint				=Last page 
+ btnFitw.hint				=Fit width
+ btnFit.hint				=Fit
+ lbtotle.Caption				=/
+ eCurPage.text				=0
+ GroupBoxSource.Caption				=1. Select Source
+ BtnScan.Caption				=&Scan
+ BtnOpen.Caption				=&Browse
+ GroupBoxAt.Caption				=2. Adjust the testing parameters
+ lbThreshold.Caption				=&Threshold value:
+ labeltsvaluemin.Caption				=0.00001
+ labeltsvaluemax.Caption				=0.1
+ labelbwmin.Caption				=1
+ labelbwmax.Caption				=255
+ lbBWTH.Caption				=Black/&white value:
+ Button1.Caption				=&Auto
+ edtThreadhold.text				=0.001
+ edtBWTH.text				=200
+ cbUsecrop.Caption				=&Use crop frame automatically.
+ GroupBoxTR.Caption				=3. Test results for recognizing
+ Labelresult.Caption				=Result:
+ LbIsBlank.Caption				=N/A
+
+[frmScanBarcode]
+ BtnOk.Caption				=&Save 
+ BtnCancel.Caption				=&Cancel
+ Labeltip1.Caption				=To make your barcode page recognized, please follow the instructions below: 
+ Labeltip2.Caption				=Step1: Scan a test document which include barcode(we recommend that all scanned images are at least 100 DPI, Color 16 bit or Grayscale 8 bit)
+ Labeltip3.Caption				=Step2: Adjust the parameters for confidence and granularity until find the barcode
+ Labeltip4.Caption				=Step3: Click Save button to save the settings 
+ Gbpreview.Caption				=Preview
+ btnhead.hint				=First page 
+ btnnext.hint				=Next page 
+ btnpre.hint				=Prior
+ btntail.hint				=Last page 
+ btnFitw.hint				=Fit width
+ btnFit.hint				=Fit
+ lbtotle.Caption				=/
+ eCurPage.text				=0
+ GroupBoxSource.Caption				=1.Select Source
+ BtnOpen.Caption				=&Browse PDF
+ BtnScan.Caption				=Scan &Paper
+ GroupBoxadjust.Caption				=2. Adjust the testing parameters
+ lbThreshold.Caption				=Confidence &Threshold (0.7~0.9) 
+ lbGranularity.Caption				=Barcode search &Granularity (5~100)  
+ Labelnotecon.Caption				=Note: the more less the more forgiving
+ Labelnotepix.Caption				=Note: the more less the high Recognition rate the low speed
+ Labelnote.Caption				=Selecting only those you wish might both speed up the decoding process and minimize false positive rates
+ btndefault.Caption				=&Default
+ GroupBoxTR.Caption				=3. Test results for recognizing
+ Labelbarcode.Caption				=Barcode:
+ lbBarcode.Caption				=Not found barcode!
+
+
+[frmSelectDir]
+ bCancel.Caption				=&Cancel
+ bOk.Caption				=&OK
+ bAdvanced.Caption				=&Advanced
+ cbIncSub.Caption				=Include sub folder(s)
+ lDesc.Caption				=Select directory:
+ lMask.Caption				=Filter:
+ lMaskDesc.Caption				=Split by comma, support *, and ? wide char
+ cbMask.items				=*.pdf
+
+[Formcompress]
+.Caption					=Output Quality Setting
+ GroupBox6.Caption				=Compress Quality
+ LabelSmall.Caption				=Small Size
+ LabelHi.Caption				=High Quality
+ LabelIT.Caption				=&JEPG Quality:
+ BtnOk.Caption				=&Ok
+ BtnCancel.Caption				=&Cancel
+
+[frmHotDir_1]
+btnOk.Caption                 				=Ok
+btnCancel.Caption             				=Cancel
+lbtitle.Caption               				=A-PDF Scan and Split Hot Directory Setting
+lbdes.Caption                 				=Select monitor and output directories and apply a split rule
+TabSheet1.Caption             				=Hot Directory
+GroupBox3.Caption             				=Hot Directory Setting
+Label4.Caption                				=Monitored &Directory:
+Labellog.Caption              				=Log &File Directory:
+Label5.Caption                				=O&utput Directory:
+lbcommand.Caption             				=&Params:
+Label1.Caption                				=%1 stands for the filename
+lbApp.Caption                 				=&Run Application:
+Label2.Caption                				=Split Method:
+chksubdir.Caption             				=&Include Sub-Directory
+chkmoveto.Caption             				=Bac&kup Directory:
+btnselectindir.Caption        				=..
+btnselectindir.hint           				=Browse...
+btnselectoutdir.Caption       				=..
+btnselectoutdir.hint          				=Browse...
+btnselectlogfile.Caption      				=..
+btnselectlogfile.hint         				=Browse...
+btnviewlog.Caption            				=Ope&n log directory
+btnmoveto.Caption             				=..
+btnmoveto.hint                				=Browse...
+BtnApp.Caption                				=..
+BtnApp.hint                   				=Browse...
+
+[frmDirMonitor_1]
+btnenable.Caption             				=E&nable
+btndisable.Caption            				=&Disable
+btnenableall.Caption          				=Enable A&ll
+btndisableall.Caption         				=D&isable All
+btnEdit.Caption               				=&Edit
+btnRemove.Caption             				=&Remove
+btnClose.Caption              				=&Back to Batch Mode
+Button1.Caption               				=&Add
+BtnStart.Caption              				=&Start Services
+BtnStop.Caption               				=S&top Services
+GroupBox1.Caption             				=Current Monitor Settings
+Label5.Caption                				=Backup Dir:
+Label3.Caption                				=Log Dir:
+Label1.Caption                				=Out Dir:
+actAdd.Caption                				=&Add
+actRemove.Caption             				=&Remove
+actEdit.Caption               				=&Edit
+ 
+[STRINGS]
+ 1					= Thank you for registering
+ 2					= Invalid Register Key
+ 3					= The product has been licensed. 
+ 4					= The product has been licensed to:
+ 5					= Q: How to order||A: Click the "Online Purchase" button above, or visit our homepage(http://www.a-pdf.com) for more options. We will send your registration key after receiving your order. If you cannot access the Internet, please call our Toll Free number 1-877-353-7297, and give the operator the product number %s. The product price is %s.
+ 6					= Note: The product is a try-before-buy product. The unregistered version has a limitation: adding a watermark into the output image files. If you ordered, you will get a register key (license code), after inputting the code below, the limitation will remove, that means the output files will not be added a watermark.
+
+ 11					= Cannot load file: %s. %s
+ 12					= Unknown error!
+ 13					= %s needs password to open:
+ 14					= Decrypt fail. %s
+ 15					= User stopped.
+ 16					= Folder %s does not exist. Do you want to create it?
+ 17					= Cannot create folder: %s
+ 18					= Save file error. %s
+
+ 20                     = N/A 
+ 21                     = Unknown                          
+ 22                     = Need                             
+ 23                     = No 
+ 24                     = Title 
+ 25                     = Author 
+ 26                     = Subject 
+ 27                     = Keywords 
+ 28                     = File 
+ 29                     = Input password here: 
+ 30                     = Password           
+
+34					=No PDF Samples opened. Please Open a PDF Sample first!
+ 35					=Information
+ 36					=Loading PDF Documents...
+ 37					=Please waiting...
+ 38					=No items!
+ 39					=Are you sure to clear all items? 
+ 40					=Delete all items information
+ 41					=Warning!
+ 42					=Need rule name.
+ 43					=Rule name exists already.
+ 44					=Total
+ 45					=File cannot save: %s
+ 46					=It will take a few minutes. Please wait...
+ 47					= File not found: "%s"
+ 48					= items selected
+ 49					=Open file "%s" failed. Code: %d
+ 50					=Need Password 
+ 51					=need password to open!
+ 52					=Select a Directory to Save 
+ 53					=Saving file:  
+ 54					=No split rule selected
+ 55					=Edit rule
+ 56					=Sample text: %s, from page: %d)
+ 57					=items 
+ 58					=Split &All 
+ 59					=Selected split rule: 
+ 60					=At least one file needs a password to open, if you do not set the passwords, it will not be able to be split from these documents. |||| Continue?
+ 61					=Add New Rule
+ 62					=No tags in tag list, please add tags first!
+ 63                                     =No PDF files selected!
+ 64                                     =Page: %d
+ 65                                     =Samples: %s
+ 66                                     =Position: (%d, %d)
+ 67                                     =Add Samples to Split Tag List
+ 68                                     =Modify A split tag
+ 69                                     =Are you sure to delete the rule %s?
+ 70                                     =Delete rule
+ 71                                     =load file "%s" failed.
+ 72                                     =Export to file "%s" failed. The file may be in use.
+ 73                                     =Select Alternative Directory
+ 74                                     =Illegal directory %s
+ 75                                     =Can not save file %s, retry?
+ 76                                     =Script fail: %s	
+
+ 80                                     =Task begin
+ 81                                     =Task end
+ 82                                     =Job start at %s
+ 83                                     =Job end at %s
+ 84                                     ="  Input file: %s"
+ 85                                     ="  Using rule: %s"
+ 86                                     ="  Load input file..."
+ 87                                     ="  Analyzing input file..."
+ 88                                     ="  Successfully"
+ 89                                     ="  Failed"
+ 90                                     ="  Split %s..."
+ 91                                     ="  Total split %d files."
+ 92                                     ="  Finish."
+ 93                                     ="  Output directory: %s"
+ 95                                     =Empty codes 
+
+ 98                                     =Directory can not be found : %s !
+ 99                                     = The names will not be unique. To avoid it, you must use the one of macros: {part}, {pagebegin} or {barcode}
+ 100                                    = The names will not be unique. The pattern must include the one of macros: {part} or {pagebegin}
+ 101                                    =Save not completed, File save failed, Retry?
+ 102                                    =Wait...
+ 103                                    =is blank
+ 104                                    =not blank
+ 105                                    =Please input the barcode!
+ 106                                    =Barcode not found!
+ 107                                    =Failed to acquire from scanner!
+
+ 108                                    =Home
+ 109                                    =&Next >
+ 110                                    =Home  -->
+ 111                                    =Scan and Split
+ 112                                    =Scan and Split  -->
+ 113                                   =Scan and Split Settings
+ 114                                   =&Start
+ 115                                   =Scan and Split Settings  -->
+ 116                                    =Scan and Split in Process...
+ 117                                   =&Stop
+ 118                                   =Split PDF
+ 119                                    =Split PDF  -->
+ 120                                    =Split PDF Settings
+ 121                                    =Split PDF Settings  -->
+ 122                                   =Split PDF in Process...
+ 123                                    =&Finish
+ 124                                    =Blank Page Recognizing
+ 125                                    = Step1: Scan a test document which is blank(we recommend that scanned images are at least 100 DPI, Color 16 bit or Grayscale 8 bit)
+ 126                                    =Barcode Recognizing
+ 127                                    = Step1: Scan a test document which is barcode(we recommend that scanned images are at least 100 DPI, Color 16 bit or Grayscale 8 bit)
+ 128                                    =Barcode Creating and Printing
+ 129                                    =Step1: Open a PDF which include barcode, and navigate to the barcode page
+ 130                                    =Step1: Open a PDF which include blank page, and navigate to the blank page
+ 131					=Install incorrectly. Please re-install the program. More detail: Barcode recongnized ocx does not install correctly.
+ 132					=%d Page(s) Scanned. Split %d file(s).
+ 133					=Current Threshold:||%.5f
+ 135					=Code:Alpha-Numeric and -.$/+%*
+ 136					=Code:Fill Alpha-Numeric
+ 140					=You must select a valid directory for monitoring. 
+ 141					=Can not set the same path "%s" to the monitored directory and output directory.
+ 142					=Warning!
+ 143					=You must select a valid output directory which the encrypted file will be saved to.
+ 144					=The watch folder has been used in another Hot directory setting item!
+ 145					=You must select a valid directory for log files saved to. 
+ 146					=You need select a valid directory for backing up original files. 
+ 147					=Stop services and return to batch mode?
+ 150					=Barcode parameters
+ 151					=Blank page parameters
+ 152					=Page parameters
+ 160					=Transform failed

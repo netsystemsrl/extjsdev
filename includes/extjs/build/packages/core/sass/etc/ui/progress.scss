@@ -1,0 +1,12 @@
+@if $include-progress-ui and $include-ext-layout-component-progressbar {
+  @include extjs-progress-ui(
+    $ui: '#{$ui-label}-progress',
+    $ui-border-color: $ui-progress-border-color,
+    $ui-background-color: $ui-progress-background-color,
+    $ui-bar-background-color: $ui-progress-bar-background-color,
+    $ui-bar-background-gradient: $ui-progress-bar-background-gradient,
+    $ui-color-front: $ui-progress-text-color-front,
+    $ui-color-back: $ui-progress-text-color-back
+  );
+}
+

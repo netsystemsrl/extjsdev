@@ -1,0 +1,132 @@
+Array
+(
+    [url] => http://localhost/includes/io/LayoutReadRunExt.php?format=JSONP&username=NATURASIREGGIO1&password=STRIA2703&dbname=stria&registrationid=&dc=246551&baseurl=https://stria.geqo.it/eshop/&
+    [content_type] => application/json
+    [http_code] => 200
+    [header_size] => 594
+    [request_size] => 298
+    [filetime] => -1
+    [ssl_verify_result] => 0
+    [redirect_count] => 0
+    [total_time] => 0.007995
+    [namelookup_time] => 0.004188
+    [connect_time] => 0.004258
+    [pretransfer_time] => 0.004314
+    [size_upload] => 0
+    [size_download] => 220
+    [speed_download] => 31428
+    [speed_upload] => 0
+    [download_content_length] => 220
+    [upload_content_length] => 0
+    [starttransfer_time] => 0.007972
+    [redirect_time] => 0
+    [redirect_url] => 
+    [primary_ip] => ::1
+    [certinfo] => Array
+        (
+        )
+
+    [primary_port] => 80
+    [local_ip] => ::1
+    [local_port] => 34544
+    [http_version] => 2
+    [protocol] => 1
+    [ssl_verifyresult] => 0
+    [scheme] => HTTP
+    [appconnect_time_us] => 0
+    [connect_time_us] => 4258
+    [namelookup_time_us] => 4188
+    [pretransfer_time_us] => 4314
+    [redirect_time_us] => 0
+    [starttransfer_time_us] => 7972
+    [total_time_us] => 7995
+)
+
+Array
+(
+    [url] => http://localhost/includes/io/CallProcessExt.php?format=JSONP&username=NATURASIREGGIO1&password=STRIA2703&dbname=stria&registrationid=&dc=1360293&baseurl=https://stria.geqo.it/eshop/&processid=web_ajax_checkout_b2b&
+    [content_type] => application/json
+    [http_code] => 200
+    [header_size] => 658
+    [request_size] => 356
+    [filetime] => -1
+    [ssl_verify_result] => 0
+    [redirect_count] => 0
+    [total_time] => 0.034971
+    [namelookup_time] => 0.004106
+    [connect_time] => 0.004184
+    [pretransfer_time] => 0.004695
+    [size_upload] => 443121
+    [size_download] => 407469
+    [speed_download] => 11984382
+    [speed_upload] => 13032970
+    [download_content_length] => -1
+    [upload_content_length] => 443121
+    [starttransfer_time] => 0.0047
+    [redirect_time] => 0
+    [redirect_url] => 
+    [primary_ip] => ::1
+    [certinfo] => Array
+        (
+        )
+
+    [primary_port] => 80
+    [local_ip] => ::1
+    [local_port] => 34546
+    [http_version] => 2
+    [protocol] => 1
+    [ssl_verifyresult] => 0
+    [scheme] => HTTP
+    [appconnect_time_us] => 0
+    [connect_time_us] => 4184
+    [namelookup_time_us] => 4106
+    [pretransfer_time_us] => 4695
+    [redirect_time_us] => 0
+    [starttransfer_time_us] => 4700
+    [total_time_us] => 34971
+)
+
+Array
+(
+    [url] => https://geqo.it/eshop/includes/io/MenuReadExt.php?format=JSONP&username=WEBPUBLIC&password=WEBPUBLIC&dbname=geqo&registrationid=&dc=1540923&baseurl=https://geqo.geqo.it/eshop/&query=includes
+    [content_type] => text/html; charset=iso-8859-1
+    [http_code] => 301
+    [header_size] => 371
+    [request_size] => 300
+    [filetime] => -1
+    [ssl_verify_result] => 0
+    [redirect_count] => 1
+    [total_time] => 31.285933
+    [namelookup_time] => 0.054277
+    [connect_time] => 0.000601
+    [pretransfer_time] => 0.000684
+    [size_upload] => 0
+    [size_download] => 0
+    [speed_download] => 0
+    [speed_upload] => 0
+    [download_content_length] => -1
+    [upload_content_length] => -1
+    [starttransfer_time] => 0.001357
+    [redirect_time] => 0.001459
+    [redirect_url] => 
+    [primary_ip] => ::1
+    [certinfo] => Array
+        (
+        )
+
+    [primary_port] => 80
+    [local_ip] => ::1
+    [local_port] => 38364
+    [http_version] => 2
+    [protocol] => 1
+    [ssl_verifyresult] => 0
+    [scheme] => HTTP
+    [appconnect_time_us] => 0
+    [connect_time_us] => 601
+    [namelookup_time_us] => 54277
+    [pretransfer_time_us] => 684
+    [redirect_time_us] => 1459
+    [starttransfer_time_us] => 1357
+    [total_time_us] => 31285933
+)
+

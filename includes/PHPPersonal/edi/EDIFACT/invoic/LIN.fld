@@ -1,0 +1,11 @@
+NomeField		,Len,Align	,Requested	,CodeValue										,SampleValue
+TIPOREC			,99	,		,Y		 	,LIN											,LIN
+FILLER			,99	,		,Y		 	,+												,FILLER
+NUMRIGA			,99	,		,Y			,												,NUMRIGA
+FILLER			,99	,		,Y		 	,+												,FILLER
+NOTCODE			,99	,		,Y		 	,												,notification description cod
+FILLER			,99	,		,Y		 	,+												,FILLER
+CODICE			,99	,		,Y			,												,04440360230 GTIN
+FILLER			,99	,		,Y		 	,:												,FILLER
+TIPOCODICE		,99	,		,Y			,SRV											,SRV		=	GS1 Global Trade Item Number;SA		=	Suppliers article number;IN		=	Buyers item number
+END				,99	,		,Y		 	,'												,END 

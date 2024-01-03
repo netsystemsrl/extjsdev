@@ -1,0 +1,9 @@
+NomeField		,Len,Align	,Requested	,CodeValue	,SampleValue
+TIPOREC			,03	,L		,Y		 	,'ALD'		,ALD
+INDSCADD		,03	,L		,Y			,			,AAS
+DESCR			,35	,L		,Y			, 			,0000193
+INDSEQ			,3	,L		,Y			,			,20181024	
+TIPOSCADD		,6	,L		,N			,			,102
+IMPORTO			,16	,L		,N			,			,102
+PERC			,7	,L		,N			,			,102
+FLGPRZUN		,3	,L		,N			,			,102

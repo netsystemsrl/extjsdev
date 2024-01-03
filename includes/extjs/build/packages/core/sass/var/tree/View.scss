@@ -1,0 +1,35 @@
+﻿
+/** 
+ * CODAXY
+ * $medium-tree-switch, $large-tree-switch
+ * @var {number}
+ * used in theme-scale-switch function to set appropriate css property values for different theme sizes
+*/
+$medium-tree-switch: dynamic(25);
+$large-tree-switch: dynamic(75);
+
+/** 
+ * CODAXY
+ * $tree-elbow-width
+ * @var {string}
+ * through theme-scale-switch function sets different tree elbow width values depending on the $theme-size variable, $medium-tree-switch and $large-tree-switch values,
+   as well as default width
+*/
+$tree-elbow-width: dynamic(theme-scale-switch(16px, $medium-tree-switch 24px, $large-tree-switch 32px));
+$tree-icon-width: dynamic(theme-scale-switch(16px, $medium-tree-switch 24px, $large-tree-switch 32px));
+
+/** 
+ * CODAXY
+ * $tree-elbows-background-image, $tree-icons-background-image, $tree-arrows
+ * @var {string}
+ * through theme-scale-switch function sets different tree elbow background image, tree icon background image and tree arrow background image for different theme sizes
+ * $tree-elbows-background-image-rtl, $tree-icons-background-image-rtl do the same thing when 'right to left' is active
+*/
+$tree-elbows-background-image: dynamic(theme-scale-switch('tree/all-elbows-small', $medium-tree-switch 'tree/all-elbows-medium', $large-tree-switch 'tree/all-elbows-large'));
+$tree-icons-background-image: dynamic(theme-scale-switch('tree/icons-small', $medium-tree-switch 'tree/icons-medium', $large-tree-switch 'tree/icons-large'));
+$tree-elbows-background-image-rtl: dynamic(theme-scale-switch('tree/all-elbows-small-rtl', $medium-tree-switch 'tree/all-elbows-medium-rtl', $large-tree-switch 'tree/all-elbows-large-rtl'));
+$tree-icons-background-image-rtl: dynamic(theme-scale-switch('tree/icons-small-rtl', $medium-tree-switch 'tree/icons-medium-rtl', $large-tree-switch 'tree/icons-large-rtl'));
+
+$tree-arrows-background-image: dynamic(null);
+
+$tree-arrows-background-image-rtl: dynamic(null);

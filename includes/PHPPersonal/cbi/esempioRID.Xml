@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CBISDDReqLogMsg xmlns="urn:CBI:xsd:CBISDDReqLogMsg.00.01.00" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:CBI:xsd:CBISDDReqLogMsg.00.01.00 CBISDDReqLogMsg.00.01.00.xsd">
+	<GrpHdr>
+		<MsgId>3042</MsgId>
+		<CreDtTm>2020-01-16T11:21:42</CreDtTm>
+		<NbOfTxs>176</NbOfTxs>
+		<CtrlSum>3619.17</CtrlSum>
+		<InitgPty>
+			<Nm>Accordi Promozioni Musicali s.a.s.</Nm>
+			<Id>
+				<OrgId>
+					<Othr>
+						<Id>0955369K</Id>
+						<Issr>CBI</Issr>
+					</Othr>
+					<Othr>
+						<Id>12934130159</Id>
+						<Issr>ADE</Issr>
+					</Othr>
+				</OrgId>
+			</Id>
+		</InitgPty>
+	</GrpHdr>
+	<PmtInf>
+		<PmtInfId>1</PmtInfId>
+		<PmtMtd>DD</PmtMtd>
+		<PmtTpInf>
+			<SvcLvl>
+				<Cd>SEPA</Cd>
+			</SvcLvl>
+			<LclInstrm>
+				<Cd>CORE</Cd>
+			</LclInstrm>
+			<SeqTp>FRST</SeqTp>
+		</PmtTpInf>
+		<ReqdColltnDt>2019-12-31</ReqdColltnDt>
+		<Cdtr>
+			<Nm>Accordi Promozioni Musicali s.a.s.</Nm>
+			<PstlAdr>
+				<AdrLine>Via Meda 5</AdrLine>
+				<AdrLine>20136 Milano MI</AdrLine>
+			</PstlAdr>
+			<Id>
+				<OrgId>
+					<Othr>
+						<Id>0955369K</Id>
+						<Issr>CBI</Issr>
+					</Othr>
+				</OrgId>
+			</Id>
+		</Cdtr>
+		<CdtrAcct>
+			<Id>
+				<IBAN>IT86C0200801652000100489065</IBAN>
+			</Id>
+		</CdtrAcct>
+		<CdtrAgt>
+			<FinInstnId>
+				<ClrSysMmbId>
+					<MmbId>02008</MmbId>
+				</ClrSysMmbId>
+			</FinInstnId>
+		</CdtrAgt>
+		<CdtrSchmeId>
+			<Nm>Accordi Promozioni Musicali s.a.s.</Nm>
+			<Id>
+				<PrvtId>
+					<Othr>
+						<Id>IT59ZZZ0000012934130159</Id>
+						<SchmeNm>
+							<Prtry>SEPA</Prtry>
+						</SchmeNm>
+					</Othr>
+				</PrvtId>
+			</Id>
+		</CdtrSchmeId>
+		<DrctDbtTxInf>
+			<PmtId>
+				<InstrId>27</InstrId>
+				<EndToEndId>43334-1037/FN2019-14</EndToEndId>
+			</PmtId>
+			<InstdAmt Ccy="EUR">15.99</InstdAmt>
+			<DrctDbtTx>
+				<MndtRltdInf>
+					<MndtId>NOLO vo2209 BASSI</MndtId>
+					<DtOfSgntr>2018-10-19</DtOfSgntr>
+				</MndtRltdInf>
+			</DrctDbtTx>
+			<Dbtr>
+				<Nm>BASSI ANDREA</Nm>
+				<PstlAdr>
+					<AdrLine>Via Montello.3</AdrLine>
+					<AdrLine>CERNUSCO SUL NAVIGLIO MI</AdrLine>
+				</PstlAdr>
+				<Id>
+					<PrvtId>
+						<Othr>
+							<Id>BSSNDR78E20L378S</Id>
+							<Issr>ADE</Issr>
+						</Othr>
+					</PrvtId>
+				</Id>
+			</Dbtr>
+			<DbtrAcct>
+				<Id>
+					<IBAN>IT18B0830401810000010084285</IBAN>
+				</Id>
+			</DbtrAcct>
+			<Purp>
+				<Cd>PADD</Cd>
+			</Purp>
+			<RmtInf>
+				<Ustrd>/CNR/C000803/DOC/1037/FN/ 20191218</Ustrd>
+			</RmtInf>
+		</DrctDbtTxInf>
+		<DrctDbtTxInf>
+			<PmtId>
+				<InstrId>37</InstrId>
+				<EndToEndId>43344-1047/FN2019-14</EndToEndId>
+			</PmtId>
+			<InstdAmt Ccy="EUR">50.00</InstdAmt>
+			<DrctDbtTx>
+				<MndtRltdInf>
+					<MndtId>NOLO vo2354 SANNA</MndtId>
+					<DtOfSgntr>2018-11-16</DtOfSgntr>
+				</MndtRltdInf>
+			</DrctDbtTx>
+			<Dbtr>
+				<Nm>SANNA SUSANNA</Nm>
+				<PstlAdr>
+					<AdrLine>Via Moretto Da Brescia,19</AdrLine>
+					<AdrLine>20100 Milano MI</AdrLine>
+				</PstlAdr>
+				<Id>
+					<PrvtId>
+						<Othr>
+							<Id>SNNSNN67P43L219O</Id>
+							<Issr>ADE</Issr>
+						</Othr>
+					</PrvtId>
+				</Id>
+			</Dbtr>
+			<DbtrAcct>
+				<Id>
+					<IBAN>IT80D0306909465000026830164</IBAN>
+				</Id>
+			</DbtrAcct>
+			<Purp>
+				<Cd>PADD</Cd>
+			</Purp>
+			<RmtInf>
+				<Ustrd>/CNR/C000829/DOC/1047/FN/ 20191218</Ustrd>
+			</RmtInf>
+		</DrctDbtTxInf>
+		<DrctDbtTxInf>
+			<PmtId>
+				<InstrId>103</InstrId>
+				<EndToEndId>43412-1115/FN2019-14</EndToEndId>
+			</PmtId>
+			<InstdAmt Ccy="EUR">21.00</InstdAmt>
+			<DrctDbtTx>
+				<MndtRltdInf>
+					<MndtId>NOLO V01288 PINTO (PEREDES)</MndtId>
+					<DtOfSgntr>2018-10-20</DtOfSgntr>
+				</MndtRltdInf>
+			</DrctDbtTx>
+			<Dbtr>
+				<Nm>PINTO RUY</Nm>
+				<PstlAdr>
+					<AdrLine>Via A. Diaz,4</AdrLine>
+					<AdrLine>20090 CESANO BOSCONE MI</AdrLine>
+				</PstlAdr>
+				<Id>
+					<PrvtId>
+						<Othr>
+							<Id>PNTRYU83H27Z602M</Id>
+							<Issr>ADE</Issr>
+						</Othr>
+					</PrvtId>
+				</Id>
+			</Dbtr>
+			<DbtrAcct>
+				<Id>
+					<IBAN>IT45R0760101600001021839343</IBAN>
+				</Id>
+			</DbtrAcct>
+			<Purp>
+				<Cd>PADD</Cd>
+			</Purp>
+			<RmtInf>
+				<Ustrd>/CNR/C000951/DOC/1115/FN/ 20191218</Ustrd>
+			</RmtInf>
+		</DrctDbtTxInf>
+		<DrctDbtTxInf>
+			<PmtId>
+				<InstrId>109</InstrId>
+				<EndToEndId>43419-1122/FN2019-14</EndToEndId>
+			</PmtId>
+			<InstdAmt Ccy="EUR">24.00</InstdAmt>
+			<DrctDbtTx>
+				<MndtRltdInf>
+					<MndtId>NOLO VO 1877 MONTELEONE</MndtId>
+					<DtOfSgntr>2019-01-10</DtOfSgntr>
+				</MndtRltdInf>
+			</DrctDbtTx>
+			<Dbtr>
+				<Nm>MONTELEONE IVANA</Nm>
+				<PstlAdr>
+					<AdrLine>Viale dei Mille,23</AdrLine>
+					<AdrLine>20129 MILANO MI</AdrLine>
+				</PstlAdr>
+				<Id>
+					<PrvtId>
+						<Othr>
+							<Id>MNTVNI73T41F537O</Id>
+							<Issr>ADE</Issr>
+						</Othr>
+					</PrvtId>
+				</Id>
+			</Dbtr>
+			<DbtrAcct>
+				<Id>
+					<IBAN>IT78X0306901687100000000589</IBAN>
+				</Id>
+			</DbtrAcct>
+			<Purp>
+				<Cd>PADD</Cd>
+			</Purp>
+			<RmtInf>
+				<Ustrd>/CNR/C000962/DOC/1122/FN/ 20191218</Ustrd>
+			</RmtInf>
+		</DrctDbtTxInf>
+		<DrctDbtTxInf>
+			<PmtId>
+				<InstrId>129</InstrId>
+				<EndToEndId>43439-1142/FN2019-14</EndToEndId>
+			</PmtId>
+			<InstdAmt Ccy="EUR">7.00</InstdAmt>
+			<DrctDbtTx>
+				<MndtRltdInf>
+					<MndtId>NOLO VO135 6ALBINO</MndtId>
+					<DtOfSgntr>2019-09-05</DtOfSgntr>
+				</MndtRltdInf>
+			</DrctDbtTx>
+			<Dbtr>
+				<Nm>Sammartino Silvia</Nm>
+				<PstlAdr>
+					<AdrLine>Via S. Albino</AdrLine>
+					<AdrLine>20900 monza MB</AdrLine>
+				</PstlAdr>
+				<Id>
+					<PrvtId>
+						<Othr>
+							<Id>SMMSLV75E65F205C</Id>
+							<Issr>ADE</Issr>
+						</Othr>
+					</PrvtId>
+				</Id>
+			</Dbtr>
+			<DbtrAcct>
+				<Id>
+					<IBAN>IT12A0308301607000000007183</IBAN>
+				</Id>
+			</DbtrAcct>
+			<Purp>
+				<Cd>PADD</Cd>
+			</Purp>
+			<RmtInf>
+				<Ustrd>/CNR/C001008/DOC/1142/FN/ 20191218</Ustrd>
+			</RmtInf>
+		</DrctDbtTxInf>
+		<DrctDbtTxInf>
+			<PmtId>
+				<InstrId>130</InstrId>
+				<EndToEndId>43440-1143/FN2019-14</EndToEndId>
+			</PmtId>
+			<InstdAmt Ccy="EUR">14.01</InstdAmt>
+			<DrctDbtTx>
+				<MndtRltdInf>
+					<MndtId>nolo vo1526</MndtId>
+					<DtOfSgntr>2019-09-06</DtOfSgntr>
+				</MndtRltdInf>
+			</DrctDbtTx>
+			<Dbtr>
+				<Nm>Mella Roberta</Nm>
+				<PstlAdr>
+					<AdrLine>Via Arrigo Minerbi,1</AdrLine>
+					<AdrLine>20142 Gratosoglio MI</AdrLine>
+				</PstlAdr>
+				<Id>
+					<PrvtId>
+						<Othr>
+							<Id>MLLRRT78A41F205A</Id>
+							<Issr>ADE</Issr>
+						</Othr>
+					</PrvtId>
+				</Id>
+			</Dbtr>
+			<DbtrAcct>
+				<Id>
+					<IBAN>IT63I0558401799000000066618</IBAN>
+				</Id>
+			</DbtrAcct>
+			<Purp>
+				<Cd>PADD</Cd>
+			</Purp>
+			<RmtInf>
+				<Ustrd>/CNR/C001009/DOC/1143/FN/ 20191218</Ustrd>
+			</RmtInf>
+		</DrctDbtTxInf>
+		<DrctDbtTxInf>
+			<PmtId>
+				<InstrId>132</InstrId>
+				<EndToEndId>43442-1145/FN2019-14</EndToEndId>
+			</PmtId>
+			<InstdAmt Ccy="EUR">30.00</InstdAmt>
+			<DrctDbtTx>
+				<MndtRltdInf>
+					<MndtId>NOLO PD 189 ROSSI</MndtId>
+					<DtOfSgntr>2019-09-12</DtOfSgntr>
+				</MndtRltdInf>
+			</DrctDbtTx>
+			<Dbtr>
+				<Nm>ROSSI DI MARIGNANO</Nm>
+				<PstlAdr>
+					<AdrLine>Via Alzaia Naviglio Pavese,44</AdrLine>
+					<AdrLine>20143 Milano MI</AdrLine>
+				</PstlAdr>
+				<Id>
+					<PrvtId>
+						<Othr>
+							<Id>RSSMNL67E48F205C</Id>
+							<Issr>ADE</Issr>
+						</Othr>
+					</PrvtId>
+				</Id>
+			</Dbtr>
+			<DbtrAcct>
+				<Id>
+					<IBAN>IT90D0503401797000000004904</IBAN>
+				</Id>
+			</DbtrAcct>
+			<Purp>
+				<Cd>PADD</Cd>
+			</Purp>
+			<RmtInf>
+				<Ustrd>/CNR/C001014/DOC/1145/FN/ 20191218</Ustrd>
+			</RmtInf>
+		</DrctDbtTxInf>
+	</PmtInf>
+</CBISDDReqLogMsg>

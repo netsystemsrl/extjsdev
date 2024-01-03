@@ -1,0 +1,13 @@
+NomeField			,Len,Align	,Requested	,CodeValue,SampleValue
+FILLER         		,01,L0		,N		 	, 		,FILLER
+TIPOREC				,02,L0		,N			,40		,TIPOREC
+DelegaProg			,07,R0		,Y		 	,		,ProgressivoDelega
+SUBTIPOREC			,02,L0		,N			,03		,Fisso 
+CodiceSede          ,05,L		,Y		 	,		,CodiceSede
+CausaleContributo   ,04,L		,Y		 	,		,CausaleContributo
+MatricolaInps       ,17,L		,Y		 	,		,MatricolaInps
+PeriodoRifInizio    ,06,R0		,Y		 	,		,PeriodoRiferimentoInizio
+PeriodoRifFine      ,06,R0		,Y		 	,		,PeriodoRiferimentoFine
+ImpADebitoVersato   ,15,D2		,Y		 	,		,ImportoADebitoVersato
+ImpACreditoCompensa ,15,D2		,Y		 	,		,ImportoACreditoCompensato
+FILLER          	,39,L		,N		 	,		,FILLER

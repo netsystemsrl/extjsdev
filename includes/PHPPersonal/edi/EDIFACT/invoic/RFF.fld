@@ -1,0 +1,7 @@
+NomeField		,Len,Align	,Requested	,CodeValue										,SampleValue
+TIPOREC			,99	,		,Y		 	,RFF											,RFF
+FILLER			,99	,		,Y		 	,+												,FILLER
+TPRIF			,99	,		,Y			,ON												,ON		=	Proforma invoice number,AAJ		=	Delivery order number,AAK		=	Despatch advice number,AFO		=	Beneficiarys reference,ALL		=	Message batch number,AIZ		=	Consolidated invoice number,AMT		=	Goods and Services Tax identification number,APQ		=	Commercial account summary reference number,CD		=	Credit note number,CR		=	Customer reference number,DL		=	Debit note number,DQ		=	Delivery note number,IV		=	Invoice number,ON		=	Order number (buyer),PL		=	Price list number,RF		=	Export reference number,VN		=	Order number (supplier)
+FILLER			,99	,		,Y		 	,:												,FILLER
+NUMRIF			,35	,		,Y			,XX  											,0000193
+END				,99	,		,Y		 	,'												,END

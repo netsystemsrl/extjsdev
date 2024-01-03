@@ -1,0 +1,12 @@
+NomeField		,Len,Align	,Requested	,CodeValue											,SampleValue
+TIPOREC			,03	,L		,Y		 	,'NAD'												,NAD
+TIPNAD			,03	,L		,Y			,													,BY
+CODNAD			,35	,L		,Y			,   												,04440360230
+QCODNAD			,3	,L		,Y			,													,VA	
+RAGSOCD			,70	,L		,N			,													,SPINSERVICE SRL A SOCIO UNICO
+INDIRD			,70	,L		,N			,													,VIA CAMPALTO, 3/D
+CITTAD			,35	,L		,N			,													,SAN MARTINO BUON ALBERGO
+PROVD			,9	,L		,N			,													,VI
+CAPD			,9	,L		,N			,													,37036
+NAZIOD			,3	,L		,N			,													,IT
+

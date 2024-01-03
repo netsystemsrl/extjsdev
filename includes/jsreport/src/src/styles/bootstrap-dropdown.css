@@ -1,0 +1,195 @@
+.jsr-style-root .caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px solid;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+.jsr-style-root .dropdown {
+  position: relative;
+}
+.jsr-style-root .dropdown-toggle:focus {
+  outline: 0;
+}
+.jsr-style-root .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  list-style: none;
+  font-size: 14px;
+  text-align: left;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+}
+.jsr-style-root .dropdown-menu.pull-right {
+  right: 0;
+  left: auto;
+}
+.jsr-style-root .dropdown-menu .divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+.jsr-style-root .dropdown-menu > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #333333;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.jsr-style-root .dropdown-menu > li > a:hover,
+.jsr-style-root .dropdown-menu > li > a:focus {
+  text-decoration: none;
+  color: #262626;
+  background-color: #f5f5f5;
+}
+.jsr-style-root .dropdown-menu > .active > a,
+.jsr-style-root .dropdown-menu > .active > a:hover,
+.jsr-style-root .dropdown-menu > .active > a:focus {
+  color: #ffffff;
+  text-decoration: none;
+  outline: 0;
+  background-color: #428bca;
+}
+.jsr-style-root .dropdown-menu > .disabled > a,
+.jsr-style-root .dropdown-menu > .disabled > a:hover,
+.jsr-style-root .dropdown-menu > .disabled > a:focus {
+  color: #777777;
+}
+.jsr-style-root .dropdown-menu > .disabled > a:hover,
+.jsr-style-root .dropdown-menu > .disabled > a:focus {
+  text-decoration: none;
+  background-color: transparent;
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  cursor: not-allowed;
+}
+.jsr-style-root .open > .dropdown-menu {
+  display: block;
+}
+.jsr-style-root .open > a {
+  outline: 0;
+}
+.jsr-style-root .dropdown-menu-right {
+  left: auto;
+  right: 0;
+}
+.jsr-style-root .dropdown-menu-left {
+  left: 0;
+  right: auto;
+}
+.jsr-style-root .dropdown-header {
+  display: block;
+  padding: 3px 20px;
+  font-size: 12px;
+  line-height: 1.42857143;
+  color: #777777;
+  white-space: nowrap;
+}
+.jsr-style-root .dropdown-backdrop {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 990;
+}
+.jsr-style-root .pull-right > .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+.jsr-style-root .dropup .caret,
+.jsr-style-root .navbar-fixed-bottom .dropdown .caret {
+  border-top: 0;
+  border-bottom: 4px solid;
+  content: "";
+}
+.jsr-style-root .dropup .dropdown-menu,
+.jsr-style-root .navbar-fixed-bottom .dropdown .dropdown-menu {
+  top: auto;
+  bottom: 100%;
+  margin-bottom: 1px;
+}
+@media (min-width: 768px) {
+  .jsr-style-root .navbar-right .dropdown-menu {
+    left: auto;
+    right: 0;
+  }
+  .jsr-style-root .navbar-right .dropdown-menu-left {
+    left: 0;
+    right: auto;
+  }
+}
+.jsr-style-root .clearfix:before,
+.jsr-style-root .clearfix:after {
+  content: " ";
+  display: table;
+}
+.jsr-style-root .clearfix:after {
+  clear: both;
+}
+.jsr-style-root .center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.jsr-style-root .pull-right {
+  float: right !important;
+}
+.jsr-style-root .pull-left {
+  float: left !important;
+}
+.jsr-style-root .hide {
+  display: none !important;
+}
+.jsr-style-root .show {
+  display: block !important;
+}
+.jsr-style-root .invisible {
+  visibility: hidden;
+}
+.jsr-style-root .text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.jsr-style-root .hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+.jsr-style-root .affix {
+  position: fixed;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.jsr-style-root .input-append .add-on,
+.jsr-style-root .input-prepend .add-on,
+.jsr-style-root .input-append .btn,
+.jsr-style-root .input-prepend .btn,
+.jsr-style-root .input-append .btn-group > .dropdown-toggle,
+.jsr-style-root .input-prepend .btn-group > .dropdown-toggle {
+  vertical-align: top;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+}

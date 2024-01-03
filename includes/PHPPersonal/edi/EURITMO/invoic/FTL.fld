@@ -1,0 +1,3 @@
+NomeField		,Len,Align	,Requested	,CodeValue,SampleValue
+TIPOREC			,03	,L		,Y		 	,'FTL'	,FTL   NOTE RIGA
+NOTE			,35	,L		,Y			,   	,0000193

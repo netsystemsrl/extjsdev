@@ -1,0 +1,9 @@
+NomeField		,Len,Align	,Requested	,CodeValue										,SampleValue
+TIPOREC			,99	,		,Y		 	,BGM											,BGM
+FILLER			,99	,		,Y		 	,+												,FILLER
+DOCTYPE			,99	,		,Y			,380											,380		=	Commercial invoice
+FILLER			,99	,		,Y		 	,+												,FILLER
+DOCNUM			,99	,		,Y			,947											,NUM FT
+FILLER			,99	,		,Y		 	,+												,FILLER
+TYPENUM			,99	,		,Y			,9												,9 ORIGINAL
+END				,99	,		,Y		 	,'												,END

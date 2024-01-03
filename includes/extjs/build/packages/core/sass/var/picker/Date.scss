@@ -1,0 +1,156 @@
+﻿
+/** 
+ * CODAXY
+ * $datepicker-border-radius
+ * @var {list}
+ * defines border radius of datepicker
+*/
+$datepicker-border-radius: dynamic(null);
+
+/** 
+ * CODAXY
+ * $datepicker-header-inner-border-width
+ * @var {list}
+ * defines inner border width of datepicker header
+*/
+$datepicker-header-inner-border-width: dynamic(null);
+
+/** 
+ * CODAXY
+ * $datepicker-header-inner-border-color
+ * @var {list}
+ * defines inner border color of datepicker header
+*/
+$datepicker-header-inner-border-color: dynamic(null);
+
+/** 
+ * CODAXY
+ * $datepicker-item-over-background-color
+ * @var {string}
+ * sets background color to datepicker item (number that shows day of the month) on hover
+*/
+$datepicker-item-over-background-color: dynamic(null);
+
+/** 
+ * CODAXY
+ * $datepicker-item-over-color
+ * @var {string}
+ * defines datepicker item (number that shows day of the month) text color on hover
+*/
+$datepicker-item-over-color: dynamic(null);
+
+/** 
+ * CODAXY
+ * $datepicker-item-selected-color
+ * @var {string}
+ * defines datepicker item (number that shows day of the month) text color when selected
+*/
+$datepicker-item-selected-color: dynamic(null);
+
+/** 
+ * CODAXY
+ * $datepicker-item-today-color
+ * @var {string}
+ * defines color of datepicker item showing today's date 
+*/
+$datepicker-item-today-color: dynamic(null);
+
+/** 
+ * CODAXY
+ * $datepicker-item-today-color
+ * @var {string}
+ * defines today's date text color on hover
+*/
+$datepicker-item-today-over-color: dynamic(null);
+
+/** 
+ * CODAXY
+ * $datepicker-item-today-background-color
+ * @var {string}
+ * defines background color of datepicker item showing today's date 
+*/
+$datepicker-item-today-background-color: dynamic(null);
+
+/** 
+ * CODAXY
+ * $datepicker-item-today-over-background-color
+ * @var {string}
+ * defines background color of datepicker item showing today's date on hover
+*/
+$datepicker-item-today-over-background-color: dynamic(null);
+
+/** 
+ * CODAXY
+ * $datepicker-item-today-selected-background-color
+ * @var {string}
+ * defines background color of datepicker item showing today's date when selected
+*/
+$datepicker-item-today-selected-background-color: dynamic(null);
+
+/** 
+ * CODAXY
+ * $datepicker-item-today-selected-color
+ * @var {string}
+ * defines text color of datepicker item showing today's date when selected
+*/
+$datepicker-item-today-selected-color: dynamic(null);
+
+/** 
+ * CODAXY
+ * $datepicker-item-background-color-transition
+ * @var {list}
+ * defines transition variables for background color of datepicker item
+*/
+$datepicker-item-background-color-transition: dynamic(null);
+
+/** 
+ * CODAXY
+ * $datepicker-item-color-transition
+ * @var {list}
+ * defines transition variables for text color of datepicker item
+*/
+$datepicker-item-color-transition: dynamic(null);
+
+/** 
+ * CODAXY
+ * $datepicker-item-border-radius
+ * @var {list}
+ * sets border radius to datepicker item
+*/
+$datepicker-item-border-radius: dynamic(null);
+
+/** 
+ * CODAXY
+ * $datepicker-monthpicker-btn-over-image
+ * @var {string}
+ * defines background image of monthpicker arrow button on hover
+*/
+$datepicker-monthpicker-btn-over-image: dynamic(null);
+
+/** 
+ * CODAXY
+ * $datepicker-shadow
+ * @var {list}
+ * defines datepicker shadow
+*/
+$datepicker-shadow: dynamic(null);
+
+
+
+
+// Undeclared variables in "neutral-theme" //
+
+$datepicker-border-color: dynamic(null);
+
+$datepicker-header-background-color: dynamic(null);
+
+$datepicker-column-header-color: dynamic(null);
+$datepicker-column-header-background-color: dynamic(null);
+$datepicker-column-header-border-color: dynamic(null);
+
+$datepicker-item-today-border-color: dynamic(null);
+
+$datepicker-footer-border-color: dynamic(null);
+
+
+

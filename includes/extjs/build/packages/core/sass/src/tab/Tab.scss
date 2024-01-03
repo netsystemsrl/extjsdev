@@ -1,0 +1,464 @@
+
+@mixin _codaxy-tab-ui (
+  $ui,
+  
+  $ui-color: null,
+  $ui-color-over: null,
+  $ui-color-active: null,
+  
+  $ui-border-color: null,
+  $ui-border-color-over: null,
+  $ui-border-color-active: null,
+
+  $ui-background-color: null,
+  $ui-background-color-over: null,
+  $ui-background-gradient: null,
+  $ui-background-gradient-active: null,
+  
+  $ui-background-gradient-over: null,
+  $ui-background-color-active: null,
+  
+  $ui-bar-background-color: null,
+  $ui-bar-background-gradient: null,
+  $ui-bar-border-color: null,
+  $ui-bar-inner-border-width: null,
+  $ui-bar-inner-border-color: null,
+
+  $ui-first-child-border-color: null,
+  $ui-first-child-border-color-active: null,
+  $ui-first-child-border-width: null,
+  $ui-first-child-border-radius: null,
+  
+  $ui-strip-border-color: null,
+  $ui-strip-background-color: null,
+  $ui-strip-plain-border-width: null,
+  $ui-strip-plain-border-color: null,
+  
+  $ui-text-shadow: null,
+  $ui-text-shadow-active: null,
+ 
+  $ui-inner-border-width: null,
+  $ui-inner-border-color: null,
+  $ui-inner-border-width-over: null,
+  $ui-inner-border-color-over: null,
+  $ui-inner-border-width-active: null,
+  $ui-inner-border-color-active: null,
+  
+  $ui-tab-border-width: $tab-border-width,
+
+  $ui-hidden-icon: false,
+  $ui-closable-icon-height: $tab-closable-icon-height,
+  $ui-closable-background-image-active: null,
+  $shadow: null,
+  $tab-active-shadow: null,
+  $tab-bar-strip-shadow: null,
+  $ui-margin: null,
+  
+  $ui-tab-active-border-color-inheritance: null,
+  $ui-last-child-border-width: null
+) {
+
+    .#{$prefix}tab-bar-#{$ui} {
+        @if $ui-margin != null { margin: $ui-margin !important }
+        @if $shadow != null {
+            @include box-shadow(#{$shadow});
+            overflow: visible;
+        }
+
+        @if not is-null($ui-bar-background-color) { background-color: $ui-bar-background-color; }
+        @if not is-null($ui-bar-background-gradient) { 
+            @include background-gradient($ui-bar-background-color, $ui-bar-background-gradient, top);  
+        }
+        @if $ui-bar-border-color != null { border-color: $ui-bar-border-color; }
+        @if $ui-bar-inner-border-width != null and $ui-bar-inner-border-color != null {
+            @include inner-border($ui-bar-inner-border-width, $ui-bar-inner-border-color);
+        }
+        .#{$prefix}tab-bar-strip {
+            @if not is-null($ui-strip-border-color) { border-color: $ui-strip-border-color }
+            @if not is-null($ui-strip-background-color) { background-color: $ui-strip-background-color }
+        }
+        &.#{$prefix}tab-bar-bottom {
+            @if $ui-bar-inner-border-width != null and $ui-bar-inner-border-color != null {
+                @include inner-border(mirror(v, $ui-bar-inner-border-width), $ui-bar-inner-border-color);
+            }
+            .#{$prefix}tab-bar-strip {
+                @if $ui-strip-border-color != null { border-color: mirror(v, $ui-strip-border-color) }
+                 @if $tab-bar-strip-shadow != null { 
+                     @include box-shadow($tab-bar-strip-shadow); 
+                     overflow: visible;
+                 }
+            }
+        }
+        
+
+        &.#{$prefix}tab-bar-left {
+            @if $tabbar-border-width != null { border-width: mirror(v, rotate270($tabbar-border-width)) }
+            @if $ui-bar-inner-border-width != null and $ui-bar-inner-border-color != null {
+                @include inner-border(rotate270($ui-bar-inner-border-width), $ui-bar-inner-border-color);
+            }
+            .#{$prefix}tab-bar-strip {
+                @if $tabbar-strip-border-width != null { border-width: mirror(v, rotate270($tabbar-strip-border-width)) }
+                @if $ui-strip-border-color != null { border-color: mirror(v, rotate270($ui-strip-border-color)) }
+            }
+        }
+
+        &.#{$prefix}tab-bar-right {
+            @if $ui-bar-inner-border-width != null and $ui-bar-inner-border-color != null {
+                @include inner-border(rotate90($ui-bar-inner-border-width), $ui-bar-inner-border-color);
+            }
+            .#{$prefix}tab-bar-strip {
+                @if $ui-strip-border-color != null { border-color: rotate90($ui-strip-border-color) }
+            }
+        }
+
+        &.#{$prefix}tab-bar-plain {
+            border-width: 0;
+            @include inner-border(0, rgba(white, 0));
+            .#{$prefix}tab-bar-strip {
+                @if $ui-strip-plain-border-width != null { border-width: $ui-strip-plain-border-width }
+                @if $ui-strip-plain-border-color != null { border-color: $ui-strip-plain-border-color }
+            }
+            &.#{$prefix}tab-bar-bottom {
+                .#{$prefix}tab-bar-strip {
+                    @if $ui-strip-plain-border-width != null { border-width: mirror(v, $ui-strip-plain-border-width) }
+                    @if $ui-strip-plain-border-color != null { border-color: mirror(v, $ui-strip-plain-border-color) }
+                }
+            }
+            &.#{$prefix}tab-bar-left {
+                .#{$prefix}tab-bar-strip {
+                    @if $ui-strip-plain-border-width != null { border-width: mirror(v, rotate270($ui-strip-plain-border-width)) }
+                    @if $ui-strip-plain-border-color != null { border-color: mirror(v, rotate270($ui-strip-plain-border-color)) }
+                }
+            }
+            &.#{$prefix}tab-bar-right {
+                .#{$prefix}tab-bar-strip {
+                    @if $ui-strip-plain-border-width != null { border-width: rotate90($ui-strip-plain-border-width) }
+                    @if $ui-strip-plain-border-color != null { border-color: rotate90($ui-strip-plain-border-color) }
+                }
+            }
+        }
+
+
+        .#{$prefix}tab-#{$ui} {
+            
+            &:first-child {
+                @if $ui-first-child-border-width != null { border-width: $ui-first-child-border-width }
+                @if $ui-first-child-border-radius != null {
+                    @include border-radius($ui-first-child-border-radius)
+                }
+            } 
+            &:last-child {
+                @if $ui-first-child-border-radius != null {
+                    @include border-radius(rotate90(mirror(h, $ui-first-child-border-radius)))
+                }
+
+                /* O-315
+                 * sets tab:last-child border width 
+                 */
+                @if $ui-last-child-border-width != null { border-width: $ui-last-child-border-width }
+                                
+            }
+            @if not is-null($ui-background-color) { 
+                background-color: $ui-background-color;
+                /* O-315
+                     * used if the tab background color and tab border color have "alpha" value
+                     */
+                /*@if $ui-border-color!= null  {
+                    @if alpha($ui-background-color) < 1 and alpha-list($ui-border-color) == true  {
+                        background-clip: padding-box;
+                    }   
+                }*/  
+            }
+                        
+            @if not is-null($ui-background-gradient) { 
+                    @include background-gradient($ui-background-color, $ui-background-gradient, top); 
+            }
+            @if not is-null($ui-border-color) { border-color: $ui-border-color }
+            .x-tab-inner-#{$ui} {
+                @if not is-null($ui-color) { color: $ui-color }
+            }
+            @if $ui-inner-border-width != null and $ui-inner-border-color != null {
+                @include inner-border($width: $ui-inner-border-width, $color: $ui-inner-border-color);
+            }
+            .#{$prefix}tab-text {
+                @if $ui-text-shadow != null { 
+                @include text-shadow($ui-text-shadow);
+                }  
+            }
+
+            &.#{$prefix}tab-active {
+
+                /* O-315
+                 * left border color of the tab that comes after active tab is set to be the same as active tab border color
+                 */
+                @if ($ui-tab-active-border-color-inheritance == true) {
+                    + .#{$prefix}tab { 
+                        @if $ui-border-color-active != null { border-left-color: list-rect($ui-border-color-active, left) } 
+                    }
+                }
+                
+                @if $tab-active-shadow != null {
+                    @include box-shadow(#{$tab-active-shadow});
+                    overflow: visible;
+                }
+                @if $ui-inner-border-width-active != null and $ui-inner-border-color-active != null {    
+                    @include inner-border($width: $ui-inner-border-width-active, $color: $ui-inner-border-color-active);
+                }
+                &:first-child {
+                    @if $ui-first-child-border-color-active != null { border-color: $ui-first-child-border-color-active }
+                    &:hover { @if $ui-first-child-border-color-active != null { border-color: $ui-first-child-border-color-active } }
+                }
+                .#{$prefix}tab-text {
+                    @if $ui-text-shadow-active != null { 
+                    @include text-shadow($ui-text-shadow-active);
+                    }  
+                }
+                @if not is-null($ui-background-color-active)  { 
+                    background-color: $ui-background-color-active; 
+
+                    /* O-315
+                     * used if the active tab background color and active tab border color have "alpha" value
+                     */
+                    /*@if $ui-border-color-active != null  {
+                        @if alpha($ui-background-color-active) < 1 and alpha-list($ui-border-color-active) == true  {
+                            background-clip: padding-box;
+                        }   
+                    }*/              
+                }
+                @if not is-null($ui-border-color-active) { border-color: $ui-border-color-active }
+                @if not is-null($ui-background-gradient-active) { 
+                    @include background-gradient($ui-background-color-active, $ui-background-gradient-active, top); 
+                }
+                @if not is-null($ui-color-active) { color: $ui-color-active; }
+                .#{$prefix}tab-inner { 
+                    @if not is-null($ui-color-active) { 
+                        color: $ui-color-active; 
+                    .#{$prefix}tab-over & { color: $ui-color-active; } 
+                    }
+                }
+                &.#{$prefix}tab-over {
+                    @if not is-null($ui-background-color-active) { background-color: $ui-background-color-active }
+                    @if not is-null($ui-background-gradient-active) { 
+                        @include background-gradient($ui-background-color-active, $ui-background-gradient-active, top);
+                    }
+                    @if not is-null($ui-border-color-active) { border-color: $ui-border-color-active }
+                    .#{$prefix}tab-inner {
+                        @if not is-null($ui-color-active) { color: $ui-color-active } 
+                    }
+                    @if $ui-inner-border-width-active != null and $ui-inner-border-color-active != null {    
+                        @include inner-border($width: $ui-inner-border-width-active, $color: $ui-inner-border-color-active);
+                    } 
+                }
+            }
+
+            &.#{$prefix}tab-over {
+                @if not is-null($ui-background-color-over){ background-color: $ui-background-color-over}
+                @if not is-null($ui-border-color-over) { border-color: $ui-border-color-over }
+                @if not is-null($ui-background-gradient-over) { 
+                    @include background-gradient($ui-background-color-over, $ui-background-gradient-over, top); 
+                }
+                @if $ui-inner-border-width-over != null and $ui-inner-border-color-over != null {
+                    @include inner-border($width: $ui-inner-border-width-over, $color: $ui-inner-border-color-over);
+                }
+                .#{$prefix}tab-inner { @if $ui-color-over != null { color: $ui-color-over } }
+            }
+
+            // TAB BOTTOM //
+
+            &.#{$prefix}tab-bottom {
+                @if not is-null($ui-inner-border-width) and not is-null($ui-inner-border-color) {
+                    @include inner-border($ui-inner-border-width, rgba(white, 0));
+                }
+                border-width: mirror(v, $ui-tab-border-width);
+                &:first-child {
+                    @if $ui-first-child-border-width != null { border-width: mirror(v, $ui-first-child-border-width) }
+                } 
+                &.#{$prefix}tab-active {
+                    @if not is-null($ui-inner-border-width-active) and not is-null($ui-inner-border-color-active) {
+                        @include inner-border($ui-inner-border-width-active, rgba(white, 0));
+                    }
+                    @if not is-null($ui-border-color-active) { border-color: mirror(v, $ui-border-color-active) }
+                    &:first-child {
+                        @if $ui-first-child-border-color-active != null { border-color: mirror(v, $ui-first-child-border-color-active) }
+                    }                    
+                }
+                &:last-child {
+                    /* O-315
+                     * sets tab:last-child border width 
+                     */
+                    @if $ui-last-child-border-width != null { border-width: $ui-last-child-border-width } 
+                }
+            }
+
+            // TAB LEFT //
+
+            &.#{$prefix}tab-rotate-left {
+                border-width: mirror(h, $ui-tab-border-width);
+                &:first-child {
+                    @if $ui-first-child-border-width != null { border-width: mirror(h, $ui-first-child-border-width) }
+                    
+                    /* O-315
+                     * tab border radius rotation
+                     */
+
+                    @if $ui-first-child-border-radius != null {
+                        @include border-radius(rotate90(mirror(h, $ui-first-child-border-radius)))
+                    }
+                }
+                &.#{$prefix}tab-active {
+                    &:first-child {
+                        @if $ui-first-child-border-color-active != null { border-color: mirror(h, $ui-first-child-border-color-active) }
+                    }
+
+                    /* O-315
+                     * tab active border color inheritance rotation
+                     */
+                    @if ($ui-tab-active-border-color-inheritance == true) {
+                        + .#{$prefix}tab { 
+                            @if $ui-border-color-active != null { 
+                                border-right-color: list-rect($ui-border-color-active, right);
+                                border-left-color: list-rect($ui-border-color, left);
+                            } 
+                        }
+                    }
+                }
+                &:last-child {
+                    @if $ui-first-child-border-radius != null {
+                        @include border-radius($ui-first-child-border-radius)
+                    }
+                    @if $ui-last-child-border-width != null {
+                       border-width: $ui-last-child-border-width; 
+                    }
+                }
+            }
+
+            &.#{$prefix}tab-left {
+                border-width: mirror(v, rotate270($ui-tab-border-width));
+                &:first-child {
+                    @if $ui-first-child-border-width != null { border-width: mirror(h, rotate90($ui-first-child-border-width)) }
+                    /* O-315
+                     * tab border radius rotation
+                     */
+                    @if $ui-first-child-border-radius != null {
+                        @include border-radius(mirror(h, $ui-first-child-border-radius))
+                    }
+                }
+                &.#{$prefix}tab-active {
+                    @if not is-null($ui-border-color-active) { border-color: mirror(h, rotate90($ui-border-color-active)) }
+                    &:first-child {
+                        @if $ui-first-child-border-color-active != null { border-color: mirror(h, rotate90($ui-first-child-border-color-active)) }
+                    }
+                    /* O-315
+                     * tab active border color inheritance 
+                     */
+                    @if ($ui-tab-active-border-color-inheritance == true) {
+                        + .#{$prefix}tab { 
+                            @if $ui-border-color-active != null { 
+                                border-top-color: list-rect($ui-border-color-active, top);
+                                border-left-color: list-rect($ui-border-color, left);
+                            } 
+                        }
+                    }
+                }
+                &:last-child {
+                    /* O-315
+                     * tab border radius rotation 
+                     */
+                    @if $ui-first-child-border-radius != null {
+                        @include border-radius(rotate270($ui-first-child-border-radius))
+                    }
+                    @if $ui-last-child-border-width != null {
+                       border-width: $ui-last-child-border-width; 
+                    }
+                }
+            }
+
+            // TAB RIGHT //
+
+            &.#{$prefix}tab-right {
+                &:first-child {
+                    @if $ui-first-child-border-width != null { border-width: rotate90($ui-first-child-border-width) }
+                    /* O-315
+                     * tab border radius rotation
+                     */
+                    @if $ui-first-child-border-radius != null {
+                        @include border-radius(rotate90($ui-first-child-border-radius))
+                    }
+                }
+                &.#{$prefix}tab-active {
+                    @if not is-null($ui-border-color-active) { border-color:  rotate90($ui-border-color-active) }
+                    &:first-child {
+                        @if $ui-first-child-border-color-active != null { border-color: rotate90($ui-first-child-border-color-active) }
+                    }
+                    /* O-315
+                     * tab active border color inheritance 
+                     */
+                    @if ($ui-tab-active-border-color-inheritance == true) {
+                        + .#{$prefix}tab { 
+                            @if $ui-border-color-active != null { 
+                                border-top-color: list-rect($ui-border-color-active, top);
+                                border-left-color: list-rect($ui-border-color, left);
+                            } 
+                        }
+                    }
+                }
+                &:last-child {
+                    @if $ui-first-child-border-radius != null {
+                        @include border-radius(rotate180(mirror(h, $ui-first-child-border-radius)))
+                    }
+                    @if $ui-last-child-border-width != null {
+                        border-width: $ui-last-child-border-width; 
+                    }
+                }
+            }
+        }
+    }
+
+      /********* TAB CLOSE *********/
+
+      @if $ui-hidden-icon {
+        .#{$prefix}tab-#{$ui} .#{$prefix}tab-close-btn {
+          background-position: (-$tab-closable-icon-height) $tab-closable-icon-height;
+        }
+      }
+      @if not is-null($ui-closable-icon-height) {
+        .#{$prefix}tab-#{$ui}.#{$prefix}tab-over .#{$prefix}tab-close-btn {
+          background-position: 0 (-$ui-closable-icon-height);
+        }
+      }
+      @if not is-null($ui-closable-background-image-active) {
+        .#{$prefix}tab-#{$ui}.#{$prefix}tab-active .#{$prefix}tab-close-btn {
+          background-image: $ui-closable-background-image-active;
+        }
+      }
+
+}
+
+
+@include _codaxy-tab-ui (
+    $ui: default,
+    $ui-border-color: $tab-border-color,
+    $ui-text-shadow: $tab-text-shadow,
+    $ui-text-shadow-active: $tab-text-shadow-active,
+    $ui-inner-border-width: $tab-inner-border-width,
+    $ui-inner-border-color: $tab-inner-border-color,
+    $ui-inner-border-width-active: $tab-inner-border-width-active,
+    $ui-inner-border-color-active: $tab-inner-border-color-active,
+    $ui-inner-border-width-over: $tab-inner-border-width-over,
+    $ui-inner-border-color-over: $tab-inner-border-color-over, 
+    $ui-hidden-icon: $tab-hidden-icon,
+    $ui-border-color-active: $tab-border-color-active,
+    $ui-bar-inner-border-width: $tabbar-inner-border-width,
+    $ui-bar-inner-border-color: $tabbar-border-color,
+    $ui-strip-plain-border-width: $tabbar-strip-plain-border-width,
+    $ui-strip-plain-border-color: $tabbar-strip-border-color,
+    $ui-closable-background-image-active: $tab-closable-icon-background-image-active,
+    $ui-strip-border-color: $tabbar-strip-border-color,
+    $ui-first-child-border-width: $tab-first-child-border-width,
+    $ui-first-child-border-radius: $tab-first-child-border-radius,
+    $ui-tab-active-border-color-inheritance: $tab-active-border-color-inheritance,
+    $ui-last-child-border-width: $tab-last-child-border-width
+);
+
+
+

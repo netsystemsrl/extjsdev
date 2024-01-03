@@ -1,0 +1,8 @@
+﻿
+@function important ($condition) {
+    @if ($condition) {
+        @return !important;
+    } @else {
+        @return #{''};
+    }
+}

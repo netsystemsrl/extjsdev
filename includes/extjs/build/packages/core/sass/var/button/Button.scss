@@ -1,0 +1,130 @@
+﻿
+/** 
+ * CODAXY
+ * $button-margin
+ * @var {list}
+ * adds margin around buttons
+*/
+$button-margin: dynamic(null);
+
+/** 
+ * CODAXY
+ * $button-shadow
+ * @var {list}
+ * adds shadow around button
+*/
+$button-shadow: dynamic(null);
+
+/** 
+ * CODAXY
+ * $button-border-color
+ * @var {list}
+ * override for default button border color when $button-default-border-color is defined by list 
+ * gives possibility of applying different colors to button borders
+*/
+$button-border-color: dynamic(null);
+
+
+// SHOWS ERROR //
+
+/*@if length($button-default-border-color) > 1 {  
+  $button-border-color: dynamic($button-default-border-color);
+  $button-default-border-color: dynamic(#fff);
+} @else { $button-border-color: dynamic(null) }*/
+
+
+/** 
+ * CODAXY
+ * $segmented-toolbar-button-border-width
+ * @var {string}
+ * defines border style of whole segmented toolbar button
+*/
+$segmented-toolbar-button-border-style: dynamic(null);
+
+/** 
+ * CODAXY
+ * $segmented-toolbar-button-border-width
+ * @var {list/number}
+ * defines border width of whole segmented toolbar button
+*/
+$segmented-toolbar-button-border-width: dynamic(null);
+
+/** 
+ * CODAXY
+ * $segmented-toolbar-button-border-color
+ * @var {list/color}
+ * defines border color of whole segmented toolbar button
+*/
+$segmented-toolbar-button-border-color: dynamic(null);
+
+/** 
+ * CODAXY
+ * $segmented-toolbar-button-inner-border-width
+ * @var {list/number}
+ * defines inner border width of whole segmented toolbar button
+*/
+$segmented-toolbar-button-inner-border-width: dynamic(null);
+
+/** 
+ * CODAXY
+ * $segmented-toolbar-button-inner-border-color
+ * @var {list/color}
+ * defines inner border color of whole segmented toolbar button
+*/
+$segmented-toolbar-button-inner-border-color: dynamic(null);
+
+/** 
+ * CODAXY
+ * $segmented-toolbar-button-background-color-over
+ * @var {string/color}
+ * defines background color of segmented toolbar button on hover
+*/
+$segmented-toolbar-button-background-color-over: dynamic(null);
+
+/** 
+ * CODAXY
+ * $segmented-toolbar-button-first-border-width
+ * @var {list/number}
+ * defines border width of first button inside segmented toolbar button
+*/
+$segmented-toolbar-button-first-border-width: dynamic(null);
+
+/** 
+ * CODAXY
+ * $segmented-toolbar-button-first-border-color
+ * @var {list/color}
+ * defines border color of first button inside segmented toolbar button
+*/
+$segmented-toolbar-button-first-border-color: dynamic(null);
+
+/** 
+ * CODAXY
+ * $segmented-toolbar-button-middle-border-width
+ * @var {list/number}
+ * defines border width of middle buttons inside segmented toolbar button
+*/
+$segmented-toolbar-button-middle-border-width: dynamic(null);
+
+/** 
+ * CODAXY
+ * $segmented-toolbar-button-middle-border-color
+ * @var {list/color}
+ * defines border color of middle buttons inside segmented toolbar button
+*/
+$segmented-toolbar-button-middle-border-color: dynamic(null);
+
+/** 
+ * CODAXY
+ * $segmented-toolbar-button-last-border-width
+ * @var {list/number}
+ * defines border width of last button inside segmented toolbar button
+*/
+$segmented-toolbar-button-last-border-width: dynamic(null);
+
+/** 
+ * CODAXY
+ * $segmented-toolbar-button-last-border-color
+ * @var {list/color}
+ * defines border color of last button inside segmented toolbar button
+*/
+$segmented-toolbar-button-last-border-color: dynamic(null);

@@ -1,0 +1,9 @@
+NomeField		,Len,Align	,Requested	,CodeValue										,SampleValue
+TIPOREC			,99	,		,Y		 	,TDT											,TDT
+FILLER			,99	,		,Y		 	,+												,FILLER
+TYPE 			,99	,		,Y			,20												,20		Transport mode name code
+FILLER			,99	,		,Y		 	,+												,FILLER
+MEANS			,99	,		,Y			,												,TRANSPORT MEANS
+FILLER			,99	,		,Y		 	,+												,FILLER
+TYPECUR			,99	,		,Y			,30  											,30		Transport mo
+END				,99	,		,Y		 	,'												,END

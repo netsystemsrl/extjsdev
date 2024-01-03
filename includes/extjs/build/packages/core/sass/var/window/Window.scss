@@ -1,0 +1,59 @@
+﻿
+/**
+ * CODAXY 
+ * $window-borders-overrides
+ * @var {boolean}
+ * `true` to add bottom border to header and remove top border from toolbars and body
+ */
+$window-borders-overrides: dynamic(false) !default;
+
+/**
+ * CODAXY 
+ * $window-active-class
+ * @var {string}
+ * adds class 'x-window-active' to active window, making it look different from window that is not active (for example, active window is blue colored in codaxy-theme-azzurra and codaxy-theme-basic,
+   but has gray color when not active)
+ */
+$window-active-class: dynamic("x-window-active");
+
+/**
+ * CODAXY 
+ * $window-tools-background-color-over
+ * @var {string}
+ * sets background color on hover to tool icons (close, minimize, maximize...) in window header
+ */
+$window-tools-background-color-over: dynamic(null);
+
+/**
+ * CODAXY 
+ * $window-header-text-shadow
+ * @var {list}
+ * defines shadow of text elements in window header
+ */
+$window-header-text-shadow: dynamic(null);
+
+/**
+ * CODAXY 
+ * $window-shadow
+ * @var {list}
+ * defines window shadow
+ */
+$window-shadow: dynamic(null);
+
+/**
+ * CODAXY 
+ * $window-footer-padding
+ * @var {list}
+ * defines window toolbar footer padding
+ */
+$window-footer-padding: dynamic(null);
+
+/**
+ * CODAXY 
+ * $window-footer-background-color
+ * @var {string}
+ * defines window toolbar footer background color
+ */
+$window-footer-background-color: dynamic(null);
+
+

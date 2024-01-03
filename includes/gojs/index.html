@@ -1,0 +1,726 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>OrganizationChart Editor</title>
+<meta charset="UTF-8">
+<script src="go.js"></script>
+ <!--<link href="../assets/css/goSamples.css" rel="stylesheet" type="text/css"/>  you don't need to use this -->
+<script src="goSamples.js"></script>  <!-- this is only for the GoJS Samples framework -->
+<script id="code">
+  function init() {
+   // if (window.goSamples) goSamples();  // init for these samples -- you don't need to call this
+    var $ = go.GraphObject.make;  // for conciseness in defining templates
+
+    myDiagram =
+      $(go.Diagram, "myDiagram", // must be the ID or reference to div
+        {
+          initialContentAlignment: go.Spot.Center,
+          // make sure users can only create trees
+          validCycle: go.Diagram.CycleDestinationTree,
+          // users can select only one part at a time
+          maxSelectionCount: 1,
+          layout:
+            $(go.TreeLayout,
+              {
+                treeStyle: go.TreeLayout.StyleLastParents,
+                arrangement: go.TreeLayout.ArrangementHorizontal,
+                // properties for most of the tree:
+                angle: 90,
+                layerSpacing: 35,
+                // properties for the "last parents":
+                alternateAngle: 90,
+                alternateLayerSpacing: 35,
+                alternateAlignment: go.TreeLayout.AlignmentBus,
+                alternateNodeSpacing: 20
+              }),
+          // support editing the properties of the selected person in HTML
+          "ChangedSelection": onSelectionChanged,
+          "TextEdited": onTextEdited,
+          // enable undo & redo
+          "undoManager.isEnabled": true
+        });
+
+    // when the document is modified, add a "*" to the title and enable the "Save" button
+    myDiagram.addDiagramListener("Modified", function(e) {
+      var button = document.getElementById("SaveButton");
+      if (button) button.disabled = !myDiagram.isModified;
+      var idx = document.title.indexOf("*");
+      if (myDiagram.isModified) {
+        if (idx < 0) document.title += "*";
+      } else {
+        if (idx >= 0) document.title = document.title.substr(0, idx);
+      }
+    });
+
+    var levelColors = ["#AC193D/#BF1E4B", "#2672EC/#2E8DEF", "#8C0095/#A700AE", "#5133AB/#643EBF",
+                       "#008299/#00A0B1", "#D24726/#DC572E", "#008A00/#00A600", "#094AB2/#0A5BC4"];
+
+    // override TreeLayout.commitNodes to also modify the background brush based on the tree depth level
+    myDiagram.layout.commitNodes = function() {
+      go.TreeLayout.prototype.commitNodes.call(myDiagram.layout);  // do the standard behavior
+      // then go through all of the vertexes and set their corresponding node's Shape.fill
+      // to a brush dependent on the TreeVertex.level value
+      myDiagram.layout.network.vertexes.each(function(v) {
+        if (v.node) {
+          var level = v.level % (levelColors.length);
+          var colors = levelColors[level].split("/");
+          var shape = v.node.findObject("SHAPE");
+          if (shape) shape.fill = $(go.Brush, "Linear", { 0: colors[0], 1: colors[1], start: go.Spot.Left, end: go.Spot.Right });
+        }
+      });
+    }
+
+    // when a node is double-clicked, add a child to it
+    function nodeDoubleClick(e, obj) {
+      var clicked = obj.part;
+      if (clicked !== null) {
+        var thisemp = clicked.data;
+        myDiagram.startTransaction("add employee");
+        var nextkey = (myDiagram.model.nodeDataArray.length + 1).toString();
+        var newemp = { key: nextkey, name: "(new person)", title: "", parent: thisemp.key };
+        myDiagram.model.addNodeData(newemp);
+        myDiagram.commitTransaction("add employee");
+      }
+    }
+
+    // this is used to determine feedback during drags
+    function mayWorkFor(node1, node2) {
+      if (!(node1 instanceof go.Node)) return false;  // must be a Node
+      if (node1 === node2) return false;  // cannot work for yourself
+      if (node2.isInTreeOf(node1)) return false;  // cannot work for someone who works for you
+      return true;
+    }
+
+    // This function provides a common style for most of the TextBlocks.
+    // Some of these values may be overridden in a particular TextBlock.
+    function textStyle() {
+      return { font: "9pt  Segoe UI,sans-serif", stroke: "white" };
+    }
+
+    // This converter is used by the Picture.
+    function findHeadShot(key) {
+      if (key > 16) return ""; // There are only 16 images on the server
+      return "images/HS" + key + ".png"
+    };
+
+
+    // define the Node template
+    myDiagram.nodeTemplate =
+      $(go.Node, "Auto",
+        { doubleClick: nodeDoubleClick },
+        { // handle dragging a Node onto a Node to (maybe) change the reporting relationship
+          mouseDragEnter: function (e, node, prev) {
+            var diagram = node.diagram;
+            var selnode = diagram.selection.first();
+            if (!mayWorkFor(selnode, node)) return;
+            var shape = node.findObject("SHAPE");
+            if (shape) {
+              shape._prevFill = shape.fill;  // remember the original brush
+              shape.fill = "darkred";
+            }
+          },
+          mouseDragLeave: function (e, node, next) {
+            var shape = node.findObject("SHAPE");
+            if (shape && shape._prevFill) {
+              shape.fill = shape._prevFill;  // restore the original brush
+            }
+          },
+          mouseDrop: function (e, node) {
+            var diagram = node.diagram;
+            var selnode = diagram.selection.first();  // assume just one Node in selection
+            if (mayWorkFor(selnode, node)) {
+              // find any existing link into the selected node
+              var link = selnode.findTreeParentLink();
+              if (link !== null) {  // reconnect any existing link
+                link.fromNode = node;
+              } else {  // else create a new link
+                diagram.toolManager.linkingTool.insertLink(node, node.port, selnode, selnode.port);
+              }
+            }
+          }
+        },
+        // for sorting, have the Node.text be the data.name
+        new go.Binding("text", "name"),
+        // bind the Part.layerName to control the Node's layer depending on whether it isSelected
+        new go.Binding("layerName", "isSelected", function(sel) { return sel ? "Foreground" : ""; }).ofObject(),
+        // define the node's outer shape
+        $(go.Shape, "Rectangle",
+          {
+            name: "SHAPE", fill: "white", stroke: null,
+            // set the port properties:
+            portId: "", fromLinkable: true, toLinkable: true, cursor: "pointer"
+          }),
+        $(go.Panel, "Horizontal",
+          $(go.Picture,
+            {
+              name: 'Picture',
+              desiredSize: new go.Size(39, 50),
+              margin: new go.Margin(6, 8, 6, 10),
+            },
+            new go.Binding("source", "key", findHeadShot)),
+          // define the panel where the text will appear
+          $(go.Panel, "Table",
+            {
+              maxSize: new go.Size(150, 999),
+              margin: new go.Margin(6, 10, 0, 3),
+              defaultAlignment: go.Spot.Left
+            },
+            $(go.RowColumnDefinition, { column: 2, width: 4 }),
+            $(go.TextBlock, textStyle(),  // the name
+              {
+                row: 0, column: 0, columnSpan: 5,
+                font: "12pt Segoe UI,sans-serif",
+                editable: true, isMultiline: false,
+                minSize: new go.Size(10, 16)
+              },
+              new go.Binding("text", "name").makeTwoWay()),
+            $(go.TextBlock, "Title: ", textStyle(),
+              { row: 1, column: 0 }),
+            $(go.TextBlock, textStyle(),
+              {
+                row: 1, column: 1, columnSpan: 4,
+                editable: true, isMultiline: false,
+                minSize: new go.Size(10, 14),
+                margin: new go.Margin(0, 0, 0, 3)
+              },
+              new go.Binding("text", "title").makeTwoWay()),
+            $(go.TextBlock, textStyle(),
+              { row: 2, column: 0 },
+              new go.Binding("text", "key", function(v) {return "ID: " + v;})),
+            $(go.TextBlock, textStyle(),
+              { row: 2, column: 3, },
+              new go.Binding("text", "parent", function(v) {return "Boss: " + v;})),
+            $(go.TextBlock, textStyle(),  // the comments
+              {
+                row: 3, column: 0, columnSpan: 5,
+                font: "italic 9pt sans-serif",
+                wrap: go.TextBlock.WrapFit,
+                editable: true,  // by default newlines are allowed
+                minSize: new go.Size(10, 14)
+              },
+              new go.Binding("text", "comments").makeTwoWay())
+          )  // end Table Panel
+        ) // end Horizontal Panel
+      );  // end Node
+
+    // define the Link template
+    myDiagram.linkTemplate =
+      $(go.Link, go.Link.Orthogonal,
+        { corner: 5, relinkableFrom: true, relinkableTo: true },
+        $(go.Shape, { strokeWidth: 4, stroke: "#00a4a4" }));  // the link shape
+
+    // read in the JSON-format data from the "mySavedModel" element
+    load();
+  }
+
+  
+  
+  
+  
+  
+  
+  // Allow the user to edit text when a single node is selected
+  function onSelectionChanged(e) {
+    var node = e.diagram.selection.first();
+    if (node instanceof go.Node) {
+      updateProperties(node.data);
+    } else {
+      updateProperties(null);
+    }
+  }
+
+  // Update the HTML elements for editing the properties of the currently selected node, if any
+  function updateProperties(data) {
+    if (data === null) {
+      document.getElementById("propertiesPanel").style.display = "none";
+      document.getElementById("name").value = "";
+      document.getElementById("title").value = "";
+      document.getElementById("comments").value = "";
+    } else {
+      document.getElementById("propertiesPanel").style.display = "block";
+      document.getElementById("name").value = data.name || "";
+      document.getElementById("title").value = data.title || "";
+      document.getElementById("comments").value = data.comments || "";
+    }
+  }
+
+  // This is called when the user has finished inline text-editing
+  function onTextEdited(e) {
+    var tb = e.subject;
+    if (tb === null || !tb.name) return;
+    var node = tb.part;
+    if (node instanceof go.Node) {
+      updateProperties(node.data);
+    }
+  }
+
+  // Update the data fields when the text is changed
+  function updateData(text, field) {
+    var node = myDiagram.selection.first();
+    // maxSelectionCount = 1, so there can only be one Part in this collection
+    var data = node.data;
+    if (node instanceof go.Node && data !== null) {
+      var model = myDiagram.model;
+      model.startTransaction("modified " + field);
+      if (field === "name") {
+        model.setDataProperty(data, "name", text);
+      } else if (field === "title") {
+        model.setDataProperty(data, "title", text);
+      } else if (field === "comments") {
+        model.setDataProperty(data, "comments", text);
+      }
+      model.commitTransaction("modified " + field);
+    }
+  }
+
+  // Show the diagram's model in JSON format
+  function save() {
+    document.getElementById("mySavedModel").value = myDiagram.model.toJson();
+    myDiagram.isModified = false;
+  }
+  function load() {
+    myDiagram.model = go.Model.fromJson(document.getElementById("mySavedModel").value);
+  }
+</script>
+</head>
+<body onload="init()">
+<div id="sample">
+  <div id="myDiagram" style="background-color: #696969; border: solid 1px black; height: 85vh"></div>
+  <div>
+    <div id="propertiesPanel" style="display: none; background-color: aliceblue; border: solid 1px black">
+      <b>Properties</b><br />
+      Name: <input type="text" id="name" value="" onchange="updateData(this.value, 'name')" /><br />
+      Title: <input type="text" id="title" value="" onchange="updateData(this.value, 'title')" /><br />
+      Note: <input type="text" id="comments" value="" onchange="updateData(this.value, 'comments')" /><br />
+    </div>
+  </div>
+  <div>
+    <div>
+      <button id="SaveButton" onclick="save()">Write</button>
+      <button onclick="load()">Read</button>
+      Diagram Model saved in JSON format:
+    </div>
+    <textarea id="mySavedModel" style="width:100%;height:2%">
+{ "class": "go.TreeModel",
+  "nodeDataArray": [ 
+{
+"key" : "1",
+"name" : "AO Lodi"
+}, {
+"key" : "23",
+"parent" : "1",
+"name" : "DIPARTIMENTO MATERNO INFANTILE"
+}, {
+"key" : "25",
+"parent" : "1",
+"name" : "DIPARTIMENTO CHIRURGICO"
+}, {
+"key" : "26",
+"parent" : "1",
+"name" : "DIPARTIMENTO CURE INTERMEDIE E RIABILITAZIONE"
+}, {
+"key" : "27",
+"parent" : "1",
+"name" : "DIPARTIMENTO TECNICO AMMINISTRATIVO"
+}, {
+"key" : "28",
+"parent" : "1",
+"name" : "DIREZIONE AMMINISTRATIVA"
+}, {
+"key" : "29",
+"parent" : "1",
+"name" : "DIPARTIMENTO MEDICO ONCOLOGICO"
+}, {
+"key" : "30",
+"parent" : "1",
+"name" : "DIPARTIMENTO EMERGENZA URGENZA"
+}, {
+"key" : "93",
+"parent" : "23",
+"name" : "UOC OSTETRICIA GINECOLOGIA CODOGNO"
+}, {
+"key" : "95",
+"parent" : "23",
+"name" : "USD GINECOLOGIA AD INDIRIZZO DIURNO AMBULATORIALE ED ISTEROSCOPICO"
+}, {
+"key" : "97",
+"parent" : "24",
+"name" : "UOC DIREZIONE MEDICA DEL PRESIO OSPEDALIERO UNICO"
+}, {
+"key" : "98",
+"parent" : "24",
+"name" : "UOC FARMACIA OSPEDALIERA"
+}, {
+"key" : "99",
+"parent" : "25",
+"name" : "UOC CHIRURGIA PLASTICA"
+}, {
+"key" : "101",
+"parent" : "25",
+"name" : "UOC UROLOGIA"
+}, {
+"key" : "102",
+"parent" : "25",
+"name" : "UOC OTORINOLARINGOIATRIA"
+}, {
+"key" : "103",
+"parent" : "25",
+"name" : "UOC ORTOPEDIA"
+}, {
+"key" : "104",
+"parent" : "25",
+"name" : "UOC CHIRURGIA VASCOLARE ED ENDOVASCOLARE"
+}, {
+"key" : "105",
+"parent" : "25",
+"name" : "UOC CHIRURGIA GENERALE CODOGNO"
+}, {
+"key" : "108",
+"parent" : "26",
+"name" : "UOC RIABILITAZIONE SPECIALISTICA"
+}, {
+"key" : "109",
+"parent" : "26",
+"name" : "UOC GERIATRIA"
+}, {
+"key" : "111",
+"parent" : "26",
+"name" : "UOC RIABILITAZIONE GERIATRICA"
+}, {
+"key" : "112",
+"parent" : "26",
+"name" : "USD RIABILITAZIONE RESPIRATORIA"
+}, {
+"key" : "113",
+"parent" : "26",
+"name" : "USD DEGENZA SUB ACUTI"
+}, {
+"key" : "115",
+"parent" : "27",
+"name" : "UOC GESTIONE SERVIZI TECNICO LOGISTICI"
+}, {
+"key" : "116",
+"parent" : "27",
+"name" : "UOC GESTIONE RISORSE ECONOMICO FINANZIARIE"
+}, {
+"key" : "117",
+"parent" : "27",
+"name" : "UOC GESTIONE FORMAZIONE E SVILUPPO RISORSE UMANE"
+}, {
+"key" : "118",
+"parent" : "27",
+"name" : "UOC ACQUISTI E PATRIMONIO"
+}, {
+"key" : "120",
+"parent" : "29",
+"name" : "UOC ONCOLOGIA"
+}, {
+"key" : "121",
+"parent" : "29",
+"name" : "UOC NEFROLOGIA"
+}, {
+"key" : "122",
+"parent" : "29",
+"name" : "UOC NEUROLOGIA"
+}, {
+"key" : "123",
+"parent" : "29",
+"name" : "UOC CURE PALLIATIVE E TERAPIA DEL DOLORE"
+}, {
+"key" : "125",
+"parent" : "29",
+"name" : "UOC PNEUMOLOGIA"
+}, {
+"key" : "126",
+"parent" : "29",
+"name" : "UOC MEDICINA GENERALE CODOGNO"
+}, {
+"key" : "127",
+"parent" : "29",
+"name" : "UOC CARDIOLOGIA"
+}, {
+"key" : "128",
+"parent" : "29",
+"name":"UOC MEDICINA GENERALE LODI"
+}, {
+"key" : "130",
+"parent" : "29",
+"name" : "USD MALATTIE ENDOCRINE E DISMETABOLICHE"
+}, {
+"key" : "131",
+"parent" : "29",
+"name" : "USD EMODINAMICA"
+} , {
+"key" : "132",
+"parent" : "30",
+"name" : "UOC PRONTO SOCCORSO CODOGNO"
+}, {
+"key" : "134",
+"parent" : "30",
+"name" : "UOC TERAPIA INTENSIVA E SUB INTENSIVA"
+}, {
+"key" : "135",
+"parent" : "30",
+"name" : "UOC ANESTESIA E MEDICINA PERIOPERATORIA"
+}, {
+"key" : "139",
+"parent" : "31",
+"name" : "USS SICUREZZA DEI LAVORATORI E DEGLI AMBIENTI DI LAVORO"
+}, {
+"key" : "140",
+"parent" : "32",
+"name" : "UOC PSICHIATRIA"
+}, {
+"key" : "141",
+"parent" : "32",
+"name" : "UOC NEUROPSICHIATRIA INFANTILE"
+}, {
+"key" : "142",
+"parent" : "32",
+"name" : "USD PSICOLOGIA CLINICA"
+}, {
+"key" : "143",
+"parent" : "33",
+"name" : "UOC RADIOTERAPIA"
+}, {
+"key" : "144",
+"parent" : "33",
+"name" : "UOC RADIOLOGIA CODOGNO E CASALPUSTERLENGO"
+}, {
+"key" : "145",
+"parent" : "33",
+"name" : "UOC RADIOLOGIA LODI E SANTANGELO"
+}, {
+"key" : "146",
+"parent" : "33",
+"name" : "UOC MEDICINA TRASFUSIONALE"
+}, {
+"key" : "151",
+"parent" : "92",
+"name" : "USS POLO PEDIATRICO NEONATOLOGICO CODOGNO"
+}, {
+"key" : "153",
+"parent" : "93",
+"name" : "UOC OSTETRICIA GINECOLOGIA CODOGNO"
+}, {
+"key" : "154",
+"parent" : "94",
+"name" : "UOC OSTETRICIA GINECOLOGIA LODI"
+}, {
+"key" : "158",
+"parent" : "97",
+"name" : "USS DIREZIONE MEDICA CODOGNO E CASALPUSTERLENGO"
+}, {
+"key" : "159",
+"parent" : "97",
+"name" : "UOC DIREZIONE MEDICA DEL PRESkeyIO OSPEDALIERO UNICO"
+}, {
+"key" : "160",
+"parent" : "98",
+"name" : "USS FARMACIA CLINICA E LOGISTICA"
+}, {
+"key" : "161",
+"parent": "98",
+"name" : "USS GALENICA CLINICA"
+}, {
+"key" : "162",
+"parent" : "98",
+"name" : "UOC FARMACIA OSPEDALIERA"
+}, {
+"key" : "164",
+"parent" : "100",
+"name" : "UOC OCULISTICA"
+}, {
+"key" : "165",
+"parent" : "101",
+"name" : "UOC UROLOGIA"
+}, {
+"key" : "167",
+"parent" : "103",
+"name" : "USS ORTOPEDIA CODOGNO"
+}, {
+"key" : "169",
+"parent" : "104",
+"name" : "UOC CHIRURGIA VASCOLARE ED ENDOVASCOLARE"
+}, {
+"key" : "170",
+"parent" : "105",
+"name" : "UOC CHIRURGIA GENERALE CODOGNO"
+}, {
+"key" : "172",
+"parent" : "106",
+"name" : "UOC CHIRURGIA GENERALE E TORACICA LODI"
+}, {
+"key" : "173",
+"parent" : "107",
+"name" : "USD ENDOSCOPIA DIGESTIVA E GASTROENTEROLOGIA"
+}, {
+"key" : "174",
+"parent" : "108",
+"name" : "USS RIABILITAZIONE SPECIALISTICA LODI"
+}, {
+"key" : "176",
+"parent" : "108",
+"name" : "USS RIABILITAZIONE GERIATRICA CASALPUSTERLENGO"
+}, {
+"key" : "177",
+"parent" : "108",
+"name" : "UOC RIABILITAZIONE SPECIALISTICA"
+}, {
+"key" : "178",
+"parent" : "109",
+"name" : "UOC GERIATRIA"
+}, {
+"key" : "179",
+"parent" : "110",
+"name" : "USS SERVIZI CARDIOLOGICI CODOGNO E CASALPUSTERLENGO"
+}, {
+"key" : "180",
+"parent" : "110",
+"name" : "UOC CARDIOLOGIA A BASSA INTENSITA"
+}, {
+"key" : "182",
+"parent" : "112",
+"name" : "USD RIABILITAZIONE RESPIRATORIA"
+}, {
+"key" : "184",
+"parent" : "114",
+"name" : "UOC SISTEMI INFORMATIVI E TECNOLOGIE DI RETE"
+}, {
+"key" : "185",
+"parent" : "115",
+"name" : "USS MANUTENZIONE E CONDUZIONE DEL PATRIMONIO"
+}, {
+"key" : "188",
+"parent" : "117",
+"name" : "USS FORMAZIONE E DIPLOMA DI LAUREA IN SCIENZE INFERMIERISTICHE"
+}, {
+"key" : "189",
+"parent" : "117",
+"name" : "USS AREA GIURICA E ISTITUZIONALE"
+}, {
+"key" : "191",
+"parent" : "118",
+"name" : "UOC ACQUISTI E PATRIMONIO"
+}, {
+"key" : "192",
+"parent" : "119",
+"name" : "USS AFFARI GENERALI E LEGALI"
+}, {
+"key" : "193",
+"parent" : "120",
+"name" : "USS ONCOLOGIA CASALPUSTERLENGO"
+}, {
+"key" : "194",
+"parent" : "120",
+"name" : "UOC ONCOLOGIA"
+}, {
+"key" : "195",
+"parent" : "121",
+"name" : "USS ATTIVITA E DIALISI AD ASSISTENZA LIMITAT AMBULATORIALE E DH"
+ }, {
+"key" : "199",
+"parent" : "123",
+"name" : "UOC CURE PALLIATIVE E TERAPIA DEL DOLORE"
+}, {
+"key" : "201",
+"parent" : "125",
+"name" : "UOC PNEUMOLOGIA"
+}, {
+"key" : "204",
+"parent" : "128",
+"name" : "USS DAY HOSPITAL E DAY SERVICE MEDICO"
+}, {
+"key" : "206",
+"parent" : "129",
+"name" : "USD DERMATOLOGIA"
+}, {
+"key" : "207",
+"parent" : "130",
+"name" : "USD MALATTIE ENDOCRINE E DISMETABOLICHE"
+}, {
+"key" : "210",
+"parent" : "133",
+"name" : "UOC PRONTO SOCCORSO LODI"
+}, {
+"key" : "211",
+"parent" : "134",
+"name" : "USS AREA INTENSIVA CODOGNO"
+}, {
+"key" : "212",
+"parent" : "134",
+"name" : "UOC TERAPIA INTENSIVA E SUB INTENSIVA"
+}, {
+"key" : "215",
+"parent" : "135",
+"name" : "UOC ANESTESIA E MEDICINA PERIOPERATORIA"
+}, {
+"key" : "216",
+"parent" : "136",
+"name" : "USD AAT 118 LODI"
+}, {
+"key" : "217",
+"parent" : "137",
+"name" : "USS INGEGNERIA CLINICA"
+}, {
+"key" : "219",
+"parent" : "138",
+"name" : "USS CONTROLLO DI GESTIONE"
+}, {
+"key" : "221",
+"parent" : "140",
+"name" : "USS COMUNITA RIABILITATIVA AD ALTA ASSISTENZA LODI CRA"
+}, {
+"key" : "223",
+"parent" : "140",
+"name" : "USS UNITA TERRITORIALE PSICHIATRICA CASALPUSTERLENGO"
+}, {
+"key" : "224",
+"parent" : "140",
+"name" : "USS CPS LODI SANTANGELO"
+}, {
+"key" : "225",
+"parent" : "140",
+"name" : "UOC PSICHIATRIA"
+}, {
+"key" : "227",
+"parent" : "142",
+"name" : "USD PSICOLOGIA CLINICA"
+}, {
+"key" : "228",
+"parent" : "143",
+"name" : "UOC RADIOTERAPIA"
+}, {
+"key" : "230",
+"parent" : "145",
+"name" : "UOC RADIOLOGIA LODI E SANTANGELO"
+}, {
+"key" : "231",
+"parent" : "146",
+"name" : "USS SERVIZIO TRASFUSIONALE CODOGNO"
+}, {
+"key" : "232",
+"parent" : "146",
+"name" : "UOC MEDICINA TRASFUSIONALE"
+}, {
+"key" : "233",
+"parent" : "147",
+"name" : "USS LABORATORIO ANALISI CODOGNO"
+}, {
+"key" : "234",
+"parent" : "147",
+"name" : "USS MICROBIOLOGIA"
+}, {
+"key" : "236",
+"parent" : "148",
+"name" : "UOC ANATOMIA E ISTOLOGIA PATOLOGICA"
+}, {
+"key" : "237",
+"parent" : "149",
+"name" : "USD RADIOLOGIA DIAGNOSTICA SENOLOGICA BREAST UNIT"
+}]}
+    </textarea>
+  </div>
+</div>
+</body>
+</html>

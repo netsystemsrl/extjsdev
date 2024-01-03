@@ -1,0 +1,47 @@
+﻿
+/** 
+ * CODAXY
+ * $toolbar-inner-border-width
+ * @var {list}
+ * defines inner border width of toolbar
+*/
+$toolbar-inner-border-width: dynamic(null);
+
+/** 
+ * CODAXY
+ * $toolbar-inner-border-color
+ * @var {list}
+ * defines inner border color of toolbar
+*/
+$toolbar-inner-border-color: dynamic(null);
+
+/** 
+ * CODAXY
+ * $toolbar-header-text-color
+ * @var {string}
+ * overrides $toolbar-text-color from ext-theme-neutral mixin, which can't be changed when new toolbar 'uis' are being made
+*/
+$toolbar-header-text-color: dynamic(null);
+
+/** 
+ * CODAXY
+ * $toolbar-padding
+ * @var {list}
+ * gives user the possibility of directly setting toolbar padding (instead of setting it through other variables as in ext-theme-neutral)
+*/
+$toolbar-padding: dynamic(null);
+
+/** 
+ * CODAXY
+ * $toolbar-footer-padding
+ * @var {list}
+ * gives user the possibility of directly setting toolbar footer padding (instead of setting it through other variables as in ext-theme-neutral)
+*/
+$toolbar-footer-padding: dynamic(null);
+
+/**
+ * CODAXY
+ * $toolbar-docked-border-color-rotation
+ * helps with toolbar docked correct border color rotation, based on toolbar dock side
+*/
+$toolbar-docked-border-color-rotation: dynamic(true);

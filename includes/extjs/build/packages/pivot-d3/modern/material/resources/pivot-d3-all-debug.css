@@ -1,0 +1,170 @@
+/* /Users/space/buildAgent/work/8cc7421dd8da164c/staging/modern/theme-material/sass/var/plugin/PullRefresh.scss:17 */
+.x-pullrefresh-md-main {
+    padding: 9px;
+    z-index: 10001;
+    overflow: hidden;
+    border-radius: 999px;
+    opacity: 0;
+    transform: scale(1);
+    transition: all 0.43s cubic-bezier(0.08, 0.55, 0.81, 1.8);
+}
+/* /Users/space/buildAgent/work/8cc7421dd8da164c/staging/modern/theme-material/sass/var/plugin/PullRefresh.scss:27 */
+.x-pullrefresh-md-loader-wrapper {
+    width: 25px;
+    height: 25px;
+}
+/* /Users/space/buildAgent/work/8cc7421dd8da164c/staging/modern/theme-material/sass/var/plugin/PullRefresh.scss:32 */
+.x-pullrefresh-md-arrow-wrapper {
+    transition: all 0.2s ease;
+}
+/* /Users/space/buildAgent/work/8cc7421dd8da164c/staging/modern/theme-material/sass/var/plugin/PullRefresh.scss:36 */
+.x-pullrefresh-md-half-circle,
+.x-pullrefresh-md-arrow-main {
+    position: absolute;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: black black transparent;
+    border-radius: 999px;
+}
+/* /Users/space/buildAgent/work/8cc7421dd8da164c/staging/modern/theme-material/sass/var/plugin/PullRefresh.scss:45 */
+.x-pullrefresh-md-arrow-main {
+    margin-top: 10px;
+    transform: rotate(-37deg);
+    border-color: #2196f3 #2196f3 transparent;
+}
+/* /Users/space/buildAgent/work/8cc7421dd8da164c/staging/modern/theme-material/sass/var/plugin/PullRefresh.scss:50 */
+.x-pullrefresh-md-arrow-main:before {
+    border-color: #2196f3 transparent transparent transparent;
+}
+/* /Users/space/buildAgent/work/8cc7421dd8da164c/staging/modern/theme-material/sass/var/plugin/PullRefresh.scss:54 */
+.x-pullrefresh-md-arrow-main:before {
+    content: '';
+    display: block;
+    position: relative;
+    top: 14px;
+    left: 0px;
+    width: 0;
+    height: 0;
+    border-width: 6px 6px;
+    border-style: solid;
+    transform: rotate(-56deg);
+}
+/* /Users/space/buildAgent/work/8cc7421dd8da164c/staging/modern/theme-material/sass/var/plugin/PullRefresh.scss:68 */
+.x-pullrefresh-md-spinner-main {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    animation: x-pullrefresh-spinner-sporadic-rotate 5.25s cubic-bezier(0.35, 0, 0.25, 1) infinite;
+}
+/* /Users/space/buildAgent/work/8cc7421dd8da164c/staging/modern/theme-material/sass/var/plugin/PullRefresh.scss:75 */
+.x-pullrefresh-md-spinner-main .x-pullrefresh-md-spinner-left,
+.x-pullrefresh-md-spinner-main .x-pullrefresh-md-spinner-right {
+    position: absolute;
+    top: 0;
+    height: 25px;
+    width: 13px;
+    overflow: hidden;
+}
+/* /Users/space/buildAgent/work/8cc7421dd8da164c/staging/modern/theme-material/sass/var/plugin/PullRefresh.scss:82 */
+.x-pullrefresh-md-spinner-main .x-pullrefresh-md-spinner-left .x-pullrefresh-md-half-circle,
+.x-pullrefresh-md-spinner-main .x-pullrefresh-md-spinner-right .x-pullrefresh-md-half-circle {
+    border-top-color: #2196f3;
+    animation-iteration-count: infinite;
+    animation-duration: 1.3125s;
+    animation-timing-function: cubic-bezier(0.35, 0, 0.25, 1);
+}
+/* /Users/space/buildAgent/work/8cc7421dd8da164c/staging/modern/theme-material/sass/var/plugin/PullRefresh.scss:90 */
+.x-pullrefresh-md-spinner-main .x-pullrefresh-md-spinner-left {
+    left: 0;
+}
+/* /Users/space/buildAgent/work/8cc7421dd8da164c/staging/modern/theme-material/sass/var/plugin/PullRefresh.scss:92 */
+.x-pullrefresh-md-spinner-main .x-pullrefresh-md-spinner-left .x-pullrefresh-md-half-circle {
+    left: 0;
+    border-right-color: transparent;
+    border-left-color: #2196f3;
+    animation-name: x-pullrefresh-spinner-left-wobble;
+}
+/* /Users/space/buildAgent/work/8cc7421dd8da164c/staging/modern/theme-material/sass/var/plugin/PullRefresh.scss:100 */
+.x-pullrefresh-md-spinner-main .x-pullrefresh-md-spinner-right {
+    right: 0;
+}
+/* /Users/space/buildAgent/work/8cc7421dd8da164c/staging/modern/theme-material/sass/var/plugin/PullRefresh.scss:102 */
+.x-pullrefresh-md-spinner-main .x-pullrefresh-md-spinner-right .x-pullrefresh-md-half-circle {
+    right: 0;
+    border-left-color: transparent;
+    border-right-color: #2196f3;
+    animation-name: x-pullrefresh-spinner-right-wobble;
+}
+/* /Users/space/buildAgent/work/8cc7421dd8da164c/staging/modern/theme-material/sass/var/plugin/PullRefresh.scss:111 */
+.x-pullrefresh-md-spinner-wrapper {
+    animation: x-pullrefresh-spinner-outer-rotate 2.91667s linear infinite;
+}
+/* /Users/space/buildAgent/work/8cc7421dd8da164c/staging/modern/theme-material/sass/var/plugin/PullRefresh.scss:115 */
+@keyframes x-pullrefresh-spinner-outer-rotate {
+    /* /Users/space/buildAgent/work/8cc7421dd8da164c/staging/modern/theme-material/sass/var/plugin/PullRefresh.scss:116 */
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* /Users/space/buildAgent/work/8cc7421dd8da164c/staging/modern/theme-material/sass/var/plugin/PullRefresh.scss:121 */
+@keyframes x-pullrefresh-spinner-left-wobble {
+    /* /Users/space/buildAgent/work/8cc7421dd8da164c/staging/modern/theme-material/sass/var/plugin/PullRefresh.scss:122 */
+    0%,
+    100% {
+        transform: rotate(130deg);
+    }
+    /* /Users/space/buildAgent/work/8cc7421dd8da164c/staging/modern/theme-material/sass/var/plugin/PullRefresh.scss:126 */
+    50% {
+        transform: rotate(-5deg);
+    }
+}
+/* /Users/space/buildAgent/work/8cc7421dd8da164c/staging/modern/theme-material/sass/var/plugin/PullRefresh.scss:131 */
+@keyframes x-pullrefresh-spinner-right-wobble {
+    /* /Users/space/buildAgent/work/8cc7421dd8da164c/staging/modern/theme-material/sass/var/plugin/PullRefresh.scss:132 */
+    0%,
+    100% {
+        transform: rotate(-130deg);
+    }
+    /* /Users/space/buildAgent/work/8cc7421dd8da164c/staging/modern/theme-material/sass/var/plugin/PullRefresh.scss:136 */
+    50% {
+        transform: rotate(5deg);
+    }
+}
+/* /Users/space/buildAgent/work/8cc7421dd8da164c/staging/modern/theme-material/sass/var/plugin/PullRefresh.scss:141 */
+@keyframes x-pullrefresh-spinner-sporadic-rotate {
+    /* /Users/space/buildAgent/work/8cc7421dd8da164c/staging/modern/theme-material/sass/var/plugin/PullRefresh.scss:142 */
+    12.5% {
+        transform: rotate(135deg);
+    }
+    /* /Users/space/buildAgent/work/8cc7421dd8da164c/staging/modern/theme-material/sass/var/plugin/PullRefresh.scss:146 */
+    25% {
+        transform: rotate(270deg);
+    }
+    /* /Users/space/buildAgent/work/8cc7421dd8da164c/staging/modern/theme-material/sass/var/plugin/PullRefresh.scss:150 */
+    37.5% {
+        transform: rotate(405deg);
+    }
+    /* /Users/space/buildAgent/work/8cc7421dd8da164c/staging/modern/theme-material/sass/var/plugin/PullRefresh.scss:154 */
+    50% {
+        transform: rotate(540deg);
+    }
+    /* /Users/space/buildAgent/work/8cc7421dd8da164c/staging/modern/theme-material/sass/var/plugin/PullRefresh.scss:158 */
+    62.5% {
+        transform: rotate(675deg);
+    }
+    /* /Users/space/buildAgent/work/8cc7421dd8da164c/staging/modern/theme-material/sass/var/plugin/PullRefresh.scss:162 */
+    75% {
+        transform: rotate(810deg);
+    }
+    /* /Users/space/buildAgent/work/8cc7421dd8da164c/staging/modern/theme-material/sass/var/plugin/PullRefresh.scss:166 */
+    87.5% {
+        transform: rotate(945deg);
+    }
+    /* /Users/space/buildAgent/work/8cc7421dd8da164c/staging/modern/theme-material/sass/var/plugin/PullRefresh.scss:170 */
+    100% {
+        transform: rotate(1080deg);
+    }
+}

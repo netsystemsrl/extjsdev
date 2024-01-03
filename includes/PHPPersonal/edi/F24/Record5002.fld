@@ -1,0 +1,13 @@
+NomeField			,Len,Align	,Requested	,CodeValue,SampleValue
+FILLER         		,01,L0		,N		 	, 		,FILLER
+TIPOREC				,02,L0		,N			,50		,Fisso
+DelegaProg			,07,R0		,Y		 	,		,ProgressivoDelega
+SUBTIPOREC			,02,L0		,N			,02		,Fisso
+MittenteCodice  	,16,L		,Y		 	,		,CodiceMittente
+FILLER         		,04,L		,Y		 	,		,FILLER
+MittenteAbi			,05,R		,Y		 	,0		,AbiMittenteFisico
+MittenteFCab		,05,R		,Y		 	,0		,CabMittenteFisico
+ClienteBancaCodice	,20,L		,Y		 	,0		,CodiceClienteBancario
+DestStampa			,01,L	    ,Y		 	,0		,DestinatarioStampa
+DestStampaDen		,45,L		,Y 			,		,DenominazioneDestinatarioStampa
+FILLER          	,12,L		,N		 	,		,FILLER

@@ -1,0 +1,49 @@
+[{
+		"Id" : "general",
+		"Name" : "General",
+		"DaysPerMonth" : 20,
+		"DaysPerWeek" : 5,
+		"HoursPerDay" : 8,
+		"WeekendsAreWorkdays" : false,
+		"WeekendFirstDay" : 6,
+		"WeekendSecondDay" : 0,
+		"DefaultAvailability" : ["08:00-12:00", "13:00-17:00"],
+		"leaf" : true,
+		"Days" : {
+			"rows" : [{
+					"Id" : 1,
+					"Date" : "2019-08-14",
+					"Cls" : "gnt-national-holiday",
+					"Name" : "Some big holiday"
+				}
+			]
+		}
+	}, {
+		"Id" : "Customized",
+		"Name" : "Customized",
+		"DaysPerMonth" : 20,
+		"DaysPerWeek" : 5,
+		"HoursPerDay" : 8,
+		"WeekendsAreWorkdays" : false,
+		"WeekendFirstDay" : 6,
+		"WeekendSecondDay" : 0,
+		"DefaultAvailability" : ["00:00-06:00", "22:00-24:00"],
+		"leaf" : true,
+		"Days" : {
+			"rows" : [{
+					"Id" : 1,
+					"Date" : "2019-08-19",
+					"Availability" : ["08:00-10:00"]
+				}, {
+					"Id" : 2,
+					"Date" : "2019-08-20",
+					"Availability" : ["09:00-10:00"]
+				}, {
+					"Id" : 3,
+					"Date" : "2019-08-21",
+					"Availability" : ["08:00-12:00"]
+				}
+			]
+		}
+	}
+]

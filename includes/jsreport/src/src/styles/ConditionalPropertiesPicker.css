@@ -1,0 +1,158 @@
+.jsr-cond-prop-picker {
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
+  overflow: auto;
+}
+
+.jsr-cond-prop-popup {
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 9998;
+  min-width: 400px;
+}
+
+.jsr-cond-prop-popup .jsr-cond-prop-popup-arrow {
+  position: absolute;
+  top: -8px;  
+  left: 20px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAICAYAAAAm06XyAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAA6VpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIgogICAgICAgICAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyIKICAgICAgICAgICAgeG1sbnM6ZXhpZj0iaHR0cDovL25zLmFkb2JlLmNvbS9leGlmLzEuMC8iPgogICAgICAgICA8eG1wOk1vZGlmeURhdGU+MjAxNi0xMC0wOVQyMToxMDo3MzwveG1wOk1vZGlmeURhdGU+CiAgICAgICAgIDx4bXA6Q3JlYXRvclRvb2w+UGl4ZWxtYXRvciAzLjU8L3htcDpDcmVhdG9yVG9vbD4KICAgICAgICAgPHRpZmY6T3JpZW50YXRpb24+MTwvdGlmZjpPcmllbnRhdGlvbj4KICAgICAgICAgPHRpZmY6Q29tcHJlc3Npb24+NTwvdGlmZjpDb21wcmVzc2lvbj4KICAgICAgICAgPHRpZmY6UmVzb2x1dGlvblVuaXQ+MjwvdGlmZjpSZXNvbHV0aW9uVW5pdD4KICAgICAgICAgPHRpZmY6WVJlc29sdXRpb24+NzI8L3RpZmY6WVJlc29sdXRpb24+CiAgICAgICAgIDx0aWZmOlhSZXNvbHV0aW9uPjcyPC90aWZmOlhSZXNvbHV0aW9uPgogICAgICAgICA8ZXhpZjpQaXhlbFhEaW1lbnNpb24+MTU8L2V4aWY6UGl4ZWxYRGltZW5zaW9uPgogICAgICAgICA8ZXhpZjpDb2xvclNwYWNlPjE8L2V4aWY6Q29sb3JTcGFjZT4KICAgICAgICAgPGV4aWY6UGl4ZWxZRGltZW5zaW9uPjg8L2V4aWY6UGl4ZWxZRGltZW5zaW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4K2iF5uAAAADhJREFUGBljYMADzpw58x+PNG4pkEYQINkAmEawblIMQNdItAG4NBI0gJBGnAYQqxHDAFI1IhsAAEa/9gqrpvPoAAAAAElFTkSuQmCC) 0 0 no-repeat;
+  width: 15px;
+  height: 8px;
+}
+
+.jsr-cond-prop-effect > div,
+.jsr-cond-prop-condition > div {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.jsr-cond-prop-effect,
+.jsr-cond-prop-condition {
+  margin: 5px 0;
+}
+
+.jsr-cond-prop-condition .jsr-cond-prop-add-condition {
+  display: none;
+}
+.jsr-cond-prop-condition:last-child .jsr-cond-prop-add-condition {
+  display: inline-block;
+}
+
+.jsr-cond-prop-picker .select2-container a {
+  background-image: none;
+}
+
+.jsr-cond-prop-picker .select2-container .select2-arrow {
+  background: none;
+  border-left: none;
+}
+
+.jsr-cond-prop-picker .jsr-cond-prop-picker-controls {
+  margin-top: 20px;
+}
+
+.jsr-cond-prop-picker .jsr-cond-prop-rule {
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.jsr-cond-prop-picker .jsr-cond-prop-rule:first-child {
+  padding-top: 0;
+}
+
+.jsr-cond-prop-picker .jsr-cond-prop-add-condition,
+.jsr-cond-prop-picker .jsr-cond-prop-add-effect {
+  font-size: 150%;
+  font-weight: bold;
+  opacity: 0.3;
+  transition: opacity 250ms;
+  position: relative;
+  top: 1px;
+}
+
+.jsr-cond-prop-picker .jsr-cond-prop-add-condition a,
+.jsr-cond-prop-picker .jsr-cond-prop-add-effect a {
+  color: black;
+  text-decoration: none;
+}
+
+.jsr-cond-prop-picker .jsr-cond-prop-add-condition:hover,
+.jsr-cond-prop-picker .jsr-cond-prop-add-effect:hover {
+  opacity: 1;
+}
+
+.jsr-cond-prop-picker .jsr-cond-prop-delete-button {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAABLElEQVQ4y73Vu0oDQRTG8Z93vFWxtrbTlPa2gqBiQNE38CnESpCID6CFYKEPIKKNtVgFr9EHMIja2BjXZhaWdXcNJnjgNIfv/JmZ880M2TGAFRyjjpeQdRxhOWhaigU8IfolHzFfBOpBtQVQOrdD74/Y/QMszmoaNtcGLMIXZmNYPx7aBEa4Qx9UcgTnKOE0Vb/COE4yehbhMAc4HXYwhLMErBTq6xk9B8JSs4ANTIXmYWwF2Aj2cnqu4b3gXBqYTAxvArcF+rdudBd4sxQcEEcvxgr0XUVbjrATRKOYCU3lsPIs/U3RUKoJ2AU+sZqAvuYNJc825QQsrjWxhkFc5tkmz9jPYWrpehP3Rcbu+NWLY7MN4Ma/PF8df2DTX0AF+6jhI2QtXLulvC/gGz+0BAHp9nG7AAAAAElFTkSuQmCC) 0 0 no-repeat;
+  width: 16px;
+  height: 16px;
+  background-size: 16px;
+  display: inline-block;
+  opacity: 0.25;
+  transition: opacity 250ms;
+  margin-left: 10px;
+  cursor: pointer;
+  position: relative;
+  top: 4px;
+}
+
+.jsr-cond-prop-picker .jsr-cond-prop-delete-button:hover {
+  opacity: 1;
+}
+
+.jsr-cond-prop-picker .jsr-cond-prop-condition:last-child .jsr-cond-prop-delete-button,
+.jsr-cond-prop-picker .jsr-cond-prop-effect:last-child .jsr-cond-prop-delete-button {
+  display: none;
+}
+
+.jsr-cond-prop-picker-empty-text {
+  color: #888;
+}
+
+.jsr-toolbar-conditional-properties {
+  position: relative;
+}
+
+.jsr-cond-props-count-bubble {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  font-size: 10px;
+  padding: 2px;
+  border-radius: 10px;
+  background: rgba(0, 0, 255, 0.5);
+  color: white;
+  line-height: 1em;
+  color: white;
+  min-width: 10px;
+}
+
+.jsr-cond-prop-delete-rule {
+  margin-left: 20px;
+}
+
+.jsr-cond-prop-close-btn {
+  margin-left: 15px;
+}
+
+.jsr-cond-prop-picker input[type=text] {
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    line-height: 26px;
+    font-size: 14px;
+    padding: 0 6px;
+}
+
+.jsr-cond-prop-field {
+  border: 1px solid rgb(170, 170, 170);
+  border-radius: 4px;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 8px;
+  font-size: 14px;
+  vertical-align: top;
+  margin-right: 10px;
+}

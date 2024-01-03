@@ -1,0 +1,41 @@
+﻿NomeField		,Len,Align	,Requested	,CodeValue,SampleValue
+CTIPREC         ,01 ,R      ,Y		 	,'0'    ,2= MATRICOLE STIPENDI
+CIST            ,05 ,R      ,Y		 	,' '    ,CODICE ISTITUTO
+SENT            ,01 ,R      ,Y		 	,'0'    ,0=TESORERIA/1=DITTA
+CENT            ,07 ,R      ,Y		 	,'0'    ,CODICE ENTE
+CESE            ,04 ,R      ,Y		 	,'0'    ,CODICE ESERCIZIO
+NELESTI         ,07 ,R      ,Y		 	,'0'    ,NUMERO ELENCO STIPENDI
+CMATSTI         ,16 ,R      ,Y		 	,' '    ,CODICE DIPENDENTE
+CTIPMAT         ,04 ,R      ,Y		 	,' '    ,TIPO DIPENDENTE
+ZCLI            ,30 ,R      ,Y		 	,' '    ,DESCRIZIONE DIPENDENTE
+CPAGMAT         ,03 ,R      ,Y		 	,'0'    ,CODICE PAGAMENTO
+CABIMAT         ,05 ,R      ,Y		 	,'0'    ,ABI DIPENDENTE
+CCABMAT         ,05 ,R      ,Y		 	,'0'    ,CAB DIPENDENTE
+NCNTMAT         ,12 ,R      ,Y		 	,' '    ,CONTO DIPENDENTE
+CCINMAT         ,01 ,R      ,Y		 	,' '    ,CIN DIPENDENTE
+IMAT            ,15 ,R      ,Y		 	,'0'    ,CODICE DIPENDENTE
+CDIVMAT         ,03 ,R      ,Y		 	,' '    ,DIVISA DIPENDENTE
+CSPE            ,03 ,R      ,Y		 	,'0'    ,CODICE SPESE
+ISPE            ,09 ,R      ,Y		 	,'0'    ,IMPORTO SPESE TwoDecimalConverter
+DVAL            ,09 ,L      ,Y		 	,'0'    ,DATA VALUTA ENTE 0yyyyMMdd
+DVALMAT         ,09 ,L      ,Y		 	,'0'    ,DATA VALUTA DIPENDENTE 0yyyyMMdd
+DVALBCA         ,09 ,L      ,Y		 	,'0'    ,DATA VALUTA BANCA 0yyyyMMdd
+ZIND            ,30 ,R      ,Y		 	,' '    ,INDIRIZZO MATRICOLA
+CCAP            ,05 ,R      ,Y		 	,' '    ,CAP MATRICOLA
+ZLOC            ,30 ,R      ,Y		 	,' '    ,LOCALITA' MATRICOLA
+CFIS            ,16 ,R      ,Y		 	,' '    ,CODICE FISCALE
+DNAS            ,08 ,R      ,Y		 	,'0'    ,DATA NASCITA
+TTABERR         ,93 ,R      ,Y		 	,' '    ,CODICI ERRORE STRUTTURA
+CDIP            ,05 ,R      ,Y		 	,'0'    ,CODICE DIPENDENZA
+CERR            ,04 ,R      ,Y		 	,'0'    ,CODICI ERRORE
+ZERR            ,60 ,R      ,Y		 	,' '    ,DESCRIZIONE 
+XPGMERR         ,08 ,R      ,Y		 	,' '    ,DESCRIZIONE PROGRAMMA SEQNALANTE
+NRECORD         ,07 ,R      ,Y		 	,'0'    ,NUMERO RECORD SCARTATO
+DCARBAT         ,09 ,R      ,Y		 	,'0'    ,DATA BATCH DI CARICO
+SBAN            ,01 ,R      ,Y		 	,' '    ,INDICATORE COORDINATE BANCARIE - ' ' - BBAN O ALTRO, 'I' - IBAN, 'E' - EXTRA-UE
+CBAN            ,34 ,R      ,Y		 	,' '    ,COORDINATE BANCARIE BANCA DESTINATARIA
+CBIC            ,11 ,R      ,Y		 	,' '    ,CODICE BIC
+CBICTRA         ,11 ,R      ,Y		 	,' '    ,CODICE BIC BANCA TRAMITE
+CCOM            ,03 ,R      ,Y		 	,'0'    ,CODICE COMMISSIONE
+ICOM            ,09 ,R      ,Y		 	,'0'    ,IMPORTO COMMISSIONE TwoDecimalConverter
+FILLER          ,61 ,R      ,N		 	,' '    ,FILLER

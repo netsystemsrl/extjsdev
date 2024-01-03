@@ -1,0 +1,1802 @@
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/HeaderResize.scss:1 */
+.sch-header-cell-resizehandle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    max-width: 100%;
+    width: 7px;
+    cursor: col-resize;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/column/timeAxis/Horizontal.scss:1 */
+.sch-header-row .x-column-header-inner,
+.sch-timeheader {
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/column/timeAxis/Horizontal.scss:8 */
+.sch-simple-timeaxis .x-column-header-text-container {
+    /* Hide default Ext JS column text container since it's not used in the timeaxis column*/
+    display: none !important;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/column/timeAxis/Horizontal.scss:12 */
+.sch-column-header.sch-header-cell-center .sch-simple-timeheader {
+    margin-left: 0;
+    margin-right: 0;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/column/timeAxis/Horizontal.scss:17 */
+.sch-simple-timeaxis .x-column-header-inner {
+    padding: 0;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/column/timeAxis/Horizontal.scss:21 */
+.sch-column-header {
+    position: relative;
+    overflow: hidden;
+    color: #666;
+    border-right: 1px solid #c2c2c2;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/column/timeAxis/Horizontal.scss:31 */
+.sch-column-header .sch-simple-timeheader {
+    margin: 7px 10px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/column/timeAxis/Horizontal.scss:35 */
+.sch-header-row {
+    border-top: 1px solid #c2c2c2;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/column/timeAxis/Horizontal.scss:39 */
+.sch-column-header-over {
+    background-color: #eff6fb;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/column/timeAxis/Horizontal.scss:46 */
+.sch-simple-timeaxis .sch-simple-timeheader {
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0 6px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/column/timeAxis/Horizontal.scss:52 */
+.sch-simple-timeheader-pad {
+    padding: 0 6px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/column/timeAxis/Horizontal.scss:57 */
+.sch-simple-timeaxis .sch-header-row-compact .sch-simple-timeheader {
+    /* Adjust font size and padding for very narrow cells */
+    padding-left: 1px;
+    padding-right: 1px;
+    font-size: 85%;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/column/timeAxis/Horizontal.scss:63 */
+.sch-simple-timeaxis .sch-header-row-compact .sch-column-header .sch-simple-timeheader {
+    margin-left: 0;
+    margin-right: 0;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/column/timeAxis/Horizontal.scss:68 */
+.x-safari .sch-simple-timeaxis .sch-header-row-compact .sch-simple-timeheader {
+    padding-left: 0;
+    padding-right: 0;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/column/timeAxis/Horizontal.scss:73 */
+.sch-timeaxiscolumn .x-column-header-inner {
+    padding: 0;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/column/timeAxis/Horizontal.scss:77 */
+.sch-header-row {
+    table-layout: fixed;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/column/timeAxis/Horizontal.scss:81 */
+.sch-header-single-row .x-group-sub-header {
+    border-top-width: 0 !important;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/column/timeAxis/Horizontal.scss:85 */
+.x-webkit .sch-column-header .x-column-header-inner {
+    white-space: normal;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/column/timeAxis/Horizontal.scss:89 */
+.sch-header-secondary-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/column/timeAxis/Horizontal.scss:95 */
+.sch-horizontal .sch-header-secondary-canvas {
+    height: 100%;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Lines.scss:1 */
+.sch-timeline {
+    cursor: pointer;
+    position: absolute;
+    border-style: dotted;
+    border-color: #aaa;
+    overflow: hidden;
+    z-index: 4;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Lines.scss:10 */
+.sch-timeline:hover {
+    z-index: 1000;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Lines.scss:14 */
+.x-ie .sch-timeline {
+    margin-left: 0;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Lines.scss:18 */
+.sch-horizontal .sch-timeline {
+    border-width: 0 0 0 1px;
+    height: 100%;
+    margin-left: -1px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Lines.scss:24 */
+.sch-vertical .sch-timeline {
+    border-width: 1px 0 0 0;
+    width: 100%;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Lines.scss:29 */
+.sch-header-indicator {
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    border: 2px solid #f33;
+    background: #fff;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -webkit-box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Lines.scss:45 */
+.sch-horizontal .sch-header-indicator {
+    bottom: 3px;
+    margin: 0 -5px 0 -6px;
+    border-radius: 8px 8px 8px 0;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Lines.scss:51 */
+.sch-vertical .sch-header-indicator {
+    right: 3px;
+    margin: -5px 0 0 0;
+    border-radius: 8px 8px 0 8px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Lines.scss:57 */
+.sch-vertical.x-rtl .sch-header-indicator {
+    right: auto;
+    left: 3px;
+    border-radius: 0 8px 8px 8px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/ColumnLines.scss:1 */
+.sch-column-line {
+    position: absolute;
+    border-style: solid;
+    border-color: #ededed;
+    pointer-events: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/ColumnLines.scss:10 */
+.x-ie .sch-column-line {
+    margin-left: 0;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/ColumnLines.scss:14 */
+.sch-horizontal .sch-column-line,
+.sch-all-day-header.sch-horizontal .sch-column-line {
+    border-width: 0 0 0 1px;
+    height: 100%;
+    margin-left: -1px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/ColumnLines.scss:21 */
+.sch-vertical .sch-column-line {
+    border-width: 1px 0 0 0;
+    width: 100%;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/ColumnLines.scss:29 */
+.sch-vertical .sch-verticaltimeaxis-cell.sch-column-line-solid,
+.sch-column-line-solid {
+    /* To use columnlines plugin .x-grid-item borders are disabled in vertical view and moved to .x-grid-cell
+ We need such detailed rule to provide better match for cell color as we want one darker line across locked and normal view
+ */
+    border-color: #d0d0d0;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/tooltip/ClockTemplate.scss:1 */
+.sch-clockwrap {
+    position: relative;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/tooltip/ClockTemplate.scss:5 */
+.sch-clock {
+    position: absolute;
+    height: 21px;
+    width: 21px;
+    white-space: nowrap;
+    display: inline-block;
+    text-indent: -100px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/tooltip/ClockTemplate.scss:14 */
+.sch-clock,
+.sch-clock .sch-hourIndicator,
+.sch-clock .sch-minuteIndicator {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/tooltip/ClockTemplate.scss:23 */
+.sch-supports-border-radius.sch-clock-hour .sch-clock {
+    border: 2px solid #bddbe1;
+    background-color: #fff;
+    box-shadow: 0px 1px 1px #444 inset;
+    border-radius: 100%;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/tooltip/ClockTemplate.scss:30 */
+.sch-clock-day .sch-clock,
+.sch-clock-allday .sch-clock {
+    background: #fff none !important;
+    border: 1px solid #ccc;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/tooltip/ClockTemplate.scss:36 */
+.sch-clock-text {
+    margin-left: 25px;
+    padding-bottom: 5px;
+    padding-top: 2px;
+    display: inline-block;
+    white-space: nowrap;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/tooltip/ClockTemplate.scss:44 */
+.sch-clock-allday .sch-clock-text {
+    display: none;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/tooltip/ClockTemplate.scss:48 */
+.sch-clock-allday {
+    width: 3em;
+    height: 2em;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/tooltip/ClockTemplate.scss:53 */
+.x-rtl .sch-clock-text {
+    margin-left: auto;
+    margin-right: 25px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/tooltip/ClockTemplate.scss:58 */
+.sch-clock-day .sch-clock .sch-hourIndicator,
+.sch-clock-allday .sch-clock .sch-hourIndicator {
+    width: inherit;
+    position: static !important;
+    background-color: #5966b0;
+    border-bottom: 1px solid navy;
+    font-size: 7px;
+    line-height: 8px;
+    text-align: center;
+    color: #fff;
+    height: 8px;
+    text-indent: 0px;
+    margin-top: -1px;
+    text-shadow: rgba(200, 200, 200, 0.2) 0 -1px 0;
+    border: 0 none;
+    transform: none !important;
+    -moz-transform: none !important;
+    -webkit-transform: none !important;
+    -o-transform: none !important;
+    -ms-transform: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/tooltip/ClockTemplate.scss:82 */
+.sch-clock-day .sch-clock .sch-minuteIndicator,
+.sch-clock-allday .sch-clock .sch-minuteIndicator {
+    width: inherit;
+    color: #555;
+    position: static !important;
+    height: 16px;
+    background-color: transparent;
+    font-size: 10px;
+    text-align: center;
+    text-indent: 0;
+    text-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0;
+    line-height: 12px;
+    border: 0 none;
+    transform: none !important;
+    -moz-transform: none !important;
+    -webkit-transform: none !important;
+    -o-transform: none !important;
+    -ms-transform: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/tooltip/ClockTemplate.scss:104 */
+.sch-clock .sch-minuteIndicator,
+.sch-clock .sch-hourIndicator {
+    position: absolute;
+    left: 50%;
+    top: 1px;
+    width: 2px;
+    height: 8px;
+    overflow: hidden;
+    margin-left: -1px;
+    transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    -webkit-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/tooltip/ClockTemplate.scss:120 */
+.sch-clock .sch-hourIndicator {
+    border-top: 2px solid transparent;
+    border-bottom: 6px solid #777;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/tooltip/ClockTemplate.scss:125 */
+.sch-clock .sch-minuteIndicator {
+    border-top: 8px solid #777;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/tooltip/ClockTemplate.scss:129 */
+.sch-clock-hour.sch-supports-border-radius .sch-clock-dot {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 4px;
+    height: 4px;
+    margin-left: -2px;
+    margin-top: -2px;
+    background: #777;
+    border-radius: 3px;
+    z-index: 2;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/tooltip/ClockTemplate.scss:142 */
+.sch-clock-day .sch-clock-dot,
+.sch-clock-allday .sch-clock-dot {
+    display: none;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/tooltip/Tooltip.scss:1 */
+.sch-tip-ok,
+.sch-tip-notok {
+    position: relative;
+    padding-left: 20px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/tooltip/Tooltip.scss:7 */
+.sch-tip-ok:before,
+.sch-tip-notok:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 17px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/tooltip/Tooltip.scss:15 */
+.sch-tooltip-enddate {
+    padding-top: 2px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/tooltip/Tooltip.scss:20 */
+.sch-tip-message {
+    margin: 3px 0;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/DragCreator.scss:1 */
+div.sch-dragcreator-proxy {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    border: 1px solid #39b;
+    border-radius: 3px;
+    cursor: auto !important;
+    opacity: 0.5;
+    filter: opacity=50;
+    zoom: 1;
+    background-color: #c3daf9;
+    z-index: 10000;
+    -moz-transition-property: none !important;
+    -webkit-transition-property: none !important;
+    -ms-transition-property: none !important;
+    transition-property: none !important;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/DragDrop.scss:1 */
+.sch-dd-newtime {
+    font-weight: bold;
+    color: #274490;
+    display: block;
+    margin: 0 0 5px 4px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/DragDrop.scss:8 */
+.sch-dragproxy {
+    background: none !important;
+    overflow: visible !important;
+    border: 0 !important;
+    pointer-events: none;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/DragDrop.scss:15 */
+.sch-dragproxy .sch-dd-ref {
+    position: relative;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/DragDrop.scss:19 */
+.sch-dragproxy .sch-event {
+    opacity: 0.6;
+    cursor: pointer;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/DragDrop.scss:24 */
+.sch-dragproxy .x-resizable-handle,
+.sch-dragproxy .x-dd-drop-icon {
+    display: none !important;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/DragDrop.scss:29 */
+.sch-dragproxy .x-dd-drag-ghost {
+    background-color: transparent;
+    border: 0 none;
+    padding: 0;
+    white-space: nowrap;
+    /* Gantt tasks elements are sized based on row height */
+    height: inherit;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/DragDrop.scss:39 */
+.sch-rtl .sch-dragproxy .sch-event {
+    text-align: right;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/DragDrop.scss:44 */
+.sch-dragdrop-tip {
+    /* Avoid tooltip interfering with drag drop if cursor goes above it*/
+    pointer-events: none;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/DragDrop.scss:51 */
+.sch-dragproxy.sch-before-drag-finalized {
+    /*
+    In case Ext JS sets a very high Z-index, lower it temporarily so it doesn't interfere with popups etc
+*/
+    z-index: 10 !important;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/Grouping.scss:1 */
+.sch-schedulerview .x-grid-group-hd {
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/Grouping.scss:7 */
+.sch-schedulerview .x-grid-group-title,
+.sch-schedulerview .x-grid-group-hd-collapsible .x-grid-group-title {
+    visibility: visible !important;
+    background-image: none;
+    text-indent: -1000em;
+    font-weight: normal;
+    padding-left: 0;
+    padding-right: 0;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/Grouping.scss:17 */
+.sch-grid-group-hd-cell {
+    text-indent: 0;
+    float: left;
+    text-align: center;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/Grouping.scss:23 */
+.sch-grid-group-custom-header div.x-grid-group-hd {
+    padding: 0 !important;
+    background: none;
+    /* http://www.mikepadgett.com/technology/technical/alternative-to-the-pie-clearfix-hack/ */
+    height: 1%;
+    overflow: hidden;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/ResizeZone.scss:1 */
+.sch-schedulerview .sch-resizable-handle {
+    position: absolute;
+    visibility: hidden;
+    overflow: hidden;
+    border-color: #ddd;
+    border-style: double;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/ResizeZone.scss:9 */
+.sch-horizontal-view .sch-resizable-handle-start,
+.sch-horizontal-view .sch-resizable-handle-end {
+    width: 7px;
+    height: 50%;
+    top: 25%;
+    cursor: ew-resize;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/ResizeZone.scss:17 */
+.sch-horizontal-view .sch-resizable-handle-start {
+    border-width: 0 3px 0 0;
+    left: -2px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/ResizeZone.scss:22 */
+.sch-horizontal-view .sch-resizable-handle-end {
+    border-width: 0 0 0 3px;
+    right: -2px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/ResizeZone.scss:27 */
+.sch-horizontal-view .x-rtl .sch-resizable-handle-start {
+    border-width: 0 0 0 3px;
+    right: -2px;
+    left: auto;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/ResizeZone.scss:33 */
+.sch-horizontal-view .x-rtl .sch-resizable-handle-end {
+    border-width: 0 3px 0 0;
+    left: -2px;
+    right: auto;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/ResizeZone.scss:39 */
+.sch-vertical-view .sch-resizable-handle {
+    width: 50%;
+    left: 25%;
+    cursor: ns-resize;
+    height: 7px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/ResizeZone.scss:46 */
+.sch-vertical-view .sch-resizable-handle-start {
+    border-width: 3px 0 0 0;
+    top: 1px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/ResizeZone.scss:51 */
+.sch-vertical-view .sch-resizable-handle-end {
+    border-width: 0 0 3px 0;
+    bottom: 1px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/ResizeZone.scss:56 */
+.sch-event-endsoutside .sch-resizable-handle-end,
+.sch-event-startsoutside .sch-resizable-handle-start,
+.sch-schedulerview-readonly .sch-resizable-handle,
+.sch-event-resizable-false .sch-resizable-handle,
+.sch-event-resizable-start .sch-resizable-handle-end,
+.sch-event-resizable-end .sch-resizable-handle-start {
+    display: none !important;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/ResizeZone.scss:65 */
+.sch-event .x-resizable-handle {
+    background: none;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/ResizeZone.scss:69 */
+.sch-schedulerview .sch-event-hover .sch-resizable-handle {
+    visibility: visible;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/ResizeZone.scss:73 */
+.sch-event-resizing .sch-resizable-handle,
+.sch-event-milestone .sch-resizable-handle {
+    /* No resize handles for milestone tasks */
+    /* No resize handles for milestone tasks */
+    display: none !important;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/ResizeZone.scss:81 */
+.x-touch .sch-schedulerview .sch-event:not(.sch-event-hover) .sch-resizable-handle {
+    /* TOUCH DEVICE ADAPTIONS */
+    /* Skip bg for resize handles */
+    visibility: visible;
+    border: 0 none;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/ResizeZone.scss:87 */
+.x-touch .sch-schedulerview .sch-event:not(.sch-event-hover) .sch-resizable-handle {
+    /* Make it easier to grab */
+    width: 20px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/ResizeZone.scss:91 */
+.x-touch.x-desktop .sch-horizontal .sch-event:not(.sch-event-hover) .sch-resizable-handle {
+    height: 100%;
+    top: 0;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/feature/ResizeZone.scss:96 */
+.x-touch .sch-schedulerpanel .sch-event:not(.sch-event-hover) .sch-resizable-handle {
+    height: 20px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/field/SegmentedButton.scss:1 */
+.sch-segmentedbuttonfield .x-btn {
+    display: block;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Zones.scss:1 */
+.sch-zone {
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    margin-left: -1px;
+    z-index: -1;
+    background-color: rgba(235, 235, 235, 0.5);
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Zones.scss:10 */
+.sch-horizontal .sch-zone {
+    height: 100%;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Zones.scss:14 */
+.sch-vertical .sch-zone {
+    width: 100%;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Zones.scss:18 */
+.sch-print-body .sch-zone {
+    border-left-style: solid;
+    border-left-color: #f4f4f4;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/ResourceZones.scss:1 */
+.sch-resourcezone {
+    position: absolute;
+    overflow: hidden;
+    background: #eee;
+    pointer-events: none;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/ResourceZones.scss:8 */
+.x-ie .sch-resourcezone {
+    z-index: -1;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/ResourceZones.scss:12 */
+.sch-horizontal .sch-resourcezone {
+    top: 0 !important;
+    height: 100% !important;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/ResourceZones.scss:17 */
+.sch-vertical .sch-resourcezone {
+    width: 100% !important;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/ResourceZones.scss:21 */
+.sch-ltr.sch-vertical .sch-resourcezone {
+    left: 0 !important;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/ResourceZones.scss:25 */
+.sch-rtl.sch-vertical .sch-resourcezone {
+    right: 0 !important;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/template/Event.scss:1 */
+.sch-event {
+    color: #fff;
+    border-color: #118914;
+    border-style: solid;
+    border-width: 1px;
+    background-color: #118914;
+    font-weight: normal;
+    position: absolute;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 5;
+    text-align: left;
+    opacity: 0.8;
+    transition: none;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/template/Event.scss:17 */
+.sch-scheduler-with-dependencies .sch-event {
+    overflow: visible;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/template/Event.scss:21 */
+.sch-scheduler-with-dependencies .sch-event-inner {
+    width: 100%;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/template/Event.scss:25 */
+.sch-timelineview .x-grid-item-focused .x-grid-cell-inner {
+    z-index: 5;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/template/Event.scss:29 */
+div.sch-event-fixed {
+    cursor: default;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/template/Event.scss:33 */
+.sch-event-inner {
+    overflow: hidden;
+    height: 100%;
+    white-space: nowrap;
+    padding: 3px 1px 3px 3px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/template/Event.scss:40 */
+.sch-event-icon {
+    font-style: normal;
+    padding: 0 6px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/template/Event.scss:46 */
+.sch-horizontal.sch-ltr .sch-event.sch-event-endsoutside,
+.sch-horizontal.sch-rtl .sch-event.sch-event-startsoutside {
+    /* Hide right border for events ending outside the view */
+    border-right-color: #118914;
+    border-right-style: dashed;
+    border-right-width: 1px;
+    -moz-border-radius-topright: 0 !important;
+    -moz-border-radius-bottomright: 0 !important;
+    -webkit-border-radius-top-right: 0 !important;
+    -webkit-border-radius-bottom-right: 0 !important;
+    -ms-border-radius-top-right: 0 !important;
+    -ms-border-radius-bottom-right: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/template/Event.scss:62 */
+.sch-horizontal.sch-ltr .sch-event.sch-event-startsoutside,
+.sch-horizontal.sch-rtl .sch-event.sch-event-endsoutside {
+    /* Hide left border for events starting outside the view */
+    border-left-color: #118914;
+    border-left-style: dashed;
+    border-left-width: 1px;
+    -moz-border-radius-topleft: 0 !important;
+    -moz-border-radius-bottomleft: 0 !important;
+    -webkit-border-radius-top-left: 0 !important;
+    -webkit-border-radius-bottom-left: 0 !important;
+    -ms-border-radius-top-left: 0 !important;
+    -ms-border-radius-bottom-left: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/template/Event.scss:77 */
+.x-rtl .sch-event {
+    text-align: right;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/template/Event.scss:81 */
+.sch-vertical .sch-event-startsoutside {
+    border-top-color: #118914;
+    border-top-style: dashed;
+    border-top-width: 1px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/template/Event.scss:87 */
+.sch-vertical .sch-event-endsoutside {
+    border-bottom-color: #118914;
+    border-bottom-style: dashed;
+    border-bottom-width: 1px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/template/Event.scss:93 */
+div.sch-event.sch-event-highlighted {
+    box-shadow: inset 0 0 0 2px red !important;
+    border-width: 1px;
+    border-color: red;
+    border-style: solid;
+    z-index: 1000;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/template/Event.scss:102 */
+.sch-horizontal .sch-event {
+    /* Ensure events are always visible if zoomed out */
+    min-width: 2px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/template/Event.scss:106 */
+.sch-vertical .sch-event {
+    min-height: 2px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/template/Event.scss:110 */
+div.sch-event-selected,
+div.sch-event-hover.sch-event-selected {
+    color: #fff;
+    background-color: #118914;
+    border-width: 1px;
+    border-color: #157fcc;
+    border-style: solid;
+    box-shadow: 1px 1px 1px 0 rgba(100, 100, 100, 0.5);
+    opacity: 1;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/template/Event.scss:122 */
+.sch-event.sch-event-hover {
+    border-width: 1px;
+    border-color: #888;
+    border-style: solid;
+    box-shadow: 0 0 0 0 transparent;
+    opacity: 1;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/template/Event.scss:131 */
+.sch-terminal {
+    /* TERMINAL STYLES */
+    display: none;
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    background: #fff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: inherit;
+    border-radius: 11px;
+    cursor: pointer;
+    z-index: 1000;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/template/Event.scss:145 */
+.sch-event-hover .sch-terminal {
+    display: block;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/template/Event.scss:149 */
+.sch-terminal:hover {
+    background: #d9d9d9;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/template/Event.scss:153 */
+.sch-terminal-left {
+    left: 0;
+    top: 50%;
+    margin-top: -6px;
+    margin-left: -9px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/template/Event.scss:160 */
+.sch-terminal-right {
+    right: 0;
+    top: 50%;
+    margin-top: -6px;
+    margin-right: -9px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/template/Event.scss:167 */
+.sch-terminal-top {
+    left: 50%;
+    top: 0;
+    margin-left: -6px;
+    margin-top: -9px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/template/Event.scss:174 */
+.sch-terminal-bottom {
+    left: 50%;
+    bottom: 0;
+    margin-left: -6px;
+    margin-bottom: -9px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/template/Event.scss:184 */
+.x-edge .sch-event,
+.x-ie11 .sch-event {
+    /* EOF TERMINAL STYLES */
+    /* Allow to drag events with touch on Edge/IE11 */
+    touch-action: none;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/Vertical.scss:1 */
+.sch-vertical .sch-verticaltimeaxis-cell {
+    background: #f9f9f9;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/Vertical.scss:5 */
+.sch-vertical .sch-verticaltimeaxis-cell .x-grid-cell-inner {
+    color: #666;
+    padding: 0 5px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/Vertical.scss:10 */
+.sch-vertical .sch-timetd {
+    border-top-color: transparent;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/Vertical.scss:14 */
+.sch-vertical .sch-animations-enabled .sch-event {
+    transition-property: width, left;
+    transition-duration: 0.4s;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/Vertical.scss:19 */
+.sch-vertical .sch-schedulerview .x-grid-cell-inner {
+    padding: 0;
+    height: 100%;
+    overflow: visible;
+    z-index: auto;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/Vertical.scss:27 */
+.sch-vertical .sch-schedulerview td.sch-timetd,
+.sch-vertical .sch-schedulerview .x-grid-item-alt {
+    background: transparent;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/Vertical.scss:33 */
+.sch-schedulerpanel.sch-vertical .sch-schedulerview td.sch-col-alt {
+    /* Alternating coloring for columns */
+    background-color: rgba(245, 245, 245, 0.4);
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/Vertical.scss:38 */
+.sch-vertical .x-grid-item-over .sch-verticaltimeaxis-cell {
+    /* No mouse over effect for vertical time column cells */
+    background-color: #f9f9f9;
+    border-color: #fafafa #ededed #ededed;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/Vertical.scss:43 */
+.sch-verticaltimeaxis-header .x-column-header-text {
+    background-image: none;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/Vertical.scss:48 */
+.sch-vertical .sch-schedulerview .x-grid-cell-inner:before {
+    /* visual divider for rows in day/week view */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    content: " ";
+    border-top: 1px dotted #e9e9e9;
+    margin-top: -1px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/Vertical.scss:59 */
+.sch-vertical .sch-header-secondary-canvas {
+    width: 100%;
+    z-index: 1;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/Vertical.scss:65 */
+.sch-vertical .x-grid-item {
+    /* Border is moved from .x-grid-item to .x-grid-cell to highlight properly and use along with column lines feature */
+    border-top-width: 0;
+    border-color: transparent;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/Vertical.scss:70 */
+.sch-vertical .x-grid-cell {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #ededed;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/Vertical.scss:76 */
+.sch-vertical .sch-lockedview .x-grid-item:first-child .x-grid-cell {
+    border-top-color: transparent;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/Vertical.scss:80 */
+.sch-vertical .sch-normalview .x-grid-cell {
+    border-top-color: transparent;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/mixin/AbstractTimelinePanel.scss:2 */
+.sch-timelinepanel .x-grid-item-focused .x-grid-cell-inner:before {
+    /* Ext adds a dotted outline of focused cells, remove it */
+    border: none;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/mixin/AbstractTimelinePanel.scss:6 */
+.sch-timelinepanel-highlightweekends .sch-dayheadercell-nonworking {
+    background-color: #dfdfdf;
+    color: #aaa;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/Horizontal.scss:2 */
+.x-webkit .sch-horizontal td.sch-timetd {
+    /* Make sure column lines are always out of reach in Chrome */
+    position: relative;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/Horizontal.scss:7 */
+.sch-horizontal td.sch-timetd .x-grid-cell-inner {
+    /* Ext Triton sets this to 1 which leads to dependencies rendering above terminals */
+    z-index: auto;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/Horizontal.scss:12 */
+.sch-timelinepanel .x-grid-with-row-lines .x-grid-item[data-recordindex="0"] {
+    border-top-color: transparent;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/Horizontal.scss:21 */
+.sch-locked-column-fixer {
+    /* Locked column in RTL positioned incorrectly by EXT
+ https://www.sencha.com/forum/showthread.php?299582-RTL-locking-grid-bug
+ https://www.sencha.com/forum/showthread.php?304826-Locked-column-content-is-misaligned-with-RTL-ext
+ TODO: try to get rid of it
+ */
+    margin: 0 !important;
+    right: auto !important;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/mixin/FilterableTreeView.scss:1 */
+.sch-tree-filtered .x-tree-expander {
+    visibility: hidden;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/mixin/GridViewCanvas.scss:1 */
+.sch-item-canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/mixin/GridViewCanvas.scss:7 */
+.sch-horizontal .sch-item-canvas {
+    height: 100%;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/mixin/GridViewCanvas.scss:11 */
+.sch-vertical .sch-item-canvas {
+    width: 100%;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/mixin/GridViewCanvas.scss:19 */
+.sch-dependencyview-ct.sch-item-canvas-layer {
+    z-index: 1 !important;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/mixin/GridViewCanvas.scss:24 */
+.x-rtl .sch-secondary-canvas,
+.x-rtl .sch-item-canvas {
+    right: 0;
+    left: auto;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/tooltip/EventTip.scss:1 */
+.sch-tooltip-eventtip .x-tip-anchor {
+    pointer-events: none;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/mixin/TimelineView.scss:2 */
+.sch-timelineview .x-grid-item td.sch-timetd {
+    /* Use 3 specifiers to make sure we don't "lose" to .x-reset .x-grid-row .x-grid-cell which sets it to #fff */
+    overflow: visible;
+    background-color: transparent;
+    border-top-color: transparent;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/mixin/TimelineView.scss:8 */
+.sch-timelineview td.sch-timetd {
+    overflow: hidden;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/mixin/TimelineView.scss:12 */
+td.sch-timetd .x-grid-cell-inner {
+    position: relative;
+    padding-left: 0;
+    /*For IE in quirks mode */
+    padding-right: 0;
+    /* No need for horizontal padding */
+    cursor: default;
+    /* For trees, Ext sets it to pointer for some reason */
+    overflow: visible;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/mixin/TimelineView.scss:21 */
+.sch-timelineview .x-grid-item-container {
+    /* Make sure zones are always below the TRs/TDs */
+    position: relative;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/mixin/TimelineView.scss:25 */
+.sch-animations-enabled .sch-resourcezone,
+.sch-animations-enabled .sch-timeline,
+.sch-animations-enabled .sch-zone {
+    -moz-transition-property: width, left, top, height;
+    -moz-transition-duration: 0.4s;
+    -webkit-transition-property: width, left, top, height;
+    -webkit-transition-duration: 0.4s;
+    -ms-transition-property: width, left, top, height;
+    -ms-transition-duration: 0.4s;
+    transition-property: width, left, top, height;
+    transition-duration: 0.4s;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/mixin/TimelineView.scss:39 */
+.sch-timelinepanel .x-grid-item-focused .x-grid-cell-inner:before {
+    /* Ext adds a dotted outline of focused cells, remove it */
+    border: none;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/WeekView.scss:1 */
+.sch-calendar .sch-verticaltimeaxis-cell {
+    overflow: visible;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/WeekView.scss:5 */
+.sch-calendar .x-grid-cell {
+    border-bottom-color: #e0e0e0;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/WeekView.scss:9 */
+.sch-calendar .sch-schedulerview td.sch-col-alt {
+    background-image: none;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/WeekView.scss:13 */
+.sch-calendar .x-grid-item:first-child .sch-verticaltimeaxis-cell .sch-calendarcolumn-ct {
+    display: none;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/WeekView.scss:17 */
+.sch-calendar .sch-verticaltimeaxis-cell .x-grid-cell-inner {
+    overflow: visible;
+    padding-left: 0;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/WeekView.scss:22 */
+.sch-calendarcolumn-ct {
+    background-color: #f9f9f9;
+    color: #999;
+    margin-top: -11px;
+    position: absolute;
+    padding: 0 3px 0 5px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/WeekView.scss:30 */
+.sch-calendarcolumn-minutes,
+.sch-calendarcolumn-hours {
+    display: block;
+    float: left;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/WeekView.scss:36 */
+.sch-calendarcolumn-hours {
+    font-size: 1.5em;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/WeekView.scss:40 */
+.sch-calendarcolumn-minutes {
+    font-size: 0.8em;
+    margin-top: -0.2em;
+    margin-left: 2px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/WeekView.scss:46 */
+.sch-calendarcolumn-minutes-non-zero {
+    padding-left: 30px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/WeekView.scss:50 */
+.sch-calendar .sch-schedulerview td.sch-daycolumn-weekend {
+    background-color: rgba(242, 242, 242, 0.4);
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/WeekView.scss:55 */
+.sch-daycolumn-header-weekend .x-column-header-text {
+    color: #888;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/WeekView.scss:60 */
+.sch-calendar .sch-schedulerview td.sch-daycolumn-today {
+    background-color: rgba(255, 236, 236, 0.5);
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/WeekView.scss:65 */
+.sch-daycolumn-header-today .x-column-header-text {
+    color: #b26c3e;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/dependency/View.scss:3 */
+.sch-dependencyview-ct {
+    /* z-index 2 to make sure lines are on top of row inner elements - we reset .x-grid-cell-inner to z-index:auto toofocused */
+    /* See tests 201_create.t.js and 052_dependency_events.t.js */
+    position: absolute;
+    top: 0;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/dependency/View.scss:8 */
+.sch-ltr .sch-dependencyview-ct {
+    left: 0;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/dependency/View.scss:12 */
+.x-rtl .sch-dependencyview-ct {
+    right: 0;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/dependency/View.scss:16 */
+.sch-dependency-line {
+    position: absolute;
+    border-style: solid;
+    border-color: #777;
+    border-width: 1px;
+    overflow: hidden;
+    z-index: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-color: transparent;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/dependency/View.scss:28 */
+div.sch-dependency-line-horizontal {
+    border-width: 1px 0px 0px 0px;
+    height: 4px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/dependency/View.scss:33 */
+div.sch-dependency-line-vertical {
+    border-width: 0px 0px 0px 1px;
+    width: 4px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/dependency/View.scss:38 */
+.x-rtl div.sch-dependency-line-vertical {
+    border-width: 0px 1px 0px 0px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/dependency/View.scss:42 */
+.sch-export .sch-dependency-line {
+    -webkit-box-sizing: content-box;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/dependency/View.scss:46 */
+.sch-export.x-chrome .sch-dependency-line,
+.sch-export.x-safari .sch-dependency-line,
+.sch-export.sch-ie-export .sch-dependency-line {
+    -webkit-box-sizing: border-box;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/dependency/View.scss:52 */
+.sch-dependency-arrow {
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    border-style: solid;
+    border-color: #777;
+    line-height: 0;
+    /* Required for IE in quirks mode */
+    z-index: 1;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/dependency/View.scss:63 */
+.sch-dependency-arrow-left {
+    /* The extra 0.5 offset makes the alignment better in Firefox (no effect in Chrome) */
+    margin-top: -3.5px;
+    margin-left: -8px;
+    border-top-color: transparent !important;
+    border-bottom-color: transparent !important;
+    border-left-color: transparent !important;
+    border-width: 4px 8px 4px 0;
+    border-style: solid;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/dependency/View.scss:73 */
+.sch-dependency-arrow-right {
+    margin-top: -3.5px;
+    border-width: 4px 0 4px 8px;
+    border-style: solid;
+    border-top-color: transparent !important;
+    border-bottom-color: transparent !important;
+    border-right-color: transparent !important;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/dependency/View.scss:82 */
+.sch-dependency-arrow-up {
+    margin-left: -3.5px;
+    margin-top: -8px;
+    border-right-color: transparent !important;
+    border-left-color: transparent !important;
+    border-width: 0px 4px 8px 4px;
+    border-style: solid;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/dependency/View.scss:91 */
+.sch-dependency-arrow-down {
+    margin-left: -3.5px;
+    border-right-color: transparent !important;
+    border-left-color: transparent !important;
+    border-width: 8px 4px 0;
+    border-style: solid;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/dependency/View.scss:99 */
+.x-rtl .sch-dependency-arrow-up,
+.x-rtl .sch-dependency-arrow-down {
+    margin-left: 0;
+    margin-right: -3.5px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/dependency/View.scss:105 */
+.x-rtl .sch-dependency-arrow-right {
+    margin-right: -8px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/dependency/View.scss:109 */
+.sch-dependency-selected {
+    z-index: 4;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/dependency/View.scss:113 */
+.sch-dependency.sch-dependency-selected {
+    border-color: red;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/dependency/View.scss:117 */
+.sch-dependency.sch-dependency-over {
+    border-color: #5e5e5e;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/dependency/View.scss:121 */
+.sch-dependency-connector-proxy {
+    position: absolute;
+    width: 2px;
+    border-left: 2px dashed gray;
+    z-index: 20;
+    transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    pointer-events: none;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/dependency/View.scss:134 */
+.sch-terminal-valid-drop {
+    background: #a4cf6d;
+    border-color: green;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/dependency/View.scss:139 */
+.sch-terminal-invalid-drop {
+    background: #d9705d;
+    border-color: red;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/dependency/View.scss:144 */
+.sch-terminals-visible .sch-terminal {
+    display: block;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/dependency/View.scss:148 */
+.sch-schedulerview-readonly .sch-terminal,
+.sch-terminal.sch-terminal-hidden {
+    display: none;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/dependency/View.scss:154 */
+.sch-dependency-tip .x-fa {
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/dependency/View.scss:159 */
+.sch-dependency-tip dt {
+    font-weight: bolder;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/dependency/View.scss:164 */
+.sch-dep-tip {
+    margin: 0;
+    min-width: 100px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/dependency/View.scss:169 */
+.sch-dep-tip .x-fa.sch-dep-tip-valid {
+    color: #a4cf6d;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/dependency/View.scss:172 */
+.sch-dep-tip .x-fa.sch-dep-tip-invalid {
+    color: #d9705d;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/view/dependency/View.scss:177 */
+.sch-dep-tip dd {
+    margin: 0 0 10px 0;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/panel/AllDayHeader.scss:1 */
+.sch-all-day-header {
+    background-color: #fff;
+    border: 0 !important;
+    border-top: 1px solid #e9e9e9 !important;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/panel/AllDayHeader.scss:6 */
+.sch-all-day-header .x-grid-body {
+    border-left-width: 0;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/panel/AllDayHeader.scss:10 */
+.sch-all-day-header .x-grid-scrollbar {
+    display: none;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/panel/AllDayHeader.scss:14 */
+.sch-all-day-header .x-grid-scroll-body {
+    height: 100% !important;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/panel/AllDayHeader.scss:18 */
+.sch-all-day-header .x-panel,
+.sch-all-day-header .sch-timetd,
+.sch-all-day-header .x-grid-item {
+    border: 0 !important;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/panel/AllDayHeader.scss:24 */
+.sch-all-day-header .x-grid-scroll-container,
+.sch-all-day-header .x-grid-scroll-body,
+.sch-all-day-header .x-grid-view,
+.sch-all-day-header .x-grid-item {
+    background: transparent !important;
+    overflow: hidden !important;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/panel/AllDayHeader.scss:32 */
+.sch-all-day-header .sch-event {
+    font-size: 11px;
+    line-height: 14px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/panel/AllDayHeader.scss:36 */
+.sch-all-day-header .sch-event .sch-event-inner {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/panel/AllDayHeader.scss:42 */
+.sch-all-day-header .sch-column-line {
+    border-color: #d0d0d0;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/panel/AllDayHeader.scss:46 */
+.sch-all-day-header .sch-schedulerview .x-grid-cell-inner:before {
+    display: none;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/panel/AllDayHeader.scss:51 */
+.sch-all-day-locked-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    color: #666;
+    font: bold 13px/15px helvetica, arial, verdana, sans-serif;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/panel/TimelineTreePanel.scss:2 */
+.sch-timelinetreeview .x-grid-item .x-grid-cell-inner {
+    /* Default cursor for tree scheduler should be auto */
+    cursor: default;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/panel/TimelineTreePanel.scss:6 */
+.sch-tree-filtered .x-tree-expander {
+    visibility: hidden;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/CellPlugin.scss:1 */
+.sch-cellplugin-highlighter {
+    position: absolute;
+    z-index: 10;
+    pointer-events: none;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/CellPlugin.scss:7 */
+.sch-cellplugin-highlighter.sch-cellplugin-highlighter-editing {
+    pointer-events: all;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/CellPlugin.scss:11 */
+.sch-cellplugin-active .sch-cellplugin-border {
+    border-color: green;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/CellPlugin.scss:15 */
+.sch-cellplugin-border {
+    position: absolute;
+    z-index: 1;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/CellPlugin.scss:20 */
+.sch-cellplugin-border-horizontal {
+    height: 0;
+    width: inherit;
+    border-top: 1px solid black;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/CellPlugin.scss:26 */
+.sch-cellplugin-border-vertical {
+    width: 0;
+    height: inherit;
+    border-left: 1px solid black;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/CellPlugin.scss:32 */
+.sch-cellplugin-border-top {
+    top: 0;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/CellPlugin.scss:36 */
+.sch-cellplugin-border-bottom {
+    bottom: 0;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/CellPlugin.scss:40 */
+.sch-cellplugin-border-left {
+    left: 0;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/CellPlugin.scss:44 */
+.sch-cellplugin-border-right {
+    right: 0;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/DragSelector.scss:2 */
+.sch-drag-selector {
+    /* Make sure the drag selector is shown above any event nodes */
+    z-index: 5000;
+    position: absolute;
+    left: -100px;
+    top: 0;
+    background-color: #c3daf9;
+    border: 1px dotted #39b;
+    filter: opacity=50;
+    opacity: 0.5;
+    zoom: 1;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/widget/recurrence/field/RecurrenceComboBox.scss:1 */
+.sch-recurrencecombo-split {
+    border-top: 1px solid #c2c2c2;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/widget/recurrence/field/PositionsComboBox.scss:1 */
+.sch-recurrenceformpositions-split {
+    border-top: 1px solid #c2c2c2;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/widget/recurrence/field/DaysComboBox.scss:1 */
+.sch-recurrenceformdays-split {
+    border-top: 1px solid #c2c2c2;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/EventEditor.scss:1 */
+.sch-eventeditor-floating-container {
+    -webkit-box-shadow: 1px 1px 5px rgba(100, 100, 100, 0.5);
+    -moz-box-shadow: 1px 1px 5px rgba(100, 100, 100, 0.5);
+    box-shadow: 1px 1px 5px rgba(100, 100, 100, 0.5);
+    border-radius: 3px;
+    border-top-left-radius: 0px;
+    border: 1px solid #ddd;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/EventEditor.scss:10 */
+.sch-eventeditor {
+    background: #fff;
+    z-index: 5000;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/EventEditor.scss:15 */
+.sch-eventeditor-floating-container {
+    top: -1000px;
+    left: -1000px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/EventEditor.scss:20 */
+.sch-eventeditor .x-border-layout-ct {
+    background: transparent;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/EventEditor.scss:24 */
+.sch-eventeditor-timefields .x-form-text {
+    padding-right: 2px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/EventEditor.scss:28 */
+.sch-event-editor-durationlabel {
+    padding-top: 7px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/EventEditor.scss:32 */
+.sch-eventeditor-timefields {
+    background: #ececec;
+    border-top-right-radius: 3px;
+    border-bottom: 1px solid #ddd;
+    padding: 7px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/EventEditor.scss:39 */
+.sch-eventeditor-timefields .x-field,
+.sch-eventeditor-timefields .label {
+    margin-right: 5px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/EventEditor.scss:44 */
+.sch-eventeditor-timefields .label {
+    line-height: 21px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/EventEditor.scss:48 */
+.sch-eventeditor.x-panel-collapsed {
+    border: 0px none;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/EventEditor.scss:52 */
+.sch-eventeditor > .x-panel-body {
+    background: transparent;
+    border-top: 0 none;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/EventEditor.scss:57 */
+.sch-eventeditor .x-toolbar-footer {
+    padding-bottom: 5px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/EventTools.scss:1 */
+.sch-event-tools {
+    border: none;
+    background: transparent;
+    padding: 3px;
+    border-radius: 0;
+    box-shadow: none;
+    z-index: 10;
+    position: relative;
+    height: 47px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/EventTools.scss:12 */
+.sch-event-tools .x-box-inner {
+    background: #157fcc;
+    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/EventTools.scss:18 */
+.sch-event-tools:after,
+.sch-event-tools:before {
+    left: 50%;
+    border: solid transparent;
+    content: ' ';
+    position: absolute;
+    pointer-events: none;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/EventTools.scss:26 */
+.sch-event-tools:after {
+    border-top-color: #157fcc;
+    border-width: 10px;
+    margin-left: -10px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/EventTools.scss:32 */
+.sch-event-tools:before {
+    border-top-color: #157fcc;
+    border-width: 16px;
+    margin-left: -16px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/EventTools.scss:38 */
+.sch-tool {
+    float: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/EventTools.scss:44 */
+.sch-tool-img {
+    font-family: 'Font Awesome 5 Free';
+    font-size: 13px;
+    text-align: center;
+    line-height: 22px;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    transition: color 0.2s;
+    padding: 0;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/EventTools.scss:56 */
+.sch-tool-over .sch-tool-img {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 0;
+    border-radius: inherit;
+    box-shadow: 0 0 2px 0 #fff;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/EventTools.scss:63 */
+.sch-tool:first-child {
+    margin-left: 5px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/EventTools.scss:67 */
+.sch-tool:last-child {
+    margin-right: 5px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/EventTools.scss:73 */
+.sch-tool .sch-tool-details:before {
+    /* Tool icons */
+    content: '\f05a';
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/EventTools.scss:77 */
+.sch-tool .sch-tool-edit:before {
+    content: '\f303';
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/EventTools.scss:81 */
+.sch-tool .sch-tool-split:before {
+    content: '\f0c4';
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/EventTools.scss:85 */
+.sch-tool .sch-tool-delete:before {
+    content: '\f1f8';
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/EventTools.scss:89 */
+.sch-tool .sch-tool-shiftforward:before {
+    content: '\f0a9';
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/EventTools.scss:93 */
+.sch-tool .sch-tool-shiftback:before {
+    content: '\f0a8';
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/widget/ColumnPicker.scss:1 */
+.sch-columnpicker-list li.x-boundlist-item {
+    border: 0;
+    padding-left: 7px;
+    line-height: 30px;
+    background-color: transparent;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/widget/ColumnPicker.scss:8 */
+.sch-columnpicker-list li.x-boundlist-selected:before {
+    margin-right: 5px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Export.scss:2 */
+.sch-export {
+    /* Styles for Exporting. */
+    padding: 0;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Export.scss:6 */
+.sch-none {
+    display: none;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Export.scss:10 */
+.sch-export-header {
+    background: #99bce8;
+    border: 1px solid #c5c5c5;
+    height: 40px;
+    padding-top: 7px;
+    text-align: center;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Export.scss:18 */
+.sch-export-header h2 {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Export.scss:25 */
+.sch-export-mask {
+    opacity: 0.95;
+    background: #f8f8f8;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Export.scss:30 */
+.sch-exportdialog-msg {
+    padding: 10px;
+    color: black;
+    font-size: 13px;
+    background-color: white;
+    min-height: 100px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Export.scss:38 */
+.sch-ux-range-picker {
+    position: relative;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Export.scss:42 */
+.sch-ux-range-picker .x-panel-body {
+    background: #aaa;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Export.scss:46 */
+.sch-ux-range-value {
+    height: 16px;
+    width: 16px;
+    background: lightseagreen;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    -webkit-box-shadow: 1px 1px 5px rgba(45, 45, 45, 0.7);
+    -moz-box-shadow: 1px 1px 5px rgba(45, 45, 45, 0.7);
+    -ms-box-shadow: 1px 1px 5px rgba(45, 45, 45, 0.7);
+    box-shadow: 1px 1px 5px rgba(45, 45, 45, 0.7);
+    cursor: pointer;
+    position: absolute;
+    overflow: visible;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Export.scss:61 */
+.sch-ux-range-value span {
+    font-size: 9px;
+    color: #fff;
+    display: block;
+    left: -25px;
+    top: -18px;
+    position: absolute;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Export.scss:70 */
+.sch-fieldcontainer-label-wrap {
+    font: inherit;
+    width: 100%;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Export.scss:75 */
+.sch-fieldcontainer-label-wrap td {
+    padding: 0;
+    margin: 0;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Export.scss:80 */
+.sch-fieldcontainer-label {
+    color: #999;
+    white-space: nowrap;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Export.scss:85 */
+.sch-fieldcontainer-separator {
+    margin: 2px 0 3px 5px;
+    height: 0;
+    line-height: 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+    border-width: 1px;
+    display: block;
+    font-size: 1px;
+    overflow: hidden;
+    cursor: default;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Printable.scss:1 */
+.sch-print-body {
+    /* If component is in a viewport, it puts overflow:hidden on the body which prevents
+       print from working.
+    */
+    /* If component is in a viewport, it puts overflow:hidden on the body which prevents
+       print from working.
+    */
+    overflow: visible !important;
+    background-color: transparent !important;
+    position: static !important;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Printable.scss:13 */
+.sch-print-ct {
+    overflow: visible !important;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Printable.scss:19 */
+.sch-print-header-wrap * {
+    /* Remove any background image since they won't be printed anyway unless user changes browser setting. */
+    background: transparent none !important;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Printable.scss:25 */
+.sch-print-fake-background .sch-event {
+    /* Use border-width to achieve background color*/
+    overflow: visible !important;
+    width: 0 !important;
+    border-left-style: solid;
+    border-right-style: solid !important;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Printable.scss:34 */
+.sch-print-fake-background .sch-event-inner {
+    /* Make sure the inner content is "above" the border */
+    overflow: visible !important;
+    z-index: 10000;
+    position: absolute;
+    left: 0;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Printable.scss:43 */
+.sch-print-normalheader {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Printable.scss:50 */
+.sch-print-headerbg {
+    position: absolute;
+    left: 0;
+    width: 0;
+    border-left: 1px solid #eee;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Printable.scss:58 */
+.sch-print-lockedheader {
+    z-index: 2;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Printable.scss:63 */
+.sch-print-locked-rows-ct {
+    z-index: 2;
+    float: left;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Printable.scss:69 */
+div.sch-print-normal-rows-ct {
+    overflow: hidden !important;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Printable.scss:74 */
+@media print {
+    /* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Printable.scss:75 */
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/SimpleEditor.scss:1 */
+.sch-simpleeditor .x-form-trigger-wrap-default {
+    border: 0;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/SimpleEditor.scss:5 */
+.sch-simpleeditor {
+    box-shadow: 1px 1px 5px #ccc;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/Split.scss:1 */
+.sch-grid-split-clone .x-grid {
+    padding-top: 10px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/SummaryBar.scss:1 */
+.sch-summaryrow-title {
+    background: #f5f5f5;
+    padding: 0 10px;
+    text-align: right;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/SummaryBar.scss:6 */
+.sch-summaryrow-title .sch-summaryrow-title-text {
+    font-weight: bold;
+    font-size: 13px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/SummaryBar.scss:12 */
+.sch-summaryrow-view {
+    background: #f5f5f5;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/SummaryBar.scss:15 */
+.sch-summaryrow-view table {
+    height: 100%;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/SummaryBar.scss:19 */
+.sch-summaryrow-view .sch-summaryrow-bar-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/SummaryBar.scss:24 */
+.sch-summaryrow-view .sch-summaryrow-bar-wrapper .sch-summaryrow-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #f8da81;
+    width: 100%;
+    transition: height 0.4s, color 0.4s;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-base/sass/src/Sch/plugin/SummaryBar.scss:32 */
+.sch-summaryrow-view .sch-summaryrow-bar-wrapper .sch-summaryrow-bar .sch-summaryrow-bar-text {
+    position: absolute;
+    font-weight: bold;
+    font-size: 90%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+    height: 20px;
+    top: -20px;
+    left: 0;
+    text-align: center;
+    line-height: 20px;
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-neptune/sass/src/Sch/mixin/TimelineView.scss:1 */
+.sch-timelineview .x-grid-item {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-neptune/sass/src/Sch/mixin/TimelineView.scss:5 */
+.sch-timelineview .x-grid-item-alt {
+    background-color: rgba(245, 245, 245, 0.35);
+}
+/* /home/dev/workspace/Bryntum/ExtScheduler6.x/scheduler-6.1.17/packages/bryntum-scheduler-theme-neptune/sass/src/Sch/view/TimelineGridView.scss:1 */
+.sch-timelinepanel-splitter {
+    background: #cbddf3;
+}

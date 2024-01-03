@@ -1,0 +1,22 @@
+NomeField		,Len,Align	,Requested	,CodeValue,SampleValue
+TIPOREC			,03	,L		,Y		 	,'LIN'	,NAD
+NUMRIGA			,06	,L		,Y			,		,BY
+CODEANCU		,35	,L		,Y			,   	,04440360230
+TIPCODCU		,3	,L		,Y			,		,VA	
+CODEANTU		,35	,L		,Y			,		,VIA CAMPALTO, 3/D
+CODFORTU		,35	,L		,Y			,		,SAN MARTINO BUON ALBERGO
+CODDISTU		,35	,L		,Y			,		,VI
+DESART			,35	,L		,Y			,		,37036
+FLINPROM		,3	,L		,Y			,		,37036
+QTAORD			,15	,L		,Y			,		,IT
+UDMQORD			,3	,L		,Y			,		,IT
+PRZUNI			,15	,L		,Y			,		,IT
+TIPOPRZ			,3	,L		,Y			,		,IT
+UDMPRZUN		,3	,L		,N			,		,IT
+NRCUINTU		,15	,L		,N			,		,IT
+CODAZIOL		,3	,L		,N			,		,IT
+QTACONF			,15	,L		,N			,		,IT
+UDMQCONF 		,3	,L		,N			,		,IT
+PRZUN2 			,15	,L		,N			,		,IT
+TIPOPRZ2 		,3	,L		,N			,		,IT
+UDMPRZUN2 		,3	,L		,N			,		,IT

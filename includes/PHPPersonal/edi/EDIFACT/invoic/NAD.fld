@@ -1,0 +1,25 @@
+NomeField		,Len,Align	,Requested	,CodeValue										,SampleValue
+TIPOREC			,99	,		,Y		 	,NAD											,NAD consegna della merce
+FILLER			,99	,		,Y		 	,+												,FILLER
+CODCONS			,99	,		,Y			,SU												,BO		=	Broker or sales office;BS		=	Bill and ship to;BY		=	Buyer;CN		=	Consignee;CS		=	Consolidator;DP		=	Delivery party;II		=	Issuer of invoice;IV		=	Invoicee;LD		=	Party recovering the Value Added Tax (VAT);PE		=	Payee;RE		=	Party to receive commercial invoice remittance;SE		=	Seller;SN		=	Store number;SR		=	Suppliers agent/representative;ST		=	Ship to;SU		=	Supplier;LC		=	Party declaring the Value Added Tax (VAT)
+FILLER			,99	,		,Y		 	,+												,FILLER
+CODICE			,99	,		,N			,   											,GLNCOSE 04440360230
+FILLER			,99	,		,Y		 	,:												,FILLER
+CODIDENT		,99	,		,N			,  												,Code list identific
+FILLER			,99	,		,Y		 	,:												,FILLER
+CODRESP			,99	,		,N			,9  											,9=GS1
+FILLER			,99	,		,Y		 	,+												,FILLER
+RAGSOCA			,35	,		,Y			,												,VA	 SOCIO UNICO
+FILLER			,99	,		,Y		 	,+												,FILLER
+RAGSOC			,35	,		,Y			,												,VA	 SOCIO UNICO
+FILLER			,99	,		,Y		 	,+												,FILLER
+INDIRIZZO		,35	,		,N			,												,VIA CAMPALTO, 3/D
+FILLER			,99	,		,Y		 	,+												,FILLER
+CITTA			,35	,		,N			,												,SAN MARTINO BUON ALBERGO
+FILLER			,99	,		,Y		 	,+												,FILLER
+PROVA			,99	,		,N			,												,VI
+FILLER			,99	,		,Y		 	,+												,FILLER
+CAP				,99	,		,N			,												,37036
+FILLER			,99	,		,Y		 	,+												,FILLER
+NAZIONE			,99	,		,N			,												,IT
+END				,99	,		,Y		 	,'												,END

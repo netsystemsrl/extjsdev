@@ -1,0 +1,77 @@
+﻿
+
+/* will be implemented in future releases */
+
+/*@mixin navigation-ui() {
+    @include treelist-ui(
+        $ui: 'navigation',
+        $padding: 0 20px,
+
+        $background-color: darken($neutral-color, 2),
+        $toolstrip-background-color: darken($neutral-color, 2),
+
+        $tool-float-indicator-color: lighten($base-color-dark, 20),
+        $tool-float-indicator-width: 4px,
+
+        $tool-indicator-selected-color: darken(#6badf6, 6),
+        $tool-indicator-selected-width: 4px,
+        $tool-selected-background-color: darken($neutral-color, 8),
+        $tool-selected-color: $color,
+
+        // Darker background for expanded subtrees
+        $item-expanded-background-color: darken($neutral-color, 10),
+
+        // Taller line height
+        $item-line-height : 2.5rem,
+
+        $row-over-background-color: darken($neutral-color, 5),
+        $row-selected-background-color: darken($neutral-color, 8),
+
+        $item-icon-color: $color,
+        $item-expander-color: $color,
+        $item-text-color: $color,
+
+        // Brighter when hovered
+        $item-icon-over-color: $color,
+        $item-expander-over-color: $color,
+        $item-text-over-color: $color,
+        $item-text-font-size: 14px,
+
+        // Various sizes for the pieces:
+        $item-icon-font-size: 16px,
+        $item-icon-width: 24px,
+        $item-expander-font-size: 16px,
+        $item-expander-width: 24px,
+
+        // Style the "row indicator" (the vertical stripe on the left edge):
+        $row-indicator-width: 4px,
+        $row-indicator-selected-color: darken(#6badf6, 6),
+        $row-indicator-selected-over-color: #6badf6,
+        $row-indicator-over-color: lighten($base-color-dark, 20)
+    );
+
+
+    @include _codaxy-treelist-ui (
+        $ui: 'navigation',
+        $ui-border-width: 0 1px 0 0,
+        $ui-border-color: lighten($border-color, 6),
+        $ui-item-border-style: $treelist-item-border-style,
+        $ui-item-border-width: $treelist-item-border-width,
+        $ui-item-border-color: lighten($border-color, 6),
+        $ui-expanded-child-background-color-over: darken($neutral-color, 14),
+        $ui-expanded-child-background-color-selected: darken($neutral-color, 18),
+        $ui-expanded-parent-float-border-width: 0,
+        $ui-tool-border-style: $treelist-item-border-style,
+        $ui-tool-border-width: $treelist-item-border-width,
+        $ui-tool-border-color:  lighten($border-color, 6),
+        $ui-tool-over-background-color: darken($neutral-color, 5),
+        $ui-tool-expanded-item-border-color: lighten($border-color, 6),
+        $ui-tool-expanded-item-border-width: 0 0 1px 0,
+        $ui-treelist-item-leaf-float-border-width: 0
+    );
+
+    .#{$prefix}treelist-navigation {
+        z-index: 10000 !important;
+    }
+}*/
+    

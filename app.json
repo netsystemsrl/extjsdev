@@ -1,0 +1,48 @@
+"progressive": {
+    "manifest": {
+		"theme_color": "#f69435",
+		"background_color": "#f69435",
+		"display": "Minimal-UI",
+		"scope": "/",
+		"start_url": "/index.php",
+		"short_name": "GeQo",
+		"name": "GeQo - Gestione Economica Qualita Organizzativa",
+		"description": "GeQo ERP Appplication",
+        "icons": [{
+            "src": "/repositorycom/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+			"purpose": "maskable" 
+        },
+        {
+            "src": "/repositorycom/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/repositorycom/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/repositorycom/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+        ]
+    },
+    "serviceWorker": {
+        "runtimeCaching": [{
+                "urlPattern": "\\/api\\/events"
+            }, {
+                "urlPattern": "\\/api\\/events\\/\d+",
+                "options": {
+                    "cache": {
+                        "name": "events",
+                        "maxEntries": 10
+                    }
+                }
+            }
+        ]
+    }
+}

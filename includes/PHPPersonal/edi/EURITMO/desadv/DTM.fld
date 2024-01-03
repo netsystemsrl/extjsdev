@@ -1,0 +1,5 @@
+NomeField		,Len,Align	,Requested	,CodeValue											,SampleValue
+TIPOREC			,03	,L		,Y		 	,'DTM'												,DTM
+QDATRIF			,03	,L		,Y			,													,2
+DATORARIF		,35	,L		,Y			,   												,20181024
+QFMTDAT		,3	,L		,Y			,   												,20181024

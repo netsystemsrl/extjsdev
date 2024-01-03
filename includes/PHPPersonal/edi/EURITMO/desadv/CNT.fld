@@ -1,0 +1,5 @@
+NomeField		,Len,Align	,Requested	,CodeValue											,SampleValue
+TIPOREC			,03	,L		,Y		 	,'CNT'												,RFF
+TIPOTOT			,03	,L		,Y			,													,AAS
+TOTALE			,15	,R0		,Y			,   												,0000193
+UDMTOT			,03	,L		,Y			,													,20181024	

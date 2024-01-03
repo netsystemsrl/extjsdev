@@ -1,0 +1,1629 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AmazonEnvelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="amzn-envelope.xsd">
+	<Header>
+		<DocumentVersion>1.02</DocumentVersion>
+		<MerchantIdentifier>A57SHBLZ59N1S</MerchantIdentifier>
+	</Header>
+	<MessageType>ProcessingReport</MessageType>
+	<Message>
+		<MessageID>1</MessageID>
+		<ProcessingReport>
+			<DocumentTransactionID>70164018860</DocumentTransactionID>
+			<StatusCode>Complete</StatusCode>
+			<ProcessingSummary>
+				<MessagesProcessed>0</MessagesProcessed>
+				<MessagesSuccessful>0</MessagesSuccessful>
+				<MessagesWithError>89</MessagesWithError>
+				<MessagesWithWarning>0</MessagesWithWarning>
+			</ProcessingSummary>
+			<Result>
+				<MessageID>0</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5001</ResultMessageCode>
+				<ResultDescription>XML Parsing Fatal Error at Line 285872, Column 1: XML document structures must start and end within the same entity. XML document structures must start and end within the same entity.</ResultDescription>
+			</Result>
+			<Result>
+				<MessageID>1032</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 29920, Column 44: cvc-minLength-valid: Value &apos;&apos; with length = &apos;0&apos; is not facet-valid with respect to minLength &apos;1&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558833009</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1032</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 29920, Column 44: cvc-type.3.1.3: The value &apos;&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558833009</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1099</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 31863, Column 44: cvc-minLength-valid: Value &apos;&apos; with length = &apos;0&apos; is not facet-valid with respect to minLength &apos;1&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558863105</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1099</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 31863, Column 44: cvc-type.3.1.3: The value &apos;&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558863105</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1100</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 31892, Column 44: cvc-minLength-valid: Value &apos;&apos; with length = &apos;0&apos; is not facet-valid with respect to minLength &apos;1&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558863105</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1100</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 31892, Column 44: cvc-type.3.1.3: The value &apos;&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558863105</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1434</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 41578, Column 44: cvc-minLength-valid: Value &apos;&apos; with length = &apos;0&apos; is not facet-valid with respect to minLength &apos;1&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8712364560084</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1434</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 41578, Column 44: cvc-type.3.1.3: The value &apos;&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8712364560084</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1435</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 41607, Column 44: cvc-minLength-valid: Value &apos;&apos; with length = &apos;0&apos; is not facet-valid with respect to minLength &apos;1&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8712364560084</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1435</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 41607, Column 44: cvc-type.3.1.3: The value &apos;&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8712364560084</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1539</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 44623, Column 44: cvc-minLength-valid: Value &apos;&apos; with length = &apos;0&apos; is not facet-valid with respect to minLength &apos;1&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8712364606522</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1539</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 44623, Column 44: cvc-type.3.1.3: The value &apos;&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8712364606522</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1540</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 44652, Column 44: cvc-minLength-valid: Value &apos;&apos; with length = &apos;0&apos; is not facet-valid with respect to minLength &apos;1&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8712364606522</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1540</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 44652, Column 44: cvc-type.3.1.3: The value &apos;&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8712364606522</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1579</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 45783, Column 44: cvc-minLength-valid: Value &apos;&apos; with length = &apos;0&apos; is not facet-valid with respect to minLength &apos;1&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8712364615432</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1579</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 45783, Column 44: cvc-type.3.1.3: The value &apos;&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8712364615432</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1627</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 47175, Column 44: cvc-minLength-valid: Value &apos;&apos; with length = &apos;0&apos; is not facet-valid with respect to minLength &apos;1&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>9801000000059</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1627</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 47175, Column 44: cvc-type.3.1.3: The value &apos;&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>9801000000059</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1628</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 47204, Column 44: cvc-minLength-valid: Value &apos;&apos; with length = &apos;0&apos; is not facet-valid with respect to minLength &apos;1&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>9801000000059</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1628</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 47204, Column 44: cvc-type.3.1.3: The value &apos;&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>9801000000059</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1659</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>99038</ResultMessageCode>
+				<ResultDescription>Il campo Message/Product/DescriptionData/BulletPoint[1] contiene un valore non valido: &lt;h2&gt;Flacone Sangue Gelatinoso&lt;/h2&gt;&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;&lt;h3&gt;Trucco Effetto Sangue&lt;/h3&gt;&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;Ideale per Trucchi e Kit di Travestimento ad Halloween, Carnevale, Tutte le Feste in Maschera e a tema per divertirsi in compagnia. &lt;BR&gt;&lt;BR&gt;&lt;BR&gt;Accessorio trucco, camuffamenti, cosmetica, Travestimento Halloween, Carnevale, Make Up, cosplay. The bullet_point1 field contains an invalid value. Please provide a valid value for the field and try again.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558409808</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1659</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>99038</ResultMessageCode>
+				<ResultDescription>Il campo Message/Product/DescriptionData/Description contiene un valore non valido: &lt;h2&gt;Flacone Sangue Gelatinoso&lt;/h2&gt;&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;&lt;h3&gt;Trucco Effetto Sangue&lt;/h3&gt;&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;Ideale per Trucchi e Kit di Travestimento ad Halloween, Carnevale, Tutte le Feste in Maschera e a tema per divertirsi in compagnia. &lt;BR&gt;&lt;BR&gt;&lt;BR&gt;Accessorio trucco, camuffamenti, cosmetica, Travestimento Halloween, Carnevale, Make Up, cosplay. The product_description field contains an invalid value. Please provide a valid value for the field and try again.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558409808</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1719</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 49843, Column 44: cvc-minLength-valid: Value &apos;&apos; with length = &apos;0&apos; is not facet-valid with respect to minLength &apos;1&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558462704</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>1719</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 49843, Column 44: cvc-type.3.1.3: The value &apos;&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558462704</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>183</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 5299, Column 44: cvc-minLength-valid: Value &apos;&apos; with length = &apos;0&apos; is not facet-valid with respect to minLength &apos;1&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558132201</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>183</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 5299, Column 44: cvc-type.3.1.3: The value &apos;&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558132201</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>2</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 49, Column 3041: cvc-maxLength-valid: Value &apos;&lt;h3&gt;Lorem ipsum dolor sit amet&lt;/h3&gt;, consectetur adipiscing elit. Aliquam risus sem, finibus a tincidunt id, condimentum quis tortor. Nulla dictum nisl non neque sagittis aliquam. Aliquam vitae dui metus. Donec semper consequat nisi eu fringilla. Curabitur rutrum, turpis eu aliquam imperdiet, massa mauris auctor eros, quis pretium nisi nibh sit amet magna. Integer porttitor odio mi, ornare suscipit lectus congue ac. Phasellus nibh dolor, mattis bibendum pulvinar nec, pellentesque semper arcu. &lt;span&gt;Proin vel congue lectus&lt;/span&gt;.&lt;BR&gt;&lt;BR&gt;Aliquam erat volutpat. Praesent sed tempus dui, at euismod erat. Etiam eu placerat magna, vel aliquet velit. In vel justo at arcu dapibus vulputate in ac odio. Donec at metus augue. Vestibulum tincidunt sed neque et cursus. Duis volutpat accumsan vestibulum. Proin volutpat mauris id metus sagittis tincidunt. Morbi pretium libero a massa eleifend, eu volutpat metus egestas. Nullam in erat urna. Ut non lobortis ligula, vel rutrum tellus. Aenean finibus magna neque, eget vestibulum ipsum porttitor iaculis. Nunc sodales sagittis mauris. Vivamus vestibulum mauris ipsum, nec mattis ipsum laoreet nec. Nunc consectetur interdum felis, et congue ligula varius eu.&lt;BR&gt;&lt;BR&gt;Nunc consequat elit id ante interdum lobortis. Maecenas vel massa sed justo ultricies sagittis id nec dolor. Proin ultricies mauris nunc, vel malesuada est iaculis facilisis. Morbi lobortis, justo a congue gravida, augue nisi pulvinar lorem, in sagittis erat quam aliquam neque. Maecenas ut ornare quam, quis efficitur magna. Proin ligula quam, rutrum vel dictum nec, laoreet nec neque. Ut sollicitudin arcu eu magna mollis gravida. Donec ac nisi enim.&lt;BR&gt;&lt;BR&gt;Curabitur sit amet hendrerit lorem. Proin eleifend pellentesque congue. Aenean et sollicitudin turpis, eget vehicula arcu. Ut sit amet porttitor dolor, non consectetur enim. Cras ex erat, ultrices pellentesque justo a, efficitur vestibulum augue. Suspendisse nisl metus, finibus in dui sed, pulvinar mollis metus. Nulla posuere justo nunc, viverra luctus neque elementum non.&lt;BR&gt;&lt;BR&gt;Praesent eget lorem urna. Etiam sagittis dolor lacus, ac tincidunt neque cursus non. Duis sollicitudin, purus lacinia suscipit lacinia, dui nunc interdum sapien, sed accumsan tortor purus ut libero. Nam tincidunt sed leo eu vulputate. Nunc vestibulum purus lacinia nibh ullamcorper aliquam. Donec suscipit pharetra eleifend. Nunc aliquet nisi vitae ligula imperdiet placerat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In ultrices venenatis elit, vitae rhoncus eros fermentum eget. In consectetur neque sed rhoncus condimentum. Nulla risus nisl, convallis id mi ac, semper imperdiet tortor. Proin luctus, eros quis pellentesque ultricies, est dolor laoreet augue, in iaculis velit massa at est. Mauris sagittis nunc bibendum purus imperdiet, eu semper elit consectetur. Nulla facilisi. Pellentesque quis dapibus erat, ut ultricies purus. Vestibulum imperdiet erat eget felis tincidunt varius.&apos; with length = &apos;2997&apos; is not facet-valid with respect to maxLength &apos;2000&apos; for type &apos;#AnonType_DescriptionDescriptionDataProduct&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>0072411520187</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>2</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 49, Column 3041: cvc-type.3.1.3: The value &apos;&lt;h3&gt;Lorem ipsum dolor sit amet&lt;/h3&gt;, consectetur adipiscing elit. Aliquam risus sem, finibus a tincidunt id, condimentum quis tortor. Nulla dictum nisl non neque sagittis aliquam. Aliquam vitae dui metus. Donec semper consequat nisi eu fringilla. Curabitur rutrum, turpis eu aliquam imperdiet, massa mauris auctor eros, quis pretium nisi nibh sit amet magna. Integer porttitor odio mi, ornare suscipit lectus congue ac. Phasellus nibh dolor, mattis bibendum pulvinar nec, pellentesque semper arcu. &lt;span&gt;Proin vel congue lectus&lt;/span&gt;.&lt;BR&gt;&lt;BR&gt;Aliquam erat volutpat. Praesent sed tempus dui, at euismod erat. Etiam eu placerat magna, vel aliquet velit. In vel justo at arcu dapibus vulputate in ac odio. Donec at metus augue. Vestibulum tincidunt sed neque et cursus. Duis volutpat accumsan vestibulum. Proin volutpat mauris id metus sagittis tincidunt. Morbi pretium libero a massa eleifend, eu volutpat metus egestas. Nullam in erat urna. Ut non lobortis ligula, vel rutrum tellus. Aenean finibus magna neque, eget vestibulum ipsum porttitor iaculis. Nunc sodales sagittis mauris. Vivamus vestibulum mauris ipsum, nec mattis ipsum laoreet nec. Nunc consectetur interdum felis, et congue ligula varius eu.&lt;BR&gt;&lt;BR&gt;Nunc consequat elit id ante interdum lobortis. Maecenas vel massa sed justo ultricies sagittis id nec dolor. Proin ultricies mauris nunc, vel malesuada est iaculis facilisis. Morbi lobortis, justo a congue gravida, augue nisi pulvinar lorem, in sagittis erat quam aliquam neque. Maecenas ut ornare quam, quis efficitur magna. Proin ligula quam, rutrum vel dictum nec, laoreet nec neque. Ut sollicitudin arcu eu magna mollis gravida. Donec ac nisi enim.&lt;BR&gt;&lt;BR&gt;Curabitur sit amet hendrerit lorem. Proin eleifend pellentesque congue. Aenean et sollicitudin turpis, eget vehicula arcu. Ut sit amet porttitor dolor, non consectetur enim. Cras ex erat, ultrices pellentesque justo a, efficitur vestibulum augue. Suspendisse nisl metus, finibus in dui sed, pulvinar mollis metus. Nulla posuere justo nunc, viverra luctus neque elementum non.&lt;BR&gt;&lt;BR&gt;Praesent eget lorem urna. Etiam sagittis dolor lacus, ac tincidunt neque cursus non. Duis sollicitudin, purus lacinia suscipit lacinia, dui nunc interdum sapien, sed accumsan tortor purus ut libero. Nam tincidunt sed leo eu vulputate. Nunc vestibulum purus lacinia nibh ullamcorper aliquam. Donec suscipit pharetra eleifend. Nunc aliquet nisi vitae ligula imperdiet placerat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In ultrices venenatis elit, vitae rhoncus eros fermentum eget. In consectetur neque sed rhoncus condimentum. Nulla risus nisl, convallis id mi ac, semper imperdiet tortor. Proin luctus, eros quis pellentesque ultricies, est dolor laoreet augue, in iaculis velit massa at est. Mauris sagittis nunc bibendum purus imperdiet, eu semper elit consectetur. Nulla facilisi. Pellentesque quis dapibus erat, ut ultricies purus. Vestibulum imperdiet erat eget felis tincidunt varius.&apos; of element &apos;Description&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>0072411520187</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>2</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 50, Column 3041: cvc-maxLength-valid: Value &apos;&lt;h3&gt;Lorem ipsum dolor sit amet&lt;/h3&gt;, consectetur adipiscing elit. Aliquam risus sem, finibus a tincidunt id, condimentum quis tortor. Nulla dictum nisl non neque sagittis aliquam. Aliquam vitae dui metus. Donec semper consequat nisi eu fringilla. Curabitur rutrum, turpis eu aliquam imperdiet, massa mauris auctor eros, quis pretium nisi nibh sit amet magna. Integer porttitor odio mi, ornare suscipit lectus congue ac. Phasellus nibh dolor, mattis bibendum pulvinar nec, pellentesque semper arcu. &lt;span&gt;Proin vel congue lectus&lt;/span&gt;.&lt;BR&gt;&lt;BR&gt;Aliquam erat volutpat. Praesent sed tempus dui, at euismod erat. Etiam eu placerat magna, vel aliquet velit. In vel justo at arcu dapibus vulputate in ac odio. Donec at metus augue. Vestibulum tincidunt sed neque et cursus. Duis volutpat accumsan vestibulum. Proin volutpat mauris id metus sagittis tincidunt. Morbi pretium libero a massa eleifend, eu volutpat metus egestas. Nullam in erat urna. Ut non lobortis ligula, vel rutrum tellus. Aenean finibus magna neque, eget vestibulum ipsum porttitor iaculis. Nunc sodales sagittis mauris. Vivamus vestibulum mauris ipsum, nec mattis ipsum laoreet nec. Nunc consectetur interdum felis, et congue ligula varius eu.&lt;BR&gt;&lt;BR&gt;Nunc consequat elit id ante interdum lobortis. Maecenas vel massa sed justo ultricies sagittis id nec dolor. Proin ultricies mauris nunc, vel malesuada est iaculis facilisis. Morbi lobortis, justo a congue gravida, augue nisi pulvinar lorem, in sagittis erat quam aliquam neque. Maecenas ut ornare quam, quis efficitur magna. Proin ligula quam, rutrum vel dictum nec, laoreet nec neque. Ut sollicitudin arcu eu magna mollis gravida. Donec ac nisi enim.&lt;BR&gt;&lt;BR&gt;Curabitur sit amet hendrerit lorem. Proin eleifend pellentesque congue. Aenean et sollicitudin turpis, eget vehicula arcu. Ut sit amet porttitor dolor, non consectetur enim. Cras ex erat, ultrices pellentesque justo a, efficitur vestibulum augue. Suspendisse nisl metus, finibus in dui sed, pulvinar mollis metus. Nulla posuere justo nunc, viverra luctus neque elementum non.&lt;BR&gt;&lt;BR&gt;Praesent eget lorem urna. Etiam sagittis dolor lacus, ac tincidunt neque cursus non. Duis sollicitudin, purus lacinia suscipit lacinia, dui nunc interdum sapien, sed accumsan tortor purus ut libero. Nam tincidunt sed leo eu vulputate. Nunc vestibulum purus lacinia nibh ullamcorper aliquam. Donec suscipit pharetra eleifend. Nunc aliquet nisi vitae ligula imperdiet placerat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In ultrices venenatis elit, vitae rhoncus eros fermentum eget. In consectetur neque sed rhoncus condimentum. Nulla risus nisl, convallis id mi ac, semper imperdiet tortor. Proin luctus, eros quis pellentesque ultricies, est dolor laoreet augue, in iaculis velit massa at est. Mauris sagittis nunc bibendum purus imperdiet, eu semper elit consectetur. Nulla facilisi. Pellentesque quis dapibus erat, ut ultricies purus. Vestibulum imperdiet erat eget felis tincidunt varius.&apos; with length = &apos;2997&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>0072411520187</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>2</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 50, Column 3041: cvc-type.3.1.3: The value &apos;&lt;h3&gt;Lorem ipsum dolor sit amet&lt;/h3&gt;, consectetur adipiscing elit. Aliquam risus sem, finibus a tincidunt id, condimentum quis tortor. Nulla dictum nisl non neque sagittis aliquam. Aliquam vitae dui metus. Donec semper consequat nisi eu fringilla. Curabitur rutrum, turpis eu aliquam imperdiet, massa mauris auctor eros, quis pretium nisi nibh sit amet magna. Integer porttitor odio mi, ornare suscipit lectus congue ac. Phasellus nibh dolor, mattis bibendum pulvinar nec, pellentesque semper arcu. &lt;span&gt;Proin vel congue lectus&lt;/span&gt;.&lt;BR&gt;&lt;BR&gt;Aliquam erat volutpat. Praesent sed tempus dui, at euismod erat. Etiam eu placerat magna, vel aliquet velit. In vel justo at arcu dapibus vulputate in ac odio. Donec at metus augue. Vestibulum tincidunt sed neque et cursus. Duis volutpat accumsan vestibulum. Proin volutpat mauris id metus sagittis tincidunt. Morbi pretium libero a massa eleifend, eu volutpat metus egestas. Nullam in erat urna. Ut non lobortis ligula, vel rutrum tellus. Aenean finibus magna neque, eget vestibulum ipsum porttitor iaculis. Nunc sodales sagittis mauris. Vivamus vestibulum mauris ipsum, nec mattis ipsum laoreet nec. Nunc consectetur interdum felis, et congue ligula varius eu.&lt;BR&gt;&lt;BR&gt;Nunc consequat elit id ante interdum lobortis. Maecenas vel massa sed justo ultricies sagittis id nec dolor. Proin ultricies mauris nunc, vel malesuada est iaculis facilisis. Morbi lobortis, justo a congue gravida, augue nisi pulvinar lorem, in sagittis erat quam aliquam neque. Maecenas ut ornare quam, quis efficitur magna. Proin ligula quam, rutrum vel dictum nec, laoreet nec neque. Ut sollicitudin arcu eu magna mollis gravida. Donec ac nisi enim.&lt;BR&gt;&lt;BR&gt;Curabitur sit amet hendrerit lorem. Proin eleifend pellentesque congue. Aenean et sollicitudin turpis, eget vehicula arcu. Ut sit amet porttitor dolor, non consectetur enim. Cras ex erat, ultrices pellentesque justo a, efficitur vestibulum augue. Suspendisse nisl metus, finibus in dui sed, pulvinar mollis metus. Nulla posuere justo nunc, viverra luctus neque elementum non.&lt;BR&gt;&lt;BR&gt;Praesent eget lorem urna. Etiam sagittis dolor lacus, ac tincidunt neque cursus non. Duis sollicitudin, purus lacinia suscipit lacinia, dui nunc interdum sapien, sed accumsan tortor purus ut libero. Nam tincidunt sed leo eu vulputate. Nunc vestibulum purus lacinia nibh ullamcorper aliquam. Donec suscipit pharetra eleifend. Nunc aliquet nisi vitae ligula imperdiet placerat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In ultrices venenatis elit, vitae rhoncus eros fermentum eget. In consectetur neque sed rhoncus condimentum. Nulla risus nisl, convallis id mi ac, semper imperdiet tortor. Proin luctus, eros quis pellentesque ultricies, est dolor laoreet augue, in iaculis velit massa at est. Mauris sagittis nunc bibendum purus imperdiet, eu semper elit consectetur. Nulla facilisi. Pellentesque quis dapibus erat, ut ultricies purus. Vestibulum imperdiet erat eget felis tincidunt varius.&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>0072411520187</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>2070</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 60022, Column 44: cvc-minLength-valid: Value &apos;&apos; with length = &apos;0&apos; is not facet-valid with respect to minLength &apos;1&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>9801000001254</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>2070</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 60022, Column 44: cvc-type.3.1.3: The value &apos;&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>9801000001254</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>2733</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 79249, Column 44: cvc-minLength-valid: Value &apos;&apos; with length = &apos;0&apos; is not facet-valid with respect to minLength &apos;1&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>5020570216699</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>2733</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 79249, Column 44: cvc-type.3.1.3: The value &apos;&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>5020570216699</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>3209</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 93047, Column 52: cvc-maxLength-valid: Value &apos;B000P56XSSB004S6L04CB00BLMU24KB0&apos; with length = &apos;32&apos; is not facet-valid with respect to maxLength &apos;16&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>0883028262656</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>3209</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 93047, Column 52: cvc-type.3.1.3: The value &apos;B000P56XSSB004S6L04CB00BLMU24KB0&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>0883028262656</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>3221</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 93401, Column 44: cvc-minLength-valid: Value &apos;&apos; with length = &apos;0&apos; is not facet-valid with respect to minLength &apos;1&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8712364573244</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>3221</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 93401, Column 44: cvc-type.3.1.3: The value &apos;&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8712364573244</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>3726</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 108040, Column 40: cvc-maxLength-valid: Value &apos;B004HZ8ZG0B004JUBRIQ&apos; with length = &apos;20&apos; is not facet-valid with respect to maxLength &apos;16&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558588237</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>3726</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 108040, Column 40: cvc-type.3.1.3: The value &apos;B004HZ8ZG0B004JUBRIQ&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558588237</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>4013</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 116369, Column 44: cvc-minLength-valid: Value &apos;&apos; with length = &apos;0&apos; is not facet-valid with respect to minLength &apos;1&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8712364622843</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>4013</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 116369, Column 44: cvc-type.3.1.3: The value &apos;&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8712364622843</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>4462</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 129390, Column 44: cvc-minLength-valid: Value &apos;&apos; with length = &apos;0&apos; is not facet-valid with respect to minLength &apos;1&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558135608</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>4462</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 129390, Column 44: cvc-type.3.1.3: The value &apos;&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558135608</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>4537</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 131565, Column 637: cvc-maxLength-valid: Value &apos;Abito da skull girl&lt;BR&gt;l costume per bambina da skull girl ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito con la fascia per capelli. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da skull girl ? di materiale sintetico con grafica bianca e gonna nera di tulle e orlo fucsia. ? abbinata la fascia per capelli in materiale sintetico con fiocco nero a pois bianchi.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 10-12 anni ALTEZZA 142-148 CM&apos; with length = &apos;593&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077825327</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>4537</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 131565, Column 637: cvc-type.3.1.3: The value &apos;Abito da skull girl&lt;BR&gt;l costume per bambina da skull girl ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito con la fascia per capelli. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da skull girl ? di materiale sintetico con grafica bianca e gonna nera di tulle e orlo fucsia. ? abbinata la fascia per capelli in materiale sintetico con fiocco nero a pois bianchi.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 10-12 anni ALTEZZA 142-148 CM&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077825327</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>4538</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 131594, Column 599: cvc-maxLength-valid: Value &apos;Abito sposa cadavere&lt;BR&gt;l costume per bambina da infermiera zombie ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione sono presenti il vestito e il copricapo. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da sposa cadavere ? di materiale sintetico bianco e nero con la gonna di tulle nera, abbinato al velo di tulle degli stessi colori . Le calze e il mazzo di rose nere possono essere acquistate separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 5-6 anni ALTEZZA 110-115 CM&apos; with length = &apos;555&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077825365</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>4538</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 131594, Column 599: cvc-type.3.1.3: The value &apos;Abito sposa cadavere&lt;BR&gt;l costume per bambina da infermiera zombie ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione sono presenti il vestito e il copricapo. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da sposa cadavere ? di materiale sintetico bianco e nero con la gonna di tulle nera, abbinato al velo di tulle degli stessi colori . Le calze e il mazzo di rose nere possono essere acquistate separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 5-6 anni ALTEZZA 110-115 CM&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077825365</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>4539</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 131623, Column 599: cvc-maxLength-valid: Value &apos;Abito sposa cadavere&lt;BR&gt;l costume per bambina da infermiera zombie ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione sono presenti il vestito e il copricapo. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da sposa cadavere ? di materiale sintetico bianco e nero con la gonna di tulle nera, abbinato al velo di tulle degli stessi colori . Le calze e il mazzo di rose nere possono essere acquistate separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 7-9 anni ALTEZZA 125-135 CM&apos; with length = &apos;555&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077825372</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>4539</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 131623, Column 599: cvc-type.3.1.3: The value &apos;Abito sposa cadavere&lt;BR&gt;l costume per bambina da infermiera zombie ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione sono presenti il vestito e il copricapo. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da sposa cadavere ? di materiale sintetico bianco e nero con la gonna di tulle nera, abbinato al velo di tulle degli stessi colori . Le calze e il mazzo di rose nere possono essere acquistate separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 7-9 anni ALTEZZA 125-135 CM&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077825372</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>4540</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 131652, Column 601: cvc-maxLength-valid: Value &apos;Abito sposa cadavere&lt;BR&gt;l costume per bambina da infermiera zombie ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione sono presenti il vestito e il copricapo. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da sposa cadavere ? di materiale sintetico bianco e nero con la gonna di tulle nera, abbinato al velo di tulle degli stessi colori . Le calze e il mazzo di rose nere possono essere acquistate separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 10-12 anni ALTEZZA 142-148 CM&apos; with length = &apos;557&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077825389</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>4540</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 131652, Column 601: cvc-type.3.1.3: The value &apos;Abito sposa cadavere&lt;BR&gt;l costume per bambina da infermiera zombie ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione sono presenti il vestito e il copricapo. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da sposa cadavere ? di materiale sintetico bianco e nero con la gonna di tulle nera, abbinato al velo di tulle degli stessi colori . Le calze e il mazzo di rose nere possono essere acquistate separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 10-12 anni ALTEZZA 142-148 CM&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077825389</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>4568</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 132464, Column 566: cvc-maxLength-valid: Value &apos;I costume da sposa cadavere ? adatto ad Halloweeen, cosplay e feste a tema!&lt;BR&gt;La  confezione comprende il vestito e il copricapo. Altri accessori non menzionati non sono compresi.&lt;BR&gt;L abito da bambina da sposa cadavere ? di tessuto sintetico bianco decorato da dei dettagli neri che richiamano dei punti di sutura. L abito ? stretto in vita da una cintura decorata con fiocco. Il copricapo ? costituito dal pettinino e il velo bianco. Il mazzo di rose nere ? venduto separatamente.&lt;br&gt;Taglia: 5-6 anni ALTEZZA 110-115 CM&apos; with length = &apos;522&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8435118281416</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>4568</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 132464, Column 566: cvc-type.3.1.3: The value &apos;I costume da sposa cadavere ? adatto ad Halloweeen, cosplay e feste a tema!&lt;BR&gt;La  confezione comprende il vestito e il copricapo. Altri accessori non menzionati non sono compresi.&lt;BR&gt;L abito da bambina da sposa cadavere ? di tessuto sintetico bianco decorato da dei dettagli neri che richiamano dei punti di sutura. L abito ? stretto in vita da una cintura decorata con fiocco. Il copricapo ? costituito dal pettinino e il velo bianco. Il mazzo di rose nere ? venduto separatamente.&lt;br&gt;Taglia: 5-6 anni ALTEZZA 110-115 CM&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8435118281416</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>4712</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 136634, Column 50: cvc-maxLength-valid: Value &apos;B0032T5K6KB002UB167SB002D2DVOU&apos; with length = &apos;30&apos; is not facet-valid with respect to maxLength &apos;16&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558538201</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>4712</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 136634, Column 50: cvc-type.3.1.3: The value &apos;B0032T5K6KB002UB167SB002D2DVOU&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558538201</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>4879</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 141483, Column 44: cvc-minLength-valid: Value &apos;&apos; with length = &apos;0&apos; is not facet-valid with respect to minLength &apos;1&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8435118282253</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>4879</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 141483, Column 44: cvc-type.3.1.3: The value &apos;&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8435118282253</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>4974</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 144232, Column 40: cvc-maxLength-valid: Value &apos;B00BIFLK2IB00OYUTAD0&apos; with length = &apos;20&apos; is not facet-valid with respect to maxLength &apos;16&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>0883028681259</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>4974</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 144232, Column 40: cvc-type.3.1.3: The value &apos;B00BIFLK2IB00OYUTAD0&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>0883028681259</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5016</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 145450, Column 40: cvc-maxLength-valid: Value &apos;B0035TZHUGB00BQL3V1W&apos; with length = &apos;20&apos; is not facet-valid with respect to maxLength &apos;16&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558368303</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5016</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 145450, Column 40: cvc-type.3.1.3: The value &apos;B0035TZHUGB00BQL3V1W&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558368303</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5032</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 145914, Column 40: cvc-maxLength-valid: Value &apos;B004BMJG1MB003464CRY&apos; with length = &apos;20&apos; is not facet-valid with respect to maxLength &apos;16&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558586684</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5032</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 145914, Column 40: cvc-type.3.1.3: The value &apos;B004BMJG1MB003464CRY&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558586684</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5091</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 147625, Column 40: cvc-maxLength-valid: Value &apos;B004TVLN1QB006ZTBY3M&apos; with length = &apos;20&apos; is not facet-valid with respect to maxLength &apos;16&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558771127</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5091</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 147625, Column 40: cvc-type.3.1.3: The value &apos;B004TVLN1QB006ZTBY3M&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558771127</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5092</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 147654, Column 40: cvc-maxLength-valid: Value &apos;B004J3W9GCB002W7D6K0&apos; with length = &apos;20&apos; is not facet-valid with respect to maxLength &apos;16&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558771134</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5092</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 147654, Column 40: cvc-type.3.1.3: The value &apos;B004J3W9GCB002W7D6K0&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558771134</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5113</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 148263, Column 40: cvc-maxLength-valid: Value &apos;B0035FJAQMB00C3BO7U8&apos; with length = &apos;20&apos; is not facet-valid with respect to maxLength &apos;16&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558439201</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5113</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 148263, Column 40: cvc-type.3.1.3: The value &apos;B0035FJAQMB00C3BO7U8&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558439201</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5191</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 150525, Column 40: cvc-maxLength-valid: Value &apos;B0042F1LXOB000V1SM3U&apos; with length = &apos;20&apos; is not facet-valid with respect to maxLength &apos;16&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558062638</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5191</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 150525, Column 40: cvc-type.3.1.3: The value &apos;B0042F1LXOB000V1SM3U&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558062638</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5193</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 150583, Column 50: cvc-maxLength-valid: Value &apos;B00BQKXWWGB001STKPWKB001SGYYM0&apos; with length = &apos;30&apos; is not facet-valid with respect to maxLength &apos;16&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558438600</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5193</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 150583, Column 50: cvc-type.3.1.3: The value &apos;B00BQKXWWGB001STKPWKB001SGYYM0&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558438600</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5194</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 150612, Column 40: cvc-maxLength-valid: Value &apos;B0050B03AGB00BQKYMKC&apos; with length = &apos;20&apos; is not facet-valid with respect to maxLength &apos;16&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558491308</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5194</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 150612, Column 40: cvc-type.3.1.3: The value &apos;B0050B03AGB00BQKYMKC&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558491308</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5274</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 152932, Column 40: cvc-maxLength-valid: Value &apos;B001EQXTLGB002MF5754&apos; with length = &apos;20&apos; is not facet-valid with respect to maxLength &apos;16&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558084104</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5274</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 152932, Column 40: cvc-type.3.1.3: The value &apos;B001EQXTLGB002MF5754&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558084104</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5279</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 153077, Column 40: cvc-maxLength-valid: Value &apos;B007TM6TNYB0015LRY8O&apos; with length = &apos;20&apos; is not facet-valid with respect to maxLength &apos;16&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558329809</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5279</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 153077, Column 40: cvc-type.3.1.3: The value &apos;B007TM6TNYB0015LRY8O&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558329809</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5313</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 154063, Column 40: cvc-maxLength-valid: Value &apos;B002KHQJROB001EQZAF4&apos; with length = &apos;20&apos; is not facet-valid with respect to maxLength &apos;16&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558085606</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5313</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 154063, Column 40: cvc-type.3.1.3: The value &apos;B002KHQJROB001EQZAF4&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558085606</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5317</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 154179, Column 40: cvc-maxLength-valid: Value &apos;B005OJIRWAB0048LZJSA&apos; with length = &apos;20&apos; is not facet-valid with respect to maxLength &apos;16&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558539703</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5317</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 154179, Column 40: cvc-type.3.1.3: The value &apos;B005OJIRWAB0048LZJSA&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558539703</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5318</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 154208, Column 40: cvc-maxLength-valid: Value &apos;B005OJIRWAB0048LZJSA&apos; with length = &apos;20&apos; is not facet-valid with respect to maxLength &apos;16&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558539703</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5318</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 154208, Column 40: cvc-type.3.1.3: The value &apos;B005OJIRWAB0048LZJSA&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558539703</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5777</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 167525, Column 594: cvc-maxLength-valid: Value &apos;Abito da bimba lupo&lt;BR&gt;l costume per bambina da lupo ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito con gambali, copricapo e guantini. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da lupetta ? di materiale sinteticocon gonna a fantasia scozzese rossa . ? abbinato il copricapo, i gambali e i guantini in pelo sintetico.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 5-6 anni ALTEZZA 110-115 CM&apos; with length = &apos;550&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077830499</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5777</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 167525, Column 594: cvc-type.3.1.3: The value &apos;Abito da bimba lupo&lt;BR&gt;l costume per bambina da lupo ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito con gambali, copricapo e guantini. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da lupetta ? di materiale sinteticocon gonna a fantasia scozzese rossa . ? abbinato il copricapo, i gambali e i guantini in pelo sintetico.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 5-6 anni ALTEZZA 110-115 CM&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077830499</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5778</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 167554, Column 596: cvc-maxLength-valid: Value &apos;Abito da bimba lupo&lt;BR&gt;l costume per bambina da lupo ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito con gambali, copricapo e guantini. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da lupetta ? di materiale sinteticocon gonna a fantasia scozzese rossa . ? abbinato il copricapo, i gambali e i guantini in pelo sintetico.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 10-12 anni ALTEZZA 142-148 CM&apos; with length = &apos;552&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077830512</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5778</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 167554, Column 596: cvc-type.3.1.3: The value &apos;Abito da bimba lupo&lt;BR&gt;l costume per bambina da lupo ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito con gambali, copricapo e guantini. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da lupetta ? di materiale sinteticocon gonna a fantasia scozzese rossa . ? abbinato il copricapo, i gambali e i guantini in pelo sintetico.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 10-12 anni ALTEZZA 142-148 CM&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077830512</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5782</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 167670, Column 582: cvc-maxLength-valid: Value &apos;Abito da pink kitty&lt;BR&gt;l costume per bambina da pink kitty ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito con cerchietto e coda. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da pink kitty ? di materiale sintetico con maniche e gonna di tulle fucsia. ? abbinato il cerchietto con orecchie da gatto e la coda.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 7-9 anni ALTEZZA 125-135 CM&apos; with length = &apos;538&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077831199</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5782</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 167670, Column 582: cvc-type.3.1.3: The value &apos;Abito da pink kitty&lt;BR&gt;l costume per bambina da pink kitty ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito con cerchietto e coda. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da pink kitty ? di materiale sintetico con maniche e gonna di tulle fucsia. ? abbinato il cerchietto con orecchie da gatto e la coda.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 7-9 anni ALTEZZA 125-135 CM&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077831199</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5802</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 168250, Column 581: cvc-maxLength-valid: Value &apos;Abito da lupetta&lt;BR&gt;l costume per bambina da lupetta ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito con gambali e copricapo. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da lupetta ? di materiale sintetico con maniche e gonna di tulle fucsia. ? abbinato il copricapo in pelo sintetico con orecchie da lupo.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 5-6 anni ALTEZZA 110-115 CM&apos; with length = &apos;537&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077830536</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5802</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 168250, Column 581: cvc-type.3.1.3: The value &apos;Abito da lupetta&lt;BR&gt;l costume per bambina da lupetta ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito con gambali e copricapo. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da lupetta ? di materiale sintetico con maniche e gonna di tulle fucsia. ? abbinato il copricapo in pelo sintetico con orecchie da lupo.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 5-6 anni ALTEZZA 110-115 CM&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077830536</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5803</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 168279, Column 581: cvc-maxLength-valid: Value &apos;Abito da lupetta&lt;BR&gt;l costume per bambina da lupetta ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito con gambali e copricapo. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da lupetta ? di materiale sintetico con maniche e gonna di tulle fucsia. ? abbinato il copricapo in pelo sintetico con orecchie da lupo.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 7-9 anni ALTEZZA 125-135 CM&apos; with length = &apos;537&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077830543</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5803</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 168279, Column 581: cvc-type.3.1.3: The value &apos;Abito da lupetta&lt;BR&gt;l costume per bambina da lupetta ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito con gambali e copricapo. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da lupetta ? di materiale sintetico con maniche e gonna di tulle fucsia. ? abbinato il copricapo in pelo sintetico con orecchie da lupo.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 7-9 anni ALTEZZA 125-135 CM&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077830543</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5903</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 171179, Column 582: cvc-maxLength-valid: Value &apos;Abito da pink kitty&lt;BR&gt;l costume per bambina da pink kitty ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito con cerchietto e coda. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da pink kitty ? di materiale sintetico con maniche e gonna di tulle fucsia. ? abbinato il cerchietto con orecchie da gatto e la coda.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 5-6 anni ALTEZZA 110-115 CM&apos; with length = &apos;538&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077831182</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>5903</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 171179, Column 582: cvc-type.3.1.3: The value &apos;Abito da pink kitty&lt;BR&gt;l costume per bambina da pink kitty ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito con cerchietto e coda. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da pink kitty ? di materiale sintetico con maniche e gonna di tulle fucsia. ? abbinato il cerchietto con orecchie da gatto e la coda.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 5-6 anni ALTEZZA 110-115 CM&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077831182</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>62</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 1790, Column 44: cvc-minLength-valid: Value &apos;&apos; with length = &apos;0&apos; is not facet-valid with respect to minLength &apos;1&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558008063</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>62</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 1790, Column 44: cvc-type.3.1.3: The value &apos;&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558008063</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>6424</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 186288, Column 44: cvc-minLength-valid: Value &apos;&apos; with length = &apos;0&apos; is not facet-valid with respect to minLength &apos;1&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077024720</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>6424</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 186288, Column 44: cvc-type.3.1.3: The value &apos;&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077024720</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>6699</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 194263, Column 44: cvc-minLength-valid: Value &apos;&apos; with length = &apos;0&apos; is not facet-valid with respect to minLength &apos;1&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077127087</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>6699</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 194263, Column 44: cvc-type.3.1.3: The value &apos;&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077127087</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>7205</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 208937, Column 44: cvc-minLength-valid: Value &apos;&apos; with length = &apos;0&apos; is not facet-valid with respect to minLength &apos;1&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077139318</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>7205</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 208937, Column 44: cvc-type.3.1.3: The value &apos;&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077139318</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>7268</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 210764, Column 44: cvc-minLength-valid: Value &apos;&apos; with length = &apos;0&apos; is not facet-valid with respect to minLength &apos;1&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077132173</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>7268</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 210764, Column 44: cvc-type.3.1.3: The value &apos;&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077132173</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>7345</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 212997, Column 44: cvc-minLength-valid: Value &apos;&apos; with length = &apos;0&apos; is not facet-valid with respect to minLength &apos;1&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077161036</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>7345</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 212997, Column 44: cvc-type.3.1.3: The value &apos;&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077161036</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>743</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 21533, Column 40: cvc-maxLength-valid: Value &apos;B006NU18A2B004I67I16&apos; with length = &apos;20&apos; is not facet-valid with respect to maxLength &apos;16&apos; for type &apos;#AnonType_ValueStandardProductID&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558577330</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>743</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 21533, Column 40: cvc-type.3.1.3: The value &apos;B006NU18A2B004I67I16&apos; of element &apos;Value&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558577330</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>7585</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 219957, Column 590: cvc-maxLength-valid: Value &apos;Abito da bimba lupo&lt;BR&gt;l costume per bambina da lupo ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito con gambali, copricapo e guantini. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da lupetta ? di materiale sinteticocon gonna a fantasia scozzese rossa . ? abbinato il copricapo, i gambali e i guantini in pelo sintetico.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 3-4 anni ALTEZZA 95-105&apos; with length = &apos;546&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077830482</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>7585</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 219957, Column 590: cvc-type.3.1.3: The value &apos;Abito da bimba lupo&lt;BR&gt;l costume per bambina da lupo ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito con gambali, copricapo e guantini. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da lupetta ? di materiale sinteticocon gonna a fantasia scozzese rossa . ? abbinato il copricapo, i gambali e i guantini in pelo sintetico.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 3-4 anni ALTEZZA 95-105&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077830482</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>7586</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 219986, Column 594: cvc-maxLength-valid: Value &apos;Abito da bimba lupo&lt;BR&gt;l costume per bambina da lupo ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito con gambali, copricapo e guantini. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da lupetta ? di materiale sinteticocon gonna a fantasia scozzese rossa . ? abbinato il copricapo, i gambali e i guantini in pelo sintetico.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 7-9 anni ALTEZZA 125-135 CM&apos; with length = &apos;550&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077830505</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>7586</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 219986, Column 594: cvc-type.3.1.3: The value &apos;Abito da bimba lupo&lt;BR&gt;l costume per bambina da lupo ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito con gambali, copricapo e guantini. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da lupetta ? di materiale sinteticocon gonna a fantasia scozzese rossa . ? abbinato il copricapo, i gambali e i guantini in pelo sintetico.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 7-9 anni ALTEZZA 125-135 CM&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077830505</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>7587</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 220015, Column 577: cvc-maxLength-valid: Value &apos;Abito da lupetta&lt;BR&gt;l costume per bambina da lupetta ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito con gambali e copricapo. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da lupetta ? di materiale sintetico con maniche e gonna di tulle fucsia. ? abbinato il copricapo in pelo sintetico con orecchie da lupo.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 3-4 anni ALTEZZA 95-105&apos; with length = &apos;533&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077830529</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>7587</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 220015, Column 577: cvc-type.3.1.3: The value &apos;Abito da lupetta&lt;BR&gt;l costume per bambina da lupetta ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito con gambali e copricapo. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da lupetta ? di materiale sintetico con maniche e gonna di tulle fucsia. ? abbinato il copricapo in pelo sintetico con orecchie da lupo.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 3-4 anni ALTEZZA 95-105&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077830529</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>7593</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 220189, Column 578: cvc-maxLength-valid: Value &apos;Abito da pink kitty&lt;BR&gt;l costume per bambina da pink kitty ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito con cerchietto e coda. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da pink kitty ? di materiale sintetico con maniche e gonna di tulle fucsia. ? abbinato il cerchietto con orecchie da gatto e la coda.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 3-4 anni ALTEZZA 95-105&apos; with length = &apos;534&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077831175</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>7593</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 220189, Column 578: cvc-type.3.1.3: The value &apos;Abito da pink kitty&lt;BR&gt;l costume per bambina da pink kitty ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito con cerchietto e coda. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da pink kitty ? di materiale sintetico con maniche e gonna di tulle fucsia. ? abbinato il cerchietto con orecchie da gatto e la coda.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 3-4 anni ALTEZZA 95-105&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077831175</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>7620</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 220972, Column 601: cvc-maxLength-valid: Value &apos;Abito da joker arlecchino&lt;BR&gt;l costume per bambina da joker arlecchino ? adatto ad Halloween, Carnevale, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito con cappello. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da joker arlecchino ? di materiale sintetico nero e bianco con chiusura zip sul retro . ? abbinato il copricapo bianco e nero da giullare.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 7-9 anni ALTEZZA 125-135 CM&apos; with length = &apos;557&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077859209</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>7620</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 220972, Column 601: cvc-type.3.1.3: The value &apos;Abito da joker arlecchino&lt;BR&gt;l costume per bambina da joker arlecchino ? adatto ad Halloween, Carnevale, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito con cappello. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da joker arlecchino ? di materiale sintetico nero e bianco con chiusura zip sul retro . ? abbinato il copricapo bianco e nero da giullare.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 7-9 anni ALTEZZA 125-135 CM&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077859209</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>7621</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 221001, Column 603: cvc-maxLength-valid: Value &apos;Abito da joker arlecchino&lt;BR&gt;l costume per bambina da joker arlecchino ? adatto ad Halloween, Carnevale, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito con cappello. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da joker arlecchino ? di materiale sintetico nero e bianco con chiusura zip sul retro . ? abbinato il copricapo bianco e nero da giullare.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 10-12 anni ALTEZZA 142-148 CM&apos; with length = &apos;559&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077859216</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>7621</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 221001, Column 603: cvc-type.3.1.3: The value &apos;Abito da joker arlecchino&lt;BR&gt;l costume per bambina da joker arlecchino ? adatto ad Halloween, Carnevale, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito con cappello. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da joker arlecchino ? di materiale sintetico nero e bianco con chiusura zip sul retro . ? abbinato il copricapo bianco e nero da giullare.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 10-12 anni ALTEZZA 142-148 CM&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077859216</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8376</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 242896, Column 572: cvc-maxLength-valid: Value &apos;Abito infermiera zombie&lt;BR&gt;l costume per bambina da infermiera zombie ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione sono presenti il vestito, i guanti senza dita e il copricapo. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da infermiera zombie ? di materiale sintetico bianco macchiato di rosso per richiamare delle macchie di sangue. I guanti e il copricapo riportano la stessa decorazione.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 8-10 ANNI 140H&apos; with length = &apos;528&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558075072</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8376</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 242896, Column 572: cvc-type.3.1.3: The value &apos;Abito infermiera zombie&lt;BR&gt;l costume per bambina da infermiera zombie ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione sono presenti il vestito, i guanti senza dita e il copricapo. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da infermiera zombie ? di materiale sintetico bianco macchiato di rosso per richiamare delle macchie di sangue. I guanti e il copricapo riportano la stessa decorazione.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 8-10 ANNI 140H&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558075072</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8393</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 243389, Column 613: cvc-maxLength-valid: Value &apos;Abito infermiera zombie&lt;BR&gt;l costume per donna da infermiera zombie ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione sono presenti il vestito, i guanti senza dita e il copricapo. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da infermiera zombie ? di materiale sintetico bianco macchiato di rosso per richiamare delle macchie di sangue. I guanti e il copricapo riportano la stessa decorazione. Le calze possono essere acquistate separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: S 42-44&apos; with length = &apos;569&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558075010</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8393</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 243389, Column 613: cvc-type.3.1.3: The value &apos;Abito infermiera zombie&lt;BR&gt;l costume per donna da infermiera zombie ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione sono presenti il vestito, i guanti senza dita e il copricapo. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da infermiera zombie ? di materiale sintetico bianco macchiato di rosso per richiamare delle macchie di sangue. I guanti e il copricapo riportano la stessa decorazione. Le calze possono essere acquistate separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: S 42-44&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558075010</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8394</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 243418, Column 614: cvc-maxLength-valid: Value &apos;Abito infermiera zombie&lt;BR&gt;l costume per donna da infermiera zombie ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione sono presenti il vestito, i guanti senza dita e il copricapo. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da infermiera zombie ? di materiale sintetico bianco macchiato di rosso per richiamare delle macchie di sangue. I guanti e il copricapo riportano la stessa decorazione. Le calze possono essere acquistate separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: XS 38-40&apos; with length = &apos;570&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558075096</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8394</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 243418, Column 614: cvc-type.3.1.3: The value &apos;Abito infermiera zombie&lt;BR&gt;l costume per donna da infermiera zombie ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione sono presenti il vestito, i guanti senza dita e il copricapo. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da infermiera zombie ? di materiale sintetico bianco macchiato di rosso per richiamare delle macchie di sangue. I guanti e il copricapo riportano la stessa decorazione. Le calze possono essere acquistate separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: XS 38-40&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558075096</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8400</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 243592, Column 573: cvc-maxLength-valid: Value &apos;Abito infermiera zombie&lt;BR&gt;l costume per bambina da infermiera zombie ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione sono presenti il vestito, i guanti senza dita e il copricapo. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da infermiera zombie ? di materiale sintetico bianco macchiato di rosso per richiamare delle macchie di sangue. I guanti e il copricapo riportano la stessa decorazione.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 11-13 ANNI 158H&apos; with length = &apos;529&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558075089</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8400</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 243592, Column 573: cvc-type.3.1.3: The value &apos;Abito infermiera zombie&lt;BR&gt;l costume per bambina da infermiera zombie ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione sono presenti il vestito, i guanti senza dita e il copricapo. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da infermiera zombie ? di materiale sintetico bianco macchiato di rosso per richiamare delle macchie di sangue. I guanti e il copricapo riportano la stessa decorazione.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 11-13 ANNI 158H&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558075089</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8407</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 243795, Column 571: cvc-maxLength-valid: Value &apos;Abito da strega&lt;BR&gt;l costume per bambina da strega ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito e il copricapo. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da strega ? di materiale sintetico blu, verde, fucsia e nero con chiusura zip sul retro e gonna di tulle fucsia. ? abbinato al cappello da strega nero.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 2-3 ANNI 104H&apos; with length = &apos;527&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558074709</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8407</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 243795, Column 571: cvc-type.3.1.3: The value &apos;Abito da strega&lt;BR&gt;l costume per bambina da strega ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito e il copricapo. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da strega ? di materiale sintetico blu, verde, fucsia e nero con chiusura zip sul retro e gonna di tulle fucsia. ? abbinato al cappello da strega nero.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 2-3 ANNI 104H&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558074709</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8408</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 243824, Column 571: cvc-maxLength-valid: Value &apos;Abito da strega&lt;BR&gt;l costume per bambina da strega ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito e il copricapo. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da strega ? di materiale sintetico blu, verde, fucsia e nero con chiusura zip sul retro e gonna di tulle fucsia. ? abbinato al cappello da strega nero.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 4-5 ANNI 116H&apos; with length = &apos;527&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558074754</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8408</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 243824, Column 571: cvc-type.3.1.3: The value &apos;Abito da strega&lt;BR&gt;l costume per bambina da strega ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito e il copricapo. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da strega ? di materiale sintetico blu, verde, fucsia e nero con chiusura zip sul retro e gonna di tulle fucsia. ? abbinato al cappello da strega nero.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 4-5 ANNI 116H&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558074754</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8409</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 243853, Column 571: cvc-maxLength-valid: Value &apos;Abito da strega&lt;BR&gt;l costume per bambina da strega ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito e il copricapo. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da strega ? di materiale sintetico blu, verde, fucsia e nero con chiusura zip sul retro e gonna di tulle fucsia. ? abbinato al cappello da strega nero.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 5-7 ANNI 128H&apos; with length = &apos;527&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558074761</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8409</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 243853, Column 571: cvc-type.3.1.3: The value &apos;Abito da strega&lt;BR&gt;l costume per bambina da strega ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito e il copricapo. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da strega ? di materiale sintetico blu, verde, fucsia e nero con chiusura zip sul retro e gonna di tulle fucsia. ? abbinato al cappello da strega nero.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 5-7 ANNI 128H&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558074761</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8539</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 247623, Column 565: cvc-maxLength-valid: Value &apos;Abito da principessa zombie&lt;BR&gt;l costume per bambina da principessa zombie ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da principessa zombie ? di materiale sintetico azzurro con chiusura zip sul retro e gonna a balze e decori di pizzo nero. &lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 7-9 anni ALTEZZA 125-135 CM&apos; with length = &apos;521&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077874202</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8539</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 247623, Column 565: cvc-type.3.1.3: The value &apos;Abito da principessa zombie&lt;BR&gt;l costume per bambina da principessa zombie ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da principessa zombie ? di materiale sintetico azzurro con chiusura zip sul retro e gonna a balze e decori di pizzo nero. &lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 7-9 anni ALTEZZA 125-135 CM&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077874202</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8546</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 247826, Column 565: cvc-maxLength-valid: Value &apos;Abito da principessa zombie&lt;BR&gt;l costume per bambina da principessa zombie ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da principessa zombie ? di materiale sintetico azzurro con chiusura zip sul retro e gonna a balze e decori di pizzo nero. &lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 5-6 anni ALTEZZA 110-115 CM&apos; with length = &apos;521&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077874196</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8546</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 247826, Column 565: cvc-type.3.1.3: The value &apos;Abito da principessa zombie&lt;BR&gt;l costume per bambina da principessa zombie ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da principessa zombie ? di materiale sintetico azzurro con chiusura zip sul retro e gonna a balze e decori di pizzo nero. &lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 5-6 anni ALTEZZA 110-115 CM&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077874196</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8559</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 248203, Column 603: cvc-maxLength-valid: Value &apos;Abito da miss scheletro&lt;BR&gt;l costume per bambina da miss scheletro ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito e il diadema. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da miss scheletro ? di materiale sintetico nero a righe con gonna di tulle abbinata. Il copricapo ? costituito da un cerchietto con la sagoma di uno scheletro.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 3-4 anni ALTEZZA 95-105&apos; with length = &apos;559&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077873489</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8559</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 248203, Column 603: cvc-type.3.1.3: The value &apos;Abito da miss scheletro&lt;BR&gt;l costume per bambina da miss scheletro ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito e il diadema. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da miss scheletro ? di materiale sintetico nero a righe con gonna di tulle abbinata. Il copricapo ? costituito da un cerchietto con la sagoma di uno scheletro.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 3-4 anni ALTEZZA 95-105&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077873489</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8637</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 250465, Column 616: cvc-maxLength-valid: Value &apos;Abito da clown killer&lt;BR&gt;l costume per bambina da clown killer ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito, il collo e il copricapo. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da clown killer ? di materiale sintetico nero con chiusura zip sul retro e gonna di tulle gialla, rossa, blu e nera. ? abbinato al cappello a cono rosso e nero.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 5-6 anni ALTEZZA 110-115 CM&apos; with length = &apos;572&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077857861</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8637</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 250465, Column 616: cvc-type.3.1.3: The value &apos;Abito da clown killer&lt;BR&gt;l costume per bambina da clown killer ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito, il collo e il copricapo. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da clown killer ? di materiale sintetico nero con chiusura zip sul retro e gonna di tulle gialla, rossa, blu e nera. ? abbinato al cappello a cono rosso e nero.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 5-6 anni ALTEZZA 110-115 CM&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077857861</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8666</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 251306, Column 616: cvc-maxLength-valid: Value &apos;Abito da clown killer&lt;BR&gt;l costume per bambina da clown killer ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito, il collo e il copricapo. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da clown killer ? di materiale sintetico nero con chiusura zip sul retro e gonna di tulle gialla, rossa, blu e nera. ? abbinato al cappello a cono rosso e nero.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 7-9 anni ALTEZZA 125-135 CM&apos; with length = &apos;572&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077857878</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8666</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 251306, Column 616: cvc-type.3.1.3: The value &apos;Abito da clown killer&lt;BR&gt;l costume per bambina da clown killer ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito, il collo e il copricapo. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da clown killer ? di materiale sintetico nero con chiusura zip sul retro e gonna di tulle gialla, rossa, blu e nera. ? abbinato al cappello a cono rosso e nero.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 7-9 anni ALTEZZA 125-135 CM&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077857878</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8841</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 256381, Column 44: cvc-minLength-valid: Value &apos;&apos; with length = &apos;0&apos; is not facet-valid with respect to minLength &apos;1&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8712364530773</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8841</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 256381, Column 44: cvc-type.3.1.3: The value &apos;&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8712364530773</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>889</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 25773, Column 44: cvc-minLength-valid: Value &apos;&apos; with length = &apos;0&apos; is not facet-valid with respect to minLength &apos;1&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558667703</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>889</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 25773, Column 44: cvc-type.3.1.3: The value &apos;&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558667703</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>890</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 25802, Column 44: cvc-minLength-valid: Value &apos;&apos; with length = &apos;0&apos; is not facet-valid with respect to minLength &apos;1&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558667703</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>890</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 25802, Column 44: cvc-type.3.1.3: The value &apos;&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558667703</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8964</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 259948, Column 601: cvc-maxLength-valid: Value &apos;Abito da joker arlecchino&lt;BR&gt;l costume per bambina da joker arlecchino ? adatto ad Halloween, Carnevale, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito con cappello. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da joker arlecchino ? di materiale sintetico nero e bianco con chiusura zip sul retro . ? abbinato il copricapo bianco e nero da giullare.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 5-6 anni ALTEZZA 110-115 CM&apos; with length = &apos;557&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077859193</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8964</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 259948, Column 601: cvc-type.3.1.3: The value &apos;Abito da joker arlecchino&lt;BR&gt;l costume per bambina da joker arlecchino ? adatto ad Halloween, Carnevale, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito con cappello. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da joker arlecchino ? di materiale sintetico nero e bianco con chiusura zip sul retro . ? abbinato il copricapo bianco e nero da giullare.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 5-6 anni ALTEZZA 110-115 CM&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077859193</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8968</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 260064, Column 618: cvc-maxLength-valid: Value &apos;Abito da clown killer&lt;BR&gt;l costume per bambina da clown killer ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito, il collo e il copricapo. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da clown killer ? di materiale sintetico nero con chiusura zip sul retro e gonna di tulle gialla, rossa, blu e nera. ? abbinato al cappello a cono rosso e nero.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 10-12 anni ALTEZZA 142-148 CM&apos; with length = &apos;574&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077857885</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8968</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 260064, Column 618: cvc-type.3.1.3: The value &apos;Abito da clown killer&lt;BR&gt;l costume per bambina da clown killer ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito, il collo e il copricapo. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da clown killer ? di materiale sintetico nero con chiusura zip sul retro e gonna di tulle gialla, rossa, blu e nera. ? abbinato al cappello a cono rosso e nero.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 10-12 anni ALTEZZA 142-148 CM&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077857885</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8974</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 260238, Column 567: cvc-maxLength-valid: Value &apos;Abito da principessa zombie&lt;BR&gt;l costume per bambina da principessa zombie ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da principessa zombie ? di materiale sintetico azzurro con chiusura zip sul retro e gonna a balze e decori di pizzo nero. &lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 10-12 anni ALTEZZA 142-148 CM&apos; with length = &apos;523&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077874219</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8974</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 260238, Column 567: cvc-type.3.1.3: The value &apos;Abito da principessa zombie&lt;BR&gt;l costume per bambina da principessa zombie ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da principessa zombie ? di materiale sintetico azzurro con chiusura zip sul retro e gonna a balze e decori di pizzo nero. &lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 10-12 anni ALTEZZA 142-148 CM&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077874219</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8975</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 260267, Column 561: cvc-maxLength-valid: Value &apos;Abito da principessa zombie&lt;BR&gt;l costume per bambina da principessa zombie ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da principessa zombie ? di materiale sintetico azzurro con chiusura zip sul retro e gonna a balze e decori di pizzo nero. &lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 3-4 anni ALTEZZA 95-105&apos; with length = &apos;517&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077874189</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>8975</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 260267, Column 561: cvc-type.3.1.3: The value &apos;Abito da principessa zombie&lt;BR&gt;l costume per bambina da principessa zombie ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da principessa zombie ? di materiale sintetico azzurro con chiusura zip sul retro e gonna a balze e decori di pizzo nero. &lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 3-4 anni ALTEZZA 95-105&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077874189</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>9395</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 272447, Column 560: cvc-maxLength-valid: Value &apos;COSTUME PIGIAMA GATTO NERO . La confezione comprende:  tuta con cappuccio . Sono esclusi gli accessori non menzionati.&lt;BR&gt;Costume pigiama da gatto nero, perfetto per festeggiare il Carnevale, Halloween, partecipare a feste a tema e fare cosplay!&lt;BR&gt;La confezione comprende una tuta di panno con cappuccio, gli accessori non menzionati non sono presenti all interno della confezione.&lt;BR&gt;Il vestito da gatto ? in panno e ha una chiusura frontale con bottoni, comoda da indossare.&lt;br&gt;Taglia: 5-6 anni ALTEZZA 110-115 CM&apos; with length = &apos;516&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077876879</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>9395</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 272447, Column 560: cvc-type.3.1.3: The value &apos;COSTUME PIGIAMA GATTO NERO . La confezione comprende:  tuta con cappuccio . Sono esclusi gli accessori non menzionati.&lt;BR&gt;Costume pigiama da gatto nero, perfetto per festeggiare il Carnevale, Halloween, partecipare a feste a tema e fare cosplay!&lt;BR&gt;La confezione comprende una tuta di panno con cappuccio, gli accessori non menzionati non sono presenti all interno della confezione.&lt;BR&gt;Il vestito da gatto ? in panno e ha una chiusura frontale con bottoni, comoda da indossare.&lt;br&gt;Taglia: 5-6 anni ALTEZZA 110-115 CM&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077876879</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>9424</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 273288, Column 579: cvc-maxLength-valid: Value &apos;Abito da gotica blu&lt;BR&gt;l costume per bambina da gotica blu ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito con cintura e cravatta. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da gotica blu ? di materiale sintetico a fantasia scozzese bianca, nera e blu. Sono abbinate la cravatta e la cintura bianca in materiale sintetico.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 4-6 anni&apos; with length = &apos;535&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8435118271929</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>9424</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 273288, Column 579: cvc-type.3.1.3: The value &apos;Abito da gotica blu&lt;BR&gt;l costume per bambina da gotica blu ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito con cintura e cravatta. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da gotica blu ? di materiale sintetico a fantasia scozzese bianca, nera e blu. Sono abbinate la cravatta e la cintura bianca in materiale sintetico.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 4-6 anni&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8435118271929</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>9437</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 273665, Column 600: cvc-maxLength-valid: Value &apos;Abito da gotica blu&lt;BR&gt;l costume per bambina da gotica blu ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito con cintura e cravatta. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da gotica blu ? di materiale sintetico a fantasia scozzese bianca, nera e blu. Sono abbinate la cravatta e la cintura bianca in materiale sintetico.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 10-12 anni ALTEZZA 142-148 CM&apos; with length = &apos;556&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8435118271943</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>9437</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 273665, Column 600: cvc-type.3.1.3: The value &apos;Abito da gotica blu&lt;BR&gt;l costume per bambina da gotica blu ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito con cintura e cravatta. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da gotica blu ? di materiale sintetico a fantasia scozzese bianca, nera e blu. Sono abbinate la cravatta e la cintura bianca in materiale sintetico.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 10-12 anni ALTEZZA 142-148 CM&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8435118271943</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>9443</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 273839, Column 598: cvc-maxLength-valid: Value &apos;Abito da gotica blu&lt;BR&gt;l costume per bambina da gotica blu ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito con cintura e cravatta. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da gotica blu ? di materiale sintetico a fantasia scozzese bianca, nera e blu. Sono abbinate la cravatta e la cintura bianca in materiale sintetico.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 7-9 anni ALTEZZA 125-135 CM&apos; with length = &apos;554&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8435118271936</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>9443</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 273839, Column 598: cvc-type.3.1.3: The value &apos;Abito da gotica blu&lt;BR&gt;l costume per bambina da gotica blu ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito con cintura e cravatta. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da gotica blu ? di materiale sintetico a fantasia scozzese bianca, nera e blu. Sono abbinate la cravatta e la cintura bianca in materiale sintetico.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 7-9 anni ALTEZZA 125-135 CM&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8435118271936</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>9446</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 273926, Column 577: cvc-maxLength-valid: Value &apos;Abito da poliziotta zombie&lt;BR&gt;l costume per bambina da poliziotta zombie ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito e il cappello. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da poliziotta zombie ? composto da una camicetta bianca e una gonna blu con cintura. ? abbinato un cappello da poliziotto.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 5-6 anni ALTEZZA 110-115 CM&apos; with length = &apos;533&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077877036</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>9446</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 273926, Column 577: cvc-type.3.1.3: The value &apos;Abito da poliziotta zombie&lt;BR&gt;l costume per bambina da poliziotta zombie ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito e il cappello. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da poliziotta zombie ? composto da una camicetta bianca e una gonna blu con cintura. ? abbinato un cappello da poliziotto.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 5-6 anni ALTEZZA 110-115 CM&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077877036</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>9449</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 274013, Column 577: cvc-maxLength-valid: Value &apos;Abito da poliziotta zombie&lt;BR&gt;l costume per bambina da poliziotta zombie ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito e il cappello. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da poliziotta zombie ? composto da una camicetta bianca e una gonna blu con cintura. ? abbinato un cappello da poliziotto.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 7-9 anni ALTEZZA 125-135 CM&apos; with length = &apos;533&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077877043</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>9449</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 274013, Column 577: cvc-type.3.1.3: The value &apos;Abito da poliziotta zombie&lt;BR&gt;l costume per bambina da poliziotta zombie ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito e il cappello. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da poliziotta zombie ? composto da una camicetta bianca e una gonna blu con cintura. ? abbinato un cappello da poliziotto.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 7-9 anni ALTEZZA 125-135 CM&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077877043</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>9455</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 274187, Column 579: cvc-maxLength-valid: Value &apos;Abito da poliziotta zombie&lt;BR&gt;l costume per bambina da poliziotta zombie ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito e il cappello. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da poliziotta zombie ? composto da una camicetta bianca e una gonna blu con cintura. ? abbinato un cappello da poliziotto.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 10-12 anni ALTEZZA 142-148 CM&apos; with length = &apos;535&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077877050</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>9455</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 274187, Column 579: cvc-type.3.1.3: The value &apos;Abito da poliziotta zombie&lt;BR&gt;l costume per bambina da poliziotta zombie ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione ? presente il vestito e il cappello. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;Il vestito da poliziotta zombie ? composto da una camicetta bianca e una gonna blu con cintura. ? abbinato un cappello da poliziotto.&lt;BR&gt;Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 10-12 anni ALTEZZA 142-148 CM&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8434077877050</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>9571</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 277551, Column 611: cvc-maxLength-valid: Value &apos;Abito scheletro&lt;BR&gt;l costume per bambina da scheletro ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione sono presenti la maglietta, il tut? e il cerchietto con i teschi. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;La parte superiore ? di materiale sintetico nero con la grafica delle ossa, abbinato alla gonna di tulle nera . Nella confezione ? anche contenuto un cerchietto con i teschi. Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 3-4 ANNI 110H&apos; with length = &apos;567&apos; is not facet-valid with respect to maxLength &apos;500&apos; for type &apos;LongStringNotNull&apos;.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558965373</SKU>
+				</AdditionalInfo>
+			</Result>
+			<Result>
+				<MessageID>9571</MessageID>
+				<ResultCode>Error</ResultCode>
+				<ResultMessageCode>5000</ResultMessageCode>
+				<ResultDescription>XML Parsing Error at Line 277551, Column 611: cvc-type.3.1.3: The value &apos;Abito scheletro&lt;BR&gt;l costume per bambina da scheletro ? adatto ad Halloween, feste a tema e cosplay!&lt;BR&gt;Nella confezione sono presenti la maglietta, il tut? e il cerchietto con i teschi. Ulteriori accessori non menzionati non sono compresi.&lt;BR&gt;La parte superiore ? di materiale sintetico nero con la grafica delle ossa, abbinato alla gonna di tulle nera . Nella confezione ? anche contenuto un cerchietto con i teschi. Altri accessori possono essere acquistati separatamente.&lt;BR&gt;&lt;BR&gt;Abito, Travestimento, Carnevale, Comico, Halloween, Cosplay&lt;br&gt;Taglia: 3-4 ANNI 110H&apos; of element &apos;BulletPoint&apos; is not valid.</ResultDescription>
+				<AdditionalInfo>
+					<SKU>8003558965373</SKU>
+				</AdditionalInfo>
+			</Result>
+		</ProcessingReport>
+	</Message>
+</AmazonEnvelope>

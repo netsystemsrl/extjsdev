@@ -1,0 +1,15 @@
+NomeField		,Len,Align	,Requested	,CodeValue	,SampleValue
+TIPOREC			,02	,L		,Y		 	,'23'		,PRODUZIONE SCARICO SEMILAVORATO
+TERZISTA		,13	,L		,Y			,			,0000000001234 TERZISTA
+PRODID			,13 ,L		,Y			,			,0000000001234 ID PRODUZIONE
+PRODDATA		,10 ,L		,Y			,			,2020-02-02
+CODICE			,13 ,L 		,Y  		,  			,Codice art SEMILAVORATO
+QTA				,15 ,L  	,Y  		,			,LOTTOASSEGNATO
+PESO			,15 ,L  	,Y  		,			,2020-02-02
+PRODLOTTO		,20 ,L  	,Y  		,			,xxxNR
+PRODLOTTODATA	,10 ,L  	,Y  		,			,2020-02-02
+SENDDATA		,10 ,L  	,Y  		,			,2020-02-02
+SENDTIME		,08 ,L  	,Y  		,			,18.35.17
+SEGNO			,01 ,L  	,Y  		,			,+ -
+
+

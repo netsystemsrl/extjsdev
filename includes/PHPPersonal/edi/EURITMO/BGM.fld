@@ -1,0 +1,13 @@
+NomeField		,Len,Align	,Requested	,CodeValue											,SampleValue
+TIPOREC			,03	,L		,Y		 	,'BGM'												,BGM
+ID-EDI-MITT-1	,35	,L		,Y			,													,00193200268
+ID-EDI-MITT-2	,04	,L		,Y			,(strlen($ID-EDI-MITT-1) == 11 ? 'ZZ' : 'EN')   	,ZZ
+ID-EDI-MITT-3	,14	,L		,N			,													,	
+ID-EDI-DEST-1	,35	,L 		,Y			,													,900018
+ID-EDI-DEST-2	,04	,L		,Y			,(strlen($ID-EDI-DEST-1) == 11 ? 'ZZ' : 'EN') 		,ZZ
+ID-EDI-DEST-3	,14	,L		,Y			,													,	
+TIPODOC			,06	,L		,Y			,													,DESADV
+NUMDOC			,35	,L		,Y			,													,0000193
+DATADOC			,08	,L		,Y			,													,20181024
+ORADOC			,04	,L		,N			,													,
+VERSIONE		,08	,L		,N			,													,

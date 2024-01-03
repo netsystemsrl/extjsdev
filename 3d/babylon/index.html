@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Babylon Template</title>
+
+        <style>
+            html, body {
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            #renderCanvas {
+                width: 100%;
+                height: 100%;
+                touch-action: none;
+            }
+        </style>
+
+        <script src="https://cdn.babylonjs.com/babylon.js"></script>
+        <script src="https://preview.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+        <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
+    </head>
+
+   <body>
+
+    <canvas id="renderCanvas" touch-action="none"></canvas> //touch-action="none" for best results from PEP
+
+    <script>
+        var canvas = document.getElementById("renderCanvas"); // Get the canvas element 
+        var engine = new BABYLON.Engine(canvas, true); // Generate the BABYLON 3D engine
+
+        /******* Add the create scene function ******/
+        var createScene = function () {
+
+			// Create the scene space
+			var scene = new BABYLON.Scene(engine);
+
+			// show axis
+			  var showAxis = function(size) {
+				var makeTextPlane = function(text, color, size) {
+				var dynamicTexture = new BABYLON.DynamicTexture("DynamicTexture", 50, scene, true);
+				dynamicTexture.hasAlpha = true;
+				dynamicTexture.drawText(text, 5, 40, "bold 36px Arial", color , "transparent", true);
+				var plane = new BABYLON.Mesh.CreatePlane("TextPlane", size, scene, true);
+				plane.material = new BABYLON.StandardMaterial("TextPlaneMaterial", scene);
+				plane.material.backFaceCulling = false;
+				plane.material.specularColor = new BABYLON.Color3(0, 0, 0);
+				plane.material.diffuseTexture = dynamicTexture;
+				return plane;
+				 };
+			  
+				var axisX = BABYLON.Mesh.CreateLines("axisX", [ 
+				  new BABYLON.Vector3.Zero(), new BABYLON.Vector3(size, 0, 0), new BABYLON.Vector3(size * 0.95, 0.05 * size, 0), 
+				  new BABYLON.Vector3(size, 0, 0), new BABYLON.Vector3(size * 0.95, -0.05 * size, 0)
+				  ], scene);
+				axisX.color = new BABYLON.Color3(1, 0, 0);
+				var xChar = makeTextPlane("X", "red", size / 10);
+				xChar.position = new BABYLON.Vector3(0.9 * size, -0.05 * size, 0);
+				var axisY = BABYLON.Mesh.CreateLines("axisY", [
+					new BABYLON.Vector3.Zero(), new BABYLON.Vector3(0, size, 0), new BABYLON.Vector3( -0.05 * size, size * 0.95, 0), 
+					new BABYLON.Vector3(0, size, 0), new BABYLON.Vector3( 0.05 * size, size * 0.95, 0)
+					], scene);
+				axisY.color = new BABYLON.Color3(0, 1, 0);
+				var yChar = makeTextPlane("Y", "green", size / 10);
+				yChar.position = new BABYLON.Vector3(0, 0.9 * size, -0.05 * size);
+				var axisZ = BABYLON.Mesh.CreateLines("axisZ", [
+					new BABYLON.Vector3.Zero(), new BABYLON.Vector3(0, 0, size), new BABYLON.Vector3( 0 , -0.05 * size, size * 0.95),
+					new BABYLON.Vector3(0, 0, size), new BABYLON.Vector3( 0, 0.05 * size, size * 0.95)
+					], scene);
+				axisZ.color = new BABYLON.Color3(0, 0, 1);
+				var zChar = makeTextPlane("Z", "blue", size / 10);
+				zChar.position = new BABYLON.Vector3(0, 0.05 * size, 0.9 * size);
+			  };
+
+			  showAxis(5);
+			
+			// Add a camera to the scene and attach it to the canvas
+			var camera = new BABYLON.ArcRotateCamera("Camera", Math.PI / 2, Math.PI / 4, 40, BABYLON.Vector3.Zero(), scene);
+			camera.attachControl(canvas, true);
+
+			// Add lights to the scene
+			var light1 = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(1, 1, 0), scene);
+			var light2 = new BABYLON.PointLight("light2", new BABYLON.Vector3(0, 1, -1), scene);
+
+			// Add and manipulate meshes in the scene
+			var ground = BABYLON.MeshBuilder.CreateGround("ground", {height: 10, width: 20, subdivisions: 10}, scene);
+
+			var planeRear = BABYLON.MeshBuilder.CreatePlane("plane", {height: 5, width: 20, sideOrientation: BABYLON.Mesh.DOUBLESIDE }, scene);
+			//planeRear.rotate(BABYLON.Axis.Z, 2.5, BABYLON.Space.LOCAL);
+			planeRear.translate(BABYLON.Axis.Y, 2.5, BABYLON.Space.LOCAL);
+			planeRear.translate(BABYLON.Axis.Z, -5, BABYLON.Space.LOCAL);
+			
+			var planeSx = BABYLON.MeshBuilder.CreatePlane("plane", {height: 5, width: 10, sideOrientation: BABYLON.Mesh.DOUBLESIDE }, scene);
+			planeSx.rotate(BABYLON.Axis.Y, degra(90), BABYLON.Space.LOCAL);
+			planeSx.translate(BABYLON.Axis.Y, 2.5, BABYLON.Space.LOCAL);
+			planeSx.translate(BABYLON.Axis.Z, 10, BABYLON.Space.LOCAL);
+			
+			var planeDx = BABYLON.MeshBuilder.CreatePlane("plane", {height: 5, width: 10, sideOrientation: BABYLON.Mesh.DOUBLESIDE }, scene);
+			planeDx.rotate(BABYLON.Axis.Y, degra(90), BABYLON.Space.LOCAL);
+			//planeDx.rotate.y = 10;
+			//planeDx.translate(BABYLON.Axis.Y, 2.5, BABYLON.Space.LOCAL);
+			planeDx.position.y = 2.5;
+			//planeDx.translate(BABYLON.Axis.X, -5, BABYLON.Space.LOCAL);
+			planeDx.position.x = -10;
+			
+			return scene;
+        };
+        /******* End of the create scene function ******/    
+
+        var scene = createScene(); //Call the createScene function
+
+        // Register a render loop to repeatedly render the scene
+        engine.runRenderLoop(function () { 
+                scene.render();
+        });
+
+        // Watch for browser/canvas resize events
+        window.addEventListener("resize", function () { 
+                engine.resize();
+        });
+
+		//radians
+		function degra(degree){ 
+			return degree*(Math.PI/180); 
+		}
+		
+    </script>
+
+   </body>
+
+</html>

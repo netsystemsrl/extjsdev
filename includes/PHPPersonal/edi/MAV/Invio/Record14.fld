@@ -1,0 +1,93 @@
+﻿using System;
+using CedHouseSuite.Tracciati.Converters;
+using FileHelpers;
+
+namespace CedHouseSuite.Tracciati.Mav.Invio
+{
+    [FixedLengthRecord(FixedMode.ExactLength)]
+    public sealed class Record14
+    {
+        [FieldFixedLength(1)]
+        [FieldAlign(AlignMode.Left, ' ')]
+        public string Filler1 = "";
+
+        [FieldFixedLength(2)]
+        [FieldAlign(AlignMode.Left, ' ')]
+        public readonly string TipoRecord = "14"; //Contenuto fisso “14”
+
+        [FieldFixedLength(7)]
+        [FieldAlign(AlignMode.Right, '0')]
+        public int NumeroProgressivo = 0; //Numero della disposizione all’interno del flusso. Inizia da 1 ed è progressivo di 1. Il numero deve essere uguale per tutti i record della stessa disposizione
+
+        [FieldFixedLength(12)]
+        [FieldAlign(AlignMode.Left, ' ')]
+        public string Filler11to22 = "";
+
+        [FieldFixedLength(6)]
+        [FieldAlign(AlignMode.Right, '0')]
+        [FieldConverter(ConverterKind.Date, "ddMMyy")]
+        public DateTime DataPagamento; //Data di scadenza della disposizione, indicata nel formato GGMMAA
+
+        [FieldFixedLength(5)]
+        [FieldAlign(AlignMode.Left, ' ')]
+        public readonly string Causale = "07000"; //Assume valore fisso “07000”
+
+        [FieldFixedLength(13)]
+        [FieldAlign(AlignMode.Right, '0')]
+        [FieldConverter(typeof(TwoDecimalConverter))]
+        public decimal Importo = 0; //Importo della disposizione (si vedano le note di pagina 4)
+
+        [FieldFixedLength(1)]
+        [FieldAlign(AlignMode.Left, ' ')]
+        public readonly string Segno = "-"; //Assume valore fisso “-”
+
+        #region Coordinate della banca assuntrice
+
+        [FieldFixedLength(5)]
+        [FieldAlign(AlignMode.Right, '0')]
+        public string AbiBanca; //Codice ABI della banca del cliente creditore, destinataria delle richieste di incasso; 
+        //deve corrispondere con quello presente nel record di testa
+
+        [FieldFixedLength(5)]
+        [FieldAlign(AlignMode.Right, '0')]
+        public string CabBanca; //CAB della Agenzia dove il cliente intrattiene il rapporto
+
+        [FieldFixedLength(12)]
+        [FieldAlign(AlignMode.Left, ' ')]
+        public string NumeroConto; //Numero del rapporto da accreditare (Per disposizioni dirette a UniCredit Banca indicare 
+        //obbligatoriamente il solo numero del conto  senza utilizzare caratteri quali ad esempio “/” barra, 
+        //“.” punto, “-“ trattino, etc.)
+
+        [FieldFixedLength(22)]
+        [FieldAlign(AlignMode.Left, ' ')]
+        public readonly string Filler70To91 = "";
+
+        #endregion
+
+        #region Coordinate azienda creditrice
+
+        [FieldFixedLength(5)]
+        [FieldAlign(AlignMode.Left, ' ')]
+        public string SiaOrdinante; //Codice ABI della banca del cliente creditore, destinataria delle richieste di incasso; 
+        //deve corrispondere con quello presente nel record di testa
+
+        [FieldFixedLength(1)]
+        [FieldAlign(AlignMode.Left, ' ')]
+        public string TipoCodiceClienteDebitore; //Può assumere i seguenti valori: 1 (utenza), 2 (matricola), 3 (codice fiscale), 4 (codice cliente), 
+        //5 (codice fornitore), 6 (portafoglio commerciale), 9 (altri). Deve essere valorizzato soltanto se è stato indicato anche il campo precedente
+
+        [FieldFixedLength(16)]
+        [FieldAlign(AlignMode.Left, ' ')]
+        public string CodiceClienteDebitore; //Codice con il quale il debitore è conosciuto dal creditore. (non sono ammessi caratteri “/” e “:”)                                
+
+        #endregion
+
+        [FieldFixedLength(6)]
+        [FieldAlign(AlignMode.Left, ' ')]
+        public string Filler114To119 = "";
+
+        [FieldFixedLength(1)]
+        [FieldAlign(AlignMode.Left, ' ')]
+        public readonly string Divisa = "E"; //Divisa: valorizzare con “E”
+    }
+}

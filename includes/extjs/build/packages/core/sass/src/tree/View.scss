@@ -1,0 +1,157 @@
+.#{$prefix}tree-panel {
+    .#{$prefix}panel-body {
+        @if $grid-row-cell-background-color != null { background-color: $grid-row-cell-background-color }
+    }
+}
+//elbows
+.#{$prefix}tree-lines {
+    .#{$prefix}tree-elbow {
+        background-image: theme-background-image($tree-elbows-background-image);
+        background-position: 0 0;
+    }
+
+    .#{$prefix}tree-elbow-end {
+        background-image: theme-background-image($tree-elbows-background-image);
+        background-position: -$tree-elbow-width 0;
+    }
+
+    .#{$prefix}tree-elbow-plus {
+        background-image: theme-background-image($tree-elbows-background-image);
+        background-position: -(2 * $tree-elbow-width) 0;
+    }
+
+    .#{$prefix}tree-elbow-end-plus {
+        background-image: theme-background-image($tree-elbows-background-image);
+        background-position: -(3 * $tree-elbow-width) 0;
+    }
+
+    .#{$prefix}grid-tree-node-expanded .#{$prefix}tree-elbow-plus {
+        background-image: theme-background-image($tree-elbows-background-image);
+        background-position: -(4 * $tree-elbow-width) 0;
+    }
+
+    .#{$prefix}grid-tree-node-expanded .#{$prefix}tree-elbow-end-plus {
+        background-image: theme-background-image($tree-elbows-background-image);
+        background-position: -(5 * $tree-elbow-width) 0;
+    }
+
+    .#{$prefix}tree-elbow-line {
+        background-image: theme-background-image($tree-elbows-background-image);
+        background-position: -(6 * $tree-elbow-width) 0;
+    }
+   
+    
+    //rtl support
+
+    @if $include-rtl {
+        .#{$prefix}rtl.#{$prefix}tree-elbow {
+            background-image: theme-background-image($tree-elbows-background-image-rtl);
+            background-position: -(8 * $tree-elbow-width) 0;
+        }
+
+        .#{$prefix}rtl.#{$prefix}tree-elbow-end {
+            background-image: theme-background-image($tree-elbows-background-image-rtl);
+            background-position: -(7 * $tree-elbow-width) 0;
+        }
+
+        .#{$prefix}rtl.#{$prefix}tree-elbow-plus {
+            background-image: theme-background-image($tree-elbows-background-image-rtl);
+             background-position: -(6 * $tree-elbow-width) 0;
+        }
+
+        .#{$prefix}rtl.#{$prefix}tree-elbow-end-plus {
+            background-image: theme-background-image($tree-elbows-background-image-rtl);
+            background-position: -(5 * $tree-elbow-width) 0;
+        }
+
+        .#{$prefix}grid-tree-node-expanded .#{$prefix}rtl.#{$prefix}tree-elbow-plus {
+            background-image: theme-background-image($tree-elbows-background-image-rtl);
+            background-position: -(4 * $tree-elbow-width) 0;
+        }
+
+        .#{$prefix}grid-tree-node-expanded .#{$prefix}rtl.#{$prefix}tree-elbow-end-plus {
+            background-image: theme-background-image($tree-elbows-background-image-rtl);
+            background-position: -(3 * $tree-elbow-width) 0;
+        }
+
+        .#{$prefix}rtl.#{$prefix}tree-elbow-line {
+            background-image: theme-background-image($tree-elbows-background-image-rtl);
+            background-position: -(2 * $tree-elbow-width) 0;
+        }
+    }
+}
+
+.#{$prefix}tree-no-lines {
+    .#{$prefix}tree-expander {
+        background-image: theme-background-image($tree-elbows-background-image);
+        background-position: -(7 * $tree-elbow-width) 0;
+    }
+
+    .#{$prefix}grid-tree-node-expanded .#{$prefix}tree-expander {
+        background-image: theme-background-image($tree-elbows-background-image);
+        background-position: -(8 * $tree-elbow-width) 0;
+    }
+
+    @if $include-rtl {
+        .#{$prefix}rtl.#{$prefix}tree-expander {
+            background-image: theme-background-image('tree/elbow-plus-nl-rtl');
+        }
+
+        .#{$prefix}grid-tree-node-expanded .#{$prefix}rtl.#{$prefix}tree-expander {
+            background-image: theme-background-image('tree/elbow-minus-nl-rtl');
+        }
+    }
+}
+
+
+// tree arrows //
+
+.#{$prefix}tree-arrows {
+    .#{$prefix}tree-expander {
+        @if $tree-arrows-background-image != null { background-image: theme-background-image($tree-arrows-background-image) }
+    }
+    @if $include-rtl {
+        .#{$prefix}rtl.#{$prefix}tree-expander {
+            @if $tree-arrows-background-image-rtl != null { background-image: theme-background-image($tree-arrows-background-image-rtl) }
+        }
+    }
+}
+
+
+
+.#{$prefix}tree-icon-leaf {
+    background-image: theme-background-image($tree-icons-background-image);
+    background-position: -(2 * $tree-icon-width) 0;
+}
+
+@if $include-rtl {
+    .#{$prefix}rtl.#{$prefix}tree-icon-leaf {
+        background-image: theme-background-image($tree-icons-background-image-rtl);
+        background-position: 0 0;
+    }
+}
+
+.#{$prefix}tree-icon-parent {
+    background-image: theme-background-image($tree-icons-background-image);
+    background-position: 0 0;
+}
+
+@if $include-rtl {
+    .#{$prefix}rtl.#{$prefix}tree-icon-parent {
+        background-image: theme-background-image($tree-icons-background-image-rtl);
+        background-position: -(2 * $tree-icon-width) 0;
+    }
+}
+
+.#{$prefix}grid-tree-node-expanded .#{$prefix}tree-icon-parent-expanded {
+    background-image: theme-background-image($tree-icons-background-image);
+    background-position: -$tree-icon-width 0;
+}
+
+@if $include-rtl {
+    .#{$prefix}grid-tree-node-expanded .#{$prefix}rtl.#{$prefix}tree-icon-parent-expanded {
+        background-image: theme-background-image($tree-icons-background-image-rtl);
+        background-position: -(1 * $tree-icon-width) 0;
+    }
+}
+

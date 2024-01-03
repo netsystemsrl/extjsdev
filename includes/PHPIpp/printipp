@@ -1,0 +1,8 @@
+Oct 10 18:54:15 test.php Host 192.168.0.108:631 user foo bar : printing job ipp://192.168.0.108:631/jobs/56: successfull-ok
+Oct 10 18:54:22 test.php Host 192.168.0.108:631 user foo bar : printing job ipp://192.168.0.108:631/jobs/57: successfull-ok
+Oct 10 18:54:26 test.php Host 192.168.0.108:631 user foo bar : printing job ipp://192.168.0.108:631/jobs/58: successfull-ok
+Oct 10 18:56:52 test.php Host 192.168.0.108:631 user foo bar : printing job ipp://192.168.0.108:631/jobs/59: successfull-ok
+Oct 10 18:59:18 test.php Host 192.168.0.108:631 user foo bar : printing job ipp://192.168.0.108:631/jobs/65: successfull-ok
+Oct 10 18:59:22 test.php Host 192.168.0.108:631 user foo bar : printing job ipp://192.168.0.108:631/jobs/66: successfull-ok
+Oct 10 18:59:26 test.php Host 192.168.0.108:631 user foo bar : printing job ipp://192.168.0.108:631/jobs/67: successfull-ok
+Oct 11 11:39:03 test.php Host 192.168.0.108:631 user foo bar : printing job ipp://192.168.0.108:631/jobs/74: successfull-ok

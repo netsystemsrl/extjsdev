@@ -1,0 +1,5 @@
+NomeField		,Len,Align	,Requested	,CodeValue,SampleValue
+TIPOREC			,03	,L		,Y		 	,'CNT'	,CNT
+QTAORDT			,15	,L		,Y			,		,AAS
+UDMQORDT		,03	,L		,Y			,   	,0000193
+NUMLINT			,15	,L		,Y			,		,20181024	

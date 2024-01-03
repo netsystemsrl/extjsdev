@@ -1,0 +1,9 @@
+NomeField		,Len,Align	,Requested	,CodeValue										,SampleValue
+TIPOREC			,99	,		,Y		 	,CUX											,CUX
+FILLER			,99	,		,Y		 	,+												,FILLER
+REFERENCE		,99	,		,Y			,2												,2		=	Reference currency
+FILLER			,99	,		,Y		 	,:												,FILLER
+CURRENCY		,99	,		,Y			,EUR											,EUR CURRENCY
+FILLER			,99	,		,Y		 	,:												,FILLER
+TYPECUR			,99	,		,Y			,4  											,4		=	Invoicing currency
+END				,99	,		,Y		 	,'												,END

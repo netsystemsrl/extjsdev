@@ -1,0 +1,14 @@
+[
+{
+    text:'decision',
+	typeobj: 'decisionState',
+    cls:'decisionState',
+    leaf:true
+},
+{
+    text:'action',
+	typeobj: 'actionState',
+    cls:'actionState',
+    leaf:true
+},
+] 

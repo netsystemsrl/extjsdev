@@ -1,0 +1,161 @@
+
+@mixin _codaxy-html-editor-ui (
+    $ui: default,
+    $ui-html-editor-color: $html-editor-color,
+    $ui-html-editor-btn-background-image: null,
+    $ui-html-editor-toolbar-icon-size: null,
+    $ui-html-editor-toolbar-padding: null,
+    $ui-html-editor-toolbar-border-width: null,
+    $ui-html-editor-input-border-width: null,
+    $ui-html-editor-input-background-color: null,
+    $ui-html-editor-input-padding: null
+) {
+    
+    .#{$prefix}html-editor-wrap {
+        .#{$prefix}toolbar {
+            border-left-color: $html-editor-border-color;
+            border-top-color: $html-editor-border-color;
+            border-right-color: $html-editor-border-color;
+            @if $ui-html-editor-toolbar-padding != null { padding: $ui-html-editor-toolbar-padding }
+            @if $ui-html-editor-toolbar-border-width != null { border-width: $ui-html-editor-toolbar-border-width }
+        }
+    }
+
+    .#{$prefix}html-editor-input {
+        @if $ui-html-editor-input-border-width != null { border-width: $ui-html-editor-input-border-width }
+        border-style: solid;
+        border-color: $html-editor-border-color;
+        @if $ui-html-editor-input-background-color != null { background-color: $ui-html-editor-input-background-color }
+        @if $ui-html-editor-input-padding != null { padding: $ui-html-editor-input-padding }
+    }
+    
+    .#{$prefix}html-editor-wrap textarea {
+        @if $ui-html-editor-color != null {
+            color: $ui-html-editor-color;
+        }
+    }
+
+    @if $ui-html-editor-btn-background-image != null and $ui-html-editor-toolbar-icon-size != null {
+        .#{$prefix}html-editor-tb .#{$prefix}edit-bold,
+        .#{$prefix}menu-item div.#{$prefix}edit-bold {
+            background-position: 0 0;
+            background-image: theme-background-image($ui-html-editor-btn-background-image);
+            height: $ui-html-editor-toolbar-icon-size;
+            width: $ui-html-editor-toolbar-icon-size;
+        }
+
+        .#{$prefix}html-editor-tb .#{$prefix}edit-italic,
+        .#{$prefix}menu-item div.#{$prefix}edit-italic {
+            background-position: (-$ui-html-editor-toolbar-icon-size) 0;
+            background-image: theme-background-image($ui-html-editor-btn-background-image);
+            height: $ui-html-editor-toolbar-icon-size;
+            width: $ui-html-editor-toolbar-icon-size;
+        }
+
+        .#{$prefix}html-editor-tb .#{$prefix}edit-underline,
+        .#{$prefix}menu-item div.#{$prefix}edit-underline {
+            background-position: (-$ui-html-editor-toolbar-icon-size * 2) 0;
+            background-image: theme-background-image($ui-html-editor-btn-background-image);
+            height: $ui-html-editor-toolbar-icon-size;
+            width: $ui-html-editor-toolbar-icon-size;
+        }
+
+        .#{$prefix}html-editor-tb .#{$prefix}edit-forecolor,
+        .#{$prefix}menu-item div.#{$prefix}edit-forecolor {
+            background-position: (-$ui-html-editor-toolbar-icon-size * 10) 0;
+            background-image: theme-background-image($ui-html-editor-btn-background-image);
+            height: $ui-html-editor-toolbar-icon-size;
+            width: $ui-html-editor-toolbar-icon-size;
+        }
+
+        .#{$prefix}html-editor-tb .#{$prefix}edit-backcolor,
+        .#{$prefix}menu-item div.#{$prefix}edit-backcolor {
+            background-position: (-$ui-html-editor-toolbar-icon-size * 11) 0;
+            background-image: theme-background-image($ui-html-editor-btn-background-image);
+            height: $ui-html-editor-toolbar-icon-size;
+            width: $ui-html-editor-toolbar-icon-size;
+        }
+
+        .#{$prefix}html-editor-tb .#{$prefix}edit-justifyleft,
+        .#{$prefix}menu-item div.#{$prefix}edit-justifyleft {
+            background-position: (-$ui-html-editor-toolbar-icon-size * 7) 0;
+            background-image: theme-background-image($ui-html-editor-btn-background-image);
+            height: $ui-html-editor-toolbar-icon-size;
+            width: $ui-html-editor-toolbar-icon-size;
+        }
+
+        .#{$prefix}html-editor-tb .#{$prefix}edit-justifyright,
+        .#{$prefix}menu-item div.#{$prefix}edit-justifyright {
+            background-position: (-$ui-html-editor-toolbar-icon-size * 8) 0;
+            background-image: theme-background-image($ui-html-editor-btn-background-image);
+            height: $ui-html-editor-toolbar-icon-size;
+            width: $ui-html-editor-toolbar-icon-size;
+        }
+
+        .#{$prefix}html-editor-tb .#{$prefix}edit-justifycenter,
+        .#{$prefix}menu-item div.#{$prefix}edit-justifycenter {
+            background-position: (-$ui-html-editor-toolbar-icon-size * 9) 0;
+            background-image: theme-background-image($ui-html-editor-btn-background-image);
+            height: $ui-html-editor-toolbar-icon-size;
+            width: $ui-html-editor-toolbar-icon-size;
+        }
+
+        .#{$prefix}html-editor-tb .#{$prefix}edit-insertorderedlist,
+        .#{$prefix}menu-item div.#{$prefix}edit-insertorderedlist {
+            background-position: (-$ui-html-editor-toolbar-icon-size * 5) 0;
+            background-image: theme-background-image($ui-html-editor-btn-background-image);
+            height: $ui-html-editor-toolbar-icon-size;
+            width: $ui-html-editor-toolbar-icon-size;
+        }
+
+        .#{$prefix}html-editor-tb .#{$prefix}edit-insertunorderedlist,
+        .#{$prefix}menu-item div.#{$prefix}edit-insertunorderedlist {
+            background-position: (-$ui-html-editor-toolbar-icon-size * 6) 0;
+            background-image: theme-background-image($ui-html-editor-btn-background-image);
+            height: $ui-html-editor-toolbar-icon-size;
+            width: $ui-html-editor-toolbar-icon-size;
+        }
+
+        .#{$prefix}html-editor-tb .#{$prefix}edit-increasefontsize,
+        .#{$prefix}menu-item div.#{$prefix}edit-increasefontsize {
+            background-position: (-$ui-html-editor-toolbar-icon-size * 3) 0;
+            background-image: theme-background-image($ui-html-editor-btn-background-image);
+            height: $ui-html-editor-toolbar-icon-size;
+            width: $ui-html-editor-toolbar-icon-size;
+        }
+
+        .#{$prefix}html-editor-tb .#{$prefix}edit-decreasefontsize,
+        .#{$prefix}menu-item div.#{$prefix}edit-decreasefontsize {
+            background-position: (-$ui-html-editor-toolbar-icon-size * 4) 0;
+            background-image: theme-background-image($ui-html-editor-btn-background-image);
+            height: $ui-html-editor-toolbar-icon-size;
+            width: $ui-html-editor-toolbar-icon-size;
+        }
+
+        .#{$prefix}html-editor-tb .#{$prefix}edit-sourceedit,
+        .#{$prefix}menu-item div.#{$prefix}edit-sourceedit {
+            background-position: (-$ui-html-editor-toolbar-icon-size * 12) 0;
+            background-image: theme-background-image($ui-html-editor-btn-background-image);
+            height: $ui-html-editor-toolbar-icon-size;
+            width: $ui-html-editor-toolbar-icon-size;
+        }
+
+        .#{$prefix}html-editor-tb .#{$prefix}edit-createlink,
+        .#{$prefix}menu-item div.#{$prefix}edit-createlink {
+            background-position: (-$ui-html-editor-toolbar-icon-size * 13) 0;
+            background-image: theme-background-image($ui-html-editor-btn-background-image);
+            height: $ui-html-editor-toolbar-icon-size;
+            width: $ui-html-editor-toolbar-icon-size;
+        }
+    }
+}
+
+@include _codaxy-html-editor-ui (
+    $ui-html-editor-btn-background-image: $html-editor-btn-background-image,
+    $ui-html-editor-toolbar-icon-size: $html-editor-toolbar-icon-size,
+    $ui-html-editor-toolbar-padding: $html-editor-toolbar-padding,
+    $ui-html-editor-toolbar-border-width: $html-editor-toolbar-border-width,
+    $ui-html-editor-input-border-width: $html-editor-input-border-width,
+    $ui-html-editor-input-background-color: $html-editor-input-background-color,
+    $ui-html-editor-input-padding: $html-editor-input-padding
+);

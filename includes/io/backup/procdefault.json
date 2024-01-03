@@ -1,0 +1,57 @@
+WFDEBUG(false);
+$conn->StartTrans(); 
+$RecordCountResult = 0;
+
+$ValueInForm = WFVALUE('DATAREG', acSelf);
+$ArrayForm = WFVALUEFORM(acSelf);
+
+
+/* chk */
+if ( IsNull($PianoContiBancaId, 0) == 0){
+	/* CHECK TOTALE  */ 
+	$output['message'] = 'Errore Inserire codice ' ;
+	$output['failure'] = true;
+	goto ExitProc;
+}
+
+/* SAMPLE CODE REGION */
+WFMSGLOG ('comment to log') //titling log
+WFVARLOG ($ValueInForm)   // monitoring variable
+if ($conn->debug == 1) { echo ('ciao'); }  //log in message to video in debug mode
+
+
+/* SAMPLE READ DATA FROM DB */
+$sql = "SELECT tablename.* FROM tablename ";
+$rsData = $conn->Execute($sql);
+while (!$rsData->EOF) {
+	$MyVar = $rsData->fields['VALORE'];
+	$MyArrayRow = WFRECORDCLONE($rsData->fields);
+	$rsData->Movenext();
+}
+
+/* SAMPLE INSERT DATA TO DB (if field are not present in table, field will skip with no error)*/
+$AppoArray = array();
+$AppoArray['FIELDDATA'] = IsNull($RegData, WFVALUEDate()) ;
+$AppoArray['FIELDNotInTable'] = 'value not will write in table';
+$AppoArray['FIELDIInTable'] = 'blabla';
+$conn->AutoExecute("tablename", $AppoArray, 'INSERT');
+$SavedId = $conn->Insert_ID();
+	
+/* SAMPLE UPDATE DATA TO DB (if data in field are same as present no update is made)*/
+$AppoArray = array();
+$AppoArray['FIELDNotInTable'] = 'value not will write in table';
+$AppoArray['FIELDIInTable'] = 'blabla';
+$conn->AutoExecute("tablename", $AppoArray, 'UPDATE', 'ID =' . $MyID );
+
+
+CommitProc:
+if ($conn->HasFailedTrans()) {
+	$output['message'] = 'errore';
+	$output['failure'] = true;
+}else{
+	WFCLEANUP();
+	$output['message'] = 'Registrate :' . $RecordCountResult;
+	$output['success'] = true;
+}
+ExitProc:
+$conn->completeTrans(); 

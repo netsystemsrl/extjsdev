@@ -1,0 +1,25 @@
+﻿
+.#{$prefix}form-file-wrap {
+
+    .#{$prefix}form-trigger-wrap-default {
+        background-color: rgba(#fff, 0);
+        border: none;
+        .#{$prefix}form-text.#{$prefix}form-text-file {
+            border-width: 1px;
+            border-style: solid;
+            border-color: $form-field-border-color;
+            height: $form-field-height;
+        }
+    }
+
+    .#{$prefix}form-trigger-default {
+        @include box-shadow(none);
+        &.#{$prefix}form-trigger-click {
+            background-color: rgba(#fff, 0);
+        }
+        &.#{$prefix}form-trigger-over {
+            background-color: rgba(#fff, 0);
+        }
+    }
+
+}

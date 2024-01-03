@@ -1,0 +1,29 @@
+﻿
+$theme-size: dynamic(0);
+
+@function theme-scale ($var, $incrementStep, $size: $theme-size) {
+	
+	$s: $var + floor($size / $incrementStep);
+	
+	@return $s;
+}
+
+@function theme-scale-switch ($default, $switch1, $switch2: 1000 null, $switch3: 1000 null, $switch4: 1000 null, $size: $theme-size) {
+	
+    @if $size >= nth($switch1, 1) and $size < nth($switch2, 1) {
+	    @return nth($switch1, 2);
+	}   
+    @elseif $size >= nth($switch2, 1) and $size < nth($switch3, 1) {
+		@return nth($switch2, 2);
+	}   
+    @elseif $size >= nth($switch3, 1) and $size < nth($switch4, 1) {
+		@return nth($switch3, 2);
+	}   
+    @elseif $size >= nth($switch4, 1) {
+        @return nth($switch4, 2);
+    }   
+    @else {
+		@return $default;
+	}
+		
+}

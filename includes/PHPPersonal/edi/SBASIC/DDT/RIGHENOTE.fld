@@ -1,0 +1,8 @@
+NomeField		,Len,Align	,Requested	,CodeValue,SampleValue
+ANNO			,2	,L		,Y		 	,'T'	,Fisso
+TIPODOC			,1	,L		,Y			,		,N= Nota credito - P=Fattura proforma -Spazio= Fattura
+DOCNUM			,5	,L		,Y			,   	,NUM
+RIGA			,5	,L		,N			,   	,Riga
+FILLER			,80	,L		,N			,		,Codice Articolo
+DESCRIZIONE		,50	,R		,N			,		,Descrzione
+LOTTO			,1	,R		,N			,		,Lotto

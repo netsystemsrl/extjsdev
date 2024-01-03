@@ -1,0 +1,13 @@
+NomeField		,Len,Align	,Requested	,CodeValue										,SampleValue
+TIPOREC			,99	,		,Y		 	,LOC											,LOC consegna della merce
+FILLER			,99	,		,Y		 	,+												,FILLER
+LOCCODE			,99	,		,Y			,9												,9 Departure 7 delivery
+FILLER			,99	,		,Y		 	,+												,FILLER
+GLNCODE			,99	,		,N			,   											,GLNCODE 04440360230
+FILLER			,99	,		,Y		 	,:												,FILLER
+CODIDENT		,99	,		,N			,   											,Code list identific
+FILLER			,99	,		,Y		 	,:												,FILLER
+CODRESP			,99	,		,N			,9  											,9=GS1
+FILLER			,99	,		,Y		 	,:												,FILLER
+RAGSOC			,99	,		,Y			,												,VA	 SOCIO UNICO
+END				,99	,		,Y		 	,'												,END

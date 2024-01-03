@@ -1,0 +1,48 @@
+﻿
+/** 
+ * CODAXY
+ * $spinner-background-color
+ * @var {string}
+ * defines spinner background color
+*/
+$spinner-background-color: dynamic(null);
+
+/** 
+ * CODAXY
+ * $spinner-background-color-over
+ * @var {string}
+ * defines spinner background color on hover
+*/
+$spinner-background-color-over: dynamic(null);
+  
+/** 
+ * CODAXY
+ * $spinner-background-color-pressed
+ * @var {string}
+ * defines spinner background color when pressed
+*/  
+$spinner-background-color-pressed: dynamic(null);
+
+/** 
+ * CODAXY
+ * $spinner-inner-border-width
+ * @var {list}
+ * defines spinner inner border width
+*/
+$spinner-inner-border-width: dynamic(null);
+
+/** 
+ * CODAXY
+ * $spinner-inner-border-color
+ * @var {list}
+ * defines spinner inner border color
+*/
+$spinner-inner-border-color: dynamic(null);
+
+/** 
+ * CODAXY
+ * $spinner-inner-border-color-pressed
+ * @var {list}
+ * defines spinner inner border color when pressed
+*/
+$spinner-inner-border-color-pressed: dynamic(null);

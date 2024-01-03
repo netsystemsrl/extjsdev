@@ -1,0 +1,1 @@
+wget 127.0.0.1/batch/scheduleManager.php

@@ -1,0 +1,4 @@
+﻿
+.#{$prefix}grid-inner-locked { 
+     @if $grid-lockable-separator-border-color != null { border-right-color: $grid-lockable-separator-border-color !important; }
+}

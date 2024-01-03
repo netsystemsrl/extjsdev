@@ -1,0 +1,13 @@
+NomeField		,Len,Align	,Requested	,CodeValue										,SampleValue
+TIPOREC			,99	,		,Y		 	,UNH											,UNH
+FILLER			,99	,		,Y		 	,+												,FILLER
+IDMSG			,99	,		,Y			,1												,IDENTIFICATORE
+FILLER			,99	,		,Y		 	,+												,FILLER
+TIPODOC			,99	,		,Y			,INVOIC										   	,INVOIC
+FILLER			,99	,		,Y		 	,:												,FILLER
+VERSION			,99	,		,Y			,D												,version/UN/EDIFACT Directory	
+FILLER			,99	,		,Y		 	,:												,FILLER
+RELEASE			,99	, 		,Y			,01B											,RELEASE
+FILLER			,99	,		,Y		 	,:												,FILLER
+AGENCY			,99	,		,Y			,UN										 		,UN		=	UN/CEFACT
+END				,99	,		,Y		 	,'												,END

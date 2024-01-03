@@ -1,0 +1,69 @@
+﻿
+
+/**
+ * CODAXY 
+ * $include-panel-default-framed-ui-extended
+ * @var {boolean}
+ * `true` to include extended mixin for panel-default-framed instead of default defined in ext-theme-neutral
+ */
+$include-panel-default-framed-ui-extended: dynamic(true);
+
+$include-panel-default-framed-ui: dynamic(false);
+
+/**
+ * CODAXY 
+ * $panel-borders-overrides
+ * @var {boolean}
+ * `true` to add bottom border to header and remove top border from toolbars and body
+ */
+$panel-borders-overrides: dynamic(false);
+
+$panel-frame-header-background-color: dynamic($base-color);
+
+/**
+ * CODAXY 
+ * $panel-frame-body-border-color
+ * @var {string}
+ * sets framed panel body border color
+ */
+$panel-frame-body-border-color: dynamic($panel-border-color);
+
+/** 
+ * CODAXY
+ * $panel-tools-background-color 
+ * @var {string}
+ * adds background color to tool icons in panel header (close icon, collapse icon...)
+*/
+$panel-tools-background-color: dynamic(null);
+
+/** 
+ * CODAXY
+ * $panel-tools-background-color-over 
+ * @var {string}
+ * adds background color to tool icons in panel header on hover
+*/
+$panel-tools-background-color-over: dynamic(null);
+
+/** 
+ * CODAXY
+ * $panel-header-text-shadow 
+ * @var {list}
+ * adds shadow to text in panel header
+*/
+$panel-header-text-shadow: dynamic(null);
+
+/** 
+ * CODAXY
+ * $panel-footer-padding
+ * @var {list}
+ * sets padding for toolbar footer inside panel
+*/
+$panel-footer-padding: dynamic(null);
+
+/** 
+ * CODAXY
+ * $panel-footer-backgorund-color
+ * @var {list}
+ * sets background color of toolbar footer inside panel
+*/
+$panel-footer-background-color: dynamic(null);

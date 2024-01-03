@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Spedizioni>
+  <Versione>11</Versione>
+  <Viaggio>
+    <Riferimento />
+    <Descrizione />
+    <VettoreCodice></VettoreCodice>
+    <CorrispondenteCodice />
+    <TargaAutomezzo />
+    <TargaRimorchio />
+    <Autista />
+    <DataPartenzaPrevista />
+    <DataPartenzaReale />
+    <DataArrivoPrevista />
+    <Km />
+    <Note />
+  </Viaggio>
+  <Spedizione>
+    <Codice>
+      <Anno></Anno>
+      <Filiale></Filiale>
+      <Numero></Numero>
+      <Identificativo></Identificativo>
+      <SenderId />
+      <ReceiverId />
+      <IdEsterno />
+    </Codice>
+    <Riferimenti>
+      <Ordine></Ordine>
+      <Interno></Interno>
+      <Committente></Committente>
+      <Mittente></Mittente>
+      <Destinatario></Destinatario>
+      <InternoExtra></InternoExtra>
+    </Riferimenti>
+    <Azione />
+    <Committente></Committente>
+    <Via></Via>
+    <Settore></Settore>
+    <TipoServizio></TipoServizio>
+    <TipoServizioConsegna></TipoServizioConsegna>
+    <TipoTrasporto></TipoTrasporto>
+    <Resa></Resa>
+    <Linea></Linea>
+    <PostiPallet></PostiPallet>
+    <Priorita></Priorita>
+    <CreaRitiro />
+    <Arrivo>
+      <Tipo></Tipo>
+      <SGA />
+      <Data></Data>
+      <Deposito></Deposito>
+      <Corrispondente></Corrispondente>
+      <Ritiro />
+      <RitiroRifEsterno />
+    </Arrivo>
+    <Consegna>
+      <Tipo></Tipo>
+      <SGA />
+      <Deposito></Deposito>
+      <Corrispondente></Corrispondente>
+      <Preavviso></Preavviso>
+      <InLinea />
+      <ConsegnaRifEsterno />
+    </Consegna>
+    <Mittente>
+      <Codice></Codice>
+      <CodiceInterno />
+      <RagioneSociale></RagioneSociale>
+      <Indirizzo></Indirizzo>
+      <Cap></Cap>
+      <Localita></Localita>
+      <Provincia></Provincia>
+      <Nazione></Nazione>
+      <Interlocutore></Interlocutore>
+      <Telefono></Telefono>
+      <Email></Email>
+      <PartitaIva />
+    </Mittente>
+    <Provenienza>
+      <Codice></Codice>
+      <CodiceInterno />
+      <RagioneSociale></RagioneSociale>
+      <Indirizzo></Indirizzo>
+      <Cap></Cap>
+      <Localita></Localita>
+      <Provincia></Provincia>
+      <Nazione></Nazione>
+      <Interlocutore></Interlocutore>
+      <Telefono></Telefono>
+      <Email></Email>
+      <PartitaIva />
+    </Provenienza>
+    <Destinatario>
+      <Codice></Codice>
+      <CodiceInterno />
+      <RagioneSociale></RagioneSociale>
+      <Indirizzo></Indirizzo>
+      <Cap></Cap>
+      <Localita></Localita>
+      <Provincia></Provincia>
+      <Nazione></Nazione>
+      <Interlocutore></Interlocutore>
+      <Telefono></Telefono>
+      <Email></Email>
+      <PartitaIva />
+    </Destinatario>
+    <Destinazione>
+      <Codice></Codice>
+      <CodiceInterno />
+      <RagioneSociale></RagioneSociale>
+      <Indirizzo></Indirizzo>
+      <Cap></Cap>
+      <Localita></Localita>
+      <Provincia></Provincia>
+      <Nazione></Nazione>
+      <Interlocutore></Interlocutore>
+      <Telefono></Telefono>
+      <Email></Email>
+      <PartitaIva />
+    </Destinazione>
+    <Circuito>
+      <Tipologia></Tipologia>
+      <Attivita></Attivita>
+      <TipoServizio></TipoServizio>
+      <PaletteCircuito>
+        <PalettaCircuito>
+          <NumeroPaletta></NumeroPaletta>
+          <Lunghezza></Lunghezza>
+          <Larghezza></Larghezza>
+          <Altezza></Altezza>
+          <Peso></Peso>
+          <TipoPalettaCircuito></TipoPalettaCircuito>
+          <ImballiInterni>
+            <ImballoInterno>
+              <Lunghezza></Lunghezza>
+              <Larghezza></Larghezza>
+              <Altezza></Altezza>
+              <Peso></Peso>
+              <TipoImballo></TipoImballo>
+            </ImballoInterno>
+          </ImballiInterni>
+          <PaletteInterne>
+            <PalettaInterna>
+              <Lunghezza></Lunghezza>
+              <Larghezza></Larghezza>
+              <Altezza></Altezza>
+              <Peso></Peso>
+              <TipoPaletta></TipoPaletta>
+            </PalettaInterna>
+          </PaletteInterne>
+        </PalettaCircuito>
+      </PaletteCircuito>
+    </Circuito>
+    <Merce>
+      <Codice></Codice>
+      <Descrizione></Descrizione>
+      <ADR>
+        <Merce>
+          <Identificativo>
+            <CodiceOnu />
+            <Descrizione />
+            <ClassePericolo />
+            <Classificazione />
+            <GruppoImballaggio />
+            <QuantitaLimitata />
+            <CategoriaTrasporto />
+            <RestrizioniGalleria />
+          </Identificativo>
+          <TipoImballo />
+          <TipoImballoDescrizione />
+          <UnitaMisura />
+          <Quantita />
+          <QuantitaImballi />
+          <PesoNetto />
+          <DenominazioneTecnica />
+        </Merce>
+      </ADR>
+    </Merce>
+    <Dogana>
+      <VoceDoganale />
+    </Dogana>
+    <ValoriQuantitativi>
+      <Imballi></Imballi>
+      <Palette></Palette>
+      <PesoLordo></PesoLordo>
+      <PesoNetto></PesoNetto>
+      <Volume></Volume>
+      <MetriLineari></MetriLineari>
+      <Um1>
+        <Codice></Codice>
+        <Quantita></Quantita>
+      </Um1>
+      <Um2>
+        <Codice></Codice>
+        <Quantita></Quantita>
+      </Um2>
+    </ValoriQuantitativi>
+    <Caratteristiche>
+      <Caratteristica>
+        <Codice></Codice>
+        <Quantita></Quantita>
+        <Note></Note>
+      </Caratteristica>
+    </Caratteristiche>
+    <DataRitiro>
+      <Tipo></Tipo>
+      <Data></Data>
+      <OraInizio></OraInizio>
+      <OraFine></OraFine>
+    </DataRitiro>
+    <DataConsegna>
+      <Tipo></Tipo>
+      <Data></Data>
+      <OraInizio></OraInizio>
+      <OraFine></OraFine>
+    </DataConsegna>
+    <TipoVeicolo></TipoVeicolo>
+    <AddebitiAttivi>
+      <Addebito>
+        <TipoAddebito />
+        <Cliente />
+        <Voce />
+        <Valuta />
+        <UnitaMisura />
+        <Quantita />
+        <ImportoUnitario />
+      </Addebito>
+    </AddebitiAttivi>
+    <AddebitiPassivi>
+      <Addebito>
+        <TipoAddebito />
+        <Fornitore />
+        <Voce />
+        <Valuta />
+        <UnitaMisura />
+        <Quantita />
+        <ImportoUnitario />
+      </Addebito>
+    </AddebitiPassivi>
+    <Ddt>
+      <Data></Data>
+      <Numero></Numero>
+    </Ddt>
+    <Documenti>
+      <Documento>
+        <TipoDocumento></TipoDocumento>
+        <Numero></Numero>
+        <Riferimento />
+        <Data></Data>
+        <Importo></Importo>
+        <Valuta></Valuta>
+        <Imballi></Imballi>
+        <Palette></Palette>
+        <PesoLordo></PesoLordo>
+        <PesoNetto></PesoNetto>
+        <PesoTassabile></PesoTassabile>
+        <Volume></Volume>
+      </Documento>
+    </Documenti>
+    <ValoreMerce>
+      <Valuta></Valuta>
+      <Importo></Importo>
+    </ValoreMerce>
+    <ImportoAssicurato>
+      <Valuta></Valuta>
+      <Importo></Importo>
+    </ImportoAssicurato>
+    <Contrassegno>
+      <Valuta></Valuta>
+      <Importo></Importo>
+      <TipoIncasso></TipoIncasso>
+    </Contrassegno>
+    <Vincoli>
+      <Vincolo></Vincolo>
+    </Vincoli>
+    <Imballi>
+      <Imballo>
+        <Codice></Codice>
+        <Descrizione></Descrizione>
+        <Quantita></Quantita>
+        <Lunghezza></Lunghezza>
+        <Larghezza></Larghezza>
+        <Altezza></Altezza>
+        <Peso></Peso>
+        <Volume></Volume>
+      </Imballo>
+    </Imballi>
+    <Barcodes>
+      <Barcode>
+        <Entrata></Entrata>
+        <Uscita></Uscita>
+      </Barcode>
+    </Barcodes>
+    <Articoli>
+      <Articolo>
+        <Codice></Codice>
+        <Descrizione></Descrizione>
+        <UnitaMisura></UnitaMisura>
+        <Quantita></Quantita>
+        <IdRiga></IdRiga>
+      </Articolo>
+    </Articoli>
+    <ImballaggiSupporti>
+      <ImballaggioSupporto>
+        <Categoria />
+        <Tipologia />
+        <Quantita></Quantita>
+      </ImballaggioSupporto>
+    </ImballaggiSupporti>
+    <Proprieta>
+      <Proprieta>
+        <Proprieta></Proprieta>
+        <Valore></Valore>
+        <Descrizione></Descrizione>
+      </Proprieta>
+    </Proprieta>
+    <Note>
+      <Nota>
+        <Tipologia></Tipologia>
+        <Testo></Testo>
+      </Nota>
+    </Note>
+  </Spedizione>
+</Spedizioni>

@@ -1,0 +1,46 @@
+
+.#{$prefix}tab-icon-el {
+    top: -1px;
+}
+
+// In IE a disabled icon needs to be hidden or the opacity effect covers some of the text 
+.#{$prefix}tab-noicon .#{$prefix}tab-icon {
+    display: none;
+}
+
+
+
+
+@if $tabpanel-border-overrides {
+  //top tab
+  .cx-tab-position-top > .#{$prefix}panel-body { border-top-width: 0 !important }
+
+  //right tab
+  .cx-tab-position-left > .#{$prefix}panel-body { border-left-width: 0 !important }
+
+  @if $include-rtl {
+       .cx-tab-position-left > .#{$prefix}panel-body.#{$prefix}rtl { 
+           border-right-width: 0 !important;
+           @if $panel-body-border-width != null {
+               border-left-width: left($panel-body-border-width) !important;
+           }
+       }
+  }
+
+  //right bottom
+  .cx-tab-position-bottom > .#{$prefix}panel-body { border-bottom-width: 0 !important }
+
+  //right left
+  .cx-tab-position-right > .#{$prefix}panel-body { border-right-width: 0 !important }
+
+  @if $include-rtl {
+      .cx-tab-position-right > .#{$prefix}panel-body.#{$prefix}rtl { 
+          border-left-width: 0 !important;
+          @if $panel-body-border-width != null {
+              border-right-width: right($panel-body-border-width) !important;
+          }
+      }
+  }
+
+}
+

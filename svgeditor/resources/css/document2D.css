@@ -1,0 +1,104 @@
+.showable-children>*{ display:none; }
+.showable-children>*.showed{ display:block;  }
+.hidden{ display:none !important; }
+
+.show-as-wireframe * , .optimize-zoom *{ fill:none; stroke:red; stroke-width:1px; vector-effect: non-scaling-stroke; }
+.show-as-wireframe text{ display:none; }
+
+.optimize-zoom *{ fill:none; stroke:red; stroke-width:1px; vector-effect: non-scaling-stroke; }
+.optimize-zoom text, .optimize-zoom image, .optimize-zoom  foreignObject{ display:none; }
+
+
+.precise-hit-test-element { stroke-width:20!important; stroke:#FFFFFF;  vector-effect:non-scaling-stroke!important; stroke-dasharray:none!important; stroke-linejoin:miter!important;  stroke-linecap:square!important; }
+
+:host-context(.selection-by-rect-area) [locked] { pointer-events:none!important; }
+
+
+/*  test  */
+svg.page.check-viewport rect,
+svg.page.check-viewport line,
+svg.page.check-viewport path,
+svg.page.check-viewport ellipse,
+svg.page.check-viewport polygon,
+svg.page.check-viewport circle,
+svg.page.check-viewport text{ pointer-events: bounding-box; }
+
+svg.page.only-viewport rect:not(.in-viewport),
+svg.page.only-viewport line:not(.in-viewport),
+svg.page.only-viewport path:not(.in-viewport),
+svg.page.only-viewport ellipse:not(.in-viewport),
+svg.page.only-viewport polygon:not(.in-viewport),
+svg.page.only-viewport circle:not(.in-viewport),
+svg.page.only-viewport text:not(.in-viewport){display:none;}
+/* fine test */
+
+
+svg.page .layers{ isolation: isolate; }
+
+.layer[hidden]{ display:none;  }
+.layer[locked]{ pointer-events:none; }
+
+.layer:not([hidden]):not([locked]) text:not([data-type="TextOnPath"]){  pointer-events:bounding-box; }
+.layer text[data-type="TextOnPath"]{ pointer-events:visiblePainted; }
+
+
+.layer path[data-type="EditableTextPath"]{ opacity:0; }
+.layer.isolate-layer path[data-type="EditableTextPath"] { opacity:1;  stroke: #3d7cff; fill:#00000000; stroke-dasharray:4; stroke-width:2; vector-effect: non-scaling-stroke; }
+
+
+
+:host-context( .isolate-layer-editing ) .layer:not([active] ){ opacity:.4;  pointer-events:none ;  }
+:host-context( .isolate-layer-editing ) .layer:not([active]) text{  pointer-events:none !important; }
+/*:host-context( .isolate-layer-editing ) .foreground-layers{display:none;}*/
+:host-context( .isolate-layer-editing ) .layer.clip-path>*:not(:first-child),
+:host-context( .isolate-layer-editing ) .layer.clip-path>text:not(:first-child) {  stroke-dasharray:0; stroke-width:2; vector-effect: non-scaling-stroke; }
+
+:host-context( .isolate-layer-editing ) .layer > .view-box { fill:none; stroke: red; stroke-dasharray:4; stroke-width:2; vector-effect: non-scaling-stroke; }
+
+foreignObject{ pointer-events:bounding-box;}
+foreignObject>*{pointer-events:none;}
+
+:host-context( .cmd-key ) foreignObject>*{pointer-events:all;}
+
+
+foreignObject>div[contenteditable]{ -moz-user-select: text;   -webkit-user-select: text;   -ms-user-select: text;    user-select: text; background-color: #e5edf596;}
+foreignObject>div[contenteditable]{pointer-events:all; }
+
+/*foreignObject iframe > * {*/
+/*    pointer-events: none !important;*/
+/*}*/
+
+/*foreignObject{ pointer-events:bounding-box; }*/
+/*foreignObject>div{width:100%; height: 100%; outline: none; }*/
+/*foreignObject>div *{pointer-events:none; background-color: transparent; outline: none; }*/
+/*foreignObject>div[contenteditable]{ -moz-user-select: text;   -webkit-user-select: text;   -ms-user-select: text;    user-select: text; background-color: #e5edf596;}*/
+/*foreignObject>div[contenteditable]>*{pointer-events:all; }*/
+
+
+:host-context( [active-tool='draw-edit-text-tool'].over-element ) text { cursor: text;}
+:host-context( [active-tool='draw-edit-text-tool'].over-element ) foreignObject[data-type="html-text"] { cursor: text; }
+
+
+image {
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+
+.layer text{  outline: 1px solid transparent; }
+.layer text[contenteditable]{ outline: 1px solid #2196f3; -moz-user-select: text; -webkit-user-select: text; -ms-user-select: text; user-select: text; cursor: text; pointer-events:auto; }
+.layer:not([hidden]):not([locked]) text:not([data-type="TextOnPath"]){  pointer-events:bounding-box; }
+
+/* FIX safari */
+text[paint-order="stroke"] { paint-order: stroke!important; }
+
+
+@media print {
+   .page-list{position: absolute!important;left: 0!important;top: 0!important; width:100%!important; height:100%!important;}
+   .page-list svg.page{position: unset!important; display:block!important;}
+   .page-list svg.page .content { transform: matrix(1,0,0,1,0,0)}
+}

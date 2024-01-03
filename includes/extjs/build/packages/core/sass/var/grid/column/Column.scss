@@ -1,0 +1,153 @@
+﻿
+/** 
+ * CODAXY
+ * $grid-header-line-height
+ * @var {number}
+ * defines grid header text line height
+*/   
+$grid-header-line-height: dynamic(null);
+
+/** 
+ * CODAXY
+ * $grid-column-header-background-color-sort
+ * @var {string}
+ * defines grid column header background color when pressed
+*/
+$grid-column-header-background-color-sort: dynamic(null);
+
+/** 
+ * CODAXY
+ * $grid-column-header-background-gradient-sort
+ * @var {string}
+ * defines grid column header background gradient when pressed
+*/
+$grid-column-header-background-gradient-sort: dynamic(null);
+
+/** 
+ * CODAXY
+ * $grid-column-header-background-color-over
+ * @var {string}
+ * defines grid column header background color on hover
+*/
+$grid-column-header-background-color-over: dynamic(null);
+
+/** 
+ * CODAXY
+ * $grid-column-header-background-color-open
+ * @var {string}
+ * defines grid column header background color when open
+*/
+$grid-column-header-background-color-open: dynamic(null);
+
+/** 
+ * CODAXY
+ * $grid-column-header-inner-border-color
+ * @var {list}
+ * defines grid header column inner border color
+*/   
+$grid-column-header-inner-border-color: dynamic(null);
+
+/** 
+ * CODAXY
+ * $grid-column-header-inner-border-color-sort
+ * @var {list}
+ * defines grid header column inner border color when pressed (previously variable $grid-column-header-inner-border-width-sort should be defined)
+*/ 
+$grid-column-header-inner-border-color-sort: dynamic(null);
+
+/** 
+ * CODAXY
+ * $grid-column-header-inner-border-color-over (previously variable $grid-column-header-inner-border-width-over should be defined)
+ * @var {list}
+ * defines grid header column inner border color on hover
+*/ 
+$grid-column-header-inner-border-color-over: dynamic(null);
+
+/** 
+ * CODAXY
+ * $grid-column-header-inner-border-color-focus
+ * @var {list}
+ * defines grid header column inner border color on focus (previously variable $grid-column-header-inner-border-width-focus should be defined)
+*/ 
+$grid-column-header-inner-border-color-focus: dynamic(null);
+
+/** 
+ * CODAXY
+ * $grid-column-header-inner-border-width
+ * @var {list}
+ * defines grid header column inner border width
+*/ 
+$grid-column-header-inner-border-width: dynamic(null);
+
+/** 
+ * CODAXY
+ * $grid-column-header-inner-border-width-sort
+ * @var {list}
+ * defines grid header column inner border width when pressed 
+*/ 
+$grid-column-header-inner-border-width-sort: dynamic(null);
+
+/** 
+ * CODAXY
+ * $grid-column-header-inner-border-width-over
+ * @var {list}
+ * defines grid header column inner border width on hover
+*/ 
+$grid-column-header-inner-border-width-over: dynamic(null);
+
+/** 
+ * CODAXY
+ * $grid-column-header-inner-border-width-focus
+ * @var {list}
+ * defines grid header column inner border width on focus
+*/ 
+$grid-column-header-inner-border-width-focus: dynamic(null);
+
+/** 
+ * CODAXY
+ * $grid-column-trigger-border-width
+ * @var {list}
+ * sets border width to grid column trigger
+*/
+$grid-column-trigger-border-width: dynamic(null);
+
+/** 
+ * CODAXY
+ * $grid-column-trigger-border-color
+ * @var {list}
+ * defines grid column trigger border color 
+*/
+$grid-column-trigger-border-color: dynamic(null);
+
+/** 
+ * CODAXY
+ * $grid-column-trigger-border-style
+ * @var {string}
+ * sets border style to grid column trigger
+*/
+$grid-column-trigger-border-style: dynamic(null);
+
+/** 
+ * CODAXY
+ * $grid-column-trigger-inner-border-width
+ * @var {list}
+ * defines grid column trigger inner border width- equals $grid-column-header-inner-border-width by default
+*/ 
+$grid-column-trigger-inner-border-width: dynamic($grid-column-header-inner-border-width);
+
+/** 
+ * CODAXY
+ * $grid-column-trigger-inner-border-color
+ * @var {string}
+ * defines grid column trigger inner border color- equals $grid-column-header-inner-border-color by default
+*/ 
+$grid-column-trigger-inner-border-color: dynamic($grid-column-header-inner-border-color);
+
+ /** 
+ * CODAXY
+ * $grid-column-trigger-background-color-ove
+ * @var {string}
+ * defines grid column trigger background color on hover
+*/   
+$grid-column-trigger-background-color-over: dynamic(null);
+

@@ -1,0 +1,13 @@
+https://sistemats1.sanita.finanze.it/portale/spese-sanitarie/documenti-e-specifiche-tecniche-strumenti-per-lo-sviluppo
+
+https://portal.fattura730.com/#/dashboard
+
+PORTA730:
+https://portal.fattura730.com/Account/Login
+user: info@odontoiatriasynago.com
+pwd: ek50NydL
+
+soggetti:
+synago
+manghi
+vacondio

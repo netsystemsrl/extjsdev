@@ -1,0 +1,12 @@
+NomeField			,Len,Align	,Requested	,CodeValue,SampleValue
+FILLER         		,01,L0		,N		 	, 		,FILLER
+TIPOREC				,02,L0		,N			,20		,TIPOREC
+DelegaProg			,07,R0		,Y		 	,		,ProgressivoDelega
+Comune              ,25,L		,Y		 	,		,Comune
+Provincia           ,02,L		,Y		 	,	    ,Provincia
+Indirizzo           ,35,L		,Y		 	,		,Indirizzo
+DataPagamento       ,08,yyyyMMdd,Y		 	,		,DataPagamento
+FlagAnnoImposta     ,01,L		,Y		 	,		,FlagAnnoImposta
+SecondoCodiceFiscale,16,L		,Y		 	,		,SecondoCodiceFiscale
+CodiceIdentificativo,02,L		,Y		 	,		,CodiceIdentificativo
+FILLER          	,21,L		,N		 	,		,FILLER

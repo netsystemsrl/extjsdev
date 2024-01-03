@@ -1,0 +1,7 @@
+NomeField		,Len,Align	,Requested	,CodeValue										,SampleValue
+TIPOREC			,99	,		,Y		 	,CNT											,CNT
+FILLER			,99	,		,Y		 	,+												,FILLER
+TIPONUMERO		,99	,		,Y			,2												,TIPONUMERO
+FILLER			,99	,		,Y		 	,:												,FILLER
+MSGCOUNT		,99	,		,Y			,0												,QTARIGHE O PESO
+END				,99	,		,Y		 	,'												,END 

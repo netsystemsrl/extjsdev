@@ -1,0 +1,26 @@
+﻿
+/**
+ * CODAXY 
+ * $header-tabbar-strip
+ * @var {boolean}
+ * `true` to add pseudo element which acts like tab bar strip when tab bar is positioned in panel header
+ */
+$header-tabbar-strip: dynamic(true);
+
+/**
+ * CODAXY 
+ * $tabbar-inner-border-width
+ * @var {list}
+ * sets the width of tab bar inner border
+ */
+$tabbar-inner-border-width: dynamic(null);
+
+$tabbar-border-color: dynamic(null);
+
+/**
+ * CODAXY 
+ * $tabbar-strip-plain-border-width
+ * @var {list}
+ * defines strip border width when it's set inside plain tab bar
+ */
+$tabbar-strip-plain-border-width: dynamic(null);

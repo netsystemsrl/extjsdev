@@ -1,0 +1,6 @@
+NomeField		,Len,Align	,Requested	,CodeValue											,SampleValue
+TIPOREC			,03	,L		,Y		 	,'TOD'												,TOD
+CODCONS			,03	,L		,Y			,													,
+CODCOND			,03	,L		,Y			,   												,
+DESCOND1		,70	,L		,Y			,													,	
+DESCOND2		,70	,L		,N			,													,

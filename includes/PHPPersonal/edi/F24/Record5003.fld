@@ -1,0 +1,10 @@
+NomeField			,Len,Align	,Requested	,CodeValue,SampleValue
+FILLER         		,01,L0		,N		 	, 		,FILLER
+TIPOREC				,02,L0		,N			,50		,TIPOREC
+DelegaProg			,07,R0		,Y		 	,		,ProgressivoDelega
+SUBTIPOREC			,02,L0		,N			,03		,Fisso
+Cap  	            ,05,L		,Y		 	,		,Cap
+Comune  	        ,25,L		,Y		 	,		,Comune
+Provincia  	        ,02,L		,Y		 	,		,Provincia
+Indirizzo  	        ,35,L		,Y		 	,		,Indirizzo
+FILLER          	,42,L		,N		 	,		,FILLER

@@ -1,0 +1,23 @@
+
+# BEGIN ExtJsDev
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+
+	RewriteRule ^(.*)\.html$ $1.php [L]
+
+	#questa regola ci dice che se inseriamo url che fa riferimento a un file 'html' nella directory in cui è presente il file htaccess
+ 	#allora il '.html' dell'url viene cambiato '.php'
+	#quindi se cerchiamo in questa directory /home.html questa regola ci rimanda in automatico a home.php 
+		
+
+    #RewriteCond %{HTTPS} off
+	#RewriteCond %{HTTP_HOST} = iot.extjsdev.it/devices/update.html
+	#nel caso in cui vada in questo url
+    #RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+		
+	
+	#RewriteRule (.*)$ iot.extjsdev.it/devices/update.php [R=301,L]
+
+	
+	
+</IfModule>

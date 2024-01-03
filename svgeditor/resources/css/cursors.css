@@ -1,0 +1,148 @@
+.space-key document-2d{ cursor: grab!important;}
+.space-key document-2d:active{ cursor: grabbing!important;}
+
+.alt-key #INTERACTION #ELEMENT_ORIGIN #translateOriginHandle { display:inline; }
+
+
+[active-tool='selection-tool'] document-2d{ cursor:default; }
+[active-tool='selection-tool'].over-element document-2d{ cursor:url(../cursors/arrowBlackOverInstance_cur.png), default;}
+[active-tool='selection-tool'].over-vertex document-2d{  cursor:url(../cursors/arrowBlackOverVertex_cur.png), default;}
+[active-tool='selection-tool'].over-vertex:active document-2d{ cursor:url(../cursors/translateObjectOverVertex_cur.png) 16 16, default;}
+.alt-key:not(.space-key) [active-tool='selection-tool'].over-element document-2d { cursor:url(../cursors/arrowBlackMoveCopy_cur.png) , default!important; }
+
+
+
+[active-tool='selection-points-tool'] document-2d{ cursor:url(../cursors/arrowWhite_cur.png), default; }
+[active-tool='selection-points-tool'].over-element document-2d{ cursor:url(../cursors/arrowWhiteOverInstance_cur.png), default;}
+[active-tool='selection-points-tool'].over-vertex document-2d{  cursor:url(../cursors/arrowWhiteOverVertex_cur.png), default;}
+[active-tool='selection-points-tool'].over-vertex:active document-2d { cursor:url(../cursors/translateObjectOverVertex_cur.png) 16 16, default;}
+.alt-key:not(.space-key) [active-tool='selection-points-tool'].over-element document-2d { cursor:url(../cursors/pathAddPoint_cur.png) 16 16, default!important; }
+.cmd-key.alt-key.shift-key:not(.space-key) [active-tool='selection-points-tool'].over-element document-2d { cursor:url(../cursors/pathCutter_cur.png) 16 16, default!important; }
+
+.alt-key:not(.space-key) [active-tool='selection-points-tool'] #INTERACTION .resize { cursor:url(../cursors/pathRemovePoint_cur.png) 16 16, default!important; }
+.alt-key.shift-key:not(.space-key) [active-tool='selection-points-tool'] #INTERACTION .resize { cursor:url(../cursors/convertPathPointOverVertex_cur.png) 16 16, default!important; }
+.cmd-key.alt-key.shift-key:not(.space-key) [active-tool='selection-points-tool'] #INTERACTION .resize { cursor:url(../cursors/pathCutter_cur.png) 16 16, default!important; }
+
+
+
+[active-tool='pan-tool'] document-2d{ cursor: grab; }
+[active-tool='pan-tool'] document-2d:active{ cursor: grabbing; }
+
+[active-tool='zoom-tool'] document-2d{ cursor: zoom-in; }
+
+[active-tool='draw-line-tool'] document-2d{ cursor:url(../cursors/line_cur.png) 16 16, default; }
+[active-tool='draw-line-tool'].over-vertex document-2d{ cursor:url(../cursors/lineOverVertex_cur.png) 16 16, default;}
+[active-tool='draw-line-tool']:active document-2d{ cursor:url(../cursors/crosshair_cur.png) 16 16, default;}
+[active-tool='draw-line-tool'].over-vertex:active document-2d{ cursor:url(../cursors/crosshairOverVertex_cur.png) 16 16, default;}
+
+[active-tool='draw-rect-tool'] document-2d{ cursor:url(../cursors/rect_cur.png) 16 16, default;}
+[active-tool='draw-rect-tool'].over-vertex document-2d{ cursor:url(../cursors/rectOverVertex_cur.png) 16 16, default;}
+[active-tool='draw-rect-tool']:active document-2d{ cursor:url(../cursors/crosshair_cur.png) 16 16, default;}
+[active-tool='draw-rect-tool'].over-vertex:active document-2d{ cursor:url(../cursors/crosshairOverVertex_cur.png) 16 16, default;}
+
+
+[active-tool='draw-ellipse-tool'] document-2d{ cursor:url(../cursors/ellipse_cur.png) 16 16, default;}
+[active-tool='draw-ellipse-tool'].over-vertex document-2d{ cursor:url(../cursors/ellipseOverVertex_cur.png) 16 16, default;}
+[active-tool='draw-ellipse-tool']:active document-2d{ cursor:url(../cursors/crosshair_cur.png) 16 16, default;}
+[active-tool='draw-ellipse-tool'].over-vertex:active document-2d{ cursor:url(../cursors/crosshairOverVertex_cur.png) 16 16, default;}
+
+
+[active-tool='draw-edit-text-tool'] document-2d{ cursor:url(../cursors/textBox_cur.png) 16 16, default;}
+[active-tool='draw-edit-text-tool'].over-vertex document-2d{ cursor:url(../cursors/crosshairOverVertex_cur.png) 16 16, default;}
+[active-tool='draw-edit-text-tool']:active document-2d{ cursor:url(../cursors/crosshair_cur.png) 16 16, default;}
+[active-tool='draw-edit-text-tool'].over-vertex:active document-2d{ cursor:url(../cursors/crosshairOverVertex_cur.png) 16 16, default;}
+[active-tool='draw-text-box-tool'] text:hover { cursor: text;}
+
+
+[active-tool='draw-regular-polygon-tool'] document-2d{ cursor:url(../cursors/crosshair_cur.png) 16 16, default;}
+[active-tool='draw-regular-polygon-tool'].over-vertex document-2d{ cursor:url(../cursors/crosshairOverVertex_cur.png) 16 16, default;}
+[active-tool='draw-regular-polygon-tool']:active document-2d{ cursor:url(../cursors/crosshair_cur.png) 16 16, default;}
+[active-tool='draw-regular-polygon-tool'].over-vertex:active document-2d{ cursor:url(../cursors/crosshairOverVertex_cur.png) 16 16, default;}
+
+
+[active-tool='draw-arc-tool'] document-2d{ cursor:url(../cursors/arc_cur.png) 16 16, default;}
+[active-tool='draw-arc-tool'].over-vertex document-2d{ cursor:url(../cursors/arcOverVertex_cur.png) 16 16, default;}
+[active-tool='draw-arc-tool']:active document-2d{ cursor:url(../cursors/crosshair_cur.png) 16 16, default;}
+[active-tool='draw-arc-tool'].over-vertex:active document-2d{ cursor:url(../cursors/crosshairOverVertex_cur.png) 16 16, default;}
+
+
+[active-tool='draw-path-tool'] document-2d{ cursor:url(../cursors/path_cur.png) 16 16, default;}
+[active-tool='draw-path-tool'].over-vertex document-2d{ cursor:url(../cursors/pathOverVertex_cur.png) 16 16, default;}
+[active-tool='draw-path-tool']:active document-2d{ cursor:url(../cursors/crosshair_cur.png) 16 16, default;}
+[active-tool='draw-path-tool'].over-vertex:active document-2d{ cursor:url(../cursors/crosshairOverVertex_cur.png) 16 16, default;}
+
+[active-tool='draw-freehand-tool'] document-2d { cursor:url(../cursors/pen_cur.png) 16 16, default;}
+[active-tool='draw-freehand-tool']:active document-2d{ cursor:crosshair;}
+[active-tool='draw-freehand-tool'].cmd-key document-2d{ cursor:default; }
+
+
+[active-tool='scale-by-pivot-tool'] document-2d { cursor:url(../cursors/crosshair_cur.png) 16 16, default;}
+[active-tool='scale-by-pivot-tool'].over-vertex document-2d{ cursor:url(../cursors/crosshairOverVertex_cur.png) 16 16, default;}
+[active-tool='scale-by-pivot-tool']:active document-2d{ cursor:url(../cursors/crosshair_cur.png) 16 16, default;}
+[active-tool='scale-by-pivot-tool'].over-vertex:active document-2d{ cursor:url(../cursors/crosshairOverVertex_cur.png) 16 16, default;}
+[active-tool='scale-by-pivot-tool'] #SCALE_2D .translate:hover { cursor: move!important; }
+
+[active-tool='scale-by-pivot-tool'] #INTERACTION #INTERACTION_POINTS .control-point-list,
+[active-tool='scale-by-pivot-tool'] #INTERACTION #INTERACTION_POINTS .path-interaction line,
+[active-tool='scale-by-pivot-tool'] #INTERACTION #INTERACTION_POINTS .interaction-point:not(.selected) { display:none; pointer-events: none; }
+[active-tool='scale-by-pivot-tool'] #INTERACTION #INTERACTION_POINTS .resize,
+[active-tool='scale-by-pivot-tool'] #INTERACTION #INTERACTION_POINTS .translate {pointer-events: none;}
+
+
+
+[active-tool='rotate-by-pivot-tool'] document-2d{ cursor:url(../cursors/crosshair_cur.png) 16 16, default;}
+[active-tool='rotate-by-pivot-tool'].over-vertex document-2d{ cursor:url(../cursors/crosshairOverVertex_cur.png) 16 16, default;}
+[active-tool='rotate-by-pivot-tool']:active document-2d{ cursor:url(../cursors/crosshair_cur.png) 16 16, default;}
+[active-tool='rotate-by-pivot-tool'].over-vertex:active document-2d{ cursor:url(../cursors/crosshairOverVertex_cur.png) 16 16, default;}
+[active-tool='rotate-by-pivot-tool'] #ROTATE_2D .translate:hover { cursor: move; }
+
+[active-tool='rotate-by-pivot-tool'] #INTERACTION #INTERACTION_POINTS .control-point-list,
+[active-tool='rotate-by-pivot-tool'] #INTERACTION #INTERACTION_POINTS .path-interaction line,
+[active-tool='rotate-by-pivot-tool'] #INTERACTION #INTERACTION_POINTS .interaction-point:not(.selected) { display:none; pointer-events: none; }
+[active-tool='rotate-by-pivot-tool'] #INTERACTION #INTERACTION_POINTS .resize,
+[active-tool='rotate-by-pivot-tool'] #INTERACTION #INTERACTION_POINTS .translate {pointer-events: none;}
+
+
+[active-tool='add-remove-point-tool'] document-2d{ cursor:url(../cursors/pathAddPoint_cur.png) 16 16, default;}
+[active-tool='add-remove-point-tool'].over-vertex document-2d{ cursor:url(../cursors/pathAddPointOverVertex_cur.png) 16 16, default;}
+[active-tool='add-remove-point-tool']:active document-2d{ cursor: nesw-resize; }
+
+[active-tool='add-remove-point-tool'] #INTERACTION #INTERACTION_POINTS .point-list .translate,
+[active-tool='add-remove-point-tool'] #INTERACTION #INTERACTION_POINTS .control-point-list,
+[active-tool='add-remove-point-tool'] #INTERACTION #INTERACTION_POINTS .path-interaction line{ display:none; }
+[active-tool='add-remove-point-tool'] #INTERACTION #INTERACTION_POINTS .resize { cursor:url(../cursors/pathRemovePoint_cur.png) 16 16, default; }
+[active-tool='add-remove-point-tool']:active #INTERACTION #INTERACTION_POINTS .resize { cursor: nesw-resize; }
+
+
+[active-tool='split-path-tool'] document-2d{ cursor:url(../cursors/pathCutter_cur.png) 16 16, default;}
+[active-tool='split-path-tool'].over-vertex{ cursor:url(../cursors/pathCutterOverVertex_cur.png) 16 16, default;}
+[active-tool='split-path-tool'] #INTERACTION #INTERACTION_POINTS .point-list .translate,
+[active-tool='split-path-tool'] #INTERACTION #INTERACTION_POINTS .control-point-list,
+[active-tool='split-path-tool'] #INTERACTION #INTERACTION_POINTS .path-interaction line{ display:none; }
+[active-tool='split-path-tool'] #INTERACTION #INTERACTION_POINTS .resize { cursor:url(../cursors/pathCutterOverVertex_cur.png) 16 16, default; }
+
+
+[active-tool='convert-point-tool'] document-2d{ cursor:url(../cursors/convertPathPoint_cur.png) 16 16, default;}
+[active-tool='convert-point-tool']:active document-2d{ cursor: nesw-resize; }
+
+[active-tool='convert-point-tool'] #INTERACTION #INTERACTION_POINTS .point-list .translate,
+[active-tool='convert-point-tool'] #INTERACTION #INTERACTION_POINTS .control-point-list,
+[active-tool='convert-point-tool'] #INTERACTION #INTERACTION_POINTS .path-interaction line{ display:none; }
+[active-tool='convert-point-tool'] #INTERACTION #INTERACTION_POINTS .resize { cursor:url(../cursors/convertPathPointOverVertex_cur.png) 16 16, default; }
+[active-tool='convert-point-tool']:active #INTERACTION #INTERACTION_POINTS .resize { cursor: nesw-resize; }
+
+
+[active-tool='round-corners-tool'] document-2d{ cursor:url(../cursors/roundPathCorner_cur.png) 16 16, default;}
+[active-tool='round-corners-tool']:active document-2d{ cursor: nesw-resize; }
+
+[active-tool='round-corners-tool'] #INTERACTION #INTERACTION_POINTS .point-list .translate,
+[active-tool='round-corners-tool'] #INTERACTION #INTERACTION_POINTS .control-point-list,
+[active-tool='round-corners-tool'] #INTERACTION #INTERACTION_POINTS .path-interaction line{ display:none; }
+[active-tool='round-corners-tool'] #INTERACTION #INTERACTION_POINTS .resize { cursor:url(../cursors/roundPathCornerOverVertex_cur.png) 16 16, default; }
+[active-tool='round-corners-tool']:active #INTERACTION #INTERACTION_POINTS .resize { cursor: nesw-resize; }
+
+
+[active-tool='eye-dropper-tool'] document-2d{ cursor:url(../cursors/eyedropper_cur.png) 16 16, default;}
+/*[active-tool='eye-dropper-tool']:active{ cursor:crosshair;}*/
+
+[active-tool='filling-tool'] document-2d{ cursor:url(../cursors/fill_cur.png) 16 16, default;}

@@ -1,0 +1,12 @@
+NomeField		,Len,Align	,Requested	,CodeValue	,SampleValue
+TIPOREC			,02	,L		,Y		 	,'21'		,PRODUZIONE Testata
+TERZISTA		,13	,L		,Y			,			,0000000001234 TERZISTA
+PRODID			,13 ,L		,Y			,			,0000000001234 ID PRODUZIONE
+PRODDATA		,10 ,L		,Y			,			,2020-02-02
+PRODDB			,13 ,L 		,Y  		,  			,0000000001234 Codice distinta Produzione
+PRODDBVAR		,05 ,L      ,Y			,			,VARIANTE
+PRODLOTTO		,20 ,L  	,Y  		,			,L-123
+PRODLOTTODATA	,10 ,L  	,Y  		,			,2020-02-02
+SENDDATA		,10 ,L  	,Y  		,			,2020-02-02
+SENDTIME		,08 ,L  	,Y  		,			,18.35.17
+CONSOLIDATO		,01 ,L  	,Y  		,			,1

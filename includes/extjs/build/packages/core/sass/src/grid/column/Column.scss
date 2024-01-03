@@ -1,0 +1,191 @@
+
+// OK-315 
+// not needed any more
+/*.#{$prefix}column-header-trigger {
+  background-color: $grid-header-background-color;
+  background-image: theme-background-image('grid/grid3-hd-btn');
+}*/
+
+// Classic theme uses different left.right menu trigger images.
+@if $include-rtl {
+  .#{$prefix}rtl.#{$prefix}column-header-trigger {
+    background-image: theme-background-image('grid/grid3-hd-btn-left');
+  }
+}
+
+@mixin _codaxy-grid-header-ui (    
+    $ui-border-color: null,
+    
+    $ui-inner-border-width: null,
+    $ui-inner-border-width-over: null,
+    $ui-inner-border-width-sort: null,
+    $ui-inner-border-width-focus: null,
+
+    $ui-inner-border-color: null,
+    $ui-inner-border-color-over: null,
+    $ui-inner-border-color-sort: null,
+    $ui-inner-border-color-focus: null,
+
+    $ui-trigger-inner-border-width: null,
+    $ui-trigger-inner-border-color: null,
+    $ui-trigger-border-color: null,
+    $ui-trigger-border-width: null,
+    $ui-trigger-border-style: null,
+    $ui-trigger-background-color: null,
+    $ui-trigger-background-color-over: null,
+    $ui-trigger-background-image: null,
+
+    $ui-background-color-sort: null,
+    $ui-background-gradient-sort: null,
+    $ui-background-color: null,
+    $ui-background-color-over: null,
+    $ui-background-color-open: null,
+    
+    $ui-color: null,
+    $ui-header-background-color: null,
+    $ui-header-background-color-over: null,
+    $ui-header-border-color: null,
+    $ui-focus-indicator-over-cell: $focus-indicator-over-cell,
+    $ui-header-line-height: null
+) {
+
+  
+  .#{$prefix}grid-header-ct {
+        @if $ui-inner-border-width != null {
+            @include inner-border($width: $ui-inner-border-width, $color: $ui-inner-border-color);
+        }
+        @if $ui-header-background-color != null { background-color: $ui-header-background-color }
+        @if $ui-header-border-color != null { border-color: $ui-header-border-color }
+         /* O-315
+          * this gives possibility of separately coloring whole grid header on hover 
+          */
+        &:hover {
+            @if $ui-header-background-color-over != null { background-color: $ui-header-background-color-over }
+        }
+
+        .#{$prefix}column-header {
+            @if $ui-color != null { color: $ui-color }
+            @if $ui-inner-border-width != null {
+                @include inner-border($width: $ui-inner-border-width, $color: $ui-inner-border-color);
+            }
+            @if $ui-background-color != null { background-color: $ui-background-color }
+            @if $ui-border-color != null { border-color: $ui-border-color }
+            &:hover { 
+                @if $ui-background-color-over != null { background-color: $ui-background-color-over }
+            }
+        }
+
+        .#{$prefix}column-header-sort-ASC,
+        .#{$prefix}column-header-sort-DESC {
+            @if $ui-inner-border-width-sort != null { @include inner-border($width: $ui-inner-border-width-sort, $color: $ui-inner-border-color-sort) }   
+            @if $ui-background-color-sort != null { background-color: $ui-background-color-sort }
+            @if $ui-background-gradient-sort != null { @include background-gradient($ui-background-color-sort, $ui-background-gradient-sort, top) }
+        }
+
+        .#{$prefix}column-header-over { 
+            @if $ui-inner-border-width-over != null and $ui-inner-border-color-over != null { @include inner-border($width: $ui-inner-border-width-over, $color: $ui-inner-border-color-over) }
+            @if $ui-background-color-over != null { background-color: $ui-background-color-over }
+            .#{$prefix}column-header-trigger { 
+                @if $ui-trigger-background-color-over != null { background-color: $ui-trigger-background-color-over } 
+            }   
+        }
+
+        .#{$prefix}column-header-open {
+            @if $ui-inner-border-width-over != null and $ui-inner-border-color-over != null { @include inner-border($width: $ui-inner-border-width-over, $color: $ui-inner-border-color-over) }
+            @if $ui-background-color-open != null { background-color: $ui-background-color-open }
+            .#{$prefix}column-header-trigger { 
+                @if $ui-trigger-background-color-over != null { background-color: $ui-trigger-background-color-over } 
+            }              
+        }
+
+        .#{$prefix}column-header-inner-focus {
+            @if $ui-inner-border-width-focus != null { @include inner-border($width: $ui-inner-border-width-focus, $color: $ui-inner-border-color-focus) }    
+        }
+
+        .#{$prefix}column-header-inner {
+            @if $ui-header-line-height != null {
+                line-height: $ui-header-line-height;
+            }
+        }
+
+        .#{$prefix}column-header-trigger {
+            @if $ui-trigger-background-color != null { background-color: $ui-trigger-background-color }
+            @if $ui-trigger-background-image != null { background-image: $ui-trigger-background-image }
+            @if $ui-trigger-inner-border-width != null and $ui-trigger-inner-border-color != null {
+                @include inner-border($width: $ui-trigger-inner-border-width, $color: $ui-trigger-inner-border-color);
+            }
+            @if $ui-trigger-border-width != null { border-width: $ui-trigger-border-width } 
+            @if $ui-trigger-border-color != null { border-color: $ui-trigger-border-color }
+            @if $ui-trigger-border-style != null { border-style: $ui-trigger-border-style }
+            &:hover { 
+                @if $ui-trigger-background-color-over != null { background-color: $ui-trigger-background-color-over }
+            }
+        }
+
+  }
+ 
+  //@if ($ui-focus-indicator-over-cell == true) {
+  //  .#{$prefix}grid-header-ct, .#{$prefix}grid-header-ct .#{$prefix}box-inner {
+  //      overflow: visible !important;
+  //  }
+  //  .#{$prefix}column-header-focus {        
+  //      overflow: visible;
+  //      .#{$prefix}column-header-inner {
+  //          margin: -1px;
+  //          padding: #{list-rect($grid-header-padding, top) + 1px}
+  //                   #{list-rect($grid-header-padding, right) + 1px}
+  //                   #{list-rect($grid-header-padding, bottom) + 1px}
+  //                   #{list-rect($grid-header-padding, left) + 1px};
+  //      }
+  //      .#{$prefix}column-header-over {
+  //          .#{$prefix}column-header-trigger {
+  //              border-width: 1px 0;
+  //              border-color: $grid-column-header-focus-border-color;
+  //              border-style: solid;
+  //              margin-right: 1px;
+  //          }
+  //      }
+  //
+  //      // grid grouped header focus behaviour correction
+  //      .#{$prefix}leaf-column-header {
+  //          height: calc(100% + 2px);
+  //      }
+  //  }
+  //}
+   // grid grouped header focus behaviour correction
+    .#{$prefix}leaf-column-header {
+        height: calc(100% + 2px);
+    }
+              
+}
+
+
+
+@if $include-ext-grid-column-column {
+  @include _codaxy-grid-header-ui (
+      $ui-inner-border-width: $grid-column-header-inner-border-width,
+      $ui-inner-border-width-over: $grid-column-header-inner-border-width-over,
+      $ui-inner-border-width-sort: $grid-column-header-inner-border-width-sort,
+      $ui-inner-border-width-focus: $grid-column-header-inner-border-width-focus,
+
+      $ui-inner-border-color: $grid-column-header-inner-border-color,
+      $ui-inner-border-color-over: $grid-column-header-inner-border-color-over,
+      $ui-inner-border-color-sort: $grid-column-header-inner-border-color-sort,
+      $ui-inner-border-color-focus: $grid-column-header-inner-border-color-focus,
+
+      $ui-trigger-inner-border-width: $grid-column-trigger-inner-border-width,
+      $ui-trigger-inner-border-color: $grid-column-trigger-inner-border-color,
+      $ui-trigger-border-width: $grid-column-trigger-border-width,
+      $ui-trigger-border-color: $grid-column-trigger-border-color,
+      $ui-trigger-border-style: $grid-column-trigger-border-style,
+      $ui-trigger-background-color-over: $grid-column-trigger-background-color-over,
+
+      $ui-background-color-sort: $grid-column-header-background-color-sort,
+      $ui-background-gradient-sort: $grid-column-header-background-gradient-sort,
+      $ui-background-color-over: $grid-column-header-background-color-over,
+      $ui-background-color-open: $grid-column-header-background-color-open,
+      
+      $ui-header-background-color-over: $grid-header-background-color-over,
+      $ui-header-line-height: $grid-header-line-height
+  );
+}

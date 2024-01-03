@@ -1,0 +1,11 @@
+NomeField		,Len,Align	,Requested	,CodeValue	,SampleValue
+TIPOREC			,02	,L		,Y		 	,'02'		,MP Testata
+TERZISTA		,13	,L		,Y			,			,0000000001234 TERZISTA
+ORDANNO			,04 ,L		,Y			,			,2020
+ORDNUM			,13 ,L		,Y			,			,0000000056402
+RIGA			,05 ,L 		,Y  		,  			,12345
+CODICEART		,13 ,L  	,Y  		,			,0000000056402
+QTA				,15 ,L  	,Y  		,			,NNNNNNNNNN,NNN * 1000
+PESO			,10 ,L  	,Y  		,			,NNNNNNNNNN,NNN * 1000
+QTALETTO		,15 ,L  	,Y  		,			,NNNNNNNNNN,NNN * 1000
+PESOLETTO		,10 ,L  	,Y  		,			,NNNNNNNNNN,NNN * 1000

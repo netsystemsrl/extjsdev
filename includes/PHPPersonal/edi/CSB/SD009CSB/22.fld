@@ -1,0 +1,13 @@
+NomeField		,Len,Align	,Requested	,CodeValue	,SampleValue
+TIPOREC			,02	,L		,Y		 	,'22'		,PRODUZIONE CARICO MP
+TERZISTA		,13	,L		,Y			,			,0000000001234 TERZISTA
+PRODID			,13 ,L		,Y			,			,0000000001234 ID PRODUZIONE
+PRODDATA		,10 ,L		,Y			,			,2020-02-02
+ARTCODICE		,13 ,L 		,Y  		,  			,Codice art MP
+LOTTO			,20 ,L  	,Y  		,			,xxxNR
+LOTTODATA		,10 ,L  	,Y  		,			,2020-02-02
+QTA				,09 ,L  	,Y  		,			,xxxNR
+PESO			,09 ,L  	,Y  		,			,xxxKG
+SENDDATA		,10 ,L  	,Y  		,			,2020-02-02
+SENDTIME		,08 ,L  	,Y  		,			,18.35.17
+SEGNO			,01 ,L  	,Y  		,			,+ -

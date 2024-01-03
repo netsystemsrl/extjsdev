@@ -1,0 +1,21 @@
+NomeField			,Len,Align	,Requested	,CodeValue,SampleValue
+FILLER         		,01,L0		,N		 	, 		,FILLER
+TIPOREC				,02,L0		,N			,50		,TIPOREC
+DelegaProg			,07,R0		,Y		 	,		,ProgressivoDelega
+SUBTIPOREC			,02,L0		,N			,01		,Fisso
+BcaPassiva	        ,05,R0		,Y		 	,		,BancaPassiva
+BcaPassivaSportello ,05,R0		,Y		 	,		,SportelloBancaPassiva
+ContoAddebito       ,12,R0		,Y		 	,		,ContoAddebito
+Cin                 ,01,L		,Y		 	,		,Cin
+SaldoFinaleDelega   ,15,R0		,Y		 	,		,SaldoFinaleDelega
+FlagFirmatario      ,01,L		,Y		 	,		,FlagFirmatario
+FILLER          	,02,L		,N		 	,		,FILLER
+CodiceFiscale       ,16,L		,Y		 	,		,CodiceFiscale
+TitolarePagamento   ,01,L		,Y		 	,		,TitolarePagamento
+DataPagamento       ,08,yyyyMMdd,Y		 	,		,DataPagamento
+TotACreditoCompensa ,15,D2		,Y		 	,		,TotaleImportiACreditoCompensati
+FILLER          	,02,L		,N		 	,		,FILLER
+TipoCodiceInd       ,01,L		,N		 	,3		,TipoCodiceIndividuale
+CodicePaese         ,02,L		,Y		 	,3		,CodicePaese
+CheckDigit          ,02,R0		,Y		 	,3		,CheckDigit
+FILLER          	,20,L		,N		 	,		,FILLER

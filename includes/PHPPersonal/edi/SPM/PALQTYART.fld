@@ -1,0 +1,6 @@
+NomeField		,Len,Align	,Requested	,CodeValue,SampleValue
+PALLINO			,01	,L		,Y		 	,		,Pallino in Disegno
+QTA				,16	,L		,Y			,		,Pezzi
+CODARTICOLO		,4	,L		,Y			,		,Codice Articolo Ricambio
+
+

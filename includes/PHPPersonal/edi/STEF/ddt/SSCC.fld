@@ -1,0 +1,12 @@
+NomeField		,Len,Align	,Requested	,CodeValue,SampleValue
+TIPOREC			,01	,L		,Y		 	,'S'	,Fisso
+DDTNUM			,16	,L		,Y			,		,Numero DDT Stampato
+DDTRIGA			,4	,L		,Y			,		,ID RIGA
+SSCC			,18	,L		,N			,		,SSCC SPEDIZIONE
+COLLI			,4	,L		,N			,		,COLLI
+NETTO			,8	,L		,N			,		,NETTO
+LORDO			,8	,L		,N			,		,LORDO
+LOTTO			,20	,L		,N			,		,LOTTO
+SCADENZA		,8	,L		,N			,		,SCADENZA
+SSCCPROD		,18	,L		,N			,		,SSCC PRODUZIONE
+SSCCSTRATO		,18	,L		,N			,		,SSCC STRATO

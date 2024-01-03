@@ -1,0 +1,307 @@
+// Panel UI
+
+@if $include-panel-ui and $include-ext-panel-panel {
+  @include extjs-panel-ui(
+    $ui: '#{$ui-label}-panel',
+    $ui-header-color: $ui-panel-header-color,
+    $ui-header-background-color: null-value($ui-panel-header-background-color, rgba(#fff, 0)),
+    $ui-header-border-color: $ui-panel-header-border-color,
+    $ui-header-background-gradient: $ui-panel-header-background-gradient,
+    $ui-header-inner-border-color: $ui-panel-header-inner-border-color,
+    $ui-body-color: $ui-panel-body-color,
+    $ui-body-border-color: $ui-panel-body-border-color,
+    $ui-tool-background-image: null-value($ui-panel-tools-background-image, $tool-background-image)
+
+  );
+
+  @include _codaxy-panel-ui (
+    $ui: '#{$ui-label}-panel',
+    $ui-header-text-shadow: $ui-panel-header-text-shadow,
+    $ui-tools-background-color: $ui-panel-tools-background-color,
+    $ui-tools-background-color-over: $ui-panel-tools-background-color-over,
+    $ui-panel-header-inner-border-width: $panel-header-inner-border-width,
+    $ui-panel-header-inner-border-color: $ui-panel-header-inner-border-color,
+    $ui-body-background-color: $ui-panel-body-background-color,
+    $ui-panel-footer-background-color: $ui-panel-toolbar-footer-background-color,
+    $ui-border-layout-background-color: null-value($ui-border-layout-background-color, $ui-panel-body-background-color),
+    $ui-header-icon-line-height: $ui-panel-header-icon-height
+  );
+}
+
+// Panel UI Framed
+@if $include-panel-framed-ui and $include-ext-panel-panel {
+  @include extjs-panel-ui(
+  $ui: '#{$ui-label}-panel-framed',
+  $ui-border-color: $ui-panel-frame-border-color,
+  $ui-border-width: $panel-frame-border-width,
+  $ui-border-radius: $panel-frame-border-radius,
+  $ui-padding: $panel-frame-padding,
+  $ui-header-color: $ui-panel-header-color,
+  $ui-header-border-color: $ui-panel-header-border-color,
+  $ui-header-background-color: null-value($ui-panel-header-background-color, rgba(#fff, 0)),
+  $ui-header-background-gradient: $ui-panel-header-background-gradient,
+  $ui-header-border-width: $panel-frame-header-border-width,
+  $ui-header-inner-border-color: $ui-panel-frame-header-inner-border-color,
+  $ui-header-inner-border-width: $ui-panel-frame-header-inner-border-width,
+  $ui-header-padding: $panel-frame-header-padding,
+  $ui-body-color: $ui-panel-body-color,
+  $ui-body-border-width: $panel-frame-body-border-width,
+  $ui-body-border-color: $ui-panel-frame-body-border-color,
+  $ui-tool-background-image: null-value($ui-panel-tools-background-image, $tool-background-image)
+  );
+  @include _codaxy-panel-ui (
+    $ui: '#{$ui-label}-panel-framed',
+    $ui-header-text-shadow: $ui-panel-header-text-shadow,
+    $ui-tools-background-color: $ui-panel-tools-background-color,
+    $ui-tools-background-color-over: $ui-panel-tools-background-color-over,
+    $ui-panel-header-inner-border-width: $panel-header-inner-border-width,
+    $ui-panel-header-inner-border-color: $ui-panel-header-inner-border-color,
+    $ui-body-background-color: $ui-panel-body-background-color,
+    $ui-panel-footer-background-color: $ui-panel-toolbar-footer-background-color,
+    $ui-border-layout-background-color: null-value($ui-border-layout-background-color, $ui-panel-body-background-color),
+    $ui-header-icon-line-height: $ui-panel-header-icon-height
+  );
+}
+
+// Grid UI
+
+@if $include-grid-ui and $include-ext-grid-panel and $include-ext-view-table {
+  @include _codaxy-table-ui(
+  $ui: '#{$ui-label}-panel',
+  $ui-row-cell-background-color: $ui-grid-row-cell-background-color,
+  $ui-row-cell-selected-color: $ui-grid-row-cell-selected-color,
+  $ui-row-cell-border-color: $ui-grid-row-cell-border-color,
+  $ui-row-cell-selected-border-color: $ui-grid-row-cell-selected-border-color,
+  $ui-row-cell-selected-background-color: $ui-grid-row-cell-selected-background-color,
+  $ui-row-cell-over-background-color: $ui-grid-row-cell-over-background-color,
+  $ui-row-cell-focus-color: $ui-grid-row-cell-focus-color,
+  $ui-row-cell-focus-background-color: $ui-grid-row-cell-focus-background-color,
+  $ui-row-cell-focus-border-color: $ui-grid-row-cell-focus-border-color,
+  $ui-tree-row-cell-color-selected:$ui-grid-tree-row-cell-color-selected,
+  $ui-tree-row-cell-color-focus: $ui-grid-tree-row-cell-color-focus,
+  $ui-tree-row-cell-background-color-selected: $ui-grid-tree-row-cell-background-color-selected,
+  $ui-tree-row-cell-background-color-focus: $ui-grid-tree-row-cell-background-color-focus,
+  $ui-grid-col-lines-cell-border-color: $ui-grid-col-lines-cell-border-color, 
+  $ui-grid-col-lines-cell-border-color-selected: $ui-grid-row-cell-selected-border-color
+  );
+
+  @include _codaxy-table-ui(
+  $ui: '#{$ui-label}-panel-framed',
+  $ui-row-cell-selected-color: $ui-grid-row-cell-selected-color,
+  $ui-row-cell-selected-border-color: $ui-grid-row-cell-selected-border-color,
+  $ui-row-cell-selected-background-color: $ui-grid-row-cell-selected-background-color,
+  $ui-row-cell-over-background-color: $ui-grid-row-cell-over-background-color,
+  $ui-row-cell-focus-color: $ui-grid-row-cell-focus-color,
+  $ui-row-cell-focus-background-color: $ui-grid-row-cell-focus-background-color,
+  $ui-row-cell-focus-border-color: $ui-grid-row-cell-focus-border-color,
+  $ui-tree-row-cell-color-selected:$ui-grid-tree-row-cell-color-selected,
+  $ui-tree-row-cell-color-focus: $ui-grid-tree-row-cell-color-focus,
+  $ui-tree-row-cell-background-color-selected: $ui-grid-tree-row-cell-background-color-selected,
+  $ui-tree-row-cell-background-color-focus: $ui-grid-tree-row-cell-background-color-focus,
+  $ui-grid-col-lines-cell-border-color: $ui-grid-col-lines-cell-border-color,
+  $ui-grid-col-lines-cell-border-color-selected: $ui-grid-row-cell-selected-border-color
+  );
+
+  @if $include-grid-inheritance {
+  .#{$prefix}panel-body-#{$ui-label}-panel,
+  .cx-ui-defined .#{$prefix}panel-body-#{$ui-label}-panel,
+  .cx-ui-defined .cx-ui-defined .#{$prefix}panel-body-#{$ui-label}-panel,
+  .cx-ui-defined .cx-ui-defined .cx-ui-defined .#{$prefix}panel-body-#{$ui-label}-panel {
+    @include _codaxy-table-ui(
+    $ui-row-cell-selected-color: $ui-grid-row-cell-selected-color,
+    $ui-row-cell-selected-border-color: $ui-grid-row-cell-selected-border-color,
+    $ui-row-cell-selected-background-color: $ui-grid-row-cell-selected-background-color,
+    $ui-row-cell-over-background-color: $ui-grid-row-cell-over-background-color,
+    $ui-row-cell-focus-color: $ui-grid-row-cell-focus-color,
+    $ui-row-cell-focus-background-color: $ui-grid-row-cell-focus-background-color,
+    $ui-row-cell-focus-border-color: $ui-grid-row-cell-focus-border-color,
+    $ui-grid-col-lines-cell-border-color: $ui-grid-col-lines-cell-border-color,
+    $ui-grid-col-lines-cell-border-color-selected: $ui-grid-row-cell-selected-border-color,
+    $ui-row-cell-color: $ui-grid-row-cell-color
+    );
+    }
+  }
+
+   @if $include-grid-inheritance { 
+  .#{$prefix}panel-body-#{$ui-label}-panel-framed,
+  .cx-ui-defined .#{$prefix}panel-body-#{$ui-label}-panel-framed,
+  .cx-ui-defined .cx-ui-defined .#{$prefix}panel-body-#{$ui-label}-panel-framed,
+  .cx-ui-defined .cx-ui-defined .cx-ui-defined .#{$prefix}panel-body-#{$ui-label}-panel-framed {
+    @include _codaxy-table-ui(
+    $ui-row-cell-selected-color: $ui-grid-row-cell-selected-color,
+    $ui-row-cell-selected-border-color: $ui-grid-row-cell-selected-border-color,
+    $ui-row-cell-selected-background-color: $ui-grid-row-cell-selected-background-color,
+    $ui-row-cell-over-background-color: $ui-grid-row-cell-over-background-color,
+    $ui-row-cell-focus-color: $ui-grid-row-cell-focus-color,
+    $ui-row-cell-focus-background-color: $ui-grid-row-cell-focus-background-color,
+    $ui-row-cell-focus-border-color: $ui-grid-row-cell-focus-border-color,
+    $ui-grid-col-lines-cell-border-color: $ui-grid-col-lines-cell-border-color,
+    $ui-grid-col-lines-cell-border-color-selected: $ui-grid-row-cell-selected-border-color,
+    $ui-row-cell-color: $ui-grid-row-cell-color
+    );
+    }
+  }
+
+}
+
+@if $include-accordion-ui and $include-ext-layout-container-accordion {
+
+  .#{$prefix}panel-#{$ui-label}-panel {
+
+    @include _codaxy-accordion-ui (
+    $ui:'default',
+    $ui-header-color: $ui-accordion-header-color,
+    $ui-header-background-color: $ui-accordion-header-background-color,
+    $ui-header-background-color-over: $ui-accordion-header-background-color-over,
+    $ui-header-border-color: $ui-accordion-header-border-color,
+    $ui-body-border-color: $ui-accordion-body-border-color,
+    $ui-tool-image-background-color-over: $ui-accordion-tools-background-color-over
+    );
+
+  }
+}
+@if $include-accordion-panel-ui and $include-ext-layout-container-accordion {
+
+  @include _codaxy-accordion-ui (
+  $ui:'#{$ui-label}-panel',
+  $ui-header-color: $ui-accordion-header-color,
+  $ui-header-background-color: $ui-accordion-header-background-color,
+  $ui-header-background-color-over: $ui-accordion-header-background-color-over,
+  $ui-header-border-color: $ui-accordion-header-border-color,
+  $ui-body-border-color: $ui-accordion-body-border-color
+  );
+
+}
+
+
+//UI: #{ui-label}panel-active
+@if $include-panel-active-ui and $include-ext-panel-panel {
+  @include extjs-panel-ui($ui: '#{$ui-label}-panel-active');
+  .#{$prefix}window-active {
+    @include _codaxy-panel-ui (
+    $ui: '#{$ui-label}-panel-active',
+    $ui-header-color: $ui-panel-header-color,
+    $ui-header-border-color: $ui-panel-header-border-color,
+    $ui-header-background-color: $ui-panel-header-background-color,
+    $ui-tools-background-color-over: $ui-panel-tools-background-color-over,
+    $ui-tools-background-image: $ui-panel-tools-background-image,
+    $ui-header-text-shadow: $ui-panel-header-text-shadow,
+    $ui-panel-header-inner-border-width: $panel-header-inner-border-width,
+    $ui-panel-header-inner-border-color: $ui-panel-header-inner-border-color,
+    $ui-header-background-gradient: $ui-panel-header-background-gradient,
+    $ui-border-layout-background-color: null-value($ui-border-layout-background-color, $ui-panel-body-background-color),
+    $ui-header-icon-line-height: $ui-panel-header-icon-height
+    );
+  }
+
+  @if $include-grid-ui  and $include-ext-grid-panel and $include-ext-view-table and $include-grid-inheritance {
+    .#{$prefix}window-active {
+      @include _codaxy-table-ui(
+      $ui: '#{$ui-label}-panel-active',
+      $ui-row-cell-selected-color: $ui-grid-row-cell-selected-color,
+      $ui-row-cell-selected-border-color: $ui-grid-row-cell-selected-border-color,
+      $ui-row-cell-selected-background-color: $ui-grid-row-cell-selected-background-color,
+      $ui-row-cell-over-background-color: $ui-grid-row-cell-over-background-color,
+      $ui-row-cell-focus-color: $ui-grid-row-cell-focus-color,
+      $ui-row-cell-focus-background-color: $ui-grid-row-cell-focus-background-color,
+      $ui-row-cell-focus-border-color: $ui-grid-row-cell-focus-border-color,
+      $ui-grid-col-lines-cell-border-color: $ui-grid-col-lines-cell-border-color,
+      $ui-grid-col-lines-cell-border-color-selected: $ui-grid-row-cell-selected-border-color,
+      $ui-row-cell-color: $ui-grid-row-cell-color
+      );
+
+      .#{$prefix}panel-body-#{$ui-label}-panel-active,
+      .cx-ui-defined .#{$prefix}panel-body-#{$ui-label}-panel-active,
+      .cx-ui-defined .cx-ui-defined .#{$prefix}panel-body-#{$ui-label}-panel-active,
+      .cx-ui-defined .cx-ui-defined .cx-ui-defined .#{$prefix}panel-body-#{$ui-label}-panel-active {
+        @include _codaxy-table-ui(
+        $ui-row-cell-selected-color: $ui-grid-row-cell-selected-color,
+        $ui-row-cell-selected-border-color: $ui-grid-row-cell-selected-border-color,
+        $ui-row-cell-selected-background-color: $ui-grid-row-cell-selected-background-color,
+        $ui-row-cell-over-background-color: $ui-grid-row-cell-over-background-color,
+        $ui-row-cell-focus-color: $ui-grid-row-cell-focus-color,
+        $ui-row-cell-focus-background-color: $ui-grid-row-cell-focus-background-color,
+        $ui-row-cell-focus-border-color: $ui-grid-row-cell-focus-border-color,
+        $ui-grid-col-lines-cell-border-color: $ui-grid-col-lines-cell-border-color,
+        $ui-grid-col-lines-cell-border-color-selected: $ui-grid-row-cell-selected-border-color,
+        $ui-row-cell-color: $ui-grid-row-cell-color
+        );
+      }
+
+    }
+  }
+
+}
+
+@if $include-panel-framed-active-ui and $include-ext-panel-panel {
+  @include extjs-panel-ui(
+  $ui: '#{$ui-label}-panel-active-framed',
+  $ui-border-color: $panel-frame-border-color,
+  $ui-border-width: $panel-frame-border-width,
+  $ui-border-radius: $panel-frame-border-radius,
+  $ui-padding: $panel-frame-padding,
+  $ui-header-background-color: $panel-frame-header-background-color,
+  $ui-header-border-color: $panel-frame-border-color,
+  $ui-header-border-width: $panel-frame-header-border-width,
+  $ui-header-inner-border-color: $panel-frame-header-inner-border-color,
+  $ui-header-inner-border-width: $panel-frame-header-inner-border-width,
+  $ui-header-padding: $panel-frame-header-padding,
+  $ui-body-border-width: $panel-frame-body-border-width,
+  $ui-body-background-color: $panel-frame-background-color
+  );
+
+  .#{$prefix}window-active {
+    @include _codaxy-panel-ui (
+    $ui: '#{$ui-label}-panel-active-framed',
+    $ui-border-color: $ui-panel-header-border-color,
+    $ui-header-color: $ui-panel-header-color,
+    $ui-header-border-color: $ui-panel-header-border-color,
+    $ui-header-background-color: $ui-panel-header-background-color,
+    $ui-tools-background-color-over: $ui-panel-tools-background-color-over,
+    $ui-tools-background-image: $ui-panel-tools-background-image,
+    $ui-header-text-shadow: $ui-panel-header-text-shadow,
+    $ui-panel-header-inner-border-width: $panel-header-inner-border-width,
+    $ui-panel-header-inner-border-color: $ui-panel-header-inner-border-color,
+    $ui-header-background-gradient: $ui-panel-header-background-gradient,
+    $ui-body-background-color: $ui-panel-body-background-color,
+    $ui-border-layout-background-color: null-value($ui-border-layout-background-color, $ui-panel-body-background-color),
+    $ui-header-icon-line-height: $ui-panel-header-icon-height
+    );
+  }
+
+  @if $include-grid-ui and $include-ext-grid-panel and $include-ext-view-table and $include-grid-inheritance {
+    .#{$prefix}window-active {
+      @include _codaxy-table-ui(
+      $ui: '#{$ui-label}-panel-framed',
+      $ui-row-cell-selected-border-color: $ui-grid-row-cell-selected-border-color,
+      $ui-row-cell-selected-background-color: $ui-grid-row-cell-selected-background-color,
+      $ui-row-cell-over-background-color: $ui-grid-row-cell-over-background-color,
+      $ui-row-cell-focus-background-color: $ui-grid-row-cell-focus-background-color,
+      $ui-row-cell-focus-border-color: $ui-grid-row-cell-focus-border-color,
+      $ui-grid-col-lines-cell-border-color: $ui-grid-col-lines-cell-border-color,
+      $ui-grid-col-lines-cell-border-color-selected: $ui-grid-row-cell-selected-border-color,
+      $ui-row-cell-color: $ui-grid-row-cell-color
+      );
+
+      .#{$prefix}panel-body-#{$ui-label}-panel-active-framed,
+      .cx-ui-defined .#{$prefix}panel-body-#{$ui-label}-panel-active-framed,
+      .cx-ui-defined .cx-ui-defined .#{$prefix}panel-body-#{$ui-label}-panel-active-framed,
+      .cx-ui-defined .cx-ui-defined .cx-ui-defined .#{$prefix}panel-body-#{$ui-label}-panel-active-framed {
+        @include _codaxy-table-ui(
+        $ui-row-cell-selected-border-color: $ui-grid-row-cell-selected-border-color,
+        $ui-row-cell-selected-background-color: $ui-grid-row-cell-selected-background-color,
+        $ui-row-cell-over-background-color: $ui-grid-row-cell-over-background-color,
+        $ui-row-cell-focus-background-color: $ui-grid-row-cell-focus-background-color,
+        $ui-row-cell-focus-border-color: $ui-grid-row-cell-focus-border-color,
+        $ui-grid-col-lines-cell-border-color: $ui-grid-col-lines-cell-border-color,
+        $ui-grid-col-lines-cell-border-color-selected: $ui-grid-row-cell-selected-border-color,
+        $ui-row-cell-color: $ui-grid-row-cell-color
+        );
+      }
+
+    }
+
+  }
+
+}
+

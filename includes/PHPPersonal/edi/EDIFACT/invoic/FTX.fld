@@ -1,0 +1,11 @@
+NomeField		,Len,Align	,Requested	,CodeValue										,SampleValue
+TIPOREC			,99	,		,Y		 	,FTX											,
+FILLER			,99	,		,Y		 	,+												,ALC
+FILLER			,99	,		,Y		 	,ZZZ											,
+FILLER			,99	,		,Y		 	,+												,FILLER
+FILLER			,99	,		,Y		 	,1												,FILLER
+FILLER			,99	,		,Y		 	,+												,FILLER
+TIPOLOGIA		,99	,		,Y		 	,999											,
+FILLER			,99	,		,Y		 	,+												,FILLER
+NOTE			,99	,		,Y			,												,VALORE
+END				,99	,		,Y		 	,'												,END 

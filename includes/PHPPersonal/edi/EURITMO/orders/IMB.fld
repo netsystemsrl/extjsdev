@@ -1,0 +1,13 @@
+NomeField		,Len,Align	,Requested	,CodeValue											,SampleValue
+TIPOREC			,03	,L		,Y		 	,'IMB'												,RFF
+NUMRIGA			,06	,R0		,Y			,													,AAS
+CODART			,35	,L		,Y			,   												,0000193
+TIPCODART		,03	,L		,Y			,													,20181024	
+RFFLOT			,35	,L		,Y			,													,20181024	
+QTAIMB			,15	,R0		,Y			,													,102
+UDMQIMB			,03	,L		,Y			,													,102
+TIPTRAC			,03	,L		,Y			,													,102
+INFIMBACOD		,03	,L		,Y			,													,102
+CONIMBCOD		,03	,L		,Y			,													,102
+IDETIPIMB		,03	,L		,Y			,													,102
+RESPAGIMB		,03	,L		,Y			,													,102

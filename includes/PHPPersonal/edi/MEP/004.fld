@@ -1,0 +1,19 @@
+NomeField		,Len,Align	,Requested	,CodeValue,SampleValue
+ANNOMESE		,08	,L		,Y		 	,'T'	,Fisso
+TIPOREC			,03	,L		,Y			,001	,END CYCLE EVENT
+QTY				,03	,L		,Y			,001	,
+TIME			,03	,L		,Y			,001	,
+CODEFIRST		,03	,L		,Y			,001	,
+CODESECOND		,03	,L		,Y			,001	,
+CASTFIRST		,03	,L		,Y			,001	,
+CASTSECOND		,03	,L		,Y			,001	,
+OPCODE			,03	,L		,Y			,001	,
+INDEXMAT		,03	,L		,Y			,001	,
+RESV1			,03	,L		,Y			,001	,
+RESV2			,03	,L		,Y			,001	,
+RESV3			,03	,L		,Y			,001	,
+RESV4			,03	,L		,Y			,001	,
+RESV5			,03	,L		,Y			,001	,
+RESV6			,03	,L		,Y			,001	,
+RESV7			,03	,L		,Y			,001	,
+ENERGY			,03	,L		,Y			,001	,

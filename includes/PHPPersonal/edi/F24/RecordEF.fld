@@ -1,0 +1,15 @@
+NomeField			,Len,Align	,Requested	,CodeValue,SampleValue
+FILLER         		,01,L0		,N		 	, 		,FILLER
+TIPOREC				,02,L0		,N			,EF		,TIPOREC
+Mittente            ,05,L		,Y			,		,Mittente
+Ricevente           ,05,L0		,Y			,		,Ricevente
+DataCreazione       ,06,ddMMyy	,Y			,		,DataCreazione
+NomeSupporto        ,20,L	    ,Y			,		,NomeSupporto
+MittenteRiferimenti ,06,L	    ,Y			,		,RiferimentiMittente
+NumeroDisposizioni  ,07,L0	    ,Y			,		,NumeroDisposizioni
+TotaleImportiPos    ,15,R0	    ,Y			,		,TotaleImportiPositivi
+TotaleImportiNeg    ,15,R0	    ,Y			,		,TotaleImportiNegativi
+NumeroRecord        ,07,R0	    ,Y			,		,NumeroRecord
+FILLER              ,24,L0	    ,N			,		,FILLER
+CodiceDivisa        ,01,L0	    ,Y			,		,CodiceDivisa
+CampoNonDisponibile ,06,L	    ,N			,		,CampoNonDisponibile

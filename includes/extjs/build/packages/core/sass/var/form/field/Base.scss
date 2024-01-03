@@ -1,0 +1,177 @@
+﻿
+
+/** 
+ * CODAXY
+ * $form-trigger-border-width-rtl
+ * @var {list}
+ * defines trigger border width when 'right to left' is active
+*/
+$form-trigger-border-width-rtl: 0 1px 0 0 !default;
+
+/** 
+ * CODAXY
+ * $form-field-focus-background-color
+ * @var {string}
+ * defines form field background color on focus
+*/
+$form-field-focus-background-color: dynamic(null);
+
+/** 
+ * CODAXY
+ * $form-field-focus-color
+ * @var {string}
+ * defines form field text color on focus
+*/
+$form-field-focus-color: dynamic(null);
+
+/** 
+ * CODAXY
+ * $form-field-invalid-color
+ * @var {string}
+ * defines invalid form field text color 
+*/
+$form-field-invalid-color: dynamic(null);
+
+/** 
+ * CODAXY
+ * $form-field-shadow
+ * @var {list}
+ * defines form field shadow
+*/
+$form-field-shadow: dynamic(null);
+
+/** 
+ * CODAXY
+ * $form-field-focus-shadow
+ * @var {list}
+ * defines form field shadow on focus
+*/
+$form-field-focus-shadow: dynamic(null);
+
+/** 
+ * CODAXY
+ * $form-field-invalid-shadow
+ * @var {list}
+ * defines invalid form field shadow
+*/
+$form-field-invalid-shadow: dynamic(null);
+
+/** 
+ * CODAXY
+ * $form-trigger-inner-border-width
+ * @var {list}
+ * defines trigger inner border width 
+*/
+$form-trigger-inner-border-width: dynamic(null);
+
+/** 
+ * CODAXY
+ * $form-trigger-inner-border-color
+ * @var {list}
+ * defines trigger inner border color
+*/
+$form-trigger-inner-border-color: dynamic(null);
+
+/** 
+ * CODAXY
+ * $form-trigger-inner-border-color-pressed
+ * @var {list}
+ * defines trigger inner border color when pressed
+*/
+$form-trigger-inner-border-color-pressed: dynamic(null);
+
+/** 
+ * CODAXY
+ * $form-trigger-background-color-over
+ * @var {string}
+ * defines trigger background color on hover
+*/
+$form-trigger-background-color-over: dynamic(null);
+
+/** 
+ * CODAXY
+ * $form-trigger-background-color-pressed
+ * @var {string}
+ * defines trigger background color when pressed
+*/
+$form-trigger-background-color-pressed: dynamic(null);
+
+/** 
+ * CODAXY
+ * $form-trigger-background-color-pressed
+ * @var {string}
+ * defines trigger background color when pressed
+*/
+$form-trigger-border-radius: dynamic(null);   
+
+/** 
+ * CODAXY
+ * $date-trigger-background-image
+ * @var {string}
+ * sets date trigger background image
+*/
+$date-trigger-background-image: dynamic(null);
+
+/** 
+ * CODAXY
+ * $clear-trigger-background-image
+ * @var {string}
+ * sets clear trigger background image
+*/
+$clear-trigger-background-image: dynamic(null);
+
+/** 
+ * CODAXY
+ * $search-trigger-background-image
+ * @var {string}
+ * sets search trigger background image
+*/
+$search-trigger-background-image: dynamic(null);
+
+/** 
+ * CODAXY
+ * $cell-editor-form-field-border-width
+ * @var {list}
+ * sets border width to grid cell editor form field
+*/
+$cell-editor-form-field-border-width: dynamic(null);
+
+/** 
+ * CODAXY
+ * $cell-editor-form-field-border-color
+ * @var {list}
+ * defines border color of grid cell editor form field
+*/
+$cell-editor-form-field-border-color: dynamic(null);
+
+/** 
+ * CODAXY
+ * $cell-editor-form-field-focus-border-color
+ * @var {list}
+ * defines border color of grid cell editor form field on focus
+*/
+$cell-editor-form-field-focus-border-color: dynamic(null);
+
+/** 
+ * CODAXY
+ * $cell-editor-form-field-border-radius
+ * @var {list}
+ * sets border radius to grid cell editor form field
+*/
+$cell-editor-form-field-border-radius: dynamic(null);
+
+/** 
+ * CODAXY
+ * $cell-editor-form-field-text-field-padding
+ * @var {list}
+ * defines grid cell editor form text field padding
+*/
+$cell-editor-form-field-text-field-padding: dynamic(null);
+
+/** 
+ * CODAXY
+ * $cell-editor-form-field-text-field-padding
+ * @var {number}
+ * defines grid cell editor form text field font size
+*/
+$cell-editor-form-field-font-size: dynamic(null);

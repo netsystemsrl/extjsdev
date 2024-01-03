@@ -1,0 +1,108 @@
+﻿
+@mixin _codaxy-datepicker-ui (
+    $ui,
+    $ui-border-radius: null,
+    $ui-shadow: null,
+    $ui-inner-border-width: null,
+    $ui-inner-border-color: null,
+    $ui-item-over-color: null,
+    $ui-item-over-background-color: null,
+    $ui-item-border-radius: null,
+    $ui-item-selected-color: null,
+    $ui-item-today-color: null,
+    $ui-item-today-background-color: null,
+    $ui-item-today-over-background-color: null,
+    $ui-item-today-over-color: null,
+    $ui-item-today-selected-background-color: null,
+    $ui-item-today-selected-color: null,
+    $ui-monthpicker-btn-over-image: null,
+    $ui-background-color-transition: null,
+    $ui-color-transition: null
+) {
+    .#{$prefix}datepicker-#{$ui} {
+        
+        @if $ui-border-radius != null {  @include border-radius($ui-border-radius) }
+        @if $ui-shadow != null { @include box-shadow($ui-shadow) }
+
+        .#{$prefix}datepicker-header, .#{$prefix}datepicker-footer {
+            @if $ui-inner-border-width != null and $ui-inner-border-color != null {
+                @include inner-border($width: $ui-inner-border-width, $color: $ui-inner-border-color);
+            }
+        }
+
+        .#{$prefix}datepicker-date, .#{$prefix}monthpicker-item-inner {
+            @if $ui-background-color-transition != null and $ui-color-transition != null {
+                @include transition($ui-background-color-transition, $ui-color-transition);
+            }
+            &:hover {
+                @if $ui-item-over-background-color != null { background-color: $ui-item-over-background-color }
+                @if $ui-item-over-color != null { color: $ui-item-over-color }
+            }
+            @if $ui-item-border-radius != null {
+                @include border-radius($ui-item-border-radius)
+            }
+        }
+
+        .#{$prefix}monthpicker-body {
+            @if $ui-inner-border-width != null and $ui-inner-border-color != null {
+                @include inner-border($width: $ui-inner-border-width, $color: $ui-inner-border-color);
+            }
+        }
+
+        .#{$prefix}datepicker-selected .#{$prefix}datepicker-date {
+            @if $ui-item-selected-color != null { color: $ui-item-selected-color }
+        }
+
+        .#{$prefix}datepicker-today {     
+            .#{$prefix}datepicker-date {
+                @if $ui-item-today-background-color != null { background-color: $ui-item-today-background-color }
+                &:hover {
+                    @if $ui-item-today-over-background-color != null { background-color: $ui-item-today-over-background-color }
+                    @if $ui-item-today-over-color != null { color: $ui-item-today-over-color }
+                }
+                @if $ui-item-today-color != null { color: $ui-item-today-color }
+            }
+            &.#{$prefix}datepicker-selected {
+                .#{$prefix}datepicker-date {
+                    @if $ui-item-today-selected-background-color != null { background-color: $ui-item-today-selected-background-color } 
+                    @if $ui-item-today-selected-color != null { color: $ui-item-today-selected-color }
+                    &:hover {
+                        @if $ui-item-over-color != null { color: $ui-item-over-color }
+                    }
+                }
+            }     
+        }
+
+        .#{$prefix}monthpicker-item-inner.#{$prefix}monthpicker-selected {
+            @if $ui-item-selected-color != null { color: $ui-item-selected-color }
+        }
+
+        .#{$prefix}btn-over > .#{$prefix}btn-wrap.#{$prefix}btn-split-right:after {
+            @if $ui-monthpicker-btn-over-image != null { background-image: theme-background-image($ui-monthpicker-btn-over-image) } 
+        } 
+    }
+
+}
+
+@include _codaxy-datepicker-ui (
+    $ui: default,
+    $ui-border-radius: $datepicker-border-radius,
+    $ui-inner-border-width: $datepicker-header-inner-border-width,
+    $ui-inner-border-color: $datepicker-header-inner-border-color,
+    $ui-item-over-background-color: $datepicker-item-over-background-color,
+    $ui-item-over-color: $datepicker-item-over-color,
+    $ui-item-border-radius: $datepicker-item-border-radius,
+    $ui-item-selected-color: $datepicker-item-selected-color,
+    $ui-item-today-color: $datepicker-item-today-color,
+    $ui-item-today-over-color: $datepicker-item-today-over-color,
+    $ui-item-today-background-color: $datepicker-item-today-background-color,
+    $ui-item-today-over-background-color: $datepicker-item-today-over-background-color,
+    $ui-item-today-selected-background-color: $datepicker-item-today-selected-background-color,
+    $ui-item-today-selected-color: $datepicker-item-today-selected-color,
+    $ui-monthpicker-btn-over-image: $datepicker-monthpicker-btn-over-image,
+    $ui-background-color-transition: $datepicker-item-background-color-transition,
+    $ui-color-transition: $datepicker-item-color-transition,
+    $ui-shadow: $datepicker-shadow
+);
+
+

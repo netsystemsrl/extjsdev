@@ -1,0 +1,6 @@
+2023-05-22 18:57:01 - 0 - CallProcess ADODB_Exception, mysqli error: [1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'GRANT ALL PRIVILEGES ON francy.* TO 'francy'@'localhost'' at line 2] in EXECUTE("CREATE USER 'francy'@'localhost' IDENTIFIED WITH mysql_native_password BY '1234';
+		GRANT ALL PRIVILEGES ON francy.* TO 'francy'@'localhost'") Row:86<BR> Called from Trace:#0 /var/www/html/includes/adodb5/adodb.inc.php(1590): adodb_throw()
+#1 /var/www/html/includes/adodb5/adodb.inc.php(1553): ADOConnection->_Execute()
+#2 /var/www/html/includes/io/CallProcess.php(403) : eval()'d code(4): ADOConnection->Execute()
+#3 /var/www/html/includes/io/CallProcess.php(403): eval()
+#4 {main} ParamId:

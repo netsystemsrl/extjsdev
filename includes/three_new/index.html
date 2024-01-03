@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8>
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<title>Wharehose three.js app</title>
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+		<!--
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		-->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		
+		<script src="js/three.js"></script>
+		<script src="js/threex.dynamictexture.js"></script>
+		<script src="js/controls/OrbitControls.js"></script>
+		<script src="js/Detector.js"></script>
+		<script src="js/libs/dat.gui/dat.gui.js"></script>
+		<style>
+			body {
+				margin: 0;
+				overflow: hidden;
+			}
+			canvas { width: 100%; height: 100% }
+			
+			#loading-overlay {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background: black;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.loading-overlay-hidden {
+			  display: none !important;
+			}
+
+
+			#loading-bar {
+
+			  width: 25em;
+			  height: 1em;
+			  border-radius: 0.25em;
+			  background-color: black;
+
+			  border: 1px solid grey;
+
+			  display: inline-flex;
+
+			}
+
+			#progress {
+			  background-color: #75b800;
+			  height: inherit;
+			  border-radius: inherit;
+
+			  width: 5%;
+			}
+		</style>
+		<!--
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		-->
+	</head>
+	<body>
+		
+		<div id="loading-overlay">
+		  <div id="loading-bar">
+			  <span id="progress"></span>
+		  </div>
+		</div>
+		
+		<div class="container-fluid" style="position: fixed;">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg">
+						<form id="posiziona" class="form-inline">
+							<div class="form-group">
+								<label for="nome-oggetto">Oggetto</label>
+								<input type="text" class="form-control" id="nome-oggetto" placeholder="Nome Oggeto" value="box" readonly>
+							</div>
+							<div class="form-group">
+								<label for="nome-volume">Posizione</label>
+								<!--
+								<input type="text" class="form-control" id="nome-volume" placeholder="Nome Volume" value="010">
+								-->
+								<select class="custom-select" id="nome-volume">
+								  <option selected>Scegli una posizione</option>
+								  <!--
+								  <option value="1">One</option>
+								  <option value="2">Two</option>
+								  <option value="3">Three</option>
+								  -->
+								</select>
+							</div>
+							<button id="dosomething" type="button" class="btn btn-outline-info">Posiziona</button>
+							<button id="move" type="button" class="btn btn-outline-info float-right">Sposta sul percorso</button>
+						</form>
+						<form id="magazzino" class="form-inline">
+							<label for="nome-volume">Magazzino</label>
+							<select class="custom-select" id="select-maga">
+								<option selected>Scegli un magazzino</option>
+							</select>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script src="js/script.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

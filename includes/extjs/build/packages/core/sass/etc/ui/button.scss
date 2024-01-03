@@ -1,0 +1,377 @@
+@if $include-btn-ui and $include-ext-button-button {
+
+
+  @include extjs-button-small-ui (
+    $ui: '#{$ui-label}-button',
+
+    $border-color: $ui-btn-border-color,
+    $border-color-over: $ui-btn-border-color-over,
+    $border-color-focus: $ui-btn-border-color-focus,
+    $border-color-pressed: $ui-btn-border-color-pressed,
+    $border-color-focus-over: $ui-btn-border-color-focus-over,
+    $border-color-focus-pressed: $ui-btn-border-color-focus-pressed,
+    $border-color-disabled: $ui-btn-border-color-disabled,
+
+    $background-color: $ui-btn-background-color,
+    $background-color-over: $ui-btn-background-color-over,
+    $background-color-focus: $ui-btn-background-color-focus,
+    $background-color-pressed: $ui-btn-background-color-pressed,
+    $background-color-focus-over: $ui-btn-background-color-focus-over,
+    $background-color-focus-pressed: $ui-btn-background-color-focus-pressed,
+    $background-color-disabled: $ui-btn-background-color-disabled,
+
+    $background-gradient: $ui-btn-background-gradient,
+    $background-gradient-over: $ui-btn-background-gradient-over,
+    $background-gradient-pressed: $ui-btn-background-gradient-pressed,
+    $background-gradient-focus: $ui-btn-background-gradient-focus,
+    $background-gradient-focus-over: $ui-btn-background-gradient-focus-over,
+    $background-gradient-focus-pressed: $ui-btn-background-gradient-focus-pressed,
+    $background-gradient-disabled: $ui-btn-background-gradient-disabled,
+
+    $color: $ui-btn-color,
+    $color-over: $ui-btn-color-over,
+    $color-focus: $ui-btn-color-focus,
+    $color-pressed: $ui-btn-color-pressed,
+    $color-focus-over: $ui-btn-color-focus-over,
+    $color-focus-pressed: $ui-btn-color-focus-pressed,
+    $color-disabled: $ui-btn-color-disabled,
+
+    $inner-border-width: $ui-btn-inner-border-width,
+    $inner-border-width-pressed: $ui-btn-inner-border-width-pressed,
+    $inner-border-width-focus-pressed: 1px 0 0 0,
+    $inner-border-color: $ui-btn-inner-border-color,
+    $inner-border-color-focus-pressed: $ui-btn-inner-border-color-focus-pressed,
+    $inner-border-color-disabled: $ui-btn-inner-border-color-disabled
+
+  );
+
+  @include extjs-button-medium-ui (
+    $ui: '#{$ui-label}-button',
+
+    $border-color: $ui-btn-border-color,
+    $border-color-over: $ui-btn-border-color-over,
+    $border-color-focus: $ui-btn-border-color-focus,
+    $border-color-pressed: $ui-btn-border-color-pressed,
+    $border-color-focus-over: $ui-btn-border-color-focus-over,
+    $border-color-focus-pressed: $ui-btn-border-color-focus-pressed,
+    $border-color-disabled: $ui-btn-border-color-disabled,
+
+    $background-color: $ui-btn-background-color,
+    $background-color-over: $ui-btn-background-color-over,
+    $background-color-focus: $ui-btn-background-color-focus,
+    $background-color-pressed: $ui-btn-background-color-pressed,
+    $background-color-focus-over: $ui-btn-background-color-focus-over,
+    $background-color-focus-pressed: $ui-btn-background-color-focus-pressed,
+    $background-color-disabled: $ui-btn-background-color-disabled,
+
+    $background-gradient: $ui-btn-background-gradient,
+    $background-gradient-over: $ui-btn-background-gradient-over,
+    $background-gradient-pressed: $ui-btn-background-gradient-pressed,
+    $background-gradient-focus: $ui-btn-background-gradient-focus,
+    $background-gradient-focus-over: $ui-btn-background-gradient-focus-over,
+    $background-gradient-focus-pressed: $ui-btn-background-gradient-focus-pressed, 
+    $background-gradient-disabled: $ui-btn-background-gradient-disabled, 
+
+    $color: $ui-btn-color,
+    $color-over: $ui-btn-color-over,
+    $color-focus: $ui-btn-color-focus,
+    $color-pressed: $ui-btn-color-pressed,
+    $color-focus-over: $ui-btn-color-focus-over,
+    $color-focus-pressed: $ui-btn-color-focus-pressed,
+    $color-disabled: $ui-btn-color-disabled,
+
+    $inner-border-width: $ui-btn-inner-border-width,
+    $inner-border-width-focus-pressed: 1px 0 0 0,
+    $inner-border-color: $ui-btn-inner-border-color,
+    $inner-border-color-focus-pressed: $ui-btn-inner-border-color-focus-pressed,
+    $inner-border-color-disabled: $ui-btn-inner-border-color-disabled
+    
+
+  );
+
+  @include extjs-button-large-ui (
+    $ui: '#{$ui-label}-button',
+
+    $border-color: $ui-btn-border-color,
+    $border-color-over: $ui-btn-border-color-over,
+    $border-color-focus: $ui-btn-border-color-focus,
+    $border-color-pressed: $ui-btn-border-color-pressed,
+    $border-color-focus-over: $ui-btn-border-color-focus-over,
+    $border-color-focus-pressed: $ui-btn-border-color-focus-pressed,
+    $border-color-disabled: $ui-btn-border-color-disabled,
+
+    $background-color: $ui-btn-background-color,
+    $background-color-over: $ui-btn-background-color-over,
+    $background-color-focus: $ui-btn-background-color-focus,
+    $background-color-pressed: $ui-btn-background-color-pressed,
+    $background-color-focus-over: $ui-btn-background-color-focus-over,
+    $background-color-focus-pressed: $ui-btn-background-color-focus-pressed,
+    $background-color-disabled: $ui-btn-background-color-disabled,
+
+    $background-gradient: $ui-btn-background-gradient,
+    $background-gradient-over: $ui-btn-background-gradient-over,
+    $background-gradient-pressed: $ui-btn-background-gradient-pressed,
+    $background-gradient-focus: $ui-btn-background-gradient-focus,
+    $background-gradient-focus-over: $ui-btn-background-gradient-focus-over,
+    $background-gradient-focus-pressed: $ui-btn-background-gradient-focus-pressed,
+    $background-gradient-disabled: $ui-btn-background-gradient-disabled,
+
+    $color: $ui-btn-color,
+    $color-over: $ui-btn-color-over,
+    $color-focus: $ui-btn-color-focus,
+    $color-pressed: $ui-btn-color-pressed,
+    $color-focus-over: $ui-btn-color-focus-over,
+    $color-focus-pressed: $ui-btn-color-focus-pressed,
+    $color-disabled: $ui-btn-color-disabled,
+
+    $inner-border-width: $ui-btn-inner-border-width,
+    $inner-border-width-focus-pressed: 1px 0 0 0,
+    $inner-border-color: $ui-btn-inner-border-color,
+    $inner-border-color-focus-pressed: $ui-btn-inner-border-color-focus-pressed,
+    $inner-border-color-disabled: $ui-btn-inner-border-color-disabled
+
+  );
+
+}
+
+
+@if $include-ext-toolbar-toolbar {
+       
+  @include extjs-button-toolbar-small-ui(
+      $ui: '#{$ui-label}-button',
+      $color: $ui-toolbar-btn-color,
+      $color-over: $ui-toolbar-btn-color-over,
+      $color-focus: $ui-toolbar-btn-color-focus,
+      $color-pressed: $ui-toolbar-btn-color-pressed,
+      $color-focus-over: $ui-toolbar-btn-color-focus-over,
+      $color-focus-pressed: $ui-toolbar-btn-color-focus-pressed,
+      $color-disabled: $ui-toolbar-btn-color-disabled,
+      
+      $background-color: $ui-toolbar-btn-background-color,
+      $background-color-over: $ui-toolbar-btn-background-color-over,
+      $background-color-focus: $ui-toolbar-btn-background-color-focus,
+      $background-color-pressed: $ui-toolbar-btn-background-color-pressed,
+      $border-color: $ui-toolbar-btn-border-color,
+      $border-color-over: $ui-toolbar-btn-border-color-over,
+      $border-color-focus: $ui-toolbar-btn-border-color-focus,
+      $border-color-pressed: $ui-toolbar-btn-border-color-pressed,
+      $border-color-focus-over: $ui-toolbar-btn-border-color-focus-over,
+      $border-color-focus-pressed: $ui-toolbar-btn-border-color-focus-pressed,
+
+      $background-gradient: $ui-toolbar-btn-background-gradient,
+      $background-gradient-over: $ui-toolbar-btn-background-gradient-over,
+      $background-gradient-focus: $ui-toolbar-btn-background-gradient-focus,
+      $background-gradient-pressed: $ui-toolbar-btn-background-gradient-pressed,
+      $background-gradient-focus-over: $ui-toolbar-btn-background-gradient-focus-over,
+      $background-gradient-focus-pressed: $ui-toolbar-btn-background-gradient-pressed,
+      $background-gradient-disabled: $ui-toolbar-btn-background-gradient-disabled,
+
+      $inner-border-width: $ui-toolbar-btn-inner-border-width,
+      $inner-border-width-over: $ui-toolbar-btn-inner-border-width-over,
+      $inner-border-width-focus: $ui-toolbar-btn-inner-border-width-focus,
+      $inner-border-width-pressed: $ui-toolbar-btn-inner-border-width-pressed,
+      $inner-border-width-focus-over: $ui-toolbar-btn-inner-border-width-focus-over,
+      $inner-border-width-focus-pressed: $ui-toolbar-btn-inner-border-width-focus-pressed,
+      $inner-border-width-disabled: $ui-toolbar-btn-inner-border-width-disabled,
+      $inner-border-color: $ui-toolbar-btn-inner-border-color
+          
+  );
+
+  @include extjs-button-toolbar-medium-ui(
+      $ui: '#{$ui-label}-button',
+      $color: $ui-toolbar-btn-color,
+      $color-over: $ui-toolbar-btn-color-over,
+      $color-focus: $ui-toolbar-btn-color-focus,
+      $color-pressed: $ui-toolbar-btn-color-pressed,
+      $color-focus-over: $ui-toolbar-btn-color-focus-over,
+      $color-focus-pressed: $ui-toolbar-btn-color-focus-pressed,
+      $color-disabled: $ui-toolbar-btn-color-disabled,
+
+      $background-color: $ui-toolbar-btn-background-color,
+      $background-color-over: $ui-toolbar-btn-background-color-over,
+      $background-color-focus: $ui-toolbar-btn-background-color-focus,
+      $background-color-pressed: $ui-toolbar-btn-background-color-pressed,
+
+      $border-color: $ui-toolbar-btn-border-color,
+      $border-color-over: $ui-toolbar-btn-border-color-over,
+      $border-color-focus: $ui-toolbar-btn-border-color-focus,
+      $border-color-pressed: $ui-toolbar-btn-border-color-pressed,
+      $border-color-focus-over: $ui-toolbar-btn-border-color-focus-over,
+      $border-color-focus-pressed: $ui-toolbar-btn-border-color-focus-pressed,
+
+      $background-gradient: $ui-toolbar-btn-background-gradient,
+      $background-gradient-over: $ui-toolbar-btn-background-gradient-over,
+      $background-gradient-focus: $ui-toolbar-btn-background-gradient-focus,
+      $background-gradient-pressed: $ui-toolbar-btn-background-gradient-pressed,
+      $background-gradient-focus-over: $ui-toolbar-btn-background-gradient-focus-over,
+      $background-gradient-focus-pressed: $ui-toolbar-btn-background-gradient-pressed,
+      $background-gradient-disabled: $ui-toolbar-btn-background-gradient-disabled,
+
+      $inner-border-width: $ui-toolbar-btn-inner-border-width,
+      $inner-border-width-over: $ui-toolbar-btn-inner-border-width-over,
+      $inner-border-width-focus: $ui-toolbar-btn-inner-border-width-focus,
+      $inner-border-width-pressed: $ui-toolbar-btn-inner-border-width-pressed,
+      $inner-border-width-focus-over: $ui-toolbar-btn-inner-border-width-focus-over,
+      $inner-border-width-focus-pressed: $ui-toolbar-btn-inner-border-width-focus-pressed,
+      $inner-border-width-disabled: $ui-toolbar-btn-inner-border-width-disabled,
+      $inner-border-color: $ui-toolbar-btn-inner-border-color,
+      $inner-border-color-disabled: $ui-btn-inner-border-color-disabled
+  );
+
+  @include extjs-button-toolbar-large-ui(
+      $ui: '#{$ui-label}-button',
+      $color: $ui-toolbar-btn-color,
+      $color-over: $ui-toolbar-btn-color-over,
+      $color-focus: $ui-toolbar-btn-color-focus,
+      $color-pressed: $ui-toolbar-btn-color-pressed,
+      $color-focus-over: $ui-toolbar-btn-color-focus-over,
+      $color-focus-pressed: $ui-toolbar-btn-color-focus-pressed,
+      $color-disabled: $ui-toolbar-btn-color-disabled,
+
+      $background-color: $ui-toolbar-btn-background-color,
+      $background-color-over: $ui-toolbar-btn-background-color-over,
+      $background-color-focus: $ui-toolbar-btn-background-color-focus,
+      $background-color-pressed: $ui-toolbar-btn-background-color-pressed,
+
+      $border-color: $ui-toolbar-btn-border-color,
+      $border-color-over: $ui-toolbar-btn-border-color-over,
+      $border-color-focus: $ui-toolbar-btn-border-color-focus,
+      $border-color-pressed: $ui-toolbar-btn-border-color-pressed,
+      $border-color-focus-over: $ui-toolbar-btn-border-color-focus-over,
+      $border-color-focus-pressed: $ui-toolbar-btn-border-color-focus-pressed,
+
+      $background-gradient: $ui-toolbar-btn-background-gradient,
+      $background-gradient-over: $ui-toolbar-btn-background-gradient-over,
+      $background-gradient-focus: $ui-toolbar-btn-background-gradient-focus,
+      $background-gradient-pressed: $ui-toolbar-btn-background-gradient-pressed,
+      $background-gradient-focus-over: $ui-toolbar-btn-background-gradient-focus-over,
+      $background-gradient-focus-pressed: $ui-toolbar-btn-background-gradient-pressed,
+      $background-gradient-disabled: $ui-toolbar-btn-background-gradient-disabled,
+
+      $inner-border-width: $ui-toolbar-btn-inner-border-width,
+      $inner-border-width-over: $ui-toolbar-btn-inner-border-width-over,
+      $inner-border-width-focus: $ui-toolbar-btn-inner-border-width-focus,
+      $inner-border-width-pressed: $ui-toolbar-btn-inner-border-width-pressed,
+      $inner-border-width-focus-over: $ui-toolbar-btn-inner-border-width-focus-over,
+      $inner-border-width-focus-pressed: $ui-toolbar-btn-inner-border-width-focus-pressed,
+      $inner-border-width-disabled: $ui-toolbar-btn-inner-border-width-disabled,
+      $inner-border-color: $ui-toolbar-btn-inner-border-color,
+      $inner-border-color-disabled: $ui-btn-inner-border-color-disabled   
+  );
+
+}
+
+
+
+@if $include-btn-active-ui and $include-ext-button-button {
+  @include extjs-button-small-ui ( $ui: '#{$ui-label}-button-active' );
+  @include extjs-button-medium-ui ( $ui: '#{$ui-label}-button-active' );
+  @include extjs-button-large-ui ( $ui: '#{$ui-label}-button-active' );
+
+
+  .#{$window-active-class} {
+    @include _codaxy-btn-ui (
+      $ui: '#{$ui-label}-button-active-small',
+
+      $ui-color: $ui-btn-color,
+
+      $ui-border-color: $ui-btn-border-color,
+      $ui-border-color-over: $ui-btn-border-color-over,
+      $ui-border-color-focus: $ui-btn-border-color-focus,
+      $ui-border-color-pressed: $ui-btn-border-color-pressed,
+      $ui-border-color-focus-over: $ui-btn-border-color-focus-over,
+      $ui-border-color-focus-pressed: $ui-btn-border-color-focus-pressed,
+      $ui-border-color-disabled: $ui-btn-border-color-disabled,
+      
+      $ui-background-color: $ui-btn-background-color,
+      $ui-background-color-over: $ui-btn-background-color-over,
+      $ui-background-color-focus: $ui-btn-background-color-focus,
+      $ui-background-color-pressed: $ui-btn-background-color-pressed,
+      $ui-background-color-focus-over: $ui-btn-background-color-focus-over,
+      $ui-background-color-focus-pressed: $ui-btn-background-color-focus-pressed,
+      $ui-background-color-disabled: $ui-btn-background-color-disabled,
+      
+      $ui-background-gradient: $ui-btn-background-gradient,
+      $ui-background-gradient-over: $ui-btn-background-gradient-over,
+      $ui-background-gradient-pressed: $ui-btn-background-gradient-pressed,
+      $ui-background-gradient-focus: $ui-btn-background-gradient-focus,
+      $ui-background-gradient-focus-over: $ui-btn-background-gradient-focus-over,
+      $ui-background-gradient-focus-pressed: $ui-btn-background-gradient-focus-pressed,
+      $ui-background-gradient-disabled: $ui-btn-background-gradient-disabled,
+
+      $ui-inner-border-color: $ui-btn-inner-border-color,
+      $ui-inner-border-color-disabled: $ui-btn-inner-border-color-disabled
+
+    );
+
+    
+
+    @include _codaxy-btn-ui (
+      $ui: '#{$ui-label}-button-active-medium',
+
+      $ui-color: $ui-btn-color,
+
+      $ui-border-color: $ui-btn-border-color,
+      $ui-border-color-over: $ui-btn-border-color-over,
+      $ui-border-color-focus: $ui-btn-border-color-focus,
+      $ui-border-color-pressed: $ui-btn-border-color-pressed,
+      $ui-border-color-focus-over: $ui-btn-border-color-focus-over,
+      $ui-border-color-focus-pressed: $ui-btn-border-color-focus-pressed,
+      $ui-border-color-disabled: $ui-btn-border-color-disabled,
+
+      $ui-background-color: $ui-btn-background-color,
+      $ui-background-color-over: $ui-btn-background-color-over,
+      $ui-background-color-focus: $ui-btn-background-color-focus,
+      $ui-background-color-pressed: $ui-btn-background-color-pressed,
+      $ui-background-color-focus-over: $ui-btn-background-color-focus-over,
+      $ui-background-color-focus-pressed: $ui-btn-background-color-focus-pressed,
+      $ui-background-color-disabled: $ui-btn-background-color-disabled,
+
+      $ui-background-gradient: $ui-btn-background-gradient,
+      $ui-background-gradient-over: $ui-btn-background-gradient-over,
+      $ui-background-gradient-pressed: $ui-btn-background-gradient-pressed,
+      $ui-background-gradient-focus: $ui-btn-background-gradient-focus,
+      $ui-background-gradient-focus-over: $ui-btn-background-gradient-focus-over,
+      $ui-background-gradient-focus-pressed: $ui-btn-background-gradient-focus-pressed,
+      $ui-background-gradient-disabled: $ui-btn-background-gradient-disabled,
+
+      $ui-inner-border-color: $ui-btn-inner-border-color,
+      $ui-inner-border-color-disabled: $ui-btn-inner-border-color-disabled
+
+    );
+
+
+    @include _codaxy-btn-ui (
+      $ui: '#{$ui-label}-button-active-large',
+
+      $ui-border-color: $ui-btn-border-color,
+      $ui-border-color-over: $ui-btn-border-color-over,
+      $ui-border-color-focus: $ui-btn-border-color-focus,
+      $ui-border-color-pressed: $ui-btn-border-color-pressed,
+      $ui-border-color-focus-over: $ui-btn-border-color-focus-over,
+      $ui-border-color-focus-pressed: $ui-btn-border-color-focus-pressed,
+      $ui-border-color-disabled: $ui-btn-border-color-disabled,
+
+      $ui-background-color: $ui-btn-background-color,
+      $ui-background-color-over: $ui-btn-background-color-over,
+      $ui-background-color-focus: $ui-btn-background-color-focus,
+      $ui-background-color-pressed: $ui-btn-background-color-pressed,
+      $ui-background-color-focus-over: $ui-btn-background-color-focus-over,
+      $ui-background-color-focus-pressed: $ui-btn-background-color-focus-pressed,
+      $ui-background-color-disabled: $ui-btn-background-color-disabled,
+        
+      $ui-background-gradient: $ui-btn-background-gradient,
+      $ui-background-gradient-over: $ui-btn-background-gradient-over,
+      $ui-background-gradient-pressed: $ui-btn-background-gradient-pressed,
+      $ui-background-gradient-focus: $ui-btn-background-gradient-focus,
+      $ui-background-gradient-focus-over: $ui-btn-background-gradient-focus-over,
+      $ui-background-gradient-focus-pressed: $ui-btn-background-gradient-focus-pressed,
+      $ui-background-gradient-disabled: $ui-btn-background-gradient-disabled,
+
+      $ui-inner-border-color: $ui-btn-inner-border-color,
+      $ui-inner-border-color-disabled: $ui-btn-inner-border-color-disabled
+
+    );
+  }
+
+}

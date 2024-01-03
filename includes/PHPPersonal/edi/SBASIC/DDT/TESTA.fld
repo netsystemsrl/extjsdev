@@ -1,0 +1,31 @@
+NomeField		,Len,Align	,Requested	,CodeValue,SampleValue
+ANNO			,2	,L		,Y		 	,20  	,Fisso
+TIPODOC			,1	,L		,Y			,		,N= Nota credito - P=Fattura proforma -Spazio= Fattura
+DOCNUM			,5	,L		,Y			,   	,NUM
+RIGA			,5	,L		,N			,   	,Riga
+ANAGRAFICA		,5	,L		,N			,   	,cliente
+DOCDATA			,6	,L		,N			,   	,Data bolla
+SCONTO			,3	,L		,Y			,   	,Ragione sociale 
+PAGAMENTOCOD	,2	,L		,Y			,   	,Indirizzo
+PORTO			,1	,L		,Y			,   	,Località
+AGENTE			,5	,L		,Y			,   	,CAP
+TRASPORTOSS		,10	,L		,Y			,   	,Provincia
+IMBALLOSS		,10	,L		,Y			,   	,Nazione
+BOLLISS			,10	,L		,N			,   	,Codice del CARICO
+VARIESS			,10	,L		,N			,   	,Ragione sociale 
+MONETA			,2	,L		,N			,   	,Indirizzo
+LINGUA			,1	,L		,N			,   	,Località
+SPEDRAGSOC1		,40	,L		,N			,   	,RAGSOC1
+SPEDRAGSOC2		,40	,L		,N			,   	,RAGSOC2
+SPEDVIA			,40	,L		,N			,   	,VIA
+SPEDLOCALITA	,40	,L		,N			,   	,LOCALITA
+SPEDNAZIONE		,4	,L		,Y			,   	,NAZIONE
+CF				,16	,L		,Y			,   	,CF
+VETTORE			,40	,L		,Y			,   	,VETTORE
+TRASPORTO		,1	,L		,Y			,   	,TRASPORTO
+CAUSALE			,40	,L		,Y			,   	,CAUSALE
+DOCSPEDDATA		,8	,L		,Y			,   	,DOCSPEDDATA
+DOCSPEDORA		,5	,L		,N			,   	,DOCSPEDORA
+COLLINUM		,8	,L		,N			,   	,COLLINUM 
+COLLIASP		,40	,L		,N			,   	,COLLIASP
+PORTODESC		,79	,L		,N			,   	,Descrizione porto

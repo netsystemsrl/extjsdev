@@ -1,0 +1,223 @@
+
+@if $include-panel-default-framed-ui-extended {
+  @include extjs-panel-ui(
+    $ui: 'default-framed',
+
+    $ui-border-color: $panel-frame-border-color,
+    $ui-border-width: $panel-frame-border-width,
+    $ui-border-radius: $panel-frame-border-radius,
+    $ui-padding: $panel-frame-padding,
+
+    $ui-header-background-color: $panel-frame-header-background-color,
+    $ui-header-border-color: $panel-frame-border-color,
+    $ui-header-border-width: $panel-frame-header-border-width,
+    $ui-header-inner-border-color: $panel-frame-header-inner-border-color,
+    $ui-header-inner-border-width: $panel-frame-header-inner-border-width,
+    $ui-header-padding: $panel-frame-header-padding,
+
+    $ui-body-border-width: $panel-frame-body-border-width,
+    $ui-body-border-color: $panel-frame-body-border-color,
+    $ui-body-background-color: $panel-frame-background-color
+  );
+}
+
+//borders overrides
+@if $panel-borders-overrides {
+
+  .#{$prefix}panel, .#{$prefix}tabpanel-child {
+
+	&.cx-header-docked-top {
+		> .#{$prefix}panel-header-top { border-bottom-width: 1px !important; }
+		//toolbars
+		> .#{$prefix}toolbar-docked-top{ border-top-width: 0; border-bottom-width: 1px !important; }
+  	    > .#{$prefix}toolbar-docked-left{ border-top-width: 0 !important}
+		> .#{$prefix}panel-body{ border-top-width: 0 !important}
+		> .#{$prefix}toolbar-docked-right { border-top-width: 0 !important }
+		//tabs
+		> .#{$prefix}tab-bar{ border-top-width: 0 !important}
+		//grid
+		> .#{$prefix}grid-header-ct{ border-top-width: 0 !important }
+		> .#{$prefix}grid-body{ border-top-width: 1px !important}
+	}
+
+    &.#{$prefix}panel.cx-header-docked-left {
+		> .#{$prefix}panel-header-left{ border-right-width: 1px !important; }
+		> .#{$prefix}toolbar-docked-left{ border-left-width: 0 !important; border-right-width: 1px !important; }
+		> .#{$prefix}toolbar-docked-top{ border-left-width: 0 !important}
+		> .#{$prefix}panel-body{ border-left-width: 0 !important}
+		> .#{$prefix}toolbar-docked-bottom{ border-left-width: 0 !important; }
+		//grid
+		> .#{$prefix}grid-header-ct{ border-left-width: 0 !important }
+	}
+
+    &.#{$prefix}panel.cx-header-docked-bottom {
+		> .#{$prefix}panel-header-bottom{ border-top-width: 1px !important; }
+		> .#{$prefix}toolbar-docked-bottom{ border-bottom-width: 0 !important; border-top-width: 1px !important; }
+		> .#{$prefix}toolbar-docked-left{ border-bottom-width: 0 !important}
+		> .#{$prefix}panel-body{ border-bottom-width: 0 !important}
+		> .#{$prefix}toolbar-docked-right{ border-bottom-width: 0 !important; }
+	}
+
+    &.#{$prefix}panel.cx-header-docked-right {
+		> .#{$prefix}panel-header-right{ border-left-width: 1px !important; }
+		> .#{$prefix}toolbar-docked-right{ border-right-width: 0 !important; border-left-width: 1px !important; }
+		> .#{$prefix}toolbar-docked-top{ border-right-width: 0 !important}
+		> .#{$prefix}panel-body{ border-right-width: 0 !important}
+		> .#{$prefix}toolbar-docked-bottom{ border-right-width: 0 !important; }
+		    //grid
+        > .#{$prefix}grid-header-ct{ border-right-width: 0 !important }
+	}
+
+  }
+  // OK-315
+  // commented, not needed any more
+  /*.#{$prefix}toolbar-docked-top ~ .#{$prefix}panel-body .#{$prefix}grid-header-ct {
+      border-top-width: 1px !important;
+  }*/
+
+  .#{$prefix}tree-panel .#{$prefix}panel-header-docked-top ~ .#{$prefix}grid-body {
+      border-top-width: 0 !important;
+  }
+}
+
+
+
+@mixin _codaxy-panel-ui (
+  $ui,
+  $ui-border-color: null,
+  $ui-header-color: null,
+  $ui-header-border-color: null,
+  $ui-header-background-color: null,
+  $ui-tools-background-color: null,
+  $ui-tools-background-color-over: null,
+  $ui-tools-background-image: null,
+  $ui-header-text-shadow: null,
+  $ui-panel-header-inner-border-width: null,
+  $ui-panel-header-inner-border-color: null,
+  $ui-header-background-gradient: null,
+  $ui-body-background-color: null,
+  $ui-shadow: null,
+  $ui-header-shadow: null,
+  $ui-panel-footer-background-color: null,
+  $ui-panel-footer-padding: null,
+  $ui-border-layout-background-color: null,
+  $ui-header-icon-line-height: null
+) {
+    
+    .#{$prefix}panel-#{$ui} { 
+        @if $ui-border-color != null { border-color: $ui-border-color }
+        @if $ui-shadow != null {
+          @include box-shadow(#{$ui-shadow});
+        }
+        > .#{$prefix}toolbar.#{$prefix}toolbar-footer { 
+                @if $ui-panel-footer-padding != null { padding: $ui-panel-footer-padding } 
+                @if $ui-panel-footer-background-color != null { background-color: $ui-panel-footer-background-color }
+        }
+    }
+    .#{$prefix}panel-header-#{$ui}, .#{$prefix}panel-header-#{$ui}-framed {
+        @if $ui-header-shadow != null { @include box-shadow($ui-header-shadow) }
+        @if $ui-header-border-color != null { border-color: $ui-header-border-color }
+        @if $ui-header-background-color != null { background-color: $ui-header-background-color }
+        @if $ui-header-background-gradient != null {
+            @include background-gradient($ui-header-background-color, $ui-header-background-gradient, top);
+        }
+        @if $ui-panel-header-inner-border-width != null and $ui-panel-header-inner-border-color != null {
+            @include inner-border($ui-panel-header-inner-border-width, $ui-panel-header-inner-border-color);
+        }
+        .#{$prefix}tool-img {
+            @if $ui-tools-background-color == null { background-color: $ui-header-background-color }       
+            @else { background-color: $ui-tools-background-color } 
+            &:hover { 
+                @if $ui-tools-background-color-over != null { background-color: $ui-tools-background-color-over }
+            }
+            @if $ui-tools-background-image != null { 
+                background-image: theme-background-image($ui-tools-background-image); }
+        }
+        .#{$prefix}panel-header-title-#{$ui} {
+            @if $ui-header-color != null { color: $ui-header-color }
+            @if $ui-header-text-shadow != null {
+                @include text-shadow(#{$ui-header-text-shadow});
+            }
+
+            //codaxy trial
+            @if $codaxy-trial {
+                //copied from ext js trial
+                > .#{$prefix}title-text-#{$ui}:after {
+                    content: $trial-theme-name + ' Theme Trial';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    color: #949aa1;
+                }
+            }
+
+        }
+
+        /* O-315
+         * when toolbar is immediately preceded by panel-header, and has no border or the border is transparent, 
+         * toolbar inherits panel header background color
+         */
+        + .#{$prefix}toolbar-docked-top {
+            @if alpha(list-rect($toolbar-border-color, top)) == 0 or list-rect($toolbar-border-width, top) == 0 {
+                @if $ui-header-background-color != null { background-color: $ui-header-background-color }
+            }
+        }
+    }
+
+    .#{$prefix}panel-body.#{$prefix}panel-body-#{$ui} {
+        @if $ui-body-background-color != null { background-color: $ui-body-background-color }
+        @if $ui-border-layout-background-color != null { 
+            .#{$prefix}border-layout { background-color: $ui-border-layout-background-color }
+        }
+    }
+
+
+    /*
+     * OK-315 chart legend scroll issue override
+     */
+    .#{$prefix}legend-panel.#{$prefix}docked-bottom {
+        .#{$prefix}panel-body-#{$ui} {
+            border-width: 1px 0 0 0;
+        }
+    }
+
+}
+
+
+@include _codaxy-panel-ui (
+  $ui:'default',
+  $ui-header-color: $panel-header-color,
+  $ui-border-color: $panel-border-color,
+  $ui-header-background-color: $panel-header-background-color,
+  $ui-tools-background-color: $panel-tools-background-color,
+  $ui-tools-background-color-over: $panel-tools-background-color-over,
+  $ui-header-text-shadow: $panel-header-text-shadow,
+  $ui-panel-header-inner-border-width: $panel-header-inner-border-width,
+  $ui-panel-header-inner-border-color: $panel-header-inner-border-color,
+  $ui-panel-footer-background-color: $panel-footer-background-color,
+  $ui-panel-footer-padding: $panel-footer-padding
+);
+
+@include _codaxy-panel-ui (
+  $ui:'default-framed',
+  $ui-header-color: $panel-header-color,
+  $ui-header-background-color: $panel-header-background-color,
+  $ui-border-color: $panel-frame-border-color,
+  $ui-tools-background-color: $panel-tools-background-color,
+  $ui-tools-background-color-over: $panel-tools-background-color-over,
+  $ui-header-text-shadow: $panel-header-text-shadow,
+  $ui-panel-header-inner-border-width: $panel-header-inner-border-width,
+  $ui-panel-header-inner-border-color: $panel-header-inner-border-color,
+  $ui-panel-footer-background-color: $panel-footer-background-color,
+  $ui-panel-footer-padding: $panel-footer-padding
+);
+
+
+
+/* OK-315 
+ * aligns panel header icon with text
+ * missing property added
+ */
+.#{$prefix}panel-header-title > .#{$prefix}title-icon-wrap > .#{$prefix}title-icon {
+    line-height: $panel-header-icon-height;
+}

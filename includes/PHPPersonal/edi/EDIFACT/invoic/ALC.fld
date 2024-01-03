@@ -1,0 +1,11 @@
+NomeField		,Len,Align	,Requested	,CodeValue										,SampleValue
+TIPOREC			,99	,		,Y		 	,ALC											,A		=	Allowance ;C		=	Charge
+FILLER			,99	,		,Y		 	,+												,ALC
+FILLER			,99	,		,Y		 	,A												,A		=	Allowance ;C		=	Charge
+FILLER			,99	,		,Y		 	,+												,FILLER
+FILLER			,99	,		,Y		 	,+												,FILLER
+FILLER			,99	,		,Y		 	,+												,FILLER
+TIPOLOGIA		,99	,		,Y		 	,1												,1		=	Bill back;2		=	Off invoice;5		=	Charge to be paid by vendor;6		=	Charge to be paid by customer
+FILLER			,99	,		,Y		 	,+												,FILLER
+TIPO			,15	,		,Y			,TD												,VALORE
+END				,99	,		,Y		 	,'												,END 

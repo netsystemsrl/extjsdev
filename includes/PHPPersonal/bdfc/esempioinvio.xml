@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interscambio version="10">
+	<corso>
+		<sys_scuola_id>SI1881BASE08</sys_scuola_id>
+		<scuola_id>23</scuola_id>
+		<tipo_corso cpt="1">1030120</tipo_corso>
+		<attributi_corso>
+			<tirocinio>0</tirocinio>
+			<processo_valutativo>1</processo_valutativo>
+			<progetto_formedil/>
+		</attributi_corso>
+		<nome_corso>Formazione contrattuale per la sicurezza</nome_corso>
+		<durata>16</durata>
+		<data_inizio>2018-09-06</data_inizio>
+		<data_fine>2018-09-07</data_fine>
+		<m_formative>3</m_formative>
+		<sede>Sede di Reggio Emilia</sede>
+		<attestazione>1</attestazione>
+		<finanziamento>
+			<canale tipo="1">4</canale>
+			<tipologia_fondo_interprof/>
+			<codice/>
+		</finanziamento>
+		<ud>
+			<ud>108</ud>
+		</ud>
+		<uc/>
+		<ad>
+			<ad>83</ad>
+		</ad>
+		<studenti>
+			<studente>
+				<cf>nzjrrt00h15z100m</cf>
+				<cf_provvisorio>0</cf_provvisorio>
+				<cognome>NAZAJ</cognome>
+				<nome>RIGERT</nome>
+				<cittadinanza>Z100</cittadinanza>
+				<sesso>M</sesso>
+				<nascita>
+					<stato>z100</stato>
+					<comune>Z100</comune>
+					<data>2000-06-15</data>
+				</nascita>
+				<residenza domicilio="0">
+					<indirizzo/>
+					<comune>H628</comune>
+					<stato>Z998</stato>
+					<cap/>
+				</residenza>
+				<contatti>
+					<telefono/>
+					<cellulare>+393387717109</cellulare>
+					<fax/>
+					<email/>
+				</contatti>
+				<status>1</status>
+				<qualifica/>
+				<impresa>
+					<soggetto>4</soggetto>
+					<denominazione>P.S.LATTONERIA DI PASHAJ ENGJELLUSH</denominazione>
+					<cf_impresa>PSHNJL82R09Z100D</cf_impresa>
+					<piva>02747770366</piva>
+					<sede_legale operativa="0">
+						<indirizzo>VIA CIGARINI, 30</indirizzo>
+						<comune>H223</comune>
+						<stato>Z998</stato>
+						<cap>42122</cap>
+						<telefono/>
+						<fax/>
+						<email>PS.LATTONERIA@GMAIL.COM</email>
+					</sede_legale>
+					<tip_pa/>
+					<registro_imprese/>
+					<sito/>
+				</impresa>
+				<ud>
+					<ud>SIC_GENERALE</ud>
+					<ud>SIC_SPECIFIC</ud>
+				</ud>
+				<uc/>
+				<ad>
+					<ad>83</ad>
+				</ad>
+				<frequenza>2</frequenza>
+				<proc_valutativo>1</proc_valutativo>
+			</studente>
+			<studente>
+				<cf>LMTMMD98E20Z336Y</cf>
+				<cf_provvisorio>0</cf_provvisorio>
+				<cognome>ELAMOUTY</cognome>
+				<nome>MAHMOUD ELSAYED MAHMOUD</nome>
+				<cittadinanza>Z336</cittadinanza>
+				<sesso>M</sesso>
+				<nascita>
+					<stato>Z336</stato>
+					<comune>Z336</comune>
+					<data>1998-05-20</data>
+				</nascita>
+				<residenza domicilio="0">
+					<indirizzo>VIA DELL&apos;AQUILA 5/01</indirizzo>
+					<comune>H223</comune>
+					<stato>Z998</stato>
+					<cap/>
+				</residenza>
+				<contatti>
+					<telefono/>
+					<cellulare/>
+					<fax/>
+					<email/>
+				</contatti>
+				<status>1</status>
+				<qualifica/>
+				<impresa>
+					<soggetto>1</soggetto>
+					<denominazione>ISO-TECH SRL</denominazione>
+					<cassa>11</cassa>
+					<ccnl>1</ccnl>
+					<tipologia_impresa>1</tipologia_impresa>
+					<cf_impresa>02533030355</cf_impresa>
+					<piva>02533030355</piva>
+					<sede_legale operativa="0">
+						<indirizzo>VIA F-LLI MANFREDI 11</indirizzo>
+						<comune>H223</comune>
+						<stato>Z998</stato>
+						<cap>42121</cap>
+						<telefono>0522-271322</telefono>
+						<fax>0522-503326</fax>
+						<email>isotechsrl@gmail.com</email>
+					</sede_legale>
+					<tip_pa/>
+					<registro_imprese>02533030355</registro_imprese>
+					<sito/>
+				</impresa>
+				<ud>
+					<ud>SIC_GENERALE</ud>
+					<ud>SIC_SPECIFIC</ud>
+				</ud>
+				<uc/>
+				<ad>
+					<ad>83</ad>
+				</ad>
+				<frequenza>2</frequenza>
+				<proc_valutativo>1</proc_valutativo>
+			</studente>
+			<studente>
+				<cf>FLNFRC97T15H223G</cf>
+				<cf_provvisorio>0</cf_provvisorio>
+				<cognome>FILIANTI</cognome>
+				<nome>FEDERICO</nome>
+				<cittadinanza>Z998</cittadinanza>
+				<sesso>M</sesso>
+				<nascita>
+					<stato>Z998</stato>
+					<comune>H223</comune>
+					<data>1997-12-15</data>
+				</nascita>
+				<residenza domicilio="0">
+					<indirizzo>VIA GRANDI 4/16</indirizzo>
+					<comune>A162</comune>
+					<stato>Z998</stato>
+					<cap>42020</cap>
+				</residenza>
+				<contatti>
+					<telefono/>
+					<cellulare>+393450779352</cellulare>
+					<fax/>
+					<email/>
+				</contatti>
+				<status>1</status>
+				<qualifica/>
+				<impresa>
+					<soggetto>1</soggetto>
+					<denominazione>RESIN FLOOR SRL</denominazione>
+					<cassa>11</cassa>
+					<ccnl>2</ccnl>
+					<tipologia_impresa>2</tipologia_impresa>
+					<cf_impresa>02376480352</cf_impresa>
+					<piva>02376480352</piva>
+					<sede_legale operativa="0">
+						<indirizzo>VIA O. FELICI 1/B-C</indirizzo>
+						<comune>A162</comune>
+						<stato>Z998</stato>
+						<cap>42020</cap>
+						<telefono>0522347751</telefono>
+						<fax>0522347982</fax>
+						<email>info@resinfloor.it; marco@resinfloor.it</email>
+					</sede_legale>
+					<tip_pa/>
+					<registro_imprese/>
+					<sito/>
+				</impresa>
+				<ud>
+					<ud>SIC_GENERALE</ud>
+				</ud>
+				<uc/>
+				<ad>
+					<ad>83</ad>
+				</ad>
+				<frequenza>2</frequenza>
+				<proc_valutativo>1</proc_valutativo>
+			</studente>
+			<studente>
+				<cf>LPPDVD02L18D037L</cf>
+				<cf_provvisorio>0</cf_provvisorio>
+				<cognome>LUPPI</cognome>
+				<nome>DAVIDE</nome>
+				<cittadinanza>Z998</cittadinanza>
+				<sesso>M</sesso>
+				<nascita>
+					<stato>Z998</stato>
+					<comune>D037</comune>
+					<data>2002-07-18</data>
+				</nascita>
+				<residenza domicilio="0">
+					<indirizzo>VIA S. PERTINI, 16</indirizzo>
+					<comune>D037</comune>
+					<stato>Z998</stato>
+					<cap>42015</cap>
+				</residenza>
+				<contatti>
+					<telefono/>
+					<cellulare/>
+					<fax/>
+					<email/>
+				</contatti>
+				<status>1</status>
+				<qualifica/>
+				<impresa>
+					<soggetto>1</soggetto>
+					<denominazione>WATERPROOFING SRL DI CARNEVALIG.&amp;C</denominazione>
+					<cassa>11</cassa>
+					<ccnl>I</ccnl>
+					<tipologia_impresa/>
+					<cf_impresa>00987650355</cf_impresa>
+					<piva>00987650355</piva>
+					<sede_legale operativa="0">
+						<indirizzo>VIA VERZELLONI,15</indirizzo>
+						<comune>D037</comune>
+						<stato>Z998</stato>
+						<cap>42015</cap>
+						<telefono>0522          641517</telefono>
+						<fax>335          8112891</fax>
+						<email/>
+					</sede_legale>
+					<tip_pa/>
+					<registro_imprese/>
+					<sito/>
+				</impresa>
+				<ud>
+					<ud>SIC_GENERALE</ud>
+					<ud>SIC_SPECIFIC</ud>
+				</ud>
+				<uc/>
+				<ad>
+					<ad>83</ad>
+				</ad>
+				<frequenza>2</frequenza>
+				<proc_valutativo>1</proc_valutativo>
+			</studente>
+			<studente>
+				<cf>GLNGTN72A19E932Y</cf>
+				<cf_provvisorio>0</cf_provvisorio>
+				<cognome>GOLINO</cognome>
+				<nome>GAETANO</nome>
+				<cittadinanza>Z998</cittadinanza>
+				<sesso>M</sesso>
+				<nascita>
+					<stato>Z998</stato>
+					<comune>E932</comune>
+					<data>1972-01-19</data>
+				</nascita>
+				<residenza domicilio="0">
+					<indirizzo>VIA FABBRICO 2</indirizzo>
+					<comune>B499</comune>
+					<stato>Z998</stato>
+					<cap>42012</cap>
+				</residenza>
+				<contatti>
+					<telefono/>
+					<cellulare/>
+					<fax/>
+					<email/>
+				</contatti>
+				<status>1</status>
+				<qualifica/>
+				<impresa>
+					<soggetto>1</soggetto>
+					<denominazione>ESTIA SRL</denominazione>
+					<cassa>11</cassa>
+					<ccnl>1</ccnl>
+					<tipologia_impresa>1</tipologia_impresa>
+					<cf_impresa>02589350350</cf_impresa>
+					<piva>02589350350</piva>
+					<sede_legale operativa="1">
+						<indirizzo>VIA FABBRICO, 17/B</indirizzo>
+						<comune>B499</comune>
+						<stato>Z998</stato>
+						<cap>42012</cap>
+						<telefono>333/2271620</telefono>
+						<fax/>
+						<email>amministrazione@estiasrl.it</email>
+					</sede_legale>
+					<sede_operativa>
+						<indirizzo>VIA GRANDE, 6</indirizzo>
+						<comune>B499</comune>
+						<stato>Z998</stato>
+						<cap>42012</cap>
+					</sede_operativa>
+					<tip_pa/>
+					<registro_imprese>02589350350</registro_imprese>
+					<sito/>
+				</impresa>
+				<ud>
+					<ud>SIC_GENERALE</ud>
+					<ud>SIC_SPECIFIC</ud>
+				</ud>
+				<uc/>
+				<ad>
+					<ad>83</ad>
+				</ad>
+				<frequenza>2</frequenza>
+				<proc_valutativo>1</proc_valutativo>
+			</studente>
+			<studente>
+				<cf>RGGMTT94A04C219I</cf>
+				<cf_provvisorio>0</cf_provvisorio>
+				<cognome>RAGGIOLI</cognome>
+				<nome>MATTIA</nome>
+				<cittadinanza>Z998</cittadinanza>
+				<sesso>M</sesso>
+				<nascita>
+					<stato>Z998</stato>
+					<comune>C219</comune>
+					<data>1994-01-04</data>
+				</nascita>
+				<residenza domicilio="0">
+					<indirizzo>VIA GAGGIOLO 2</indirizzo>
+					<comune>L184</comune>
+					<stato>Z998</stato>
+					<cap>42010</cap>
+				</residenza>
+				<contatti>
+					<telefono/>
+					<cellulare/>
+					<fax/>
+					<email/>
+				</contatti>
+				<status>1</status>
+				<qualifica/>
+				<impresa>
+					<soggetto>1</soggetto>
+					<denominazione>F.LLI CERESOLI SRL</denominazione>
+					<cassa>11</cassa>
+					<ccnl>1</ccnl>
+					<tipologia_impresa>1</tipologia_impresa>
+					<cf_impresa>00249010356</cf_impresa>
+					<piva>00249010356</piva>
+					<sede_legale operativa="0">
+						<indirizzo>VIA CASE BONCI 2/A</indirizzo>
+						<comune>L184</comune>
+						<stato>Z998</stato>
+						<cap>42010</cap>
+						<telefono>0522805141 Emanuela</telefono>
+						<fax>0522805590</fax>
+						<email>f.lli.ceresoli@tiscali.it;</email>
+					</sede_legale>
+					<tip_pa/>
+					<registro_imprese/>
+					<sito/>
+				</impresa>
+				<ud>
+					<ud>SIC_GENERALE</ud>
+					<ud>SIC_SPECIFIC</ud>
+				</ud>
+				<uc/>
+				<ad>
+					<ad>83</ad>
+				</ad>
+				<frequenza>2</frequenza>
+				<proc_valutativo>1</proc_valutativo>
+			</studente>
+			<studente>
+				<cf>SMNFNC63E31F458J</cf>
+				<cf_provvisorio>0</cf_provvisorio>
+				<cognome>SIMONELLI</cognome>
+				<nome>FRANCESCO</nome>
+				<cittadinanza>Z998</cittadinanza>
+				<sesso>M</sesso>
+				<nascita>
+					<stato>Z998</stato>
+					<comune>F458</comune>
+					<data>1963-05-31</data>
+				</nascita>
+				<residenza domicilio="0">
+					<indirizzo>VIA A. VESPUCCI 18</indirizzo>
+					<comune>H122</comune>
+					<stato>Z998</stato>
+					<cap>42020</cap>
+				</residenza>
+				<contatti>
+					<telefono/>
+					<cellulare/>
+					<fax/>
+					<email/>
+				</contatti>
+				<status>1</status>
+				<qualifica/>
+				<impresa>
+					<soggetto>1</soggetto>
+					<denominazione>B.C.C. 2000 SRL</denominazione>
+					<cassa>11</cassa>
+					<ccnl>1</ccnl>
+					<tipologia_impresa>1</tipologia_impresa>
+					<cf_impresa>01184160354</cf_impresa>
+					<piva>01184160354</piva>
+					<sede_legale operativa="0">
+						<indirizzo>VIA GARONNA 1-1/A-1/B</indirizzo>
+						<comune>H223</comune>
+						<stato>Z998</stato>
+						<cap>42124</cap>
+						<telefono>0522 942930</telefono>
+						<fax>0522 942921</fax>
+						<email>INFO@BCC2000.IT</email>
+					</sede_legale>
+					<tip_pa/>
+					<registro_imprese>01184160354</registro_imprese>
+					<sito/>
+				</impresa>
+				<ud>
+					<ud>SIC_GENERALE</ud>
+					<ud>SIC_SPECIFIC</ud>
+				</ud>
+				<uc/>
+				<ad>
+					<ad>83</ad>
+				</ad>
+				<frequenza>2</frequenza>
+				<proc_valutativo>1</proc_valutativo>
+			</studente>
+			<studente>
+				<cf>ZCCMHL88R31I496T</cf>
+				<cf_provvisorio>0</cf_provvisorio>
+				<cognome>ZECCHETTI</cognome>
+				<nome>MICHAEL</nome>
+				<cittadinanza>Z998</cittadinanza>
+				<sesso>M</sesso>
+				<nascita>
+					<stato>Z998</stato>
+					<comune>I496</comune>
+					<data>1988-10-31</data>
+				</nascita>
+				<residenza domicilio="0">
+					<indirizzo>VIA GALILEO GALILEI, 36-3</indirizzo>
+					<comune>B893</comune>
+					<stato>Z998</stato>
+					<cap>42013</cap>
+				</residenza>
+				<contatti>
+					<telefono/>
+					<cellulare>+393471484772</cellulare>
+					<fax/>
+					<email/>
+				</contatti>
+				<status>1</status>
+				<qualifica/>
+				<impresa>
+					<soggetto>4</soggetto>
+					<denominazione>GIBEL SRL SOC. UNIPERSONALE</denominazione>
+					<cf_impresa>01732930357</cf_impresa>
+					<piva>01732930357</piva>
+					<sede_legale operativa="1">
+						<indirizzo>Via Pablo Neruda, 11</indirizzo>
+						<comune>I496</comune>
+						<stato>Z998</stato>
+						<cap>42019</cap>
+						<telefono>0522991124</telefono>
+						<fax>0522980910</fax>
+						<email>info@gibel.it</email>
+					</sede_legale>
+					<sede_operativa>
+						<indirizzo>Via Per Reggio, 29 - ARCETO</indirizzo>
+						<comune>I496</comune>
+						<stato>Z998</stato>
+						<cap>42010</cap>
+					</sede_operativa>
+					<tip_pa/>
+					<registro_imprese/>
+					<sito/>
+				</impresa>
+				<ud>
+					<ud>SIC_GENERALE</ud>
+					<ud>SIC_SPECIFIC</ud>
+				</ud>
+				<uc/>
+				<ad>
+					<ad>83</ad>
+				</ad>
+				<frequenza>2</frequenza>
+				<proc_valutativo>1</proc_valutativo>
+			</studente>
+			<studente>
+				<cf>DRSSVN99P09I496Q</cf>
+				<cf_provvisorio>0</cf_provvisorio>
+				<cognome>DE RISI</cognome>
+				<nome>STIVEN</nome>
+				<cittadinanza>Z998</cittadinanza>
+				<sesso>M</sesso>
+				<nascita>
+					<stato>Z998</stato>
+					<comune>I496</comune>
+					<data>1999-09-09</data>
+				</nascita>
+				<residenza domicilio="0">
+					<indirizzo>VIA CANALE 1/I</indirizzo>
+					<comune>B893</comune>
+					<stato>Z998</stato>
+					<cap>42013</cap>
+				</residenza>
+				<contatti>
+					<telefono>0522991124</telefono>
+					<cellulare>+3933333828364</cellulare>
+					<fax/>
+					<email/>
+				</contatti>
+				<status>1</status>
+				<qualifica/>
+				<impresa>
+					<soggetto>4</soggetto>
+					<denominazione>GIBEL SRL SOC. UNIPERSONALE</denominazione>
+					<cf_impresa>01732930357</cf_impresa>
+					<piva>01732930357</piva>
+					<sede_legale operativa="1">
+						<indirizzo>Via Pablo Neruda, 11</indirizzo>
+						<comune>I496</comune>
+						<stato>Z998</stato>
+						<cap>42019</cap>
+						<telefono>0522991124</telefono>
+						<fax>0522980910</fax>
+						<email>info@gibel.it</email>
+					</sede_legale>
+					<sede_operativa>
+						<indirizzo>Via Per Reggio, 29 - ARCETO</indirizzo>
+						<comune>I496</comune>
+						<stato>Z998</stato>
+						<cap>42010</cap>
+					</sede_operativa>
+					<tip_pa/>
+					<registro_imprese/>
+					<sito/>
+				</impresa>
+				<ud>
+					<ud>SIC_GENERALE</ud>
+					<ud>SIC_SPECIFIC</ud>
+				</ud>
+				<uc/>
+				<ad>
+					<ad>83</ad>
+				</ad>
+				<frequenza>2</frequenza>
+				<proc_valutativo>1</proc_valutativo>
+			</studente>
+			<studente>
+				<cf>RTRGRI82L07Z140Z</cf>
+				<cf_provvisorio>0</cf_provvisorio>
+				<cognome>ROTARU</cognome>
+				<nome>IGOR</nome>
+				<cittadinanza>Z140</cittadinanza>
+				<sesso>M</sesso>
+				<nascita>
+					<stato>Z140</stato>
+					<comune>Z140</comune>
+					<data>1982-07-07</data>
+				</nascita>
+				<residenza domicilio="0">
+					<indirizzo/>
+					<comune/>
+					<stato/>
+					<cap/>
+				</residenza>
+				<contatti>
+					<telefono/>
+					<cellulare>+393271239986</cellulare>
+					<fax/>
+					<email/>
+				</contatti>
+				<status>1</status>
+				<qualifica/>
+				<impresa>
+					<soggetto>4</soggetto>
+					<denominazione>A&amp;V SRL</denominazione>
+					<cf_impresa>02741350355</cf_impresa>
+					<piva>02741350355</piva>
+					<sede_legale operativa="0">
+						<indirizzo>VIA FERRAVILLA 7</indirizzo>
+						<comune>H223</comune>
+						<stato>Z998</stato>
+						<cap>42124</cap>
+						<telefono/>
+						<fax/>
+						<email>valeriu.hamureac@gmail.rn</email>
+					</sede_legale>
+					<tip_pa/>
+					<registro_imprese/>
+					<sito/>
+				</impresa>
+				<ud>
+					<ud>SIC_GENERALE</ud>
+					<ud>SIC_SPECIFIC</ud>
+				</ud>
+				<uc/>
+				<ad>
+					<ad>83</ad>
+				</ad>
+				<frequenza>2</frequenza>
+				<proc_valutativo>1</proc_valutativo>
+			</studente>
+			<studente>
+				<cf>PSTNIO83E10Z140O</cf>
+				<cf_provvisorio>0</cf_provvisorio>
+				<cognome>POSTICA</cognome>
+				<nome>ION</nome>
+				<cittadinanza>Z140</cittadinanza>
+				<sesso>M</sesso>
+				<nascita>
+					<stato>Z140</stato>
+					<comune>Z140</comune>
+					<data>1983-05-10</data>
+				</nascita>
+				<residenza domicilio="0">
+					<indirizzo/>
+					<comune/>
+					<stato/>
+					<cap/>
+				</residenza>
+				<contatti>
+					<telefono/>
+					<cellulare>+393898325694</cellulare>
+					<fax/>
+					<email/>
+				</contatti>
+				<status>1</status>
+				<qualifica/>
+				<impresa>
+					<soggetto>4</soggetto>
+					<denominazione>A&amp;V SRL</denominazione>
+					<cf_impresa>02741350355</cf_impresa>
+					<piva>02741350355</piva>
+					<sede_legale operativa="0">
+						<indirizzo>VIA FERRAVILLA 7</indirizzo>
+						<comune>H223</comune>
+						<stato>Z998</stato>
+						<cap>42124</cap>
+						<telefono/>
+						<fax/>
+						<email>valeriu.hamureac@gmail.rn</email>
+					</sede_legale>
+					<tip_pa/>
+					<registro_imprese/>
+					<sito/>
+				</impresa>
+				<ud>
+					<ud>SIC_GENERALE</ud>
+					<ud>SIC_SPECIFIC</ud>
+				</ud>
+				<uc/>
+				<ad>
+					<ad>83</ad>
+				</ad>
+				<frequenza>2</frequenza>
+				<proc_valutativo>1</proc_valutativo>
+			</studente>
+			<studente>
+				<cf>BRWJRM85A01Z335L</cf>
+				<cf_provvisorio>0</cf_provvisorio>
+				<cognome>BROWN</cognome>
+				<nome>JEROME</nome>
+				<cittadinanza>Z335</cittadinanza>
+				<sesso>M</sesso>
+				<nascita>
+					<stato>Z335</stato>
+					<comune>Z335</comune>
+					<data>1985-01-01</data>
+				</nascita>
+				<residenza domicilio="0">
+					<indirizzo>VIA FOGLIANO 32/6</indirizzo>
+					<comune>H223</comune>
+					<stato>Z998</stato>
+					<cap/>
+				</residenza>
+				<contatti>
+					<telefono/>
+					<cellulare/>
+					<fax/>
+					<email/>
+				</contatti>
+				<status>1</status>
+				<qualifica/>
+				<impresa>
+					<soggetto/>
+					<denominazione>BROWN JEROME</denominazione>
+					<cf_impresa>BRWJRM85A01Z335L</cf_impresa>
+					<piva>00000000000</piva>
+					<sede_legale operativa="0">
+						<indirizzo>VIA G. SAVELLI 15</indirizzo>
+						<comune>G224</comune>
+						<stato>Z335</stato>
+						<cap/>
+						<telefono/>
+						<fax/>
+						<email/>
+					</sede_legale>
+					<tip_pa/>
+					<registro_imprese/>
+					<sito/>
+				</impresa>
+				<ud>
+					<ud>SIC_GENERALE</ud>
+					<ud>SIC_SPECIFIC</ud>
+				</ud>
+				<uc/>
+				<ad>
+					<ad>83</ad>
+				</ad>
+				<frequenza>2</frequenza>
+				<proc_valutativo>1</proc_valutativo>
+			</studente>
+		</studenti>
+		<validato>0</validato>
+	</corso>
+</interscambio>

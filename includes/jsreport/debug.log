@@ -1,0 +1,29 @@
+start
+PARAMS
+PARAM layoutid:30124
+PARAM registrationid:1685731936
+PARAM datawhere:FATID=57594
+PARAM userlogin:Elisa
+PARAM userpassword:newstria2021
+PARAM userdbname:stria
+PARAM dataurl:http://localhost
+PARAM filename:FAT-V0-00221.pdf
+load dataSources:
+data_source Name:defaultds
+URL:http://localhost/includes/io/DataReadExt.php?layoutid=30124&onlydata=true&limit=-1&datawhere=FATID=57594&registrationid=1685731936&username=Elisa&password=newstria2021&dbname=stria
+REQUEST START
+REQUEST LAYOUT
+REQUEST END
+layout
+URL:__parentgroup
+data_source Name:defaultds
+URL:http://localhost/includes/io/DataReadExt.php?layoutid=30124&onlydata=true&limit=-1&objid=defaultds&datawhere=&registrationid=1685731936&username=Elisa&password=newstria2021&dbname=stria
+URL:__parentgroup
+URL:table
+data_source Name:ivads
+URL:http://localhost/includes/io/DataReadExt.php?layoutid=30124&onlydata=true&limit=-1&objid=ivads&datawhere=FATID=57594&registrationid=1685731936&username=Elisa&password=newstria2021&dbname=stria
+URL:__parentgroup
+URL:table
+data_source Name:scadenzeds
+URL:http://localhost/includes/io/DataReadExt.php?layoutid=30124&onlydata=true&limit=-1&objid=scadenzeds&datawhere=FATID=57594&registrationid=1685731936&username=Elisa&password=newstria2021&dbname=stria
+{"success":true,"message":"/var/www/html/includes/jsreport/FAT-V0-00221.pdf"}
